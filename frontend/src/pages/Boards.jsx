@@ -19,3 +19,14 @@ export class Boards extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        boards: state.Boards.boards,
+        filter: state.Boards.filter
+    }
+}
+const mapDispatchToProps = {
+    loadBoards
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Boards)
