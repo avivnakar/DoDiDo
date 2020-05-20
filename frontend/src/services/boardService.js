@@ -2,15 +2,21 @@ import axios from 'axios'
 
 const baseBoardUrl = 'http://localhgost:3030/:username/boards'
 
-export {
+export const boardService = {
     query,
     save,
     getById,
 }
 
-function query(filter=null){
-    return axios.get(`/username/${baseBoardUrl}`)
-    .then(res=> res.data)
+async function query(filter=null){
+    try {
+        return await axios.get(`/username/${baseBoardUrl}`)
+        .then(res=> res.data)
+    } catch (error) {
+        console.error(error);
+        console.log('%c no backend, return a fake data for production','color:yellow;')
+        return [{ _id: '1', name: 'rondelicious' }]
+    }
 }
 function getById(id) {
     return axios.get(`${baseBoardUrl}/${id}`)
