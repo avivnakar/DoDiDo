@@ -1,0 +1,54 @@
+`{
+    "card": [
+        {
+            "_id": "cardId",
+            "members": [
+                {
+                    "_id": "userId",
+                    "fullName": "popo Ben-David"
+                },
+                {
+                    "_id": "anotherUserId",
+                    "fullName": "puki Ben-David"
+                }
+            ],
+            "labels": [
+                {
+                    "id": "5ec3a5b97669b225499aaad0",
+                    "idBoard": "5ec3a5b9a0027475f3abdc5f",
+                    "name": "label name",
+                    "color": "green"
+                }
+            ],
+            "data":{
+                "attachment": {
+                    "url":"https://www.youtube.com/watch?v=LWhlpdPn1nw"
+                },
+                "checklists": []
+    
+            }
+        },
+        {
+            "_id": "anotherTaskId"
+        }
+    ],
+    "lists": [
+        {
+            "_id": "listId",
+            "title": "",
+            "tasks": [
+                "cardId"
+            ]
+        }
+    ],
+    "user": [
+        {
+            "_id": "userId",
+            "fullName": "popo Ben-David"
+        },
+        {
+            "_id": "anotherUserId",
+            "fullName": "puki Ben-David"
+        }
+    ]
+}`
