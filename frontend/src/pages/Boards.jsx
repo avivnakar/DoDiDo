@@ -22,7 +22,7 @@ export class _Boards extends Component {
 const mapStateToProps = (state) => {    
     return {
         // boards: state.Boards.boards,
-        boards:[{_id:'1',name:'rondelicious'}],
+        boards:[{_id:'1',name:'rondelicious',background:'../logo192.png'}],
         // filter: state.Boards.filter
         loadBoards:function(){console.log('loading boards')}
     }
