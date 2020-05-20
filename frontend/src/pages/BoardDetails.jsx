@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
+import { CardDetails } from '../cmps/board/CardDetails.jsx';
 
 export class _BoardDetails extends Component {
+    state = {
+        currCard: null
+    }
 
     render() {
         const { board } = this.props;
-        console.log(board);
+        console.log(board.cardLists);
         return (
-            <pre>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre>
+            <React.Fragment>
+                {this.state.currCard && <CardDetails/>}
+                {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} />)}
+                {/* <pre>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
+            </React.Fragment>
         )
     }
 }
