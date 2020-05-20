@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-    <header></header>
+      <header></header>
       <Route component={() => {
         return (<div className="App">
           <header className="App-header">
