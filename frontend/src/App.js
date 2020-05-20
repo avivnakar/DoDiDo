@@ -1,13 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
-import { BrowserRouter, Route } from 'react-router-dom';
-import {Homepage} from './pages/Homepage.jsx';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { Homepage } from './pages/Homepage.jsx';
+import { Boards } from './pages/Boards.jsx';
 
 function App() {
   return (
     <BrowserRouter>
-      <header>sccsc</header>
-      <Route component={Homepage} path="/" />
+      <header><Link to="/guest/boards">fsfs</Link></header>
+      <Switch>
+        <Route component={Boards} path="/:username/boards" />
+        <Route component={Homepage} path="/" />
+      </Switch>
     </BrowserRouter>
   );
 }
