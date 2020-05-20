@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BoardsList } from '../cmps/BoardsList.jsx';
+import { BoardsList } from '../cmps/board/BoardsList.jsx';
 
 
 export class Boards extends Component {
