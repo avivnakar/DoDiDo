@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { BoardsList } from '../cmps/board/BoardsList.jsx';
-
-
+import {connect} from 'react-redux';
 export class Boards extends Component {
     componentDidMount() {
         this.loadBoards()
@@ -27,6 +26,6 @@ const mapStateToProps = (state) => {
     }
 }
 const mapDispatchToProps = {
-    loadBoards
+    loadBoards:()=>{console.log('loading boards')}
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Boards)

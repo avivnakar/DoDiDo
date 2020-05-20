@@ -1,6 +1,6 @@
 
 const initialState = {
-    user=null
+    user:null
 }
 
 export function userReducer(state = initialState, action) {
