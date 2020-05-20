@@ -1,4 +1,4 @@
-`{
+{
     "card": [
         {
             "_id": "cardId",
@@ -51,4 +51,4 @@
             "fullName": "puki Ben-David"
         }
     ]
-}`
+}
