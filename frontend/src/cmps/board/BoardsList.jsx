@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
+import { BoardPreiview } from './BoardPreiview.jsx';
 
-export  class BoardsList extends Component {
-    render() {
+export function BoardsList(props) {
         return (
-            <section className="grid container">
-                <div className="card">
-                    <h3>Board Title</h3>
-                </div>
-            </section>
+            <ul>
+                {props.boards.map(board => <BoardPreiview key={board._id} board={board}/>)}
+            </ul>
         )
-    }
 }
