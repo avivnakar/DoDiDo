@@ -13,7 +13,7 @@ function query(criteria) {
     return httpService.get(entity, criteria);
 }
 function getById(id) {
-    return query(id);
+    return query(id).then(arr=>arr[0]);
 }
 
 function remove(boardId) {

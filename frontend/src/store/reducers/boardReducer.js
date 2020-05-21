@@ -1,5 +1,3 @@
-import { boardService } from "../../services/boardService";
-
 const initialState = {
     boards: [],
     currBoard: null
