@@ -1,24 +1,28 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
-import { CardDetails } from '../cmps/board/CardDetails.jsx';
+import { CardDetails } from '../cmps/board/card/CardDetails.jsx';
 
 export class _BoardDetails extends Component {
     state = {
         currCard: null
     }
-
-    render() {
-        const { board } = this.props;
-        console.log(board.cardLists);
-        return (
-            <React.Fragment>
-                {this.state.currCard && <CardDetails/>}
-                {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} />)}
-                {/* <pre>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
-            </React.Fragment>
-        )
+    getCurrCard = (card) => {
+        console.log('C:',card)
+        this.setState({
+            currCard: card
+        })
     }
+render() {
+    const { board } = this.props;
+    return (
+        <React.Fragment>
+            {this.state.currCard && <CardDetails card={this.state.currCard}/>}
+            {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} />)}
+            {/* <pre>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
+        </React.Fragment>
+    )
+}
 }
 const mapStateToProps = (state) => {
     return {
@@ -41,7 +45,7 @@ const mapStateToProps = (state) => {
                 {
                     "_id": "u401",
                     "fullName": "Aviv Nakar",
-                    "imgUrl": "././img/adf.jpg"
+                    "imgUrl": "adf.jpg"
                 }
             ],
             "activities": [],
@@ -71,16 +75,16 @@ const mapStateToProps = (state) => {
                             "createdBy": {
                                 "_id": "u401",
                                 "fullName": "Aviv Nakar",
-                                "imgUrl": "././img/adf.jpg"
+                                "imgUrl": "adf.jpg"
                             },
                             "cardMembers": [
                                 {
                                     "_id": "u401",
                                     "fullName": "Aviv Nakar",
-                                    "imgUrl": "././img/adf.jpg"
+                                    "imgUrl": "adf.png"
                                 }
                             ],
-                            "desc": "lorem blabla bla bla bla",
+                            "desc": "testin testin testing",
                             "dueDate": 5413234551234,
                             "cheklists": [
                                 {
@@ -94,7 +98,7 @@ const mapStateToProps = (state) => {
                                             "doneBy": {
                                                 "_id": "u401",
                                                 "fullName": "Aviv Nakar",
-                                                "imgUrl": "././img/adf.jpg"
+                                                "imgUrl": "adf.jpg"
                                             }
                                         }
                                     ]
@@ -108,7 +112,7 @@ const mapStateToProps = (state) => {
                                     "addedBy": {
                                         "_id": "u401",
                                         "fullName": "Aviv Nakar",
-                                        "imgUrl": "././img/adf.jpg"
+                                        "imgUrl": "adf.jpg"
                                     }
                                 }
                             ]

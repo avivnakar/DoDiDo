@@ -7,7 +7,7 @@ export function ListPreiview(props) {
     return (
         <section className="list">
             <h4>{list.title}</h4>
-            {list.cards && list.cards.map(card => <CardPreiview key={card.id} card={card} />)}
+            {list.cards && list.cards.map(card => <CardPreiview key={card.id} card={card} getCurrCard={props.getCurrCard}/>)}
             <div className="add-btn-input">
                 <button>+ Add Card</button>
             </div>

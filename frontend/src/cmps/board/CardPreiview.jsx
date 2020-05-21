@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 
 export function CardPreiview(props) {
-    console.log('this card:', props);
+
     const { card } = props
-    
     return (
-        <div>
+        <div onClick={() => props.getCurrCard(card)}>
             <span>{card.title}</span>
             <div>
                 {card.cheklists && <span>{card.cheklists.length}📝</span>}
