@@ -17,7 +17,7 @@ render() {
     const { board } = this.props;
     return (
         <React.Fragment>
-            {this.state.currCard && <CardDetails card={this.state.currCard}/>}
+            {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members}/>}
             {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} />)}
             {/* <pre>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
         </React.Fragment>
@@ -40,12 +40,12 @@ const mapStateToProps = (state) => {
                 {
                     "_id": "u101",
                     "fullName": "Gal Rondel",
-                    "imgUrl": "././img/troll.jpg"
+                    "imgUrl": "adf.png"
                 },
                 {
                     "_id": "u401",
                     "fullName": "Aviv Nakar",
-                    "imgUrl": "adf.jpg"
+                    "imgUrl": "adf.png"
                 }
             ],
             "activities": [],

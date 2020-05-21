@@ -3,18 +3,18 @@ import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
 
 export class CardDetails extends Component {
-    state ={
+    state = {
         addTo: null
     }
 
-    addMembers(){
+    addMembers() {
         this.setState({
             addTo: 'members'
         })
     }
 
     render() {
-        const { card } = this.props
+        const { card, members } = this.props
         return (
             <section className="card-details">
                 <div>
@@ -25,12 +25,12 @@ export class CardDetails extends Component {
                     </div>
                 </div>
                 <div className="card-btns">
-                    <button onClick={()=>this.addMembers()}>Members</button>
+                    <button onClick={() => this.addMembers()}>Members</button>
                     <button>Labels</button>
                     <button>Checklist</button>
                     <button>Due Date</button>
                     <button>Attachment</button>
-                    {this.state.addTo === 'members' && <AddMembers  users={card.cardMembers}/>}
+                    {this.state.addTo === 'members' && <AddMembers users={members} />}
                 </div>
             </section>
         )
