@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
+import { CardTitle } from './CardTitle.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { CardLabel } from './CardLabel.jsx';
 import { MiniUser } from '../../MiniUser.jsx';
@@ -22,7 +23,7 @@ export class CardDetails extends Component {
         return (
             <section className="card-details">
                 <div>
-                    <h5>{card.title}</h5>
+                    <CardTitle title={card.title}/>
                     <CardLabel />
                     {card.cardMembers && <div><MiniUser users={card.cardMembers}/><button>+Add</button></div>}
                     <div>
