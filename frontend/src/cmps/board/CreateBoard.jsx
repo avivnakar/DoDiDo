@@ -4,13 +4,13 @@ export function CreateBoard() {
     return (
         <section>
             <div className="min-board">
+                <h2>New board</h2>
                 <img src={image} alt="" />
                 <input type="text" placeholder="Add board title" />
+                <button>Add background</button>
             </div>
 
-            <button>Add background</button>
             <div className="bg-container">
-                <h2>board background</h2>
                 <div className="photos-title flex space-between">
                     <p>photos</p>
                     <a href="">see more</a>
