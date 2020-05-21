@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar } from '../cmps/NavBar';
-
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 export class Homepage extends Component {
     render() {
         return (
@@ -11,7 +11,7 @@ export class Homepage extends Component {
                         <div className="desc">
                             <h2>DoDiDo lets you work more collaboratively and get more done.</h2>
                             <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
-                            <button className="startBtn">Start Now, It's Free</button>
+                            <Link to="/:username/boards" className="startBtn" >Start Now, It's Free</Link>
                         </div>
                         <img src={require('../assets/imgs/h1.png')} alt="" />
                     </section>
