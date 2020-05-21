@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { BoardsList } from '../cmps/board/BoardsList.jsx';
+import { BoardNav } from '../cmps/board/BoardNav.jsx';
 import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
@@ -15,14 +16,18 @@ export class _Boards extends Component {
 
     render() {
         return (
-            <section>
-                <a>+Create new board</a>
-                <CreateBoard />
-
-                <div className="list-container">
-                    <BoardsList boards={this.props.boards} />
-                </div>
-            </section>
+            <React.Fragment>
+                <BoardNav />
+                <section className="flex">
+                    <div className="list-container">
+                        <BoardsList boards={this.props.boards} />
+                    </div>
+                    <div className="side-bar">
+                        {/* <a>+Create new board</a> */}
+                        <CreateBoard />
+                    </div>
+                </section>
+            </React.Fragment>
         )
     }
 }
