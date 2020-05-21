@@ -5,7 +5,9 @@ import { Boards } from './pages/Boards.jsx';
 import { BoardDetails } from './pages/BoardDetails.jsx';
 
 
+
 function App() {
+  
   return (
 
     <BrowserRouter>
