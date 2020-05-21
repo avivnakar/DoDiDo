@@ -1,0 +1,121 @@
+header {
+    height: 65vh;
+    background-color: $clr1;
+    & section {
+        max-width: 60%;
+        margin: auto;
+
+        & h2 {
+            margin-top: 5%;
+            font-family: $mainFont;
+            font-size: 2.6rem;
+            justify-content: center;
+            width: 30vw;
+            color: $clr5;
+        }
+        & p {
+            font-family: $mainFont;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            width: 30vw;
+            color: $clr4;
+            margin-bottom: 2.3rem;
+        }
+        & img {
+            width: 50%;
+        }
+    }
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.logo {
+    & img {
+        width: 8rem;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+.pages {
+    // padding: 10px;
+    & ul {
+        display: flex;
+        color: $clr6;
+        // background-color: yellow;
+        & li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        & .sign-up {
+            // margin-right: 2rem;
+            margin-left: 1rem;
+            background-color: $clr6;
+            color: $clr1;
+            margin-right: 10px;
+        }
+        &li:last-child {
+            background-color: $clr3;
+        }
+    }
+}
+
+main {
+    margin: 30px auto;
+    // background-color: $clr5;
+    & img {
+        width: 20%;
+    }
+    & .frs-para {
+        margin-bottom: 3rem;
+        & p {
+            font-size: 1.2rem;
+            // width: 25%;
+        }
+        & .start-emil {
+            height: 3rem;
+            background-color: yellow;
+        }
+        & button {
+            border-radius: 0;
+            height: 100%;
+            padding: 8px auto;
+        }
+    }
+    & input {
+        padding: 15px;
+        height: 100%;
+        &::placeholder {
+            font-size: 1rem;
+        }
+    }
+    & .sec-para {
+        background-color: $clr5;
+        padding: 20px;
+    }
+    & .sec-para-txt {
+        margin: auto;
+        & .desc {
+            & p {
+                width: 250px;
+            }
+        }
+    }
+    & .sec-para-head {
+        & img {
+            width: 150px;
+            margin-left: 30px;
+        }
+    }
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.918);
+    & img {
+        width: 20%;
+    }
+}
