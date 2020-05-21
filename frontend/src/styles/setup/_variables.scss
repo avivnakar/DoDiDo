@@ -1,8 +1,8 @@
 // Colors
-$clr1: #ce2e6c;
+$clr1: #cc2163;
 $clr2: #4f3a65;
 $clr3: #574f7d;
-$clr4: #95adbe;
+$clr4: rgba(255, 255, 255, 0.5);
 $clr5: #dff0ea;
 $clr6: #fff;
 
@@ -10,3 +10,7 @@ $clr6: #fff;
 $mobile-breakpoint: 460px;
 $narrow-breakpoint: 720px;
 $normal-breakpoint: 960px;
+
+//font family
+$mainFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
