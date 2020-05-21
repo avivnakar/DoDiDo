@@ -13,3 +13,12 @@ button {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
         "Droid Sans", "Helvetica Neue", sans-serif;
 }
+
+.create-board {
+    margin: 20px auto;
+    border: none;
+    color: $clr4;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: $clr3;
+}

@@ -12,7 +12,6 @@ export class AddMembers extends Component {
         boardUsers.forEach((user) => {
             if(!this.matchUser(user._id)) unPickedUsers.push(user)
         });
-        console.log(unPickedUsers);
         return unPickedUsers;
     }
 

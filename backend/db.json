@@ -41,12 +41,12 @@
                 {
                     "_id": "u101",
                     "fullName": "Gal Rondel",
-                    "imgUrl": "././img/troll.jpg"
+                    "imgUrl": "troll.jpg"
                 },
                 {
                     "_id": "u401",
                     "fullName": "Aviv Nakar",
-                    "imgUrl": "././img/adf.jpg"
+                    "imgUrl": "adf.jpg"
                 }
             ],
             "activities": [],
