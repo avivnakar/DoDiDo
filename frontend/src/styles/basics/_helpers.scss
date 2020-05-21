@@ -41,6 +41,9 @@
     &.space-even {
         justify-content: space-evenly;
     }
+    &.space-between {
+        justify-content: space-between;
+    }
 }
 
 // Media helpers
