@@ -3,12 +3,17 @@ const entity = 'board';
 
 export const boardService = {
     query,
+    getById,
     remove,
-    update
+    update,
+    add
 }
 
 function query(criteria) {
     return httpService.get(entity, criteria);
+}
+function getById(id) {
+    return query(id);
 }
 
 function remove(boardId) {
@@ -17,6 +22,9 @@ function remove(boardId) {
 
 function update(board) {
     return httpService.put(`${entity}/${board._id}`, board);
+}
+function add(board) {
+    return httpService.post(entity, board);
 }
 
 

@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react';
 import image from '../../assets/imgs/3.jpg'
-export function CreateBoard() {
+export function CreateBoard(props) {
     return (
         <section>
             <div className="min-board">
@@ -13,7 +13,7 @@ export function CreateBoard() {
                 <h2>board background</h2>
                 <div className="photos-title flex space-between">
                     <p>photos</p>
-                    <a href="">see more</a>
+                    <a href="#">see more</a>
                 </div>
                 <div className="photos column flex space-even">
                     {/* render photos here */}

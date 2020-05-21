@@ -5,9 +5,10 @@ import { CardTitle } from './CardTitle.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { CardLabel } from './CardLabel.jsx';
 import { MiniUser } from '../../MiniUser.jsx';
+import { connect } from 'react-redux';
 
 
-export class CardDetails extends Component {
+class _CardDetails extends Component {
     state = {
         addTo: null
     }
@@ -44,3 +45,17 @@ export class CardDetails extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    
+    // return {
+    //     currCard
+    // }
+}
+
+const mapDispatchToProps = {
+    //update board/card
+    //get card by id
+}
+
+export const CardDetails = connect(mapStateToProps, mapDispatchToProps)(_CardDetails)
+

@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-
-export function BoardNav() {
+import React from 'react';
+export function BoardNav(props) {
 
     return (
         <nav className="board-nav flex space-between align-center">
