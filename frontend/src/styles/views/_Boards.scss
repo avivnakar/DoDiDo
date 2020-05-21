@@ -1,22 +1,57 @@
+.board-nav {
+    background-color: rgba(0, 0, 0, 0.918);
+    color: $clr1;
+    padding: 10px;
+    & .main-links {
+        background-color: $clr5;
+        & li {
+            margin-left: 10px;
+        }
+    }
+}
+
 .list-container {
-    margin: auto;
-    width: 80%;
     background-color: $clr1;
     padding: 10px;
-    height: 50vh;
+    width: 80%;
+}
+
+.side-bar {
+    width: 20%;
+    background-color: $clr5;
+    & .min-board {
+        & img {
+            // height: 200px;
+            width: 80%;
+        }
+    }
 }
 
 .board-prev {
-    width: 90%;
     padding: 50px;
+    min-width: 300px;
 }
 
 .bg-container {
-    background-color: $clr5;
-    width: 90%;
     margin: auto;
-    & img {
-        width: 20%;
-        border-radius: 12px;
+    background-color: $clr5;
+    & .photos {
+        height: 200px;
+        overflow-y: scroll;
     }
+    & .colors {
+        height: 200px;
+        overflow-y: scroll;
+    }
+    & img {
+        margin: auto;
+        width: 25%;
+        margin-left: 10px;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+}
+
+.img-line {
+    width: 100%;
 }
