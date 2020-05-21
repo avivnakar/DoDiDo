@@ -9,7 +9,6 @@ export function CreateBoard() {
                 <input type="text" placeholder="Add board title" />
                 <button>Add background</button>
             </div>
-
             <div className="bg-container">
                 <div className="photos-title flex space-between">
                     <p>photos</p>
