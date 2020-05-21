@@ -9,14 +9,23 @@ export class CardDesc extends Component {
         this.setState({
             isEdit: true
         })
-        console.log(this.state.isEdit);
-        
+    }
+    handleKeyDown(e) {
+        var newDesc = ''
+        if (!e.target.value) newDesc = this.state.desc
+        else newDesc = e.target.value
+        if (e.key === 'Enter') {
+            this.setState({
+                isEdit: null,
+                desc: newDesc
+            })
+        }
     }
     getDesc() {
         if (this.state.desc && !this.state.isEdit) {
-            return <div onClick={()=> this.onEdit()}>{this.state.desc}</div>
-        } else if (this.state.desc) return <input placeholder={this.state.desc} />
-        else return <input placeholder="Add a more detailed description" />
+            return <div onClick={() => this.onEdit()}>{this.state.desc}</div>
+        } else if (this.state.desc) return <input placeholder={this.state.desc} onKeyDown={(e) => { this.handleKeyDown(e) }} />
+        else return <input placeholder="Add a more detailed description" onKeyDown={(e) => { this.handleKeyDown(e) }} />
     }
     render() {
         return (
