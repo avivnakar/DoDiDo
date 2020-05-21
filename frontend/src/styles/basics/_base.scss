@@ -11,13 +11,24 @@ html {
 
 body {
     margin: 0;
+    background-color: $clr6;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
 }
 
 img {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: caveat;
     line-height: 1.2em;
     margin: 0 0 rem(20px);
