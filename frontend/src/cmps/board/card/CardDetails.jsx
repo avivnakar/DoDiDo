@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
+import { AddLabels } from './AddLabels.jsx';
 import { CardLabel } from './CardLabel.jsx';
 import { MiniUser } from '../../MiniUser.jsx';
+
 
 export class CardDetails extends Component {
     state = {
@@ -35,6 +37,7 @@ export class CardDetails extends Component {
                     <button>Due Date</button>
                     <button>Attachment</button>
                     {this.state.addTo === 'members' && <AddMembers boardUsers={members} cardMembers={card.cardMembers}/>}
+                    {this.state.addTo === 'labels' && <AddLabels cardMembers={card.labels}/>}
                 </div>
             </section>
         )
