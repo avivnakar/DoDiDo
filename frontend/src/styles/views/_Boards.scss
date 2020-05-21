@@ -1,0 +1,22 @@
+.list-container {
+    margin: auto;
+    width: 80%;
+    background-color: $clr1;
+    padding: 10px;
+    height: 50vh;
+}
+
+.board-prev {
+    width: 90%;
+    padding: 50px;
+}
+
+.bg-container {
+    background-color: $clr5;
+    width: 90%;
+    margin: auto;
+    & img {
+        width: 20%;
+        border-radius: 12px;
+    }
+}

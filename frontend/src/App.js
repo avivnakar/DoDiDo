@@ -7,10 +7,11 @@ import { BoardDetails } from './pages/BoardDetails.jsx';
 
 function App() {
   return (
+
     <BrowserRouter>
       <Switch>
         <Route component={Boards} path="/:username/boards" />
-        <Route component={BoardDetails} path="/b/:boardid/:boardname"/>
+        <Route component={BoardDetails} path="/b/:boardid/:boardname" />
         <Route component={Homepage} path="/" />
       </Switch>
     </BrowserRouter>
