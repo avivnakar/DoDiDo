@@ -8,7 +8,6 @@ export class _BoardDetails extends Component {
         currCard: null
     }
     getCurrCard = (card) => {
-        console.log('C:',card)
         this.setState({
             currCard: card
         })
