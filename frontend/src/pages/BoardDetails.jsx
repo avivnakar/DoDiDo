@@ -8,7 +8,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 export class _BoardDetails extends Component {
     state = {
-        currCard: null
+        currCard: null,
     }
     componentDidMount() {
         const id = this.props.match.params.boardId;
@@ -27,7 +27,7 @@ export class _BoardDetails extends Component {
         if (destination.droppableId === source.droppableId && destination.index === source.index) return;
         if (type === 'column') {
             console.log(result);
-            var list = board.cardLists.find(list=> list.id === draggableId)
+            var list = board.cardLists.find(list => list.id === draggableId)
             board.cardLists.splice(source.index, 1)
             board.cardLists.splice(destination.index, 0, list)
         } else {
@@ -46,9 +46,18 @@ export class _BoardDetails extends Component {
     };
     render() {
         const { board } = this.props;
+
+
         if (board) {
-            console.log(board.cardLists);
-            return (
+            var bg = require('../assets/imgs/' + board.background.toString())
+            var styleLi = {
+                backgroundImage: `url(${bg})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                // backgroundColor: 'pink',
+                backgroundRepeat: 'no-repeat'
+            }
+            console.log(styleLi); return (
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <Droppable droppableId='all' direction="horizontal" type="column">
                         {(provided) => (
@@ -57,7 +66,7 @@ export class _BoardDetails extends Component {
                                 ref={provided.innerRef}
                             >
                                 {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
-                                <div className="list-container">
+                                <div className="board" style={styleLi}>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} />)}
                                 </div>
                                 {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}

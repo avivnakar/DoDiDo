@@ -1,25 +1,78 @@
 .list {
     background-color: $list-bgc;
     width: 272px;
+    height: 0;
+    position: relative;
+    top: 10%;
     cursor: pointer;
-    border-radius: 3px;
-    margin-right: 10px;
+    margin-left: 10px;
     & .list-title {
+        padding: 10px;
+        text-align: left;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        background-color: $list-bgc;
         font-family: $mainFont;
         color: $list-title;
         line-height: 1.5em;
         font-size: 1.2rem;
+        & a {
+            font-size: 1rem;
+            padding-left: 4px;
+            padding-right: 4px;
+            border-radius: 3px;
+            & :hover {
+                color: $clr1;
+            }
+        }
     }
 }
 
-.add-card-btn {
-    background-color: red;
+.add-card-container {
+    padding: 5px;
+    background-color: $list-bgc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: left;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    font-size: 1rem;
+    & span {
+        font-size: 0.8rem;
+    }
+    & :hover {
+        color: $clr1;
+    }
 }
 
-.list-container {
+.board {
     display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.list-bg {
+    background-color: $list-bgc;
+    padding: 5px;
 }
 
 .card {
-    background-color: black;
+    overflow: hidden;
+    padding: 6px 8px 2px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: $clr6;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    // background-color: burlywood;
+}
+
+.card-stat {
+    font-size: 0.8rem;
+    text-align: right;
 }

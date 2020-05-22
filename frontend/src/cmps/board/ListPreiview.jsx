@@ -1,6 +1,8 @@
 import React from 'react';
 import { CardPreiview } from './CardPreiview.jsx';
 import { Droppable, Draggable } from 'react-beautiful-dnd'
+import { FaEllipsisH, FaEye } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 
 export function ListPreiview(props) {
     const { list } = props
@@ -11,12 +13,12 @@ export function ListPreiview(props) {
                     {...provided.draggableProps}
                     ref={provided.innerRef}
                 >
-                    <div className="list-title" {...provided.dragHandleProps}>
-                        {list.title}
-                    </div>
+                    <div className="list-title flex space-between justify-center align-center" {...provided.dragHandleProps}>
+                        <span>{list.title}</span>
+                        <a><FaEllipsisH /></a>                    </div>
                     <Droppable droppableId={list.id} type="task">
                         {(provided) => (
-                            <div
+                            <div className="list-bg"
                                 ref={provided.innerRef}
                                 {...provided.droppableProps}
                             >
@@ -25,8 +27,8 @@ export function ListPreiview(props) {
                             </div>
                         )}
                     </Droppable>
-                    <div className="add-card-btn">
-                        <button>+ Add Card</button>
+                    <div className="add-card-container">
+                        <a className="add-card-btn"><span><FaPlus /></span>Add Card</a>
                     </div>
                 </section>
             )}

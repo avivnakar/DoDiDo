@@ -16,7 +16,7 @@ function App() {
       <Route component={CardDetails} path="/c/:cardId/:cardTitle" />
       <Switch>
         <Route component={Boards} path="/:username/boards" />
-        <Route component={BoardDetails} path="/b/:boardId/:boardname" />
+        <Route component={BoardDetails} className="yuval" path="/b/:boardId/:boardname" />
         <Route component={Statistics} path="/b/:boardId/:boardname/statistics" />
         <Route component={Homepage} path="/" />
         <Route component={Profile} path="/:username"/>
