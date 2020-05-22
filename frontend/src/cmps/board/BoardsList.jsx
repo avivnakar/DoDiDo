@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react';
 import { BoardPreiview } from './BoardPreiview.jsx';
 
 export function BoardsList(props) {

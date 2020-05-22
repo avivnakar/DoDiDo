@@ -1,18 +1,22 @@
 import { userService } from '../../services/userService';
+import { authService } from '../../services/authService';
 
 export async function login(credentials) {
-    const user = await userService.login(credentials);
-    return dispatch => dispatch({ type: 'LOGIN', user });
+    const user = await authService.login(credentials);
+    return dispatch =>dispatch({ type: 'SET_USER', user });
 }
+
+export async function signup(credentials) {
+    const user = await authService.signup(credentials);
+    return dispatch => dispatch({ type: 'SET_USER', user });
+}
+
 export async function logout() {
-    const user = await userService.logout();
-    return dispatch => dispatch({ type: 'LOGOUT', user: null });
+    const user = await authService.logout();
+    return dispatch => dispatch({ type: 'CLR_USER' });
 }
-export function updateUser(user) {
+export async function updateUser(user) {
     const user = await userService.update(user);
-    return dispatch => dispatch({ type: 'UPDATE_USER', user });
+    return dispatch => dispatch({ type: 'SET_USER', user });
 }
-export function signup(credentials) {
-    const user = await userService.signup(credentials);
-    return dispatch => dispatch({ type: 'SIGNUP', user });
-}
+// console.log(this.props.login())

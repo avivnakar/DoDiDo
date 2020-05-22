@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavBar } from '../cmps/NavBar';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import {Link } from 'react-router-dom';
+
 export class Homepage extends Component {
     render() {
         return (
@@ -21,6 +22,9 @@ export class Homepage extends Component {
                         <img src={require('../assets/imgs/1.png')} alt="" />
                         <div className="txt-para">
                             <h1>Work with any team</h1>
+                            <i className="fas fa-plus"></i>
+                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-plus"></i>
                             <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
                             <div className="start-emil">
                                 <input type="text" placeholder="Email" />

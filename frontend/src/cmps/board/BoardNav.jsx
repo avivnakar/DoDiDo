@@ -1,13 +1,26 @@
-import React, { Component } from 'react'
-
-export function BoardNav() {
+import React from 'react'
+import image from '../../assets/imgs/Logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaTh, FaColumns, FaPlus, FaWeightHanging, FaUserCircle, FaInfo, FaHome, FaSistrix } from "react-icons/fa";
+export function BoardNav(props) {
 
     return (
-        <nav className="board-nav flex space-between align-center">
-            <div className="logo">logo</div>
+        <nav className="board-nav flex space-between align-center justify-center">
             <ul className="main-links flex space-even">
-                <li>Home</li>
-                <li>About</li>
+                <li><FaTh /></li>
+                <li><FaHome /></li>
+                <li><FaColumns /></li>
+                <input type="text" name="search" placeholder="Search.." />
+            </ul>
+            <div className="logo">
+                <img src={image} alt="" />
+
+            </div>
+            <ul className="main-links flex space-even">
+                <li><FaWeightHanging /></li>
+                <li><FaPlus /></li>
+                <li><FaInfo /></li>
+                <li><FaUserCircle /></li>
             </ul>
 
         </nav>)

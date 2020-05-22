@@ -1,28 +1,91 @@
 .board-nav {
-    background-color: rgba(0, 0, 0, 0.918);
-    color: $clr1;
-    padding: 10px;
+    background-color: $clr1;
+    color: $clr6;
+    input:focus {
+        width: 100%;
+    }
     & .main-links {
-        background-color: $clr5;
+        // font-size: 1.6rem;
+        width: 350px;
+        color: $clr6;
+        text-align: center;
+        font-size: 1.5rem;
+        align-items: center;
+        & span {
+            background-color: $clr4;
+        }
+        & svg {
+            background-color: $clr4;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 12%;
+        }
         & li {
             margin-left: 10px;
+        }
+    }
+    & .logo {
+        & img {
+            line-height: 0em;
+            padding: 0px;
+            width: 7rem;
+            cursor: pointer;
         }
     }
 }
 
 .list-container {
-    background-color: $clr1;
+    background-color: $clr6;
     padding: 10px;
     width: 80%;
 }
 
 .side-bar {
     width: 20%;
-    background-color: $clr5;
+    background-color: $clr8;
+    // position: absolute;
+    font-family: $mainFont;
+    border-radius: 12px;
+
     & .min-board {
+        display: flex;
+        // align-items: center;
+        padding: 10px;
+
         & img {
             // height: 200px;
-            width: 80%;
+            width: 100%;
+            position: relative;
+            margin: auto;
+            border-radius: 12px;
+        }
+        & h2 {
+            font-family: $mainFont;
+
+            position: absolute;
+            z-index: 100;
+            width: 20%;
+            top: 20%;
+            color: $clr7;
+            font-size: 2rem;
+            background-color: $clr4;
+        }
+        & input {
+            position: absolute;
+            width: 10%;
+            margin-left: 5%;
+            text-align: center;
+            top: 25%;
+            background-color: $clr5;
+            & ::placeholder {
+                color: $clr7;
+            }
+        }
+        & button {
+            position: absolute;
+            width: 10%;
+            margin-left: 5%;
+            top: 30%;
         }
     }
 }
@@ -30,19 +93,20 @@
 .board-prev {
     padding: 50px;
     min-width: 300px;
+    border-radius: 12px;
 }
 
 .bg-container {
     margin: auto;
-    background-color: $clr5;
-    & .photos {
-        height: 200px;
+    background-color: $clr8;
+    border-radius: 12px;
+    padding: 10px;
+    & .photos,
+    .colors {
+        height: 150px;
         overflow-y: scroll;
     }
-    & .colors {
-        height: 200px;
-        overflow-y: scroll;
-    }
+
     & img {
         margin: auto;
         width: 25%;
@@ -54,4 +118,20 @@
 
 .img-line {
     width: 100%;
+}
+
+input {
+    width: 200px;
+    box-sizing: border-box;
+    // border: 2px solid #ccc;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: $clr4;
+    // background-position: 10px 10px;
+    // background-repeat: no-repeat;
+    padding: 6px 10px 6px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    margin-left: 10px;
 }

@@ -1,15 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react';
 
 export function MiniUser(props) {
     const { users } = props
+    const initials=(name)=>name.split(' ')
+    .reduce((initials,part)=>initials+=part.charAt(0),'')
+    .toUpperCase();
+        
     return (
         <ul className="mini-user-list">
-            {users && users.map(user =>
-            <li key={user._id} className="mini-user">
-                <img className="mini-user-img" src={require(`../assets/imgs/${user.imgUrl}`)} />
-                <span>{user.fullName}</span>
-            </li>)
-                }
+            {users && users.map(({_id,imgUrl,fullName}) =>
+                <li key={_id} className="mini-user">
+                    <img className="mini-user-img"
+                        src={require(`../assets/imgs/${imgUrl}`)}
+                        alt={initials(fullName)} />
+                    <span>{fullName}</span>
+                </li>)}
         </ul>
     )
 }
