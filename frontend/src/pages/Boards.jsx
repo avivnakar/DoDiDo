@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { BoardsList } from '../cmps/board/BoardsList.jsx';
-import { BoardNav } from '../cmps/board/BoardNav.jsx';
 import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
@@ -21,7 +20,6 @@ export class _Boards extends Component {
     render() {
         return (
             <React.Fragment>
-                <BoardNav />
                 <section className="flex">
                     <div className="list-container">
                         <BoardsList boards={this.props.boards} />
