@@ -21,6 +21,7 @@
   },
   "scripts": {
     "server": "cd .. && cd backend && json-server --port 3030 -w db.json -r routes.json -i=_id",
+    "server-d": "cd .. && cd backend && json-server --delay 2300 --port 3030 -w db.json -r routes.json -i=_id",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
