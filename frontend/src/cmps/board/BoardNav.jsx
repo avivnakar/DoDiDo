@@ -1,6 +1,5 @@
 import React from 'react'
 import image from '../../assets/imgs/Logo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaTh, FaColumns, FaPlus, FaWeightHanging, FaUserCircle, FaInfo, FaHome, FaSistrix } from "react-icons/fa";
 export function BoardNav(props) {
 
