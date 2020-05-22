@@ -17,7 +17,7 @@ function getById(id) {
     return get(id);
 }
 function get(id) {
-    return httpService.get(entity,id);
+    return httpService.get(`${entity}/${id}`);
 }
 
 function remove(boardId) {
