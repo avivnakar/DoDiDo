@@ -4,7 +4,7 @@ import { AddMembers } from './AddMembers.jsx';
 import { CardTitle } from './CardTitle.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { CardLabel } from './CardLabel.jsx';
-import { MiniUser } from '../../MiniUser.jsx';
+import { MiniUser } from '../MiniUser';
 import { connect } from 'react-redux';
 
 
@@ -12,21 +12,23 @@ class _CardDetails extends Component {
     state = {
         addTo: null
     }
+    componentDidMount() {
+        {/* {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />} */ }
 
+    }
     addMembers() {
         this.setState({
             addTo: 'members'
         })
     }
-
     render() {
         const { card, members } = this.props
         return (
             <section className="card-details">
                 <div>
-                    <CardTitle title={card.title}/>
+                    <CardTitle title={card.title} />
                     <CardLabel />
-                    {card.cardMembers && <div><MiniUser users={card.cardMembers}/><button>+Add</button></div>}
+                    {card.cardMembers && <div><MiniUser users={card.cardMembers} /><button>+Add</button></div>}
                     <div>
                         Description
                         <CardDesc desc={card.desc} />
@@ -38,17 +40,17 @@ class _CardDetails extends Component {
                     <button>Checklist</button>
                     <button>Due Date</button>
                     <button>Attachment</button>
-                    {this.state.addTo === 'members' && <AddMembers boardUsers={members} cardMembers={card.cardMembers}/>}
-                    {this.state.addTo === 'labels' && <AddLabels cardMembers={card.labels}/>}
+                    {this.state.addTo === 'members' && <AddMembers boardUsers={members} cardMembers={card.cardMembers} />}
+                    {this.state.addTo === 'labels' && <AddLabels cardMembers={card.labels} />}
                 </div>
             </section>
         )
     }
 }
 const mapStateToProps = (state) => {
-    
+
     return {
-    //     currCard
+        //     currCard
     }
 }
 

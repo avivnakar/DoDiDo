@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
-import { CardDetails } from '../cmps/board/card/CardDetails.jsx';
+import { CardDetails } from '../cmps/card/CardDetails.jsx';
 import { setBoard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext } from 'react-beautiful-dnd';

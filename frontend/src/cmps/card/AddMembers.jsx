@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { MiniUser } from '../../MiniUser.jsx';
+import { MiniUser } from '../MiniUser.jsx';
 
 export class AddMembers extends Component {
     state ={
