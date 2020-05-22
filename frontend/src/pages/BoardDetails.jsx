@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
-import { setBoard,updateBoard } from '../store/actions/boardActions.js';
+import { setBoard, updateBoard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 export class _BoardDetails extends Component {
     state = {
@@ -21,20 +21,27 @@ export class _BoardDetails extends Component {
         })
     }
     onDragEnd = result => {
-        const {board} = this.props
-        const { destination, source, draggableId } = result;
-        if(!destination) return;
-        if(destination.droppableId === source.droppableId && destination.index === source.index) return;
-        const {destListIdx,srcListIdx, cardMoved} = board.cardLists.reduce((acc,list,idx)=>{
-            if(source.droppableId === list.id) {
-                acc.srcListIdx = idx
-                acc.cardMoved = list.cards.find(card => card.id === draggableId) 
-            }
-            if(destination.droppableId === list.id) acc.destListIdx = idx
-            return acc;
-        },{})
-        board.cardLists[srcListIdx].cards.splice(source.index,1)
-        board.cardLists[destListIdx].cards.splice(destination.index,0,cardMoved)
+        const { board } = this.props
+        const { destination, source, draggableId, type } = result;
+        if (!destination) return;
+        if (destination.droppableId === source.droppableId && destination.index === source.index) return;
+        if (type === 'column') {
+            console.log(result);
+            var list = board.cardLists.find(list=> list.id === draggableId)
+            board.cardLists.splice(source.index, 1)
+            board.cardLists.splice(destination.index, 0, list)
+        } else {
+            const { destListIdx, srcListIdx, cardMoved } = board.cardLists.reduce((acc, list, idx) => {
+                if (source.droppableId === list.id) {
+                    acc.srcListIdx = idx
+                    acc.cardMoved = list.cards.find(card => card.id === draggableId)
+                }
+                if (destination.droppableId === list.id) acc.destListIdx = idx
+                return acc;
+            }, {})
+            board.cardLists[srcListIdx].cards.splice(source.index, 1)
+            board.cardLists[destListIdx].cards.splice(destination.index, 0, cardMoved)
+        }
         this.props.updateBoard(board)
     };
     render() {
@@ -43,13 +50,21 @@ export class _BoardDetails extends Component {
             console.log(board.cardLists);
             return (
                 <DragDropContext onDragEnd={this.onDragEnd}>
-                    <React.Fragment>
-                        {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
-                        <div className="list-container">
-                            {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} />)}
-                        </div>
-                        {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
-                    </React.Fragment>
+                    <Droppable droppableId='all' direction="horizontal" type="column">
+                        {(provided) => (
+                            <div
+                                {...provided.droppableProps}
+                                ref={provided.innerRef}
+                            >
+                                {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
+                                <div className="list-container">
+                                    {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} />)}
+                                </div>
+                                {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
                 </DragDropContext>
             );
         } else {
