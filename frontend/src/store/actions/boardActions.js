@@ -10,18 +10,46 @@ export function loadBoards(criteria) {
             .then(boards => dispatch({ type: 'SET_BOARDS', boards }))
     }
 }
-export function setBoard(board) {
+export function loadBoard(id) {
+    return dispatch => {
+        boardService.get(id)
+            .then(board => {
+                dispatch({ type: 'SET_BOARD', board });
+            })
+    }
+}
+// export function removeCar(carId) {
+//     return dispatch => {
+//         carService.remove(carId)
+//             .then(() => dispatch({ type: 'REMOVE_CAR', carId }))
+//     }
+// }
+
+export function setBoard(board = null) {
     return dispatch => dispatch({ type: 'SET_BOARD', board })
+}
+export function setCard(card = null) {
+    return dispatch => dispatch({ type: 'SET_CARD', card })
 }
 export function addBoard(board) {
     return dispatch => {
         return async () => {
-            const prm = await boardService.update(board);
+            const prm = await boardService.add(board);
             dispatch({ type: 'ADD_BOARD', board });
             return prm;
         };
     }
 }
+export function updateBoard(board) {
+    return dispatch => {
+        return async () => {
+            const prm = await boardService.update(board);
+            dispatch({ type: 'UPDATE_BOARD', board });
+            return prm;
+        };
+    }
+}
+
 // export function loadBoards(criteria) {
 //     return dispatch => {
 //         return boardService.query(criteria)

@@ -3,7 +3,8 @@ const entity = 'board';
 
 export const boardService = {
     query,
-    getById,
+    getById,//TODO:refactor
+    get,
     remove,
     update,
     add
@@ -13,7 +14,10 @@ function query(criteria) {
     return httpService.get(entity, criteria);
 }
 function getById(id) {
-    return query(id).then(arr=>arr[0]);
+    return get(id);
+}
+function get(id) {
+    return httpService.get(entity,id);
 }
 
 function remove(boardId) {
