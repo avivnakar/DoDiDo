@@ -6,7 +6,7 @@ export function BoardNav(props) {
 
     return (
         <nav className="board-nav flex space-between align-center justify-center">
-            <ul className="main-links flex space-even">
+            <ul className="main-links left-links flex space-even">
                 <li><FaTh /></li>
                 <li><FaHome /></li>
                 <li><FaColumns /></li>
@@ -16,7 +16,7 @@ export function BoardNav(props) {
                 <img src={image} alt="" />
 
             </div>
-            <ul className="main-links flex space-even">
+            <ul className="main-links right-links flex space-even">
                 <li><FaWeightHanging /></li>
                 <li><FaPlus /></li>
                 <li><FaInfo /></li>

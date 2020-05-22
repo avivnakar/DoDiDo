@@ -16,7 +16,7 @@ export function CreateBoard(props) {
                 </div>
                 <div className="photos column flex space-even">
                     {/* render photos here */}
-                    <div className="img-line">
+                    <div className="img-line ">
                         <img src={image} alt="" />
                         <img src={image} alt="" />
                         <img src={image} alt="" />

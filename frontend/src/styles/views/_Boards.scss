@@ -1,6 +1,7 @@
 .board-nav {
     background-color: $clr1;
     color: $clr6;
+
     input:focus {
         width: 100%;
     }
@@ -8,9 +9,14 @@
         // font-size: 1.6rem;
         width: 350px;
         color: $clr6;
+        margin: 0px;
         text-align: center;
         font-size: 1.5rem;
         align-items: center;
+        &.right-links {
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
         & span {
             background-color: $clr4;
         }
@@ -25,10 +31,11 @@
         }
     }
     & .logo {
+        display: flex;
         & img {
             line-height: 0em;
             padding: 0px;
-            width: 7rem;
+            width: 5rem;
             cursor: pointer;
         }
     }
@@ -118,20 +125,4 @@
 
 .img-line {
     width: 100%;
-}
-
-input {
-    width: 200px;
-    box-sizing: border-box;
-    // border: 2px solid #ccc;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    background-color: $clr4;
-    // background-position: 10px 10px;
-    // background-repeat: no-repeat;
-    padding: 6px 10px 6px 20px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    margin-left: 10px;
 }
