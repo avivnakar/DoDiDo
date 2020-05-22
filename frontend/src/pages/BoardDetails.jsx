@@ -57,6 +57,7 @@ export class _BoardDetails extends Component {
 const mapStateToProps = (state) => {
     return {
         board: state.board.currBoard,
+        
         // board: {
         //     "_id": "5c09",
         //     "name": "BoardMcBoardy",
