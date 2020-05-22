@@ -8,7 +8,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 
 export class _BoardDetails extends Component {
     state = {
-        currCard: null
+        currCard: null,
     }
     componentDidMount() {
         const id = this.props.match.params.boardId;
@@ -37,17 +37,28 @@ export class _BoardDetails extends Component {
     };
     render() {
         const { board } = this.props;
+
+
         if (board) {
 
+            var bg = require('../assets/imgs/' + board.background.toString())
+            var styleLi = {
+                backgroundImage: `url(${bg})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                // backgroundColor: 'pink',
+                backgroundRepeat: 'no-repeat'
+            }
+            console.log(styleLi);
+            // 
             return (
                 <DragDropContext onDragEnd={this.onDragEnd}>
-                    <React.Fragment>
-                        {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
-                        <div className="list-container">
-                            {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} />)}
-                        </div>
-                        {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
-                    </React.Fragment>
+                    {/* <img src={require('../assets/imgs/3.jpg')} alt="" /> */}
+                    {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
+                    <div className="board" style={styleLi}>
+                        {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} />)}
+                    </div>
+                    {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
                 </DragDropContext>
             );
         } else {
