@@ -6,20 +6,19 @@ export function CardPreiview(props) {
     return (
         <Draggable draggableId={card.id} index={props.index}>
             {(provided) => (
-                <div onClick={() => props.getCurrCard(card)}
+                <article onClick={() => props.getCurrCard(card)}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
                 >
                     <span>{card.title}</span>
                     <div>
-                        {card.cheklists && <span>{card.cheklists.length}📝</span>}
-                        {card.cardMembers && <span>{card.cardMembers.length}👤</span>}
-                        {card.attachments && <span>{card.attachments.length}📦</span>}
-                        {card.dueDate && <span>⏰</span>}
-
+                        {card.cheklists && <span>{card.cheklists.length}{'📝'}</span>}
+                        {card.cardMembers && <span>{card.cardMembers.length}{'👤'}</span>}
+                        {card.attachments && <span>{card.attachments.length}{'📦'}</span>}
+                        {card.dueDate && <span>{'⏰'}</span>}
                     </div>
-                </div>
+                </article>
             )}
         </Draggable>
     )
