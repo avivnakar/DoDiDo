@@ -22,6 +22,9 @@ export class Homepage extends Component {
                         <img src={require('../assets/imgs/1.png')} alt="" />
                         <div className="txt-para">
                             <h1>Work with any team</h1>
+                            <i className="fas fa-plus"></i>
+                            <i className="fas fa-plus"></i>
+                            <i className="fas fa-plus"></i>
                             <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
                             <div className="start-emil">
                                 <input type="text" placeholder="Email" />

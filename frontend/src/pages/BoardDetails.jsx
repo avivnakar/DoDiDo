@@ -38,8 +38,7 @@ export class _BoardDetails extends Component {
     render() {
         const { board } = this.props;
         if (board) {
-            console.log('%c cardLists:','color:red;',board.cardLists);
-            console.log('%c board','color:orange;',board);
+
             return (
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <React.Fragment>
