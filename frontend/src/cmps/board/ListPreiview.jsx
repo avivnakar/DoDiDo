@@ -6,7 +6,7 @@ export function ListPreiview(props) {
     const { list } = props
     return (
         <section className="list">
-            <h4>{list.title}</h4>
+            <div className="list-title">{list.title}</div>
             <Droppable droppableId={list.id}>
                 {(provided) => (
                     <div
@@ -18,7 +18,7 @@ export function ListPreiview(props) {
                     </div>
                 )}
             </Droppable>
-            <div className="add-btn-input">
+            <div className="add-card-btn">
                 <button>+ Add Card</button>
             </div>
         </section>

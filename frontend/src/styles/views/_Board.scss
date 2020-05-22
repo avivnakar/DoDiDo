@@ -1,0 +1,25 @@
+.list {
+    background-color: $list-bgc;
+    width: 272px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-right: 10px;
+    & .list-title {
+        font-family: $mainFont;
+        color: $list-title;
+        line-height: 1.5em;
+        font-size: 1.2rem;
+    }
+}
+
+.add-card-btn {
+    background-color: red;
+}
+
+.list-container {
+    display: flex;
+}
+
+.card {
+    background-color: black;
+}

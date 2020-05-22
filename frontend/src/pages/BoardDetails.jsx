@@ -43,7 +43,9 @@ export class _BoardDetails extends Component {
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <React.Fragment>
                         {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
-                        {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} />)}
+                        <div className="list-container">
+                            {board.cardLists && board.cardLists.map(list => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} />)}
+                        </div>
                         {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
                     </React.Fragment>
                 </DragDropContext>
@@ -57,7 +59,7 @@ export class _BoardDetails extends Component {
 const mapStateToProps = (state) => {
     return {
         board: state.board.currBoard,
-        
+
         // board: {
         //     "_id": "5c09",
         //     "name": "BoardMcBoardy",
