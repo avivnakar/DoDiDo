@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image from '../../assets/imgs/3.jpg'
 export function CreateBoard(props) {
     return (
@@ -12,7 +13,7 @@ export function CreateBoard(props) {
             <div className="bg-container">
                 <div className="photos-title flex space-between">
                     <p>photos</p>
-                    <a href="#">see more</a>
+                    <Link to="#">see more</Link>
                 </div>
                 <div className="photos column flex space-even">
                     {/* render photos here */}
@@ -34,7 +35,7 @@ export function CreateBoard(props) {
                 </div>
                 <div className="colors-title flex space-between">
                     <p>colors</p>
-                    <a href="">see more</a>
+                    <Link to="">see more</Link>
                 </div>
                 <div className="colors column flex space-even">
                     {/* render colors here */}

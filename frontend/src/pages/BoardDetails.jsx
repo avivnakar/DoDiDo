@@ -59,255 +59,6 @@ export class _BoardDetails extends Component {
 const mapStateToProps = (state) => {
     return {
         board: state.board.currBoard,
-
-        // board: {
-        //     "_id": "5c09",
-        //     "name": "BoardMcBoardy",
-        //     "desc": "this board is board",
-        //     "background": "/fdsfsdfds.jpg",
-        //     "createdBy": {
-        //         "_id": "u101",
-        //         "fullName": "Gal Rondel",
-        //         "imgUrl": "././img/troll.jpg"
-        //     },
-        //     "members": [
-        //         {
-        //             "_id": "u101",
-        //             "fullName": "Gal Rondel",
-        //             "imgUrl": "adf.png"
-        //         },
-        //         {
-        //             "_id": "u401",
-        //             "fullName": "Aviv Nakar",
-        //             "imgUrl": "adf.png"
-        //         }
-        //     ],
-        //     "activities": [],
-        //     "cardLists": [
-        //         {
-        //             "title": "Grabage bin",
-        //             "id": "recycleBin_5c09",
-        //             "cards": []
-        //         },
-        //         {
-        //             "title": "The End Sprint",
-        //             "id": "s100",
-        //             "cards": [
-        //                 {
-        //                     "id": "5c09",
-        //                     "title": "Do It",
-        //                     "labels": [
-        //                         {
-        //                             "title": "IT",
-        //                             "color": "red"
-        //                         },
-        //                         {
-        //                             "title": "",
-        //                             "color": "orange"
-        //                         }
-        //                     ],
-        //                     "createdBy": {
-        //                         "_id": "u401",
-        //                         "fullName": "Aviv Nakar",
-        //                         "imgUrl": "adf.jpg"
-        //                     },
-        //                     "cardMembers": [
-        //                         {
-        //                             "_id": "u401",
-        //                             "fullName": "Aviv Nakar",
-        //                             "imgUrl": "adf.png"
-        //                         }
-        //                     ],
-        //                     "desc": "testin testin testing",
-        //                     "dueDate": 5413234551234,
-        //                     "cheklists": [
-        //                         {
-        //                             "id": "14s3",
-        //                             "title": "checklist22",
-        //                             "todos": [
-        //                                 {
-        //                                     "id": "14sf3",
-        //                                     "text": "lorem blabla bla bla bla",
-        //                                     "doneAt": 14325434545,
-        //                                     "doneBy": {
-        //                                         "_id": "u401",
-        //                                         "fullName": "Aviv Nakar",
-        //                                         "imgUrl": "adf.jpg"
-        //                                     }
-        //                                 }
-        //                             ]
-        //                         }
-        //                     ],
-        //                     "attachments": [
-        //                         {
-        //                             "id": "23s4",
-        //                             "name": "lorem",
-        //                             "url": "././img/ape.jpg",
-        //                             "addedBy": {
-        //                                 "_id": "u401",
-        //                                 "fullName": "Aviv Nakar",
-        //                                 "imgUrl": "adf.jpg"
-        //                             }
-        //                         }
-        //                     ]
-        //                 }
-        //             ]
-        //         }
-        //     ]
-        // }
-        // board: {
-        //     "_id": "5c09",
-        //     "name": "BoardMcBoardy",
-        //     "desc": "this board is board",
-        //     "background": "/fdsfsdfds.jpg",
-        //     "createdBy": {
-        //         "_id": "u101",
-        //         "fullName": "Gal Rondel",
-        //         "imgUrl": "././img/troll.jpg"
-        //     },
-        //     "members": [
-        //         {
-        //             "_id": "u101",
-        //             "fullName": "Gal Rondel",
-        //             "imgUrl": "adf.png"
-        //         },
-        //         {
-        //             "_id": "u401",
-        //             "fullName": "Aviv Nakar",
-        //             "imgUrl": "adf.png"
-        //         }
-        //     ],
-        //     "activities": [],
-        //     "cardLists": [
-        //         {
-        //             "title": "Grabage bin",
-        //             "id": "recycleBin_5c09",
-        //             "cards": []
-        //         },
-        //         {
-        //             "title": "The End Sprint",
-        //             "id": "s100",
-        //             "cards": [
-        //                 {
-        //                     "id": "5c09",
-        //                     "title": "Do It",
-        //                     "labels": [
-        //                         {
-        //                             "title": "IT",
-        //                             "color": "red"
-        //                         },
-        //                         {
-        //                             "title": "",
-        //                             "color": "orange"
-        //                         }
-        //                     ],
-        //                     "createdBy": {
-        //                         "_id": "u401",
-        //                         "fullName": "Aviv Nakar",
-        //                         "imgUrl": "adf.jpg"
-        //                     },
-        //                     "cardMembers": [
-        //                         {
-        //                             "_id": "u401",
-        //                             "fullName": "Aviv Nakar",
-        //                             "imgUrl": "adf.png"
-        //                         }
-        //                     ],
-        //                     "desc": "testin testin testing",
-        //                     "dueDate": 5413234551234,
-        //                     "cheklists": [
-        //                         {
-        //                             "id": "14s3",
-        //                             "title": "checklist22",
-        //                             "todos": [
-        //                                 {
-        //                                     "id": "14sf3",
-        //                                     "text": "lorem blabla bla bla bla",
-        //                                     "doneAt": 14325434545,
-        //                                     "doneBy": {
-        //                                         "_id": "u401",
-        //                                         "fullName": "Aviv Nakar",
-        //                                         "imgUrl": "adf.jpg"
-        //                                     }
-        //                                 }
-        //                             ]
-        //                         }
-        //                     ],
-        //                     "attachments": [
-        //                         {
-        //                             "id": "23s4",
-        //                             "name": "lorem",
-        //                             "url": "././img/ape.jpg",
-        //                             "addedBy": {
-        //                                 "_id": "u401",
-        //                                 "fullName": "Aviv Nakar",
-        //                                 "imgUrl": "adf.jpg"
-        //                             }
-        //                         }
-        //                     ]
-        //                 },
-        //                 {
-        //                     "id": "5539",
-        //                     "title": "Done PLS",
-        //                     "labels": [
-        //                         {
-        //                             "title": "IT",
-        //                             "color": "red"
-        //                         },
-        //                         {
-        //                             "title": "",
-        //                             "color": "orange"
-        //                         }
-        //                     ],
-        //                     "createdBy": {
-        //                         "_id": "u401",
-        //                         "fullName": "Aviv Nakar",
-        //                         "imgUrl": "adf.jpg"
-        //                     },
-        //                     "cardMembers": [
-        //                         {
-        //                             "_id": "u401",
-        //                             "fullName": "Aviv Nakar",
-        //                             "imgUrl": "adf.png"
-        //                         }
-        //                     ],
-        //                     "desc": "testin testin testing",
-        //                     "dueDate": 5413234551234,
-        //                     "cheklists": [
-        //                         {
-        //                             "id": "14h3",
-        //                             "title": "checklist22",
-        //                             "todos": [
-        //                                 {
-        //                                     "id": "14s6f3",
-        //                                     "text": "lorem blabla bla bla bla",
-        //                                     "doneAt": 14325434545,
-        //                                     "doneBy": {
-        //                                         "_id": "u401",
-        //                                         "fullName": "Aviv Nakar",
-        //                                         "imgUrl": "adf.jpg"
-        //                                     }
-        //                                 }
-        //                             ]
-        //                         }
-        //                     ],
-        //                     "attachments": [
-        //                         {
-        //                             "id": "24s4",
-        //                             "name": "lorem",
-        //                             "url": "././img/ape.jpg",
-        //                             "addedBy": {
-        //                                 "_id": "u401",
-        //                                 "fullName": "Aviv Nakar",
-        //                                 "imgUrl": "adf.jpg"
-        //                             }
-        //                         }
-        //                     ]
-        //                 }
-        //             ]
-        //         }
-        //     ]
-        // }
     }
 }
 
@@ -317,3 +68,252 @@ const mapDispatchToProps = {
 
 export const BoardDetails = connect(mapStateToProps, mapDispatchToProps)(_BoardDetails)
 
+
+// board: {
+//     "_id": "5c09",
+//     "name": "BoardMcBoardy",
+//     "desc": "this board is board",
+//     "background": "/fdsfsdfds.jpg",
+//     "createdBy": {
+//         "_id": "u101",
+//         "fullName": "Gal Rondel",
+//         "imgUrl": "././img/troll.jpg"
+//     },
+//     "members": [
+//         {
+//             "_id": "u101",
+//             "fullName": "Gal Rondel",
+//             "imgUrl": "adf.png"
+//         },
+//         {
+//             "_id": "u401",
+//             "fullName": "Aviv Nakar",
+//             "imgUrl": "adf.png"
+//         }
+//     ],
+//     "activities": [],
+//     "cardLists": [
+//         {
+//             "title": "Grabage bin",
+//             "id": "recycleBin_5c09",
+//             "cards": []
+//         },
+//         {
+//             "title": "The End Sprint",
+//             "id": "s100",
+//             "cards": [
+//                 {
+//                     "id": "5c09",
+//                     "title": "Do It",
+//                     "labels": [
+//                         {
+//                             "title": "IT",
+//                             "color": "red"
+//                         },
+//                         {
+//                             "title": "",
+//                             "color": "orange"
+//                         }
+//                     ],
+//                     "createdBy": {
+//                         "_id": "u401",
+//                         "fullName": "Aviv Nakar",
+//                         "imgUrl": "adf.jpg"
+//                     },
+//                     "cardMembers": [
+//                         {
+//                             "_id": "u401",
+//                             "fullName": "Aviv Nakar",
+//                             "imgUrl": "adf.png"
+//                         }
+//                     ],
+//                     "desc": "testin testin testing",
+//                     "dueDate": 5413234551234,
+//                     "cheklists": [
+//                         {
+//                             "id": "14s3",
+//                             "title": "checklist22",
+//                             "todos": [
+//                                 {
+//                                     "id": "14sf3",
+//                                     "text": "lorem blabla bla bla bla",
+//                                     "doneAt": 14325434545,
+//                                     "doneBy": {
+//                                         "_id": "u401",
+//                                         "fullName": "Aviv Nakar",
+//                                         "imgUrl": "adf.jpg"
+//                                     }
+//                                 }
+//                             ]
+//                         }
+//                     ],
+//                     "attachments": [
+//                         {
+//                             "id": "23s4",
+//                             "name": "lorem",
+//                             "url": "././img/ape.jpg",
+//                             "addedBy": {
+//                                 "_id": "u401",
+//                                 "fullName": "Aviv Nakar",
+//                                 "imgUrl": "adf.jpg"
+//                             }
+//                         }
+//                     ]
+//                 }
+//             ]
+//         }
+//     ]
+// }
+// board: {
+//     "_id": "5c09",
+//     "name": "BoardMcBoardy",
+//     "desc": "this board is board",
+//     "background": "/fdsfsdfds.jpg",
+//     "createdBy": {
+//         "_id": "u101",
+//         "fullName": "Gal Rondel",
+//         "imgUrl": "././img/troll.jpg"
+//     },
+//     "members": [
+//         {
+//             "_id": "u101",
+//             "fullName": "Gal Rondel",
+//             "imgUrl": "adf.png"
+//         },
+//         {
+//             "_id": "u401",
+//             "fullName": "Aviv Nakar",
+//             "imgUrl": "adf.png"
+//         }
+//     ],
+//     "activities": [],
+//     "cardLists": [
+//         {
+//             "title": "Grabage bin",
+//             "id": "recycleBin_5c09",
+//             "cards": []
+//         },
+//         {
+//             "title": "The End Sprint",
+//             "id": "s100",
+//             "cards": [
+//                 {
+//                     "id": "5c09",
+//                     "title": "Do It",
+//                     "labels": [
+//                         {
+//                             "title": "IT",
+//                             "color": "red"
+//                         },
+//                         {
+//                             "title": "",
+//                             "color": "orange"
+//                         }
+//                     ],
+//                     "createdBy": {
+//                         "_id": "u401",
+//                         "fullName": "Aviv Nakar",
+//                         "imgUrl": "adf.jpg"
+//                     },
+//                     "cardMembers": [
+//                         {
+//                             "_id": "u401",
+//                             "fullName": "Aviv Nakar",
+//                             "imgUrl": "adf.png"
+//                         }
+//                     ],
+//                     "desc": "testin testin testing",
+//                     "dueDate": 5413234551234,
+//                     "cheklists": [
+//                         {
+//                             "id": "14s3",
+//                             "title": "checklist22",
+//                             "todos": [
+//                                 {
+//                                     "id": "14sf3",
+//                                     "text": "lorem blabla bla bla bla",
+//                                     "doneAt": 14325434545,
+//                                     "doneBy": {
+//                                         "_id": "u401",
+//                                         "fullName": "Aviv Nakar",
+//                                         "imgUrl": "adf.jpg"
+//                                     }
+//                                 }
+//                             ]
+//                         }
+//                     ],
+//                     "attachments": [
+//                         {
+//                             "id": "23s4",
+//                             "name": "lorem",
+//                             "url": "././img/ape.jpg",
+//                             "addedBy": {
+//                                 "_id": "u401",
+//                                 "fullName": "Aviv Nakar",
+//                                 "imgUrl": "adf.jpg"
+//                             }
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     "id": "5539",
+//                     "title": "Done PLS",
+//                     "labels": [
+//                         {
+//                             "title": "IT",
+//                             "color": "red"
+//                         },
+//                         {
+//                             "title": "",
+//                             "color": "orange"
+//                         }
+//                     ],
+//                     "createdBy": {
+//                         "_id": "u401",
+//                         "fullName": "Aviv Nakar",
+//                         "imgUrl": "adf.jpg"
+//                     },
+//                     "cardMembers": [
+//                         {
+//                             "_id": "u401",
+//                             "fullName": "Aviv Nakar",
+//                             "imgUrl": "adf.png"
+//                         }
+//                     ],
+//                     "desc": "testin testin testing",
+//                     "dueDate": 5413234551234,
+//                     "cheklists": [
+//                         {
+//                             "id": "14h3",
+//                             "title": "checklist22",
+//                             "todos": [
+//                                 {
+//                                     "id": "14s6f3",
+//                                     "text": "lorem blabla bla bla bla",
+//                                     "doneAt": 14325434545,
+//                                     "doneBy": {
+//                                         "_id": "u401",
+//                                         "fullName": "Aviv Nakar",
+//                                         "imgUrl": "adf.jpg"
+//                                     }
+//                                 }
+//                             ]
+//                         }
+//                     ],
+//                     "attachments": [
+//                         {
+//                             "id": "24s4",
+//                             "name": "lorem",
+//                             "url": "././img/ape.jpg",
+//                             "addedBy": {
+//                                 "_id": "u401",
+//                                 "fullName": "Aviv Nakar",
+//                                 "imgUrl": "adf.jpg"
+//                             }
+//                         }
+//                     ]
+//                 }
+//             ]
+//         }
+//     ]
+// }

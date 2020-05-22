@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../../assets/imgs/Logo.png'
-import { FaTh, FaColumns, FaPlus, FaWeightHanging, FaUserCircle, FaInfo, FaHome, FaSistrix } from "react-icons/fa";
+import { FaTh, FaColumns, FaPlus, FaWeightHanging, FaUserCircle, FaInfo, FaHome } from "react-icons/fa";
 export function BoardNav(props) {
 
     return (

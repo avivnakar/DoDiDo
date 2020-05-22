@@ -47,9 +47,9 @@ class _CardDetails extends Component {
 }
 const mapStateToProps = (state) => {
     
-    // return {
+    return {
     //     currCard
-    // }
+    }
 }
 
 const mapDispatchToProps = {
