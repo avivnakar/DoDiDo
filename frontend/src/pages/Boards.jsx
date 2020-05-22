@@ -41,7 +41,7 @@ const mapStateToProps = (state) => {
 
     return {
         boards: state.board.boards,
-        // boards: [{ _id: '0', name: '+Create new board', background: '' }, { _id: '1', name: 'rondelicious', background: '../3.jpg' }, { _id: '2', name: 'Yuval', background: '../5.jpg' }, { _id: '2', name: 'Aviv', background: '../4.jpg' }],
+        boards: [{ _id: '0', name: '+Create new board', background: '' }, { _id: '1', name: 'rondelicious', background: '../3.jpg' }, { _id: '2', name: 'Yuval', background: '../5.jpg' }, { _id: '2', name: 'Aviv', background: '../4.jpg' }],
         // filter: state.Boards.filter
         // loadBoards: function () { console.log('loading boards') }
     }

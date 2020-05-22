@@ -1,6 +1,10 @@
 .board-nav {
     background-color: $clr1;
     color: $clr6;
+<<<<<<< HEAD
+=======
+
+>>>>>>> f50abd4d00af843af5ca6fe2ffe1a46b7a27effc
     input:focus {
         width: 100%;
     }
@@ -8,9 +12,20 @@
         // font-size: 1.6rem;
         width: 350px;
         color: $clr6;
+<<<<<<< HEAD
         text-align: center;
         font-size: 1.5rem;
         align-items: center;
+=======
+        margin: 0px;
+        text-align: center;
+        font-size: 1.5rem;
+        align-items: center;
+        &.right-links {
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
+>>>>>>> f50abd4d00af843af5ca6fe2ffe1a46b7a27effc
         & span {
             background-color: $clr4;
         }
@@ -25,10 +40,18 @@
         }
     }
     & .logo {
+<<<<<<< HEAD
         & img {
             line-height: 0em;
             padding: 0px;
             width: 7rem;
+=======
+        display: flex;
+        & img {
+            line-height: 0em;
+            padding: 0px;
+            width: 5rem;
+>>>>>>> f50abd4d00af843af5ca6fe2ffe1a46b7a27effc
             cursor: pointer;
         }
     }
