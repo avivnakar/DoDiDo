@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
+import { AddList } from '../cmps/board/AddList.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
 import { setBoard, updateBoard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+
 
 export class _BoardDetails extends Component {
     state = {
@@ -46,8 +48,6 @@ export class _BoardDetails extends Component {
     };
     render() {
         const { board } = this.props;
-
-
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
@@ -57,7 +57,8 @@ export class _BoardDetails extends Component {
                 // backgroundColor: 'pink',
                 backgroundRepeat: 'no-repeat'
             }
-            console.log(styleLi); return (
+            console.log(styleLi);
+            return (
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <Droppable droppableId='all' direction="horizontal" type="column">
                         {(provided) => (
@@ -68,6 +69,7 @@ export class _BoardDetails extends Component {
                                 {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
                                 <div className="board" style={styleLi}>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} />)}
+                                    <AddList board={board} updateBoard={updateBoard} />
                                 </div>
                                 {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
                                 {provided.placeholder}
