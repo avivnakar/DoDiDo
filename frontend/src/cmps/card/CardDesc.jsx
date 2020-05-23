@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export class CardDesc extends Component {
     state = {
-        isEdit: null
+        isEdit: false
     }
     onEdit() {
         this.setState({

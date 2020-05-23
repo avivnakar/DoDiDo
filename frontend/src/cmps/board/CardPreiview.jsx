@@ -5,7 +5,7 @@ import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegLi
 import { AiOutlineDatabase } from "react-icons/ai";
 
 export function CardPreiview(props) {
-    const { card } = props
+    const { card,onCardRemove } = props
     return (
         <Draggable draggableId={card.id} index={props.index}>
             {(provided) => (
@@ -23,6 +23,7 @@ export function CardPreiview(props) {
                         {card.dueDate && <span>{<FaRegClock />}</span>}
                         {card.attachments && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                     </div>
+            {/* <button onClick={onCardRemove(card.id)}>{`❌`}</button> */}
                 </article>
                 //   </Link>
             )}

@@ -4,7 +4,7 @@ import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
 
-export class _Boards extends Component {
+class _Boards extends Component {
     componentDidMount() {
         this.loadBoards()
     }

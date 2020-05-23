@@ -1,5 +1,5 @@
 import { boardService } from '../../services/boardService';
-// import { utilService } from '../../services/utilService';//makeid for lists and cards
+import { utilService } from '../../services/utilService';//makeid for lists and cards
 
 // export async function loadBoards(filter) {
 //     const boards = await boardService.query(filter)
@@ -49,6 +49,79 @@ export function updateBoard(board) {
     }
 }
 
+///bad place
+function _createCard(title, createdBy) {
+    createdBy = _miniUser(createdBy);
+    return {
+        id: utilService.makeId(4),
+        title,
+        labels: [
+        ],
+        createdBy,
+        cardMembers: [createdBy],
+        desc: '',
+        dueDate: null,
+        cheklists: [],
+        attachments: []
+    }
+}
+export function removeCard(board, cardId) {
+    const { listIdx, cardIdx } = board.cardLists.reduce((acc, list, listIdx) => {
+        if (!((acc.cardIdx) && (acc.listIdx))) {
+            const idx = utilService.getIdxById(cardId,list.cards);
+            if (idx >= 0) acc = { listIdx, cardIdx: idx };
+        }
+        return acc;
+    }, {});
+    console.log("po",listIdx,cardIdx)
+    board.cardLists[listIdx].cards.splice(cardIdx, 1);
+    updateBoard(board);
+}
+export function removeList(board, listId) {
+    const idx = utilService.getIdxById(board, listId);
+    board.cardLists.splice(idx, 1);
+    updateBoard(board);
+}
+export function updateCard(board, card) {
+    const { listIdx, cardIdx } = board.cardLists.reduce((acc, list, listIdx) => {
+        if (!(acc.cardIdx) && (acc.listIdx)) {
+            const cardIdx = utilService.getIdxById(list.cards, card.id);
+            if (cardIdx) acc = { listIdx, cardIdx };
+        }
+        return acc;
+    }, {});
+    board.cardLists[listIdx].cards.splice(cardIdx, 1, card);
+    updateBoard(board);
+}
+export function updateList(board, list) {
+    const idx = utilService.getIdxById(board, list.id);
+    board.cardLists.splice(idx, 1, list);
+    updateBoard(board);
+}
+export function addCard(board, list, title, createdBy) {
+    const idx = utilService.getIdxById(board, list.id);
+    const card = _createCard(title, createdBy);
+    list.cards.push(card);
+    board.cardLists.splice(idx, 1, list);
+    updateBoard(board);
+}
+
+
+
+// function _createCheckList() {
+//     createdBy = _miniUser(createdBy);
+//     return {
+//     }
+// }
+// function _createAttachment() {
+//     createdBy = _miniUser(createdBy);
+//     return {
+//     }
+// }
+
+function _miniUser({ _id, fullName, imgUrl }) {
+    return { _id, fullName, imgUrl }
+}
 // export function loadBoards(criteria) {
 //     return dispatch => {
 //         return boardService.query(criteria)
