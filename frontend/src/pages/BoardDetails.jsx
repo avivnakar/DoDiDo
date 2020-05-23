@@ -57,7 +57,6 @@ export class _BoardDetails extends Component {
                 // backgroundColor: 'pink',
                 backgroundRepeat: 'no-repeat'
             }
-            console.log(styleLi);
             return (
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <Droppable droppableId='all' direction="horizontal" type="column">
@@ -66,10 +65,10 @@ export class _BoardDetails extends Component {
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                             >
-                                {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />}
+                                {this.state.currCard && <CardDetails card={this.state.currCard} board={board} updateBoard={this.props.updateBoard} />}
                                 <div className="board" style={styleLi}>
-                                    {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} />)}
-                                    <AddList board={board} updateBoard={updateBoard} />
+                                    {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} board={board} updateBoard={updateBoard}/>)}
+                                    <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
                                 {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
                                 {provided.placeholder}

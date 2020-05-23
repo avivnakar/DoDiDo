@@ -22,7 +22,7 @@ class _CardDetails extends Component {
         })
     }
     render() {
-        const { card, members } = this.props
+        const { card, board , updateBoard} = this.props
         return (
             <section className="card-details">
                 <div>
@@ -31,7 +31,7 @@ class _CardDetails extends Component {
                     {card.cardMembers && <div><MiniUser users={card.cardMembers} /><button>+Add</button></div>}
                     <div>
                         Description
-                        <CardDesc desc={card.desc} />
+                        <CardDesc card={card} updateBoard={updateBoard} board={board}/>
                     </div>
                 </div>
                 <div className="card-btns">
@@ -40,7 +40,7 @@ class _CardDetails extends Component {
                     <button>Checklist</button>
                     <button>Due Date</button>
                     <button>Attachment</button>
-                    {this.state.addTo === 'members' && <AddMembers boardUsers={members} cardMembers={card.cardMembers} />}
+                    {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} />}
                     {this.state.addTo === 'labels' && <AddLabels cardMembers={card.labels} />}
                 </div>
             </section>

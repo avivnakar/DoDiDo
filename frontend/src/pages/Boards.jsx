@@ -22,7 +22,7 @@ export class _Boards extends Component {
             <React.Fragment>
                 <section className="flex">
                     <div className="list-container">
-                        <BoardsList boards={this.props.boards} />
+                        <BoardsList boards={this.props.boards}/>
                     </div>
                     <div className="side-bar">
                         {/* <a>+Create new board</a> */}
