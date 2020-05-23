@@ -33,206 +33,152 @@
       "desc": "this board is board",
       "background": "3.jpg",
       "createdBy": {
-        "_id": "u101",
-        "fullName": "Gal Rondel",
-        "imgUrl": "././img/troll.jpg"
-      },
-      "members": [
-        {
           "_id": "u101",
           "fullName": "Gal Rondel",
-          "imgUrl": "adf.png"
-        },
-        {
-          "_id": "u401",
-          "fullName": "Aviv Nakar",
-          "imgUrl": "adf.png"
-        }
+          "imgUrl": "././img/troll.jpg"
+      },
+      "members": [
+          {
+              "_id": "u101",
+              "fullName": "Gal Rondel",
+              "imgUrl": "adf.png"
+          },
+          {
+              "_id": "u401",
+              "fullName": "Aviv Nakar",
+              "imgUrl": "adf.png"
+          }
       ],
       "activities": [],
       "cardLists": [
-        {
-          "id": "KQzD",
-          "title": "hjhgfjgh",
-          "cards": [
-            {
-              "id": "QXZt",
-              "title": "TEASTR"
-            }
-          ]
-        },
-        {
-          "id": "R6HM",
-          "title": "אעיכגעיעכ",
-          "cards": [
-            {
-              "id": "KZO1",
-              "title": "ארניבודק דברים"
-            }
-          ]
-        },
-        {
-          "title": "gadgdsg",
-          "id": "s100",
-          "cards": [
-            {
-              "id": "0HxK",
-              "title": "fgsdgf"
-            }
-          ]
-        },
-        {
-          "title": "gfdgsdffgd",
-          "id": "recycleBin_5c09",
-          "cards": [
-            {
-              "id": "5c09",
-              "title": "Do It",
-              "labels": [
-                {
-                  "title": "IT",
-                  "color": "red"
-                },
-                {
-                  "title": "",
-                  "color": "orange"
-                }
-              ],
-              "createdBy": {
-                "_id": "u401",
-                "fullName": "Aviv Nakar",
-                "imgUrl": "adf.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": "hjfghjjfhgjghjdfghjfjhfgthj",
-              "dueDate": 5413234551234,
-              "cheklists": [
-                {
-                  "id": "14s3",
-                  "title": "checklist22",
-                  "todos": [
-                    {
-                      "id": "14sf3",
-                      "text": "lorem blabla bla bla bla",
-                      "doneAt": 14325434545,
-                      "doneBy": {
-                        "_id": "u401",
-                        "fullName": "Aviv Nakar",
-                        "imgUrl": "adf.jpg"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "attachments": [
-                {
-                  "id": "23s4",
-                  "name": "lorem",
-                  "url": "././img/ape.jpg",
-                  "addedBy": {
-                    "_id": "u401",
-                    "fullName": "Aviv Nakar",
-                    "imgUrl": "adf.jpg"
+          {
+              "title": "Grabage bin",
+              "id": "recycleBin_5c09",
+              "cards": []
+          },
+          {
+              "title": "The End Sprint",
+              "id": "s100",
+              "cards": [
+                  {
+                      "id": "5c09",
+                      "title": "Do It",
+                      "labels": [
+                          {
+                              "title": "IT",
+                              "color": "red"
+                          },
+                          {
+                              "title": "",
+                              "color": "orange"
+                          }
+                      ],
+                      "createdBy": {
+                          "_id": "u401",
+                          "fullName": "Aviv Nakar",
+                          "imgUrl": "adf.jpg"
+                      },
+                      "cardMembers": [
+                          {
+                              "_id": "u401",
+                              "fullName": "Aviv Nakar",
+                              "imgUrl": "adf.png"
+                          }
+                      ],
+                      "desc": "testin testin testing",
+                      "dueDate": 5413234551234,
+                      "cheklists": [
+                          {
+                              "id": "14s3",
+                              "title": "checklist22",
+                              "todos": [
+                                  {
+                                      "id": "14sf3",
+                                      "text": "lorem blabla bla bla bla",
+                                      "doneAt": 14325434545,
+                                      "doneBy": {
+                                          "_id": "u401",
+                                          "fullName": "Aviv Nakar",
+                                          "imgUrl": "adf.jpg"
+                                      }
+                                  }
+                              ]
+                          }
+                      ],
+                      "attachments": [
+                          {
+                              "id": "23s4",
+                              "name": "lorem",
+                              "url": "././img/ape.jpg",
+                              "addedBy": {
+                                  "_id": "u401",
+                                  "fullName": "Aviv Nakar",
+                                  "imgUrl": "adf.jpg"
+                              }
+                          }
+                      ]
+                  },
+                  {
+                      "id": "5539",
+                      "title": "Done PLS",
+                      "labels": [
+                          {
+                              "title": "IT",
+                              "color": "red"
+                          },
+                          {
+                              "title": "",
+                              "color": "orange"
+                          }
+                      ],
+                      "createdBy": {
+                          "_id": "u401",
+                          "fullName": "Aviv Nakar",
+                          "imgUrl": "adf.jpg"
+                      },
+                      "cardMembers": [
+                          {
+                              "_id": "u401",
+                              "fullName": "Aviv Nakar",
+                              "imgUrl": "adf.png"
+                          }
+                      ],
+                      "desc": "testin testin testing",
+                      "dueDate": 5413234551234,
+                      "cheklists": [
+                          {
+                              "id": "14h3",
+                              "title": "checklist22",
+                              "todos": [
+                                  {
+                                      "id": "14s6f3",
+                                      "text": "lorem blabla bla bla bla",
+                                      "doneAt": 14325434545,
+                                      "doneBy": {
+                                          "_id": "u401",
+                                          "fullName": "Aviv Nakar",
+                                          "imgUrl": "adf.jpg"
+                                      }
+                                  }
+                              ]
+                          }
+                      ],
+                      "attachments": [
+                          {
+                              "id": "24s4",
+                              "name": "lorem",
+                              "url": "././img/ape.jpg",
+                              "addedBy": {
+                                  "_id": "u401",
+                                  "fullName": "Aviv Nakar",
+                                  "imgUrl": "adf.jpg"
+                              }
+                          }
+                      ]
                   }
-                }
               ]
-            },
-            {
-              "id": "Zei4",
-              "title": "כדגכשדגכ"
-            },
-            {
-              "id": "5539",
-              "title": "Done PLS",
-              "labels": [
-                {
-                  "title": "IT",
-                  "color": "red"
-                },
-                {
-                  "title": "",
-                  "color": "orange"
-                }
-              ],
-              "createdBy": {
-                "_id": "u401",
-                "fullName": "Aviv Nakar",
-                "imgUrl": "adf.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": "זה עובד אני נשבע לכם",
-              "dueDate": 5413234551234,
-              "cheklists": [
-                {
-                  "id": "14h3",
-                  "title": "checklist22",
-                  "todos": [
-                    {
-                      "id": "14s6f3",
-                      "text": "lorem blabla bla bla bla",
-                      "doneAt": 14325434545,
-                      "doneBy": {
-                        "_id": "u401",
-                        "fullName": "Aviv Nakar",
-                        "imgUrl": "adf.jpg"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "attachments": [
-                {
-                  "id": "24s4",
-                  "name": "lorem",
-                  "url": "././img/ape.jpg",
-                  "addedBy": {
-                    "_id": "u401",
-                    "fullName": "Aviv Nakar",
-                    "imgUrl": "adf.jpg"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "Pwyg",
-          "title": "gsdgf",
-          "cards": []
-        },
-        {
-          "id": "yJjj",
-          "title": "fggsdf",
-          "cards": [
-            {
-              "id": "SaTv",
-              "title": "עכגדעגכעכגעדגכעגכעדגכעדגכעכגעגכעגכעגדכעדגכעגע"
-            }
-          ]
-        },
-        {
-          "id": "7ZK6",
-          "title": "פןפן",
-          "cards": [
-            {
-              "id": "qKIH",
-              "title": "עדגעדגע"
-            }
-          ]
-        }
+          }
       ]
-    }
+  }
   ]
 }
