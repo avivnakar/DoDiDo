@@ -8,7 +8,7 @@ import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 
-export class _BoardDetails extends Component {
+class _BoardDetails extends Component {
     state = {
         currCard: null,
     }

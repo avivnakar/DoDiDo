@@ -3,7 +3,7 @@ import { FaPlus } from "react-icons/fa";
 
 export class AddCard extends Component {
     state = {
-        isEdit: null
+        isEdit: false
     }
     onEdit() {
         console.log(this.props.list);
@@ -13,10 +13,10 @@ export class AddCard extends Component {
     }
     handleKeyDown(e) {
         if (e.key === 'Enter') {
-            if (!e.target.value) this.setState({ isEdit: null })
+            if (!e.target.value) this.setState({ isEdit: false })
             else {
                 const { updateBoard, board, list } = this.props
-                this.setState({ isEdit: null })
+                this.setState({ isEdit: false })
                 var newCard = {
                     id: this.makeId(),
                     title: e.target.value
