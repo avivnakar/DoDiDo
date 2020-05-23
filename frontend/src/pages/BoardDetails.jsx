@@ -3,19 +3,40 @@ import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
 import { AddList } from '../cmps/board/AddList.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
-import { setBoard, updateBoard } from '../store/actions/boardActions.js';
+import { setBoard, updateBoard, setCard, loadBoards } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-
-
 class _BoardDetails extends Component {
     state = {
         currCard: null,
     }
     componentDidMount() {
-        const id = this.props.match.params.boardId;
-        boardService.getById(id)
-            .then(board => this.props.setBoard(board))
+        this.switchRoute();
+    }
+    switchRoute = () => {
+        const { boardId, cardId } = this.props.match.params
+        var id
+        if (boardId) {
+            id = boardId;
+            boardService.getById(id)
+                .then(board => this.props.setBoard(board));
+        } else {
+            id = cardId;
+            this.props.loadBoards()
+                .then(() => {
+                    const { boards } = this.props;
+                    const { currBoard, currCard } = boards.reduce((acc, board) => {
+                        const tempCard = board.cardLists.reduce((accu, list) => {
+                            return accu ? accu : list.cards.find(card => card.id === id);
+                        }, null);
+                        if (tempCard) acc = { currCard: tempCard, currBoard: board }
+                        return acc;
+                    }, {});
+                    const { setCard, setBoard } = this.props;
+                    setBoard(currBoard);
+                    setCard(currCard);
+                })
+        }
     }
     getCurrCard = (card) => {
         this.setState({
@@ -48,6 +69,8 @@ class _BoardDetails extends Component {
     };
     render() {
         const { board } = this.props;
+        const {  cardId } = this.props.match.params
+
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
@@ -65,9 +88,9 @@ class _BoardDetails extends Component {
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                             >
-                                {this.state.currCard && <CardDetails card={this.state.currCard} board={board} updateBoard={this.props.updateBoard} />}
+                                {this.props.card && <CardDetails card={this.props.card} board={board} updateBoard={this.props.updateBoard} />}
                                 <div className="board" style={styleLi}>
-                                    {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} board={board} updateBoard={updateBoard}/>)}
+                                    {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} board={board} updateBoard={updateBoard} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
                                 {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
@@ -86,12 +109,16 @@ class _BoardDetails extends Component {
 const mapStateToProps = (state) => {
     return {
         board: state.board.currBoard,
+        card: state.board.currCard,
+        boards: state.board.boards
     }
 }
 
 const mapDispatchToProps = {
     setBoard,
-    updateBoard
+    updateBoard,
+    loadBoards,
+    setCard
 }
 
 export const BoardDetails = connect(mapStateToProps, mapDispatchToProps)(_BoardDetails)

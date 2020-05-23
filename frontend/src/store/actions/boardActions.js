@@ -66,16 +66,16 @@ function _createCard(title, createdBy) {
     }
 }
 export function removeCard(board, cardId) {
-    const { listIdx, cardIdx } = board.cardLists.reduce((acc, list, listIdx) => {
-        if (!((acc.cardIdx) && (acc.listIdx))) {
-            const idx = utilService.getIdxById(cardId,list.cards);
-            if (idx >= 0) acc = { listIdx, cardIdx: idx };
-        }
-        return acc;
-    }, {});
-    console.log("po",listIdx,cardIdx)
-    board.cardLists[listIdx].cards.splice(cardIdx, 1);
-    updateBoard(board);
+    // const { listIdx, cardIdx } = board.cardLists.reduce((acc, list, listIdx) => {
+    //     if (!((acc.cardIdx) && (acc.listIdx))) {
+    //         const idx = utilService.getIdxById(cardId,list.cards);
+    //         if (idx >= 0) acc = { listIdx, cardIdx: idx };
+    //     }
+    //     return acc;
+    // }, {});
+    // console.log("po",listIdx,cardIdx)
+    // board.cardLists[listIdx].cards.splice(cardIdx, 1);
+    // updateBoard(board);
 }
 export function removeList(board, listId) {
     const idx = utilService.getIdxById(board, listId);
