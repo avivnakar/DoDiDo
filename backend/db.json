@@ -52,38 +52,13 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "KQzD",
-          "title": "hjhgfjgh",
-          "cards": [
-            {
-              "id": "QXZt",
-              "title": "TEASTR"
-            }
-          ]
-        },
-        {
-          "id": "R6HM",
-          "title": "אעיכגעיעכ",
-          "cards": [
-            {
-              "id": "KZO1",
-              "title": "ארניבודק דברים"
-            }
-          ]
-        },
-        {
-          "title": "gadgdsg",
-          "id": "s100",
-          "cards": [
-            {
-              "id": "0HxK",
-              "title": "fgsdgf"
-            }
-          ]
-        },
-        {
-          "title": "gfdgsdffgd",
+          "title": "Grabage bin",
           "id": "recycleBin_5c09",
+          "cards": []
+        },
+        {
+          "title": "The End Sprint",
+          "id": "s100",
           "cards": [
             {
               "id": "5c09",
@@ -110,7 +85,7 @@
                   "imgUrl": "adf.png"
                 }
               ],
-              "desc": "hjfghjjfhgjghjdfghjfjhfgthj",
+              "desc": "testin testin testing",
               "dueDate": 5413234551234,
               "cheklists": [
                 {
@@ -144,10 +119,6 @@
               ]
             },
             {
-              "id": "Zei4",
-              "title": "כדגכשדגכ"
-            },
-            {
               "id": "5539",
               "title": "Done PLS",
               "labels": [
@@ -172,7 +143,7 @@
                   "imgUrl": "adf.png"
                 }
               ],
-              "desc": "זה עובד אני נשבע לכם",
+              "desc": "testin testin testing",
               "dueDate": 5413234551234,
               "cheklists": [
                 {
@@ -204,31 +175,6 @@
                   }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "id": "Pwyg",
-          "title": "gsdgf",
-          "cards": []
-        },
-        {
-          "id": "yJjj",
-          "title": "fggsdf",
-          "cards": [
-            {
-              "id": "SaTv",
-              "title": "עכגדעגכעכגעדגכעגכעדגכעדגכעכגעגכעגכעגדכעדגכעגע"
-            }
-          ]
-        },
-        {
-          "id": "7ZK6",
-          "title": "פןפן",
-          "cards": [
-            {
-              "id": "qKIH",
-              "title": "עדגעדגע"
             }
           ]
         }
