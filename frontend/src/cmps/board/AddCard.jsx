@@ -6,7 +6,6 @@ export class AddCard extends Component {
         isEdit: false
     }
     onEdit() {
-        console.log(this.props.list);
         this.setState({
             isEdit: true
         })
@@ -18,18 +17,20 @@ export class AddCard extends Component {
                 const { updateBoard, board, list } = this.props
                 this.setState({ isEdit: false })
                 var newCard = {
-                    id: this.makeId(4),
+                    id: this.makeId(),
                     title: e.target.value,
                     labels: [],
                     createdBy: {},
                     cardMembers: [],
-                    desc: '',
+                    desc: null,
                     dueDate: null,
                     cheklists: [],
                     attachments: []
                 }
-                list.cards.push(newCard)
-                updateBoard(board)
+                const idx = board.cardLists.findIndex(currList=> currList.id === list.id)
+                const newBoard = {...board}
+                newBoard.cardLists[idx].cards.push(newCard)
+                updateBoard(newBoard)
             }
         }
     }

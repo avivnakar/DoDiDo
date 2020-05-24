@@ -17,10 +17,10 @@ export function CardPreiview(props) {
                     <span>{card.title}</span>
                     <div className="card-stat flex">
                         {card.desc &&<div title="Description"><FaRegListAlt/></div>}
-                        {card.cardMembers.length<0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
-                        {card.cheklists.length<0 && <div title="Checklist items">{card.cheklists.length}{<FaRegCheckSquare />}</div>}
+                        {card.cardMembers.length>0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
+                        {card.cheklists.length>0 && <div title="Checklist items">{card.cheklists.length}{<FaRegCheckSquare />}</div>}
                         {card.dueDate && <span>{<FaRegClock />}</span>}
-                        {card.attachments.length<0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
+                        {card.attachments.length>0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                     </div>
             {/* <button onClick={onCardRemove(card.id)}>{`❌`}</button> */}
                 </article>
