@@ -41,6 +41,28 @@
         "fullName": "Gal Rondel",
         "imgUrl": "././img/troll.jpg"
       },
+      "labels": [
+        {
+          "id": "c0001",
+          "title": null,
+          "color": "red"
+        },
+        {
+          "id": "c0002",
+          "title": null,
+          "color": "orange"
+        },
+        {
+          "id": "c0003",
+          "title": null,
+          "color": "green"
+        },
+        {
+          "id": "c0004",
+          "title": null,
+          "color": "blue"
+        }
+      ],
       "members": [
         {
           "_id": "u101",
@@ -64,6 +86,21 @@
           "id": "s100",
 >>>>>>> origin/yuval
           "cards": [
+            {
+              "id": "zL4H",
+              "title": "TEST",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "gfdgsdfgfd",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            },
             {
               "id": "5539",
               "title": "Done PLS",
@@ -185,25 +222,24 @@
                   }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Done",
-          "id": "s100",
-          "cards": [
+            },
             {
               "id": "wzv9",
               "title": "gdfgdfgsfdd",
               "labels": [],
               "createdBy": {},
               "cardMembers": [],
-              "desc": "YUVAL",
+              "desc": "gfdgf",
               "dueDate": null,
               "cheklists": [],
               "attachments": []
             }
           ]
+        },
+        {
+          "title": "Done",
+          "id": "s100",
+          "cards": []
         }
       ]
     }
