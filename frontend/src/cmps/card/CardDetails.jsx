@@ -13,34 +13,6 @@ export class CardDetails extends Component {
     state = {
         addTo: null
     }
-    componentDidMount() {
-        {/* {this.state.currCard && <CardDetails card={this.state.currCard} members={board.members} />} */ }
-        // const id = this.props.match.params.cardId;
-        // this.props.loadBoards()
-        //     .then(() => {
-        //         const { boards } = this.props;
-        //         const { currBoard, currCard } = boards.reduce((acc, board) => {
-        //             const tempCard = board.cardLists.reduce((accu, list) => {
-        //                 accu = accu ? accu : list.cards.find(card => card.id === id);
-        //                 return accu;
-        //             }, null);
-        //             if (tempCard) {
-        //                 acc.currCard = tempCard;
-        //                 acc.currBoard = board;
-        //             }
-        //             return acc;
-        //         }, {});
-        //         console.log(currBoard, currCard);
-        //         const { setCard, setBoard } = this.props;
-        //         setBoard(currBoard);
-        //         console.log('card:',currCard);
-
-        //         setCard(currCard);
-        //     })
-    }
-    componentWillUnmount(){
-        
-    }
     addMembers() {
         this.setState({
             addTo: 'members'
