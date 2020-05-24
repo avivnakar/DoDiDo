@@ -2,7 +2,7 @@ import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
 import { AiOutlineDatabase } from "react-icons/ai";
-
+import { LabelList } from '../board/LabelList.jsx';
 export function CardPreiview(props) {
     const { card,history } = props
     return (
@@ -14,7 +14,9 @@ export function CardPreiview(props) {
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
                 >
-                    <div>Labels</div>
+                    <div>
+                    {card.labels && <LabelList labels={card.labels} />}
+                    </div>
                     <span>{card.title}</span>
                     <div className="card-stat flex">
                         {card.desc &&<div title="Description"><FaRegListAlt/></div>}
