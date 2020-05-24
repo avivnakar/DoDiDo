@@ -19,14 +19,6 @@ class _BoardDetails extends Component {
             
             this.setState({ match: this.props.match }, this.switchRoute)
         }
-        {
-            let { history, location, match } = prevProps;
-        }
-        let { history, location, match } = this.state;
-        if (location !== this.props.location) {
-
-        }
-
     }
     onSwitchRoute=()=>{
         
