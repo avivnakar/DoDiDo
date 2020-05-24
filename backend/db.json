@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "BoardMcBoardy",
       "desc": "this board is board",
-      "background": "3.jpg",
+      "background": "5.png",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -52,43 +52,10 @@
       "activities": [],
       "cardLists": [
         {
-<<<<<<< HEAD
-=======
-          "title": "fgdfgsg",
-          "id": "s100",
-          "cards": []
-        },
-        {
->>>>>>> origin/yuval
           "title": "Grabage bin",
           "id": "recycleBin_5c09",
           "cards": [
             {
-<<<<<<< HEAD
-              "id": "DkKl",
-              "title": "testing",
-              "labels": [],
-              "createdBy": {},
-              "cardMembers": [],
-              "desc": "gdsfgsdfd",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "wzv9",
-              "title": "gdfgdfgsfdd",
-              "labels": [],
-              "createdBy": {},
-              "cardMembers": [],
-              "desc": "",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-=======
->>>>>>> origin/yuval
               "id": "5539",
               "title": "Done PLS",
               "labels": [
@@ -145,30 +112,8 @@
                   }
                 }
               ]
-<<<<<<< HEAD
-            }
-          ]
-        },
-        {
-          "title": "fgdfgsg",
-          "id": "s100",
-          "cards": [
-            {
-              "id": "9WLq",
-              "title": "gdgd",
-              "labels": [],
-              "createdBy": {},
-              "cardMembers": [],
-              "desc": "fdsasfds",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
             },
             {
-=======
-            },
-            {
->>>>>>> origin/yuval
               "id": "5c09",
               "title": "Do It",
               "labels": [
@@ -229,13 +174,8 @@
           ]
         },
         {
-<<<<<<< HEAD
           "id": "U7pd",
           "title": "Done",
-=======
-          "id": "ZNlb",
-          "title": "rgretgert",
->>>>>>> origin/yuval
           "cards": []
         }
       ]
