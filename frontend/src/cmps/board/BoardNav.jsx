@@ -1,16 +1,14 @@
 import React from 'react'
 import image from '../../assets/imgs/Logo.png'
 import { FaTh, FaColumns, FaPlus, FaWeightHanging, FaUserCircle, FaInfo, FaHome } from "react-icons/fa";
-import { NavLink, useRouteMatch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 export function BoardNav(props) {
-    console.log('BoardNav props:',props);
-    
-    return         props.match.isExact?'':(
+    return props.match.isExact ? '' : (
         <nav className="board-nav flex space-between align-center justify-center">
             <ul className="main-links left-links flex space-even">
                 <li><FaTh /></li>
                 <li><NavLink exact to="/"><FaHome /></NavLink></li>
-                <li><FaColumns /></li>
+                <li><NavLink exact to="/:username/boards"><FaColumns /></NavLink></li>
                 <input type="text" name="search" placeholder="Search.." />
             </ul>
             <div className="logo">

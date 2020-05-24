@@ -1,6 +1,7 @@
 import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
+import { FaRegCheckSquare, FaRegClock, FaRegUser,FaRegListAlt } from "react-icons/fa";
+// import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
 import { AiOutlineDatabase } from "react-icons/ai";
 import { LabelList } from '../board/LabelList.jsx';
 export function CardPreiview(props) {

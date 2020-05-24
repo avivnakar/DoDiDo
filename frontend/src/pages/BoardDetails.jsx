@@ -79,9 +79,6 @@ class _BoardDetails extends Component {
     };
     render() {
         const { board, card, } = this.props;
-        const { match } = this.state
-        const { cardId } = this.props.match.params
-
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
