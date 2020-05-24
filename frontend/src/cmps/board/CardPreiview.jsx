@@ -14,6 +14,7 @@ export function CardPreiview(props) {
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
                 >
+                    <div>Labels</div>
                     <span>{card.title}</span>
                     <div className="card-stat flex">
                         {card.desc &&<div title="Description"><FaRegListAlt/></div>}

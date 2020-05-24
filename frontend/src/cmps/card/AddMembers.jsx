@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import { MiniUser } from '../MiniUser.jsx';
 
 export class AddMembers extends Component {
-    state ={
-        
-    }
-
     matchUser(userId) {
         const { cardMembers } = this.props;
         return cardMembers.find(user => user._id === userId)
