@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "BoardMcBoardy",
       "desc": "this board is board",
-      "background": "5.png",
+      "background": "11.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -74,8 +74,8 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "U7pd",
-          "title": "Done",
+          "title": "fgdfgsg",
+          "id": "s100",
           "cards": [
             {
               "id": "zL4H",
@@ -153,20 +153,9 @@
           ]
         },
         {
-          "title": "Done",
-          "id": "s100",
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
           "cards": [
-            {
-              "id": "wzv9",
-              "title": "gdfgdfgsfdd",
-              "labels": [],
-              "createdBy": {},
-              "cardMembers": [],
-              "desc": "gfdgf",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
             {
               "id": "5539",
               "title": "Done PLS",
@@ -241,6 +230,11 @@
               "attachments": []
             }
           ]
+        },
+        {
+          "title": "Done",
+          "id": "s102",
+          "cards": []
         }
       ]
     }

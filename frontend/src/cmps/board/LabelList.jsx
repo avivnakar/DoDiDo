@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { LabelPreiview } from './LabelPreiview.jsx';
 export function LabelList(props) {
         const {labels} = props

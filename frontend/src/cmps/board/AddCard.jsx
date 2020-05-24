@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { FaPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export class AddCard extends Component {
     state = {
@@ -53,7 +54,7 @@ export class AddCard extends Component {
         if (!this.state.isEdit) {
             return (
                 <div className="add-card-container" onClick={() => this.onEdit()}>
-                    <a className="add-card-btn"><span><FaPlus /></span>Add Card</a>
+                    <Link to="#" className="add-card-btn"><span><FaPlus /></span>Add Card</Link>
                 </div>
             )
         } else {

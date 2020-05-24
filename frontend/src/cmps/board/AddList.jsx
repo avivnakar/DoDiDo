@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { FaPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export class AddList extends Component {
     state = {
@@ -38,7 +39,7 @@ export class AddList extends Component {
     }
     getAddList() {
         if (!this.state.isEdit) {
-            return <a className="add-card-btn"><span><FaPlus /></span>Add List</a>
+            return <Link to="#" className="add-card-btn"><span><FaPlus /></span>Add List</Link>
         } else {
             return (
                 <input placeholder="enter list name" onKeyDown={(e) => { this.handleKeyDown(e) }} />

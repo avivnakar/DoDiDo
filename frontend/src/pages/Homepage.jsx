@@ -79,7 +79,11 @@ export class Homepage extends Component {
                     <div className="preview">
                         <img src={require('../assets/imgs/preview.jpg')} alt="" />
                     </div>
-
+                    <div id="wrapper">
+                        <div className="scrollbar" id="style-1">
+                            <div className="force-overflow"></div>
+                        </div>
+                    </div>
                 </main>
                 <footer>
                     <img src={require('../assets/imgs/Logo.png')} alt="" />

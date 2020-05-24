@@ -5,11 +5,11 @@ export function CreateBoard(props) {
     return (
         <section>
             <div className="min-board">
-                <h2>New board</h2>
+                {/* <h2>New board</h2> */}
                 <img src={image} alt="" />
-                <input type="text" placeholder="Add board title" />
-                <button>Add background</button>
             </div>
+            <input type="text" placeholder="Add board title" />
+            <button>Add background</button>
             <div className="bg-container">
                 <div className="photos-title flex space-between">
                     <p>photos</p>
@@ -27,11 +27,6 @@ export function CreateBoard(props) {
                         <img src={image} alt="" />
                         <img src={image} alt="" />
                     </div>
-                    <div className="img-line">
-                        <img src={image} alt="" />
-                        <img src={image} alt="" />
-                        <img src={image} alt="" />
-                    </div>
                 </div>
                 <div className="colors-title flex space-between">
                     <p>colors</p>
@@ -39,11 +34,6 @@ export function CreateBoard(props) {
                 </div>
                 <div className="colors column flex space-even">
                     {/* render colors here */}
-                    <div className="img-line">
-                        <img src={image} alt="" />
-                        <img src={image} alt="" />
-                        <img src={image} alt="" />
-                    </div>
                     <div className="img-line">
                         <img src={image} alt="" />
                         <img src={image} alt="" />

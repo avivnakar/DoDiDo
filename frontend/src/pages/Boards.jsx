@@ -3,6 +3,7 @@ import { BoardsList } from '../cmps/board/BoardsList.jsx';
 import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
+import { Link } from 'react-router-dom';
 
 class _Boards extends Component {
     componentDidMount() {
@@ -19,17 +20,15 @@ class _Boards extends Component {
 
     render() {
         return (
-            <React.Fragment>
-                <section className="flex">
-                    <div className="list-container">
-                        <BoardsList boards={this.props.boards}/>
-                    </div>
-                    <div className="side-bar">
-                        {/* <a>+Create new board</a> */}
-                        <CreateBoard />
-                    </div>
-                </section>
-            </React.Fragment>
+            <section className="list-warper">
+                <div className="list-container flex">
+                    <Link to="#" className="add-board">+Create new board</Link>
+                    <BoardsList boards={this.props.boards} />
+                </div>
+                <div className="side-bar">
+                    <CreateBoard />
+                </div>
+            </section>
         )
     }
 }
@@ -39,7 +38,7 @@ const mapStateToProps = (state) => {
 
     return {
         boards: state.board.boards,
-        // boards: [{ _id: '0', name: '+Create new board', background: '' }, { _id: '1', name: 'rondelicious', background: '../3.jpg' }, { _id: '2', name: 'Yuval', background: '../5.jpg' }, { _id: '2', name: 'Aviv', background: '../4.jpg' }],
+        // boards: [{ _id: '10', name: '+Create new board', background: '' }, { _id: '11', name: 'rondelicious', background: '../3.jpg' }, { _id: '12', name: 'Yuval', background: '../5.jpg' }, { _id: '32', name: 'Aviv', background: '../4.jpg' }],
         // filter: state.Boards.filter
         // loadBoards: function () { console.log('loading boards') }
     }
