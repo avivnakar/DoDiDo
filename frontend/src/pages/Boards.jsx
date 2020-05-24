@@ -4,7 +4,7 @@ import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
 
-export class _Boards extends Component {
+class _Boards extends Component {
     componentDidMount() {
         this.loadBoards()
     }
@@ -22,7 +22,7 @@ export class _Boards extends Component {
             <React.Fragment>
                 <section className="flex">
                     <div className="list-container">
-                        <BoardsList boards={this.props.boards} />
+                        <BoardsList boards={this.props.boards}/>
                     </div>
                     <div className="side-bar">
                         {/* <a>+Create new board</a> */}

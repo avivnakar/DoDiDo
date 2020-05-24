@@ -3,7 +3,8 @@ const entity = 'board';
 
 export const boardService = {
     query,
-    getById,
+    getById,//TODO:refactor
+    get,
     remove,
     update,
     add
@@ -13,7 +14,10 @@ function query(criteria) {
     return httpService.get(entity, criteria);
 }
 function getById(id) {
-    return query(id).then(arr=>arr[0]);
+    return get(id);
+}
+function get(id) {
+    return httpService.get(`${entity}/${id}`);
 }
 
 function remove(boardId) {
@@ -21,7 +25,68 @@ function remove(boardId) {
 }
 
 function update(board) {
-    return httpService.put(`${entity}/${board._id}`, board);
+    return httpService.put(`${entity}/${board._id}`, board)
+    /*.then(newBoard=>{
+        newBoard.cardLists[1].cards.push( {
+            id: Date.now(),
+            title: 'kek aviv is a king',
+            labels: [
+              {
+                title: 'IT',
+                color: 'red'
+              },
+              {
+                title: '',
+                color: 'orange'
+              }
+            ],
+            createdBy: {
+              _id: 'u401',
+              fullName: 'Aviv Nakar',
+              imgUrl: 'adf.jpg'
+            },
+            cardMembers: [
+              {
+                _id: 'u401',
+                fullName: 'Aviv Nakar',
+                imgUrl: 'adf.png'
+              }
+            ],
+            desc: 'testin testin testing',
+            dueDate: 5413234551234,
+            cheklists: [
+              {
+                id: '14s3',
+                title: 'checklist22',
+                todos: [
+                  {
+                    id: '14sf3',
+                    text: 'lorem blabla bla bla bla',
+                    doneAt: 14325434545,
+                    doneBy: {
+                      _id: 'u401',
+                      fullName: 'Aviv Nakar',
+                      imgUrl: 'adf.jpg'
+                    }
+                  }
+                ]
+              }
+            ],
+            attachments: [
+              {
+                id: '23s4',
+                name: 'lorem',
+                url: '././img/ape.jpg',
+                addedBy: {
+                  _id: 'u401',
+                  fullName: 'Aviv Nakar',
+                  imgUrl: 'adf.jpg'
+                }
+              }
+            ]
+          })
+          return newBoard;
+    });*/
 }
 function add(board) {
     return httpService.post(entity, board);
