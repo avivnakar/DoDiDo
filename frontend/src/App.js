@@ -7,9 +7,7 @@ import { BoardNav } from './cmps/board/BoardNav';
 
 
 function App() {
-
   return (
-
     <BrowserRouter>
       <BoardNav />
       <Switch>

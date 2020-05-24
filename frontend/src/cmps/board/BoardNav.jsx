@@ -1,8 +1,9 @@
 import React from 'react'
 import image from '../../assets/imgs/Logo.png'
 import { FaTh, FaColumns, FaPlus, FaWeightHanging, FaUserCircle, FaInfo, FaHome } from "react-icons/fa";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useRouteMatch } from 'react-router-dom';
 export function BoardNav(props) {
+    //useRouteMatch()
 
     return (
         <nav className="board-nav flex space-between align-center justify-center">
