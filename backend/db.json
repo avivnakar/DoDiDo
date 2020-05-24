@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "BoardMcBoardy",
       "desc": "this board is board",
-      "background": "3.jpg",
+      "background": "5.png",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -54,11 +54,6 @@
         {
           "title": "fgdfgsg",
           "id": "s100",
-          "cards": []
-        },
-        {
-          "title": "Grabage bin",
-          "id": "recycleBin_5c09",
           "cards": [
             {
               "id": "5539",
@@ -117,7 +112,13 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
+          "cards": [
             {
               "id": "5c09",
               "title": "Do It",
