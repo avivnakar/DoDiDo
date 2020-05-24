@@ -8,7 +8,7 @@
     margin: auto;
     display: flex;
     // background-color: $board-container;
-    height: 100vh;
+    // height: 100vh;
     & .add-board {
         height: 142px;
         width: 300px;
@@ -34,7 +34,7 @@
     position: absolute;
     right: 0;
     top: 50px;
-    width: 20%;
+    width: 15%;
     background-color: $clr5;
     // position: absolute;
     font-family: $mainFont;

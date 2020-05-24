@@ -6,6 +6,9 @@ import { loadBoards } from '../store/actions/boardActions.js';
 import { Link } from 'react-router-dom';
 
 class _Boards extends Component {
+    state = {
+        isAddBoard: false
+    }
     componentDidMount() {
         this.loadBoards()
     }
@@ -18,6 +21,10 @@ class _Boards extends Component {
         }
     }
 
+    addBoard = () => {
+        this.setState(prevState => ({ isAddBoard: !prevState.isAddBoard }))
+    }
+
     render() {
         return (
             <section className="list-warper">
@@ -26,7 +33,7 @@ class _Boards extends Component {
                     <BoardsList boards={this.props.boards} />
                 </div>
                 <div className="side-bar">
-                    <CreateBoard />
+                    {this.state.isAddBoard && <CreateBoard addBoard={this.state.isAddBoard} />}
                 </div>
             </section>
         )
