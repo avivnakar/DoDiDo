@@ -31,7 +31,11 @@
       "_id": "5c09",
       "name": "BoardMcBoardy",
       "desc": "this board is board",
+<<<<<<< HEAD
       "background": "5.png",
+=======
+      "background": "11.jpg",
+>>>>>>> origin/yuval
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -52,8 +56,13 @@
       "activities": [],
       "cardLists": [
         {
+<<<<<<< HEAD
           "id": "U7pd",
           "title": "Done",
+=======
+          "title": "fgdfgsg",
+          "id": "s100",
+>>>>>>> origin/yuval
           "cards": [
             {
               "id": "5539",
@@ -112,7 +121,13 @@
                   }
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
+          "cards": [
             {
               "id": "5c09",
               "title": "Do It",
