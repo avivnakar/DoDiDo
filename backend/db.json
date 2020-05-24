@@ -46,7 +46,7 @@
         {
           "id": "c0002",
           "title": null,
-          "color": "red"
+          "color": "orange"
         },
         {
           "id": "c0003",
@@ -74,8 +74,8 @@
       "activities": [],
       "cardLists": [
         {
+          "id": "U7pd",
           "title": "Done",
-          "id": "s100",
           "cards": [
             {
               "id": "zL4H",
@@ -91,13 +91,7 @@
               "dueDate": null,
               "cheklists": [],
               "attachments": []
-            }
-          ]
-        },
-        {
-          "id": "U7pd",
-          "title": "Done",
-          "cards": [
+            },
             {
               "id": "5539",
               "title": "Done PLS",
@@ -226,6 +220,11 @@
               "attachments": []
             }
           ]
+        },
+        {
+          "title": "Done",
+          "id": "s100",
+          "cards": []
         }
       ]
     }
