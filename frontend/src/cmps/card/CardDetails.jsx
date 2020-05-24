@@ -5,9 +5,6 @@ import { CardTitle } from './CardTitle.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { CardLabel } from './CardLabel.jsx';
 import { MiniUser } from '../MiniUser';
-import { connect } from 'react-redux';
-import { updateBoard, setCard, loadBoards, setBoard } from '../../store/actions/boardActions.js';
-
 
 export class CardDetails extends Component {
     state = {
@@ -27,7 +24,7 @@ export class CardDetails extends Component {
             return (
                 <>
                 <section className="screen flex justify-center" onClick={backToBoard}>
-                <div className="card-details" >
+                <div className="card-details" onClick={(ev)=>ev.stopPropagation()}>
                     <div>
                         <CardTitle title={card.title} />
                         <CardLabel />
@@ -53,22 +50,3 @@ export class CardDetails extends Component {
         } else return <div>עוד רגע כפרע</div>
     }
 }
-// const mapStateToProps = (state) => {
-
-//     return {
-//         card: state.board.currCard,
-//         board: state.board.currBoard,
-//         boards: state.board.boards
-//     }
-// }
-// const mapDispatchToProps = {
-//     updateBoard,
-//     setCard,
-//     setBoard,
-//     loadBoards
-//     //update board/card
-//     //get card by id
-// }
-
-// export const CardDetails = connect(mapStateToProps, mapDispatchToProps)(_CardDetails)
-
