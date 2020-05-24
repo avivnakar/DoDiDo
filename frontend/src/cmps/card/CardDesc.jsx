@@ -19,7 +19,6 @@ export class CardDesc extends Component {
         }
     }
     getDesc() {
-        console.log('curr card:', this.props.card);
         if (this.props.card.desc && !this.state.isEdit) {
             return <div onClick={() => this.onEdit()}>{this.props.card.desc}</div>
         } else if (this.props.card.desc) return <textarea placeholder={this.props.card.desc} onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea >
