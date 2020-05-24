@@ -31,7 +31,7 @@
             "_id": "5c09",
             "name": "BoardMcBoardy",
             "desc": "this board is board",
-            "background": "3.jpg",
+            "background": "5.png",
             "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
