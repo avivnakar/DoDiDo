@@ -101,14 +101,13 @@ class _BoardDetails extends Component {
                             >
                                 {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
-                                <div className="board" style={styleLi}>
+                                <main className="board" style={styleLi}>
                                     <div className="div">dsfsdfsfsd</div>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
                                         board={board} updateBoard={this.props.updateBoard} history={this.props.history} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
-                                </div>
-                                {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
+                                </main>
                                 {provided.placeholder}
                             </div>
                         )}
