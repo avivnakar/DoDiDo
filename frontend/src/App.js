@@ -4,7 +4,6 @@ import { Homepage } from './pages/Homepage.jsx';
 import { Boards } from './pages/Boards.jsx';
 import { BoardDetails } from './pages/BoardDetails.jsx';
 import { BoardNav } from './cmps/board/BoardNav';
-import { CardDetails } from './cmps/card/CardDetails.jsx';
 
 
 function App() {

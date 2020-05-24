@@ -11,6 +11,11 @@ export class AddCard extends Component {
         })
     }
     handleKeyDown(e) {
+        const user = {
+            "_id": "u101",
+            "fullName": "Gal Rondel",
+            "imgUrl": "././img/troll.jpg"
+        }
         if (e.key === 'Enter') {
             if (!e.target.value) this.setState({ isEdit: false })
             else {
@@ -20,15 +25,15 @@ export class AddCard extends Component {
                     id: this.makeId(),
                     title: e.target.value,
                     labels: [],
-                    createdBy: {},
+                    createdBy: user,
                     cardMembers: [],
                     desc: null,
                     dueDate: null,
                     cheklists: [],
                     attachments: []
                 }
-                const idx = board.cardLists.findIndex(currList=> currList.id === list.id)
-                const newBoard = {...board}
+                const idx = board.cardLists.findIndex(currList => currList.id === list.id)
+                const newBoard = { ...board }
                 newBoard.cardLists[idx].cards.push(newCard)
                 updateBoard(newBoard)
             }

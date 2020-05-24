@@ -18,17 +18,9 @@ class _BoardDetails extends Component {
         if (this.state.match !== this.props.match) {
             this.setState({ match: this.props.match }, this.switchRoute)
         }
-        {
-            let { history, location, match } = prevProps;
-        }
-        let { history, location, match } = this.state;
-        if (location !== this.props.location) {
-
-        }
-
     }
-    onSwitchRoute=()=>{
-        
+    onSwitchRoute = () => {
+
     }
     switchRoute = () => {
         const { boardId, cardId } = this.state.match.params
@@ -86,8 +78,8 @@ class _BoardDetails extends Component {
         this.props.updateBoard(board)
     };
     render() {
-        const { board,card, } = this.props;
-        const {match} = this.state
+        const { board, card, } = this.props;
+        const { match } = this.state
         const { cardId } = this.props.match.params
 
         if (board) {
@@ -110,6 +102,7 @@ class _BoardDetails extends Component {
                                 {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
                                 <div className="board" style={styleLi}>
+                                    <div className="div">dsfsdfsfsd</div>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
                                         board={board} updateBoard={this.props.updateBoard} history={this.props.history} />)}
