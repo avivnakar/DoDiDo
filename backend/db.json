@@ -52,10 +52,19 @@
       "activities": [],
       "cardLists": [
         {
+<<<<<<< HEAD
+=======
+          "title": "fgdfgsg",
+          "id": "s100",
+          "cards": []
+        },
+        {
+>>>>>>> origin/yuval
           "title": "Grabage bin",
           "id": "recycleBin_5c09",
           "cards": [
             {
+<<<<<<< HEAD
               "id": "DkKl",
               "title": "testing",
               "labels": [],
@@ -78,6 +87,8 @@
               "attachments": []
             },
             {
+=======
+>>>>>>> origin/yuval
               "id": "5539",
               "title": "Done PLS",
               "labels": [
@@ -134,6 +145,7 @@
                   }
                 }
               ]
+<<<<<<< HEAD
             }
           ]
         },
@@ -153,6 +165,10 @@
               "attachments": []
             },
             {
+=======
+            },
+            {
+>>>>>>> origin/yuval
               "id": "5c09",
               "title": "Do It",
               "labels": [
@@ -213,8 +229,13 @@
           ]
         },
         {
+<<<<<<< HEAD
           "id": "U7pd",
           "title": "Done",
+=======
+          "id": "ZNlb",
+          "title": "rgretgert",
+>>>>>>> origin/yuval
           "cards": []
         }
       ]

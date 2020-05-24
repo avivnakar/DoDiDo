@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavBar } from '../cmps/NavBar';
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export class Homepage extends Component {
     render() {
@@ -19,7 +19,7 @@ export class Homepage extends Component {
                 </header>
                 <main>
                     <div className="frs-para flex space-even align-center">
-                        <img src={require('../assets/imgs/1.png')} alt="" />
+                        <img src={require('../assets/imgs/146.jpg')} alt="" />
                         <div className="txt-para">
                             <h1>Work with any team</h1>
                             <i className="fas fa-plus"></i>
@@ -44,7 +44,7 @@ export class Homepage extends Component {
                         <img src={require('../assets/imgs/1.png')} alt="" />
                     </div>
                     <div className="frs-para flex space-even align-center">
-                        <img src={require('../assets/imgs/1.png')} alt="" />
+                        <img src={require('../assets/imgs/png.png')} alt="" />
                         <div className="txt-para">
                             <h1>Work with any team</h1>
                             <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
@@ -57,7 +57,7 @@ export class Homepage extends Component {
                     <div className="sec-para">
                         <div className="sec-para-head flex justify-center align-center">
                             <h1>Why DoDiDo</h1>
-                            <img src={require('../assets/imgs/h2.png')} alt="" />
+                            <img src={require('../assets/imgs/png.png')} alt="" />
                         </div>
 
                         <section className="sec-para-txt flex space-even align-center">
@@ -75,6 +75,9 @@ export class Homepage extends Component {
                                 <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
                             </div>
                         </section>
+                    </div>
+                    <div className="preview">
+                        <img src={require('../assets/imgs/preview.jpg')} alt="" />
                     </div>
 
                 </main>
