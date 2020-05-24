@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
 
 class _Boards extends Component {
+    state = {
+        isAddBoard: false
+    }
     componentDidMount() {
         this.loadBoards()
     }
@@ -17,15 +20,19 @@ class _Boards extends Component {
         }
     }
 
+    addBoard = () => {
+        this.setState(prevState => ({ isAddBoard: !prevState.isAddBoard }))
+    }
+
     render() {
         return (
             <section className="list-warper">
                 <div className="list-container flex">
-                    <a className="add-board">+Create new board</a>
+                    <a onClick={this.addBoard} className="add-board">+Create new board</a>
                     <BoardsList boards={this.props.boards} />
                 </div>
                 <div className="side-bar">
-                    <CreateBoard />
+                    {this.state.isAddBoard && <CreateBoard addBoard={this.state.isAddBoard} />}
                 </div>
             </section>
         )

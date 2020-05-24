@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import image from '../../assets/imgs/3.jpg'
 export function CreateBoard(props) {
+
+    // console.log(props.addBoard, 'prop');
     return (
         <section>
             <div className="min-board">
