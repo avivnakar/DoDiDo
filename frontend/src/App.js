@@ -9,7 +9,7 @@ import { BoardNav } from './cmps/board/BoardNav';
 function App() {
   return (
     <BrowserRouter>
-      <BoardNav />
+      <Route path="/" component ={BoardNav} />
       <Switch>
         <Route component={Boards} path="/:username/boards" />
         <Route component={BoardDetails} className="yuval" path="/b/:boardId/:boardname" />
