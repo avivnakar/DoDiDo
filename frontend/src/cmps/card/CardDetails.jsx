@@ -19,10 +19,15 @@ export class CardDetails extends Component {
         })
     }
     render() {
-        const { card, board, updateBoard } = this.props
+        const { card, board, updateBoard,history } = this.props
+        const backToBoard=(ev)=>{
+            history.push(`/b/${board._id}/${board.name}`);
+        }
         if (card && board ) {
             return (
-                <section className="card-details" >
+                <>
+                <section className="screen flex justify-center" onClick={backToBoard}>
+                <div className="card-details" >
                     <div>
                         <CardTitle title={card.title} />
                         <CardLabel />
@@ -41,7 +46,9 @@ export class CardDetails extends Component {
                         {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard}/>}
                         {this.state.addTo === 'labels' && <AddLabels cardMembers={card.labels} />}
                     </div>
+                </div>
                 </section>
+                </>
             )
         } else return <div>עוד רגע כפרע</div>
     }
