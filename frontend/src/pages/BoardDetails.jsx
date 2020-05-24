@@ -15,25 +15,18 @@ class _BoardDetails extends Component {
         this.setState({ match: this.props.match }, this.switchRoute);
     }
     componentDidUpdate(prevProps) {
-        console.log('board update!');
         if (this.state.match !== this.props.match) {
             
             this.setState({ match: this.props.match }, this.switchRoute)
         }
         {
             let { history, location, match } = prevProps;
-            // console.log('prev', history, location, match);
         }
         let { history, location, match } = this.state;
-        // console.log('state', history, location, match)
         if (location !== this.props.location) {
 
         }
 
-    }
-    componentWillUnmount(){
-        console.log('is going dowwwnnn');
-        
     }
     onSwitchRoute=()=>{
         
@@ -46,10 +39,6 @@ class _BoardDetails extends Component {
             this.props.setCard(null);
             boardService.getById(id)
                 .then(board => this.props.setBoard(board))
-            // .then(() => setTimeout(() => {
-            //     this.props.history.push('/c/5c09/Do It');
-            //     this.switchRoute();
-            // }, 5000))
         } else {
             id = cardId;
             this.props.loadBoards()
