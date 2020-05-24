@@ -38,7 +38,9 @@ export class CardDetails extends Component {
         //         setCard(currCard);
         //     })
     }
-
+    componentWillUnmount(){
+        
+    }
     addMembers() {
         this.setState({
             addTo: 'members'
@@ -46,8 +48,6 @@ export class CardDetails extends Component {
     }
     render() {
         const { card, board, updateBoard } = this.props
-        console.log('card and board', card, board);
-
         if (card && board ) {
             return (
                 <section className="card-details" >

@@ -1,16 +1,19 @@
 import React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
 import { AiOutlineDatabase } from "react-icons/ai";
 
 export function CardPreiview(props) {
-    const { card,onCardRemove } = props
+    const { card,onCardRemove,history } = props
+    console.log('card props:',props);
+    
     return (
         <Draggable draggableId={card.id} index={props.index}>
             {(provided) => (
-                   <Link to={`/c/${card.id}/${card.title}`}>
+                //    <NavLink to={`/c/${card.id}/${card.title}`}>
                 <article className="card" /*onClick={() => props.getCurrCard(card)}*/
+                onClick={()=>history.push(`/c/${card.id}/${card.title}`)}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
@@ -25,7 +28,7 @@ export function CardPreiview(props) {
                     </div>
             {/* <button onClick={onCardRemove(card.id)}>{`❌`}</button> */}
                 </article>
-                //   </Link>
+                //   </NavLink>
             )}
         </Draggable>
     )
