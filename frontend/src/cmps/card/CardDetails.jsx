@@ -3,7 +3,7 @@ import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
 import { CardTitle } from './CardTitle.jsx';
 import { AddLabels } from './AddLabels.jsx';
-import { CardLabel } from './CardLabel.jsx';
+import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
 
 export class CardDetails extends Component {
@@ -11,9 +11,10 @@ export class CardDetails extends Component {
         addTo: null
     }
     addMembers() {
-        this.setState({
-            addTo: 'members'
-        })
+        this.setState({ addTo: 'members' })
+    }
+    addLabels() {
+        this.setState({ addTo: 'labels' })
     }
     render() {
         const { card, board, updateBoard, history } = this.props
@@ -26,21 +27,23 @@ export class CardDetails extends Component {
                     <div className="card-details" onClick={(ev) => ev.stopPropagation()}>
                         <div>
                             <CardTitle title={card.title} />
-                            <CardLabel />
-                            {card.cardMembers.length > 0 && <div><MiniUser users={card.cardMembers} /><button>+Add</button></div>}
+                            <div className="flex">
+                                {card.labels && <div className="flex"><LabelList labels={card.labels} /><button>+Add Label</button></div>}
+                                {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} /><button>+Add Member</button></div>}
+                            </div>
                             <div>
                                 Description
-                        <CardDesc card={card} updateBoard={updateBoard} board={board} />
+                                    <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
                         </div>
                         <div className="card-btns">
                             <button onClick={() => this.addMembers()}>Members</button>
-                            <button>Labels</button>
+                            <button onClick={() => this.addLabels()}>Labels</button>
                             <button>Checklist</button>
                             <button>Due Date</button>
                             <button>Attachment</button>
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
-                            {this.state.addTo === 'labels' && <AddLabels cardMembers={card.labels} />}
+                            {this.state.addTo === 'labels' && <AddLabels cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
                         </div>
                     </div>
                 </section>
