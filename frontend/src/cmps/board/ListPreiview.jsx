@@ -22,7 +22,8 @@ export function ListPreiview(props) {
                     {...provided.draggableProps}
                     ref={provided.innerRef}
                 >
-                    <div className="list-title flex space-between justify-center align-center" {...provided.dragHandleProps}>
+                    <div className="list-title flex space-between justify-center align-center"
+                        {...provided.dragHandleProps}>
                         <ListTitle updateBoard={updateBoard} list={list} board={board} />
                         <a><FaEllipsisH /></a>
                     </div>
@@ -32,7 +33,9 @@ export function ListPreiview(props) {
                                 ref={provided.innerRef}
                                 {...provided.droppableProps}
                             >
-                                {list.cards && list.cards.map((card, index) => <CardPreiview index={index} key={card.id} card={card} getCurrCard={props.getCurrCard} onCardRemove={onCardRemove} />)}
+                                {list.cards && list.cards.map((card, index) => <CardPreiview
+                                    index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
+                                    onCardRemove={onCardRemove} history={props.history} />)}
                                 {provided.placeholder}
                             </div>
                         )}

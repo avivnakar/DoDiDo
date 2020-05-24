@@ -9,17 +9,39 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 class _BoardDetails extends Component {
     state = {
         currCard: null,
+        match: null
     }
     componentDidMount() {
-        this.switchRoute();
+        this.setState({ match: this.props.match }, this.switchRoute);
+    }
+    componentDidUpdate(prevProps) {
+        if (this.state.match !== this.props.match) {
+            console.log('board update!');
+            
+            this.setState({ match: this.props.match }, this.switchRoute)
+        }
+        {
+            let { history, location, match } = prevProps;
+            console.log('prev', history, location, match);
+        }
+        let { history, location, match } = this.props;
+        console.log('props', history, location, match)
+        if (location !== this.props.location) {
+
+        }
+
     }
     switchRoute = () => {
-        const { boardId, cardId } = this.props.match.params
+        const { boardId, cardId } = this.state.match.params
         var id
         if (boardId) {
             id = boardId;
             boardService.getById(id)
-                .then(board => this.props.setBoard(board));
+                .then(board => this.props.setBoard(board))
+            // .then(() => setTimeout(() => {
+            //     this.props.history.push('/c/5c09/Do It');
+            //     this.switchRoute();
+            // }, 5000))
         } else {
             id = cardId;
             this.props.loadBoards()
@@ -69,7 +91,7 @@ class _BoardDetails extends Component {
     };
     render() {
         const { board } = this.props;
-        const {  cardId } = this.props.match.params
+        const { cardId } = this.props.match.params
 
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
@@ -88,9 +110,12 @@ class _BoardDetails extends Component {
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                             >
-                                {this.props.card && <CardDetails card={this.props.card} board={board} updateBoard={this.props.updateBoard} />}
+                                {this.props.card && <CardDetails card={this.props.card} board={board}
+                                    updateBoard={this.props.updateBoard} history={this.props.history} />}
                                 <div className="board" style={styleLi}>
-                                    {board.cardLists && board.cardLists.map((list, index) => <ListPreiview key={list.id} list={list} getCurrCard={this.getCurrCard} index={index} board={board} updateBoard={updateBoard} />)}
+                                    {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
+                                        key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
+                                        board={board} updateBoard={updateBoard} history={this.props.history} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
                                 {/* <pre style={{textAlign:"left"}}>{board && JSON.stringify(board, null, 2).split('"').join('')}</pre> */}
