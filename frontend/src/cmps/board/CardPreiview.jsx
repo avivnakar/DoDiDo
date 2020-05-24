@@ -9,8 +9,8 @@ export function CardPreiview(props) {
     return (
         <Draggable draggableId={card.id} index={props.index}>
             {(provided) => (
-                //    <Link to={`/c/${card.id}/${card.title}`}>
-                <article className="card" onClick={() => props.getCurrCard(card)}
+                   <Link to={`/c/${card.id}/${card.title}`}>
+                <article className="card" /*onClick={() => props.getCurrCard(card)}*/
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}

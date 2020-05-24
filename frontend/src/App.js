@@ -13,14 +13,14 @@ function App() {
 
     <BrowserRouter>
       <BoardNav />
-      <Route component={CardDetails} path="/c/:cardId/:cardTitle" />
       <Switch>
         <Route component={Boards} path="/:username/boards" />
         <Route component={BoardDetails} className="yuval" path="/b/:boardId/:boardname" />
+        <Route component={BoardDetails} path="/c/:cardId/:cardTitle" />
         <Route component={Statistics} path="/b/:boardId/:boardname/statistics" />
         <Route component={Homepage} path="/" />
-        <Route component={Profile} path="/:username"/>
-        <Route component={Signup} path="/signup"/>
+        <Route compoFnent={Profile} path="/:username" />
+        <Route component={Signup} path="/signup" />
       </Switch>
     </BrowserRouter>
   );
@@ -28,12 +28,12 @@ function App() {
 
 export default App;
 
-function Statistics(props){
+function Statistics(props) {
   return (<div>Statistics</div>)
 }
-function Profile(props){
+function Profile(props) {
   return (<div>Profile</div>)
 }
-function Signup(props){
+function Signup(props) {
   return (<div>Signup</div>)
 }
