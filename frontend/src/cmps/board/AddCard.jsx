@@ -18,12 +18,17 @@ export class AddCard extends Component {
                 const { updateBoard, board, list } = this.props
                 this.setState({ isEdit: false })
                 var newCard = {
-                    id: this.makeId(),
-                    title: e.target.value
+                    id: this.makeId(4),
+                    title: e.target.value,
+                    labels: [],
+                    createdBy: {},
+                    cardMembers: [],
+                    desc: '',
+                    dueDate: null,
+                    cheklists: [],
+                    attachments: []
                 }
-                const idx = board.cardLists.findIndex(({id})=>id===list.id)
                 list.cards.push(newCard)
-                board.cardLists[idx]=list
                 updateBoard(board)
             }
         }
