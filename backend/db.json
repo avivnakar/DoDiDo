@@ -147,7 +147,7 @@
               "labels": [],
               "createdBy": {},
               "cardMembers": [],
-              "desc": null,
+              "desc": "fdsasfds",
               "dueDate": null,
               "cheklists": [],
               "attachments": []
@@ -211,6 +211,11 @@
               ]
             }
           ]
+        },
+        {
+          "id": "U7pd",
+          "title": "Done",
+          "cards": []
         }
       ]
     }
