@@ -52,25 +52,6 @@
       "activities": [],
       "cardLists": [
         {
-<<<<<<< HEAD
-            "_id": "u234",
-            "name": "Testing Ground",
-            "members": []
-        }
-    ],
-    "board": [
-        {
-            "_id": "5c09",
-            "name": "BoardMcBoardy",
-            "desc": "this board is board",
-            "background": "5.png",
-            "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-            },
-            "members": [
-=======
           "title": "fgdfgsg",
           "id": "s100",
           "cards": [
@@ -78,7 +59,6 @@
               "id": "5c09",
               "title": "Do It",
               "labels": [
->>>>>>> origin/test
                 {
                   "title": "IT",
                   "color": "red"
