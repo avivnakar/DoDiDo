@@ -16,7 +16,6 @@ class _BoardDetails extends Component {
     }
     componentDidUpdate(prevProps) {
         if (this.state.match !== this.props.match) {
-            
             this.setState({ match: this.props.match }, this.switchRoute)
         }
     }

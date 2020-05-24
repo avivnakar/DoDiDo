@@ -26,7 +26,7 @@ export class CardDetails extends Component {
                     <div>
                         <CardTitle title={card.title} />
                         <CardLabel />
-                        {card.cardMembers && <div><MiniUser users={card.cardMembers} /><button>+Add</button></div>}
+                        {card.cardMembers.length>0 && <div><MiniUser users={card.cardMembers} /><button>+Add</button></div>}
                         <div>
                             Description
                         <CardDesc card={card} updateBoard={updateBoard} board={board} />
@@ -38,7 +38,7 @@ export class CardDetails extends Component {
                         <button>Checklist</button>
                         <button>Due Date</button>
                         <button>Attachment</button>
-                        {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} />}
+                        {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard}/>}
                         {this.state.addTo === 'labels' && <AddLabels cardMembers={card.labels} />}
                     </div>
                 </section>
