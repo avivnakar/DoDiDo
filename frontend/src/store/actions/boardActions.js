@@ -39,10 +39,14 @@ export function addBoard(board) {
     }
 }
 export function updateBoard(board) {
+    console.log('%c 1','color:green;')
+    
     return dispatch => {
+        console.log('%c 2','color:yellow;')
         dispatch({ type: 'UPDATE_BOARD', board });
         return boardService.update(board)
-            .then(res => {
+        .then(res => {
+            console.log('%c 3','color:red;')
                 dispatch({ type: 'UPDATE_BOARD', board: res })
                 return res;
             });
@@ -65,7 +69,15 @@ function _createCard(title, createdBy) {
         attachments: []
     }
 }
-export function removeCard(board, cardId) {
+export function removeCard(board,list, cardId) {
+    const idx = board.cardLists.findIndex(currList => currList.id === list.id)
+    const cardIdx=board.cardLists[idx].cards.findIndex(card=>card.id===cardId);
+    console.log({
+        board,list, cardId,idx,cardIdx
+    });
+    
+    const newBoard = { ...board }
+    newBoard.cardLists[idx].cards.splice(cardIdx,1)
     // const { listIdx, cardIdx } = board.cardLists.reduce((acc, list, listIdx) => {
     //     if (!((acc.cardIdx) && (acc.listIdx))) {
     //         const idx = utilService.getIdxById(cardId,list.cards);
@@ -74,8 +86,8 @@ export function removeCard(board, cardId) {
     //     return acc;
     // }, {});
     // console.log("po",listIdx,cardIdx)
-    // board.cardLists[listIdx].cards.splice(cardIdx, 1);
-    // updateBoard(board);
+    
+    return updateBoard(newBoard);
 }
 export function removeList(board, listId) {
     const idx = utilService.getIdxById(board, listId);

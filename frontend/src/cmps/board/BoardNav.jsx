@@ -9,7 +9,7 @@ export function BoardNav(props) {
                 <li><FaTh /></li>
                 <li><NavLink exact to="/"><FaHome /></NavLink></li>
                 <li><NavLink exact to="/:username/boards"><FaColumns /></NavLink></li>
-                <input type="text" name="search" placeholder="Search.." />
+                <input type="search" name="q" placeholder="Search.." onChange={e=>console.log(e.target)} />
             </ul>
             <div className="logo">
                 <img src={image} alt="" />

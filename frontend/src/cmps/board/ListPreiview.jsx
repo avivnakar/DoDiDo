@@ -7,16 +7,21 @@ import { FaEllipsisH } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 // import { FaEllipsisH, FaEye } from "react-icons/fa";
 // import { FaPlus } from "react-icons/fa";
+import { removeCard } from '../../store/actions/boardActions.js';
 // import { removeList, removeCard } from '../../store/actions/boardActions.js';
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 
-export function ListPreiview(props) {
-    const { list, board, updateBoard } = props
+function _ListPreiview(props) {
+    const { list, board, updateBoard, removeCard } = props
     const onCardRemove = (cardId) => (ev) => {
         ev.stopPropagation();
-        // removeCard(board, cardId);
+        removeCard(board, list, cardId)
     }
-
+    const onListRemove = (ev) => {
+        const idx = board.cardLists.findIndex(l => l.in = list.id);
+        board.cardLists.splice(idx, 1);
+        updateBoard(board);
+    }
     return (
         <Draggable draggableId={list.id} index={props.index}>
             {(provided) => (
@@ -24,9 +29,11 @@ export function ListPreiview(props) {
                     {...provided.draggableProps}
                     ref={provided.innerRef}
                 >
+
                     <div className="list-title flex space-between justify-center align-center"
                         {...provided.dragHandleProps}>
                         <ListTitle updateBoard={updateBoard} list={list} board={board} />
+                        <button className="del" onClick={onListRemove}>⨯</button>
                         <Link to="#"><FaEllipsisH /></Link>
                     </div>
                     <Droppable droppableId={list.id} type="task">
@@ -49,11 +56,11 @@ export function ListPreiview(props) {
     )
 }
 
-// const mapStateToProps = (state) => {
-//     return {}
+const mapStateToProps = (state) => {
+    return {}
 
-// }
-// const mapDispatchToProps = {
-//     removeList, removeCard
-// }
-// export const ListPreiview = connect()(_ListPreiview)
+}
+const mapDispatchToProps = {
+    removeCard
+}
+export const ListPreiview = connect(mapStateToProps, mapDispatchToProps)(_ListPreiview)

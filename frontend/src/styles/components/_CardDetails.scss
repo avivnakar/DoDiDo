@@ -3,14 +3,23 @@
     width: 50%;
     height: 50%;
     border-radius: 5px;
-    & .card-btns {
+    .card-btns {
         & button {
             border: none;
             margin: 3px;
         }
     }
-    & button {
+    button {
         border: none;
         background-color: $clr0;
+    }
+    *{
+        border: 1px solid;
+    }
+    .pop-over{
+        position: absolute;
+    }
+    .todo{
+        background-color: #fff;
     }
 }

@@ -134,39 +134,8 @@
                   }
                 }
               ]
-            },
-            {
-              "id": "juat",
-              "title": "gdsfgd",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "gsdgfd",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "wzv9",
-              "title": "gdfgdfgsfdd",
-              "labels": [],
-              "createdBy": {},
-              "cardMembers": [],
-              "desc": "gfdgf",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
             }
           ]
-        },
-        {
-          "title": "Done",
-          "id": "s102",
-          "cards": []
         },
         {
           "id": "mNSr",

@@ -5,16 +5,17 @@ import { FaRegCheckSquare, FaRegClock, FaRegUser,FaRegListAlt } from "react-icon
 import { AiOutlineDatabase } from "react-icons/ai";
 import { LabelList } from '../board/LabelList.jsx';
 export function CardPreiview(props) {
-    const { card,history } = props
+    const { card,history,onCardRemove } = props
     return (
         <Draggable draggableId={card.id} index={props.index}>
             {(provided) => (
                 <article className="card" /*onClick={() => props.getCurrCard(card)}*/
                 onClick={()=>history.push(`/c/${card.id}/${card.title}`)}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                    ref={provided.innerRef}
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                ref={provided.innerRef}
                 >
+                <button className="del" onClick={onCardRemove(card.id)}>⨯</button>
                     <div>
                     {card.labels && <LabelList labels={card.labels} />}
                     </div>
@@ -26,7 +27,6 @@ export function CardPreiview(props) {
                         {card.dueDate && <span>{<FaRegClock />}</span>}
                         {card.attachments.length>0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                     </div>
-            {/* <button onClick={onCardRemove(card.id)}>{`❌`}</button> */}
                 </article>
             )}
         </Draggable>
