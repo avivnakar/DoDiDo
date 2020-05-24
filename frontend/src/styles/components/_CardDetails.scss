@@ -1,5 +1,16 @@
-.card-details{
-    background-color: gray;
+.card-details {
+    background-color: $clr5;
     width: 50%;
     height: 50%;
+    border-radius: 5px;
+    & .card-btns {
+        & button {
+            border: none;
+            margin: 3px;
+        }
+    }
+    & button {
+        border: none;
+        background-color: $clr0;
+    }
 }

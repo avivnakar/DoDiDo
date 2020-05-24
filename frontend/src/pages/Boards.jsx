@@ -29,7 +29,7 @@ class _Boards extends Component {
         return (
             <section className="list-warper">
                 <div className="list-container flex">
-                    <Link to="#" className="add-board">+Create new board</Link>
+                    <Link to="#" onClick={this.addBoard} className="add-board">+Create new board</Link>
                     <BoardsList boards={this.props.boards} />
                 </div>
                 <div className="side-bar">

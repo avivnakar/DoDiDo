@@ -16,12 +16,16 @@ export class CardDetails extends Component {
     addLabels() {
         this.setState({ addTo: 'labels' })
     }
+    onAddChecklist=(ev)=>{
+
+    }
     render() {
         const { card, board, updateBoard, history } = this.props
         const backToBoard = (ev) => {
             history.push(`/b/${board._id}/${board.name}`);
         }
         if (card && board) {
+            const {onAddChecklist} = this
             return (
                 <section className="screen flex justify-center" onClick={backToBoard}>
                     <div className="card-details" onClick={(ev) => ev.stopPropagation()}>
@@ -39,7 +43,7 @@ export class CardDetails extends Component {
                         <div className="card-btns">
                             <button onClick={() => this.addMembers()}>Members</button>
                             <button onClick={() => this.addLabels()}>Labels</button>
-                            <button>Checklist</button>
+                            <button onClick={onAddChecklist}>Checklist</button>
                             <button>Due Date</button>
                             <button>Attachment</button>
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
