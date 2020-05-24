@@ -66,19 +66,24 @@ header {
 
 main {
     margin: 30px auto;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     // background-color: $clr5;
     & img {
         width: 20%;
     }
     & .frs-para {
-        margin-bottom: 3rem;
+        margin-bottom: 10rem;
         & p {
             font-size: 1.2rem;
             // width: 25%;
         }
         & .start-emil {
-            height: 3rem;
-            background-color: yellow;
+            border: none;
+            // height: 3rem;
+            // background-color: yellow;
         }
         & button {
             border-radius: 0;
@@ -89,6 +94,8 @@ main {
     & input {
         padding: 15px;
         height: 100%;
+        background-color: $clr5;
+        border-radius: 0px;
         &::placeholder {
             font-size: 1rem;
         }
@@ -96,6 +103,7 @@ main {
     & .sec-para {
         background-color: $clr5;
         padding: 20px;
+        margin-bottom: 10rem;
     }
     & .sec-para-txt {
         margin: auto;
@@ -109,6 +117,14 @@ main {
         & img {
             width: 150px;
             margin-left: 30px;
+        }
+    }
+    & .preview {
+        width: 100%;
+        & img {
+            width: 100%;
+            height: 500px;
+            // margin-bottom: 5rem;
         }
     }
 }
