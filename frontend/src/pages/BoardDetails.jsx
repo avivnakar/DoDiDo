@@ -15,27 +15,35 @@ class _BoardDetails extends Component {
         this.setState({ match: this.props.match }, this.switchRoute);
     }
     componentDidUpdate(prevProps) {
+        console.log('board update!');
         if (this.state.match !== this.props.match) {
-            console.log('board update!');
             
             this.setState({ match: this.props.match }, this.switchRoute)
         }
         {
             let { history, location, match } = prevProps;
-            console.log('prev', history, location, match);
+            // console.log('prev', history, location, match);
         }
-        let { history, location, match } = this.props;
-        console.log('props', history, location, match)
+        let { history, location, match } = this.state;
+        // console.log('state', history, location, match)
         if (location !== this.props.location) {
 
         }
 
+    }
+    componentWillUnmount(){
+        console.log('is going dowwwnnn');
+        
+    }
+    onSwitchRoute=()=>{
+        
     }
     switchRoute = () => {
         const { boardId, cardId } = this.state.match.params
         var id
         if (boardId) {
             id = boardId;
+            this.props.setCard(null);
             boardService.getById(id)
                 .then(board => this.props.setBoard(board))
             // .then(() => setTimeout(() => {
@@ -90,7 +98,8 @@ class _BoardDetails extends Component {
         this.props.updateBoard(board)
     };
     render() {
-        const { board } = this.props;
+        const { board,card, } = this.props;
+        const {match} = this.state
         const { cardId } = this.props.match.params
 
         if (board) {
@@ -110,7 +119,7 @@ class _BoardDetails extends Component {
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                             >
-                                {this.props.card && <CardDetails card={this.props.card} board={board}
+                                {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
                                 <div className="board" style={styleLi}>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview

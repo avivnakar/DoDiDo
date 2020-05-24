@@ -6,7 +6,7 @@ import { AiOutlineDatabase } from "react-icons/ai";
 
 export function CardPreiview(props) {
     const { card,onCardRemove,history } = props
-    console.log('card props:',props);
+    //console.log('card props:',props);
     
     return (
         <Draggable draggableId={card.id} index={props.index}>
