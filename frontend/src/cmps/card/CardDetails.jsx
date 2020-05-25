@@ -34,6 +34,12 @@ export class CardDetails extends Component {
     addLabels() {
         this.setState({ addTo: 'labels' })
     }
+    removeMember = (userId) => {
+        const { cardMembers, updateBoard, board } = this.props;
+        var idx = cardMembers.findIndex(member => member._id = userId)
+        cardMembers.splice(idx, 1)
+        updateBoard(board)
+    }
     onAddChecklist = (ev) => {
         this.setState(prevstate=>({isAddChecklist:!prevstate.isAddChecklist}))
     }
@@ -51,15 +57,12 @@ export class CardDetails extends Component {
                         <div >
                             <CardTitle title={card.title} />
                             <div className="flex">
-                                {card.labels && <div className="flex"><LabelList labels={card.labels} /><button>+Add Label</button></div>}
-                                {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} /><button>+Add Member</button></div>}
-                            </div>
-                            <div>
-                                Description
-                                    <CardDesc card={card} updateBoard={updateBoard} board={board} />
+                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log}/><button>+Add Label</button></div>}
+                                {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} command={this.removeMember} /><button>+Add Member</button></div>}
                             </div>
                             <div>
                                 <h4>Description</h4>
+                                <CardDesc card={card} updateBoard={updateBoard} board={board} />
                                 <Checklist checklist={TESTING_CHEKLIST} />
                             </div>
                             {card.checklists && 'popo'}
@@ -108,7 +111,7 @@ function Checklist(props) {
                     <input type="checkbox" checked={todo.doneAt && true} />
                     < div > {todo.text}</div>
                     <button>Add an item</button>
-                        {'<MiniUser/>'}
+                    {'<MiniUser/>'}
                 </li>
             ))}
         </ul>
