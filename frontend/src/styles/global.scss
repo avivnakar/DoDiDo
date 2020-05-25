@@ -10,8 +10,9 @@
 @import "basics/base.scss";
 @import "basics/links.scss";
 @import "basics/buttons.scss";
-
+@import "basics/screen";
 // Components
+
 // @import "components/main-header.scss";
 // @import "components/cat-card.scss";
 @import "components/BoardNav.scss";
@@ -19,7 +20,7 @@
 @import "views/home-page.scss";
 @import "views/Boards-list.scss";
 @import "views/Board.scss";
-
+@import "components/CardDetails";
 //index.css
 
 body {

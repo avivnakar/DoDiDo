@@ -3,6 +3,7 @@ import { BoardsList } from '../cmps/board/BoardsList.jsx';
 import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
+import { Link } from 'react-router-dom';
 
 class _Boards extends Component {
     state = {
@@ -28,7 +29,7 @@ class _Boards extends Component {
         return (
             <section className="list-warper">
                 <div className="list-container flex">
-                    <a onClick={this.addBoard} className="add-board">+Create new board</a>
+                    <Link to="#" className="add-board">+Create new board</Link>
                     <BoardsList boards={this.props.boards} />
                 </div>
                 <div className="side-bar">

@@ -6,88 +6,73 @@ export class Homepage extends Component {
     render() {
         return (
             <div>
-                <header>
+                <header className="homepage-head">
                     <NavBar />
                     <section className="flex justify-center align-center">
                         <div className="desc">
                             <h2>DoDiDo lets you work more collaboratively and get more done.</h2>
                             <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
-                            <Link to="/:username/boards" className="startBtn" >Start Now, It's Free</Link>
+                            <Link to="/:username/boards" className="home-btn" >Try DoDiDo Now</Link>
                         </div>
-                        <img src={require('../assets/imgs/h1.png')} alt="" />
+                        <img src={require('../assets/imgs/home2.png')} alt="" />
                     </section>
                 </header>
                 <main>
                     <div className="frs-para flex space-even align-center">
-                        <img src={require('../assets/imgs/146.jpg')} alt="" />
+                        <img src={require('../assets/imgs/home3.png')} alt="" />
                         <div className="txt-para">
                             <h1>Work with any team</h1>
-                            <i className="fas fa-plus"></i>
-                            <i className="fas fa-plus"></i>
-                            <i className="fas fa-plus"></i>
-                            <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
+                            <p>Whether it’s for work, a side project or even the next family vacation, DoDiDo helps your team stay organized.</p>
                             <div className="start-emil">
                                 <input type="text" placeholder="Email" />
-                                <button className="startBtn">Start doing</button>
+                                <button className="home-btn">Start doing</button>
                             </div>
                         </div>
                     </div>
-                    <div className="frs-para flex space-even align-center">
-                        <div className="txt-para">
-                            <h1>Work with any team</h1>
-                            <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
-                            <div className="start-emil">
-                                <input type="text" placeholder="Email" />
-                                <button className="startBtn">Start doing</button>
+                    <div className="sec-para flex column space-even align-center">
+                        <div className="sec-para-txt flex align-center justify-center">
+                            <div className="sec-head">Why DoDiDo ?</div>
+                        </div>
+                        <div className="desc flex space-even">
+                            <div className="desc1">
+                                <img src={require('../assets/imgs/done.png')} alt="" />
+                                <h2>1)Make it yours.</h2>
+                                <p>Make it feel like home for you and your team. Customize the board's appearance, Organize your lists to fit the team's flow.</p>
                             </div>
-                        </div>
-                        <img src={require('../assets/imgs/1.png')} alt="" />
-                    </div>
-                    <div className="frs-para flex space-even align-center">
-                        <img src={require('../assets/imgs/png.png')} alt="" />
-                        <div className="txt-para">
-                            <h1>Work with any team</h1>
-                            <p>Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.</p>
-                            <div className="start-emil">
-                                <input type="text" placeholder="Email" />
-                                <button className="startBtn">Start doing</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="sec-para">
-                        <div className="sec-para-head flex justify-center align-center">
-                            <h1>Why DoDiDo</h1>
-                            <img src={require('../assets/imgs/png.png')} alt="" />
-                        </div>
+                            <div className="desc2">
+                                <img src={require('../assets/imgs/done.png')} alt="" />
+                                <h2>2)Drag {'&'} Drop!</h2>
+                                <p>Try our Drag n Drop technology to easily move and update your tasks with your mouse or finger.</p>
 
-                        <section className="sec-para-txt flex space-even align-center">
-                            {/* <img src={require('../assets/imgs/h2.png')} alt="" /> */}
-                            <div className="desc">
-                                <h2>1) all you need to do is</h2>
-                                <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
                             </div>
-                            <div className="desc">
-                                <h2>2) next step is ....</h2>
-                                <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
+                            <div className="desc3">
+                                <img src={require('../assets/imgs/done.png')} alt="" />
+                                <h2>3)Web Sockets</h2>
+                                <p>With the power of web sockets, you and your team can enjoy a workspace that updates in real-time, keeping everyone synced and up to date.</p>
                             </div>
-                            <div className="desc">
-                                <h2>3) its so simple !!!</h2>
-                                <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
-                            </div>
-                        </section>
+                        </div>
                     </div>
-                    <div className="preview">
-                        <img src={require('../assets/imgs/preview.jpg')} alt="" />
-                    </div>
-                    <div id="wrapper">
-                        <div class="scrollbar" id="style-1">
-                            <div class="force-overflow"></div>
+                    <div className="trh-para">
+                        <img src={require('../assets/imgs/task.png')} alt="" />
+                        <div className="main-trh-para">
+                            <h1>Lets Take A Look</h1>
+                            <img src={require('../assets/imgs/board.jpg')} alt="" />
                         </div>
                     </div>
                 </main>
-                <footer>
-                    <img src={require('../assets/imgs/Logo.png')} alt="" />
 
+                <footer className="footer-container flex align-center justify-center">
+                    <div className="footer-img">
+                        <img src={require('../assets/imgs/footer1.png')} alt="" />
+                    </div>
+                    <div className="footer-txt">
+                        <p>Start Planning Today Sign up and become one of the millions of people around the world using Trello to get more done.</p>
+                        <Link to="/:username/boards" className="home-btn" >Start Now, It's Free</Link>
+                    </div>
+
+                    <div className="footer-img">
+                        <img src={require('../assets/imgs/footer2.png')} alt="" />
+                    </div>
                 </footer>
             </div >
         )

@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
 import { FaPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export class AddCard extends Component {
     state = {
         isEdit: false
     }
     onEdit() {
-        console.log(this.props.list);
         this.setState({
             isEdit: true
         })
     }
     handleKeyDown(e) {
+        const user = {
+            "_id": "u101",
+            "fullName": "Gal Rondel",
+            "imgUrl": "././img/troll.jpg"
+        }
         if (e.key === 'Enter') {
             if (!e.target.value) this.setState({ isEdit: false })
             else {
@@ -19,12 +24,19 @@ export class AddCard extends Component {
                 this.setState({ isEdit: false })
                 var newCard = {
                     id: this.makeId(),
-                    title: e.target.value
+                    title: e.target.value,
+                    labels: [],
+                    createdBy: user,
+                    cardMembers: [],
+                    desc: null,
+                    dueDate: null,
+                    cheklists: [],
+                    attachments: []
                 }
-                const idx = board.cardLists.findIndex(({id})=>id===list.id)
-                list.cards.push(newCard)
-                board.cardLists[idx]=list
-                updateBoard(board)
+                const idx = board.cardLists.findIndex(currList => currList.id === list.id)
+                const newBoard = { ...board }
+                newBoard.cardLists[idx].cards.push(newCard)
+                updateBoard(newBoard)
             }
         }
     }
@@ -42,7 +54,7 @@ export class AddCard extends Component {
         if (!this.state.isEdit) {
             return (
                 <div className="add-card-container" onClick={() => this.onEdit()}>
-                    <a className="add-card-btn"><span><FaPlus /></span>Add Card</a>
+                    <Link to="#" className="add-card-btn"><span><FaPlus /></span>Add Card</Link>
                 </div>
             )
         } else {
