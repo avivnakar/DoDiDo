@@ -14,14 +14,26 @@ export class AddMembers extends Component {
         });
         return unPickedUsers;
     }
+    removeMember = (userId) =>{
+        const { cardMembers,updateBoard,board } = this.props;
+        var idx = cardMembers.findIndex(member => member._id = userId)
+        cardMembers.splice(idx,1)
+        updateBoard(board)
+    }
+    addMember = (userId) =>{
+        const { cardMembers,boardUsers,updateBoard,board } = this.props;
+        var user = boardUsers.find(user => user._id === userId)
+        cardMembers.push(user)
+        updateBoard(board)
+    }
 
     render() {
         return (
             <div>
                 <span>Task To:</span>
-                    <MiniUser users={this.props.cardMembers} />
+                    {this.props.cardMembers && <MiniUser users={this.props.cardMembers} isOpen={true} command={this.removeMember}/>}
                 <span>Other Board Members:</span>
-                    <MiniUser users={this.getUnPickedUsers()} />
+                    <MiniUser users={this.getUnPickedUsers()} command={this.addMember} isOpen={true}/>
             </div>
         )
     }
