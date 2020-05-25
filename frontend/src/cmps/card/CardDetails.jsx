@@ -25,7 +25,8 @@ const TESTING_CHEKLIST = {
 };
 export class CardDetails extends Component {
     state = {
-        addTo: null
+        addTo: null,
+        isAddChecklist:false
     }
     addMembers() {
         this.setState({ addTo: 'members' })
@@ -34,10 +35,11 @@ export class CardDetails extends Component {
         this.setState({ addTo: 'labels' })
     }
     onAddChecklist = (ev) => {
-
+        this.setState(prevstate=>({isAddChecklist:!prevstate.isAddChecklist}))
     }
     render() {
         const { card, board, updateBoard, history } = this.props
+        const { isAddChecklist} = this.state
         const backToBoard = (ev) => {
             history.push(`/b/${board._id}/${board.name}`);
         }
@@ -66,6 +68,7 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addMembers()}>Members</button>
                             <button onClick={() => this.addLabels()}>Labels</button>
                             <button onClick={onAddChecklist}>Checklist</button>
+                            {isAddChecklist&&<AddChecklist/>}
                             <button>Due Date</button>
                             <button>Attachment</button>
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
