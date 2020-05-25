@@ -37,6 +37,11 @@ const connectSockets = require('./api/socket/socket.routes')
 
 
 // routes
+app.get('/', (req, res) => {
+    res.status(418).json({
+        test: "stam test"
+    })
+})
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/board', boardRoutes)

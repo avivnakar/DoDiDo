@@ -16,7 +16,7 @@ async function getBoards(req, res) {
 
 async function getBoard(req, res) {
     try {
-        const boards = await boardService.query(req.query)
+        const boards = await boardService.getById(req.params.id)
         res.send(boards)
     } catch (err) {
         logger.error('Cannot get boards', err);
@@ -25,7 +25,7 @@ async function getBoard(req, res) {
     }
 }
 
-async function updateUser(req, res) {
+async function updateBoard(req, res) {
     try {
         const board = req.body;
         await boardService.update(board)
