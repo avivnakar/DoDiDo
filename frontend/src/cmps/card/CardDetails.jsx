@@ -53,11 +53,8 @@ export class CardDetails extends Component {
                                 {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} /><button>+Add Member</button></div>}
                             </div>
                             <div>
-                                Description
-                                    <CardDesc card={card} updateBoard={updateBoard} board={board} />
-                            </div>
-                            <div>
                                 <h4>Description</h4>
+                                <CardDesc card={card} updateBoard={updateBoard} board={board} />
                                 <Checklist checklist={TESTING_CHEKLIST} />
                             </div>
                             {card.checklists && 'popo'}
