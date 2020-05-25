@@ -31,9 +31,9 @@ export class AddMembers extends Component {
         return (
             <div>
                 <span>Task To:</span>
-                    {this.props.cardMembers && <MiniUser users={this.props.cardMembers} command={this.removeMember}/>}
+                    {this.props.cardMembers && <MiniUser users={this.props.cardMembers} isOpen={true} command={this.removeMember}/>}
                 <span>Other Board Members:</span>
-                    <MiniUser users={this.getUnPickedUsers()} command={this.addMember}/>
+                    <MiniUser users={this.getUnPickedUsers()} command={this.addMember} isOpen={true}/>
             </div>
         )
     }

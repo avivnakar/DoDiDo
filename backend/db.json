@@ -57,6 +57,16 @@
           "id": "c0004",
           "title": null,
           "color": "blue"
+        },
+        {
+          "id": "NfzG",
+          "title": null,
+          "color": "#00ffff"
+        },
+        {
+          "id": "KfgJ",
+          "title": "DAMN",
+          "color": "#ff0080"
         }
       ],
       "members": [
@@ -74,20 +84,42 @@
       "activities": [],
       "cardLists": [
         {
-          "title": "Grabage bin",
-          "id": "recycleBin_5c09",
+          "id": "vumj",
+          "title": "Lןדאט",
           "cards": [
             {
               "id": "5539",
               "title": "Done PLS",
               "labels": [
                 {
-                  "title": "IT",
+                  "id": "c0001",
+                  "title": null,
                   "color": "red"
                 },
                 {
-                  "title": "",
+                  "id": "c0004",
+                  "title": null,
+                  "color": "blue"
+                },
+                {
+                  "id": "c0002",
+                  "title": null,
                   "color": "orange"
+                },
+                {
+                  "id": "c0003",
+                  "title": null,
+                  "color": "green"
+                },
+                {
+                  "id": "NfzG",
+                  "title": null,
+                  "color": "#00ffff"
+                },
+                {
+                  "id": "KfgJ",
+                  "title": "DAMN",
+                  "color": "#ff0080"
                 }
               ],
               "createdBy": {
@@ -97,108 +129,8 @@
               },
               "cardMembers": [
                 {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": "testin testin testing",
-              "dueDate": 5413234551234,
-              "cheklists": [
-                {
-                  "id": "14s3",
-                  "title": "checklist22",
-                  "todos": [
-                    {
-                      "id": "14sf3",
-                      "text": "lorem blabla bla bla bla",
-                      "doneAt": 14325434545,
-                      "doneBy": {
-                        "_id": "u401",
-                        "fullName": "Aviv Nakar",
-                        "imgUrl": "adf.jpg"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "attachments": [
-                {
-                  "id": "23s4",
-                  "name": "lorem",
-                  "url": "././img/ape.jpg",
-                  "addedBy": {
-                    "_id": "u401",
-                    "fullName": "Aviv Nakar",
-                    "imgUrl": "adf.jpg"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "mNSr",
-          "title": "new list",
-          "cards": [
-            {
-              "id": "xIZ0",
-              "title": "another card",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "added new description",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "zL4H",
-              "title": "TEST",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "gfdgsdfgfd",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            }
-          ]
-        },
-        {
-          "title": "fgdfgsg",
-          "id": "s100",
-          "cards": [
-            {
-              "id": "5539",
-              "title": "Done PLS",
-              "labels": [
-                {
-                  "title": "IT",
-                  "color": "red"
-                },
-                {
-                  "title": "",
-                  "color": "orange"
-                }
-              ],
-              "createdBy": {
-                "_id": "u401",
-                "fullName": "Aviv Nakar",
-                "imgUrl": "adf.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
                   "imgUrl": "adf.png"
                 }
               ],
@@ -234,6 +166,60 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
+          "cards": [
+            {
+              "id": "xIZ0",
+              "title": "another card",
+              "labels": [
+                {
+                  "id": "KfgJ",
+                  "title": "DAMN",
+                  "color": "#ff0080"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": "הנימעצמנ",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            },
+            {
+              "id": "zL4H",
+              "title": "TEST",
+              "labels": [
+                {
+                  "id": "KfgJ",
+                  "title": "DAMN",
+                  "color": "#ff0080"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "gfdgsdfgfd",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
             }
           ]
         }
