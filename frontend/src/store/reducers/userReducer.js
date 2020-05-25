@@ -3,7 +3,7 @@ const initialState = {
     user: {
         _id: 'userid',
         fullName: 'Gal Rondel',
-        userName: 'rondelicious',
+        username: 'rondelicious',
         password: 'DoDiDo',
         lastLoginAt: Date.now() - 1000 * 60 * 30,
         phone: 97254436302,

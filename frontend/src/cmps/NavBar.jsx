@@ -1,7 +1,7 @@
 import React from 'react'
 
 export function NavBar(props) {
-    const { user } = props
+    const { user,logout,login } = props
     return (
         <nav className="nav-container">
             <div className="logo">
@@ -13,7 +13,7 @@ export function NavBar(props) {
                         <li><img src={user.imgUrl} alt={user.username}/></li>
                         <li>Hi {user.fullName}</li>
                     </>}
-                    <li className="login">{user ? 'Logout' : 'Login'}</li>
+                    <li className="login" onClick={user?logout:login} >{user ? 'Logout' : 'Login'}</li>
                     {!user && <li className="sign-up">Sign Up</li>}
                 </ul>
             </div>
