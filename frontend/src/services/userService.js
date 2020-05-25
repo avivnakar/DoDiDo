@@ -1,6 +1,7 @@
 import {httpService} from './httpService';
 
 export const userService = {
+    query,
     getById,
     update
 }

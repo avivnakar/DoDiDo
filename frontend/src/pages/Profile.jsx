@@ -10,7 +10,7 @@ class _Profile extends Component {
         const { user} = this.props
         return <section className="profile">
             <img src={`https://robohash.org/set_set3/${user.username}`} alt="" />
-            <pre>{JSON.stringify(user, null, 2).split('\"').join('')}</pre>
+            <pre>{JSON.stringify(user, null, 2).split('"').join('')}</pre>
         </section>
 
     }
