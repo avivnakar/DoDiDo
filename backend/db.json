@@ -74,27 +74,12 @@
       "activities": [],
       "cardLists": [
         {
-          "title": "fgdfgsg",
-          "id": "s100",
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
           "cards": [
             {
-              "id": "zL4H",
-              "title": "TEST",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "gfdgsdfgfd",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "5c09",
-              "title": "Do It",
+              "id": "5539",
+              "title": "Done PLS",
               "labels": [
                 {
                   "title": "IT",
@@ -153,8 +138,44 @@
           ]
         },
         {
-          "title": "Grabage bin",
-          "id": "recycleBin_5c09",
+          "id": "mNSr",
+          "title": "new list",
+          "cards": [
+            {
+              "id": "xIZ0",
+              "title": "another card",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "added new description",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            },
+            {
+              "id": "zL4H",
+              "title": "TEST",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "gfdgsdfgfd",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "title": "fgdfgsg",
+          "id": "s100",
           "cards": [
             {
               "id": "5539",
@@ -213,28 +234,8 @@
                   }
                 }
               ]
-            },
-            {
-              "id": "juat",
-              "title": "gdsfgd",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "gsdgfd",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
             }
           ]
-        },
-        {
-          "title": "Done",
-          "id": "s102",
-          "cards": []
         }
       ]
     }

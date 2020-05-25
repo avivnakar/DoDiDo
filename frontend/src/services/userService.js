@@ -12,3 +12,10 @@ function getById(userId) {
 function update(user) {
     return httpService.put(`user/${user._id}`, user)
 }
+/**
+ * 
+ * @param {*} criteria filter by username or fullname 
+ */
+function query(criteria) {
+    return httpService.get(`user/${criteria}`);
+}
