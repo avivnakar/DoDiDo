@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { CardPreiview } from './CardPreiview.jsx';
 import { ListTitle } from './ListTitle.jsx';
 import { AddCard } from './AddCard.jsx';
@@ -12,13 +12,14 @@ import { removeCard } from '../../store/actions/boardActions.js';
 import { connect } from 'react-redux'
 
 function _ListPreiview(props) {
+    var isHover =useState(false)
     const { list, board, updateBoard, removeCard } = props
     const onCardRemove = (cardId) => (ev) => {
         ev.stopPropagation();
         removeCard(board, list, cardId)
     }
     const onListRemove = (ev) => {
-        const idx = board.cardLists.findIndex(l => l.in = list.id);
+        const idx = board.cardLists.findIndex(l => l.in === list.id);
         board.cardLists.splice(idx, 1);
         updateBoard(board);
     }
@@ -28,6 +29,15 @@ function _ListPreiview(props) {
                 <section className="list"
                     {...provided.draggableProps}
                     ref={provided.innerRef}
+                    // onMouseOver={(ev=>{
+                    //     isHover=true;
+                    //     console.log(isHover);
+                    // })}
+                    // onMouseLeave={(ev=>{
+                    //     isHover=false;
+                    //     console.log(isHover);
+                    // })}
+                    
                 >
 
                     <div className="list-title flex space-between justify-center align-center"
@@ -44,7 +54,9 @@ function _ListPreiview(props) {
                             >
                                 {list.cards && list.cards.map((card, index) => <CardPreiview
                                     index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
-                                    onCardRemove={onCardRemove} history={props.history} />)}
+                                    onCardRemove={onCardRemove} history={props.history} 
+                                    listHover={isHover}
+                                    />)}
                                 {provided.placeholder}
                             </div>
                         )}

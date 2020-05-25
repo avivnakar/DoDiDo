@@ -122,7 +122,9 @@ const mapStateToProps = (state) => {
     return {
         board: state.board.currBoard,
         card: state.board.currCard,
-        boards: state.board.boards
+        boards: state.board.boards,
+        user: state.user.user
+
     }
 }
 

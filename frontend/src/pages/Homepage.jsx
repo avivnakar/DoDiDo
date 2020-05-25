@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { NavBar } from '../cmps/NavBar';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-export class Homepage extends Component {
+class _Homepage extends Component {
     render() {
+        const {user} = this.props
         return (
             <div>
                 <header>
-                    <NavBar />
+                    <NavBar user={user} />
                     <section className="flex justify-center align-center">
                         <div className="desc">
                             <h2>DoDiDo lets you work more collaboratively and get more done.</h2>
@@ -93,3 +95,13 @@ export class Homepage extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        user: state.user.user
+    }
+}
+
+const mapDispatchToProps = {
+}
+
+export const Homepage = connect(mapStateToProps,mapDispatchToProps)(_Homepage)

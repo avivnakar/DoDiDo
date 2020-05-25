@@ -1,6 +1,14 @@
 
 const initialState = {
-    user:null
+    user: {
+        _id: 'userid',
+        fullName: 'Gal Rondel',
+        userName: 'rondelicious',
+        password: 'DoDiDo',
+        lastLoginAt: Date.now() - 1000 * 60 * 30,
+        phone: 97254436302,
+        imgUrl:'https://robohash.org/set_set3/rondelicious?size=64x64'
+    }
 }
 
 export function userReducer(state = initialState, action) {
