@@ -1,22 +1,39 @@
 import { userService } from '../../services/userService';
 import { authService } from '../../services/authService';
-
-export async function login(credentials) {
-    const user = await authService.login(credentials);
-    return dispatch =>dispatch({ type: 'SET_USER', user });
+const DEFAULT_USER = {
+    _id: 'userid',
+    fullName: 'Gal Rondel',
+    username: 'rondelicious',
+    password: 'DoDiDo',
+    lastLoginAt: Date.now() - 1000 * 60 * 30,
+    phone: 97254436302,
+    imgUrl: 'https://robohash.org/set_set3/rondelicious?size=64x64'
+}
+export function login(credentials) {
+    return dispatch => authService.login(credentials)
+        .catch(err => {
+            alert(err);
+            return DEFAULT_USER;
+        })
+        .then((user) => dispatch({ type: 'SET_USER', user }));
 }
 
-export async function signup(credentials) {
-    const user = await authService.signup(credentials);
-    return dispatch => dispatch({ type: 'SET_USER', user });
+export function signup(credentials) {
+    return dispatch => authService.signup(credentials)
+        .catch(err => {
+            alert(err);
+            return DEFAULT_USER;
+        })
+        .then(user => dispatch({ type: 'SET_USER', user }));
 }
 
-export async function logout() {
-    const user = await authService.logout();
-    return dispatch => dispatch({ type: 'CLR_USER' });
+export function logout() {
+    return dispatch => authService.logout()
+        .catch(err => alert(err, 'there is no server'))
+        .then(() => dispatch({ type: 'CLR_USER' }));
 }
-export async function updateUser(user) {
-    const user = await userService.update(user);
-    return dispatch => dispatch({ type: 'SET_USER', user });
+export function updateUser(user) {
+    return dispatch => userService.update(user)
+        .then((user) => dispatch({ type: 'SET_USER', user }));
 }
 // console.log(this.props.login())

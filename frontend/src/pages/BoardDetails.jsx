@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
 import { AddList } from '../cmps/board/AddList.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
-import { setBoard, updateBoard, setCard, loadBoards } from '../store/actions/boardActions.js';
+import { setBoard, updateBoard, setCard, loadBoards,removeCard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 class _BoardDetails extends Component {
@@ -78,7 +78,8 @@ class _BoardDetails extends Component {
         this.props.updateBoard(board)
     };
     render() {
-        const { board, card, } = this.props;
+        const { board, card, history,updateBoard} = this.props;
+        const listProps={history,updateBoard,board}
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
@@ -102,7 +103,7 @@ class _BoardDetails extends Component {
                                     <div className="div">dsfsdfsfsd</div>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
-                                        board={board} updateBoard={this.props.updateBoard} history={this.props.history} />)}
+                                        {...listProps} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
                                 {provided.placeholder}
@@ -121,7 +122,9 @@ const mapStateToProps = (state) => {
     return {
         board: state.board.currBoard,
         card: state.board.currCard,
-        boards: state.board.boards
+        boards: state.board.boards,
+        user: state.user.user
+
     }
 }
 
@@ -129,7 +132,8 @@ const mapDispatchToProps = {
     setBoard,
     updateBoard,
     loadBoards,
-    setCard
+    setCard,
+    removeCard
 }
 
 export const BoardDetails = connect(mapStateToProps, mapDispatchToProps)(_BoardDetails)

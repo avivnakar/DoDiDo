@@ -56,3 +56,20 @@
         }
     }
   }
+
+@mixin button-clear {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+@mixin a-clear {
+    a{
+        color:unset;
+        @content;
+    }
+}
+
+@mixin round {
+    border-radius: 50%;
+}

@@ -1,3 +1,20 @@
+@mixin del-btns {
+    &:hover .del {
+        opacity: 0.5;
+    }
+    .del {
+        float: right;
+        opacity: 0;
+        color: red;
+        font-size: rem(20px);
+        @include button-clear;
+        @include round;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
 .list {
     background-color: $list-bgc;
     width: 272px;
@@ -26,6 +43,7 @@
             }
         }
     }
+    @include del-btns;
 }
 
 .add-card-container {
@@ -70,9 +88,11 @@
     margin: auto;
     margin-bottom: 10px;
     // background-color: burlywood;
+    @include del-btns;
 }
 
 .card-stat {
     font-size: 0.8rem;
     text-align: right;
 }
+

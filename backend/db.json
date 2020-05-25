@@ -74,121 +74,6 @@
       "activities": [],
       "cardLists": [
         {
-          "title": "Grabage bin",
-          "id": "recycleBin_5c09",
-          "cards": [
-            {
-              "id": "zL4H",
-              "title": "TEST",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "gfdgsdfgfd",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "wzv9",
-              "title": "gdfgdfgsfdd",
-              "labels": [],
-              "createdBy": {},
-              "cardMembers": [],
-              "desc": "gfdgf",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "juat",
-              "title": "gdsfgd",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "gsdgfd",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "5c09",
-              "title": "Do It",
-              "labels": [
-                {
-                  "title": "IT",
-                  "color": "red"
-                },
-                {
-                  "title": "",
-                  "color": "orange"
-                }
-              ],
-              "createdBy": {
-                "_id": "u401",
-                "fullName": "Aviv Nakar",
-                "imgUrl": "adf.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": "testin testin testing",
-              "dueDate": 5413234551234,
-              "cheklists": [
-                {
-                  "id": "14s3",
-                  "title": "checklist22",
-                  "todos": [
-                    {
-                      "id": "14sf3",
-                      "text": "lorem blabla bla bla bla",
-                      "doneAt": 14325434545,
-                      "doneBy": {
-                        "_id": "u401",
-                        "fullName": "Aviv Nakar",
-                        "imgUrl": "adf.jpg"
-                      }
-                    }
-                  ]
-                }
-              ],
-              "attachments": [
-                {
-                  "id": "23s4",
-                  "name": "lorem",
-                  "url": "././img/ape.jpg",
-                  "addedBy": {
-                    "_id": "u401",
-                    "fullName": "Aviv Nakar",
-                    "imgUrl": "adf.jpg"
-                  }
-                }
-              ]
-            },
-            {
-              "title": "gfdgsdf",
-              "labels": [],
-              "createdBy": {},
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            }
-          ]
-        },
-        {
           "title": "fgdfgsg",
           "id": "s100",
           "cards": [
@@ -221,11 +106,11 @@
               "dueDate": 5413234551234,
               "cheklists": [
                 {
-                  "id": "14h3",
+                  "id": "14s3",
                   "title": "checklist22",
                   "todos": [
                     {
-                      "id": "14s6f3",
+                      "id": "14sf3",
                       "text": "lorem blabla bla bla bla",
                       "doneAt": 14325434545,
                       "doneBy": {
@@ -239,7 +124,7 @@
               ],
               "attachments": [
                 {
-                  "id": "24s4",
+                  "id": "23s4",
                   "name": "lorem",
                   "url": "././img/ape.jpg",
                   "addedBy": {
@@ -253,9 +138,56 @@
           ]
         },
         {
-          "title": "Done",
-          "id": "s102",
-          "cards": []
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
+          "cards": [
+            {
+              "title": "gfdgsdf",
+              "labels": [],
+              "createdBy": {},
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "id": "mNSr",
+          "title": "new list",
+          "cards": [
+            {
+              "id": "xIZ0",
+              "title": "another card",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "added new description",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            },
+            {
+              "id": "zL4H",
+              "title": "TEST",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "gfdgsdfgfd",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            }
+          ]
         }
       ]
     }
