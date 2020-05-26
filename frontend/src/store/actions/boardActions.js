@@ -1,10 +1,7 @@
 import { boardService } from '../../services/boardService';
 import { utilService } from '../../services/utilService';//makeid for lists and cards
 
-// export async function loadBoards(filter) {
-//     const boards = await boardService.query(filter)
-//     return dispatch => dispatch({ type: 'SET_BOARDS', boards });
-// }
+
 export function loadBoards(criteria) {
     return dispatch => {
         return boardService.query(criteria)
@@ -19,12 +16,7 @@ export function loadBoard(id) {
             })
     }
 }
-// export function removeCar(carId) {
-//     return dispatch => {
-//         carService.remove(carId)
-//             .then(() => dispatch({ type: 'REMOVE_CAR', carId }))
-//     }
-// }
+
 
 export function setBoard(board = null) {
     return dispatch => dispatch({ type: 'SET_BOARD', board })
@@ -103,19 +95,19 @@ export function updateCard(board, card) {
         return acc;
     }, {});
     board.cardLists[listIdx].cards.splice(cardIdx, 1, card);
-    updateBoard(board);
+    return updateBoard(board);
 }
 export function updateList(board, list) {
     const idx = utilService.getIdxById(board, list.id);
     board.cardLists.splice(idx, 1, list);
-    updateBoard(board);
+    return updateBoard(board);
 }
 export function addCard(board, list, title, createdBy) {
     const idx = utilService.getIdxById(board, list.id);
     const card = _createCard(title, createdBy);
     list.cards.push(card);
     board.cardLists.splice(idx, 1, list);
-    updateBoard(board);
+    return updateBoard(board);
 }
 
 

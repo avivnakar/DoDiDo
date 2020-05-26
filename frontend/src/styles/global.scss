@@ -1,27 +1,28 @@
 // Setup
-@import "setup/variables.scss";
-@import "setup/functions.scss";
-@import "setup/mixins.scss";
-@import "setup/typography.scss";
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
 
 // Basics
-@import "basics/helpers.scss";
-@import "basics/layout.scss";
-@import "basics/base.scss";
-@import "basics/links.scss";
-@import "basics/buttons.scss";
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/base";
+@import "basics/links";
+@import "basics/buttons";
 @import "basics/screen";
 // Components
 
 // @import "components/main-header.scss";
 // @import "components/cat-card.scss";
-@import "components/BoardNav.scss";
-@import "components/MiniUser.scss";
-@import "views/home-page.scss";
-@import "views/Boards-list.scss";
-@import "views/Board.scss";
+@import "components/BoardNav";
+@import "components/MiniUser";
+@import "views/home-page";
+@import "views/Boards-list";
+@import "views/Board";
 @import "components/CardDetails";
-@import "components/BoardHeaderNav.scss";
+@import "components/BoardHeaderNav";
+@import "components/initials";
 //index.css
 
 body {

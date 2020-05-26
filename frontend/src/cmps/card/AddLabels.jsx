@@ -27,7 +27,7 @@ export class AddLabels extends Component {
             cardLabels()
         }
         return (
-            <div>
+            <div className="add-labels">
                 Labels
                 <LabelList labels={board.labels} command={this.addLabel} /><button onClick={this.toggleAdd}>+Add Label</button>
                 {this.state.isOpen && <AddLabelBoard board={board} updateBoard={updateBoard} />}

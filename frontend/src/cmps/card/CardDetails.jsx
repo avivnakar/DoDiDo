@@ -64,7 +64,7 @@ export class CardDetails extends Component {
                             {card.checklists && <CardCheckLists card={card} updateBoard={updateBoard} board={board}/>}
                             {this.state.addTo === 'check' && <h1>X</h1>}
                         </div>
-                        <div className="card-btns flex column">
+                        <aside className="card-btns flex column">
                             <button onClick={() => this.addTo('members')}>Members</button>
                             <button onClick={() => this.addTo('labels')}>Labels</button>
                             <button onClick={() => this.addTo('check')}>Checklist</button>
@@ -72,7 +72,7 @@ export class CardDetails extends Component {
                             <button>Attachment</button>
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'labels' && <AddLabels cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
-                        </div>
+                        </aside>
                     </div>
                 </section>
             )

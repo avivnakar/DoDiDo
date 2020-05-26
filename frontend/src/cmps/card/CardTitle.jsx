@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
+import { useState } from 'react';
 export class CardTitle extends Component {
     state = {
-        isEdit: null
+        isEdit: false
     }
     onEdit() {
         this.setState({
@@ -18,7 +18,7 @@ export class CardTitle extends Component {
             if (!e.target.value) {
                 card.title = e.target.placeholder
                 this.setState({
-                    isEdit: null
+                    isEdit: false
                 })
             }
             else {
