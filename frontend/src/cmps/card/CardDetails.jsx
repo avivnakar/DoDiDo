@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
 import { CardTitle } from './CardTitle.jsx';
-import { CardCheckLists } from './CardCheckLists.jsx';
+import { CardCheckList } from './CardCheckList.jsx';
+import { AddCheckList } from './AddCheckList.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
@@ -39,7 +40,6 @@ export class CardDetails extends Component {
     }
     render() {
         const { card, board, updateBoard, history } = this.props
-        const { isAddChecklist} = this.state
         const backToBoard = (ev) => {
             history.push(`/b/${board._id}/${board.name}`);
         }
@@ -57,12 +57,12 @@ export class CardDetails extends Component {
                                 <h4>Description</h4>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
+                            {card.checkLists && card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card}  checkList={checkList} updateBoard={updateBoard} board={board}/>)}
+                            {this.state.addTo === 'check' && <AddCheckList card={card} updateBoard={updateBoard} board={board}/>}
                             <div>
                                 <h4>Activity</h4>
                                 <input placeholder="enter comment"/>
                             </div>
-                            {card.checklists && <CardCheckLists card={card} updateBoard={updateBoard} board={board}/>}
-                            {this.state.addTo === 'check' && <h1>X</h1>}
                         </div>
                         <aside className="card-btns flex column">
                             <button onClick={() => this.addTo('members')}>Members</button>

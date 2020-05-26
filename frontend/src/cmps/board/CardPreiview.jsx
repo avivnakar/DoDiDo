@@ -33,7 +33,7 @@ export function CardPreiview(props) {
                         <div className="card-stat flex">
                             {card.desc && <div title="Description"><FaRegListAlt /></div>}
                             {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
-                            {card.cheklists.length > 0 && <div title="Checklist items">{card.cheklists.length}{<FaRegCheckSquare />}</div>}
+                            {card.checkLists.length > 0 && <div title="Checklist items">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
                             {card.dueDate && <span>{<FaRegClock />}</span>}
                             {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                         </div>
