@@ -4,6 +4,7 @@ import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards } from '../store/actions/boardActions.js';
 import { Link } from 'react-router-dom';
+import { socketService } from '../services/socketService.js';
 
 class _Boards extends Component {
     state = {
@@ -11,6 +12,7 @@ class _Boards extends Component {
     }
     componentDidMount() {
         this.loadBoards()
+        socketService.on('update boards', this.loadBoards)
     }
 
     loadBoards = () => {

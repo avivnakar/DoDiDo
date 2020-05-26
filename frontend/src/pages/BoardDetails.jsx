@@ -3,10 +3,12 @@ import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
 import { AddList } from '../cmps/board/AddList.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
-import { setBoard, updateBoard, setCard, loadBoards, removeCard } from '../store/actions/boardActions.js';
+import { setBoard, updateBoard, updateBoardSync, setCard, loadBoards, removeCard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
+import { socketService } from '../services/socketService.js';
+
 
 class _BoardDetails extends Component {
     state = {
@@ -15,6 +17,7 @@ class _BoardDetails extends Component {
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
+        socketService.on('update board', this.props.updateBoardSync)
     }
     componentDidUpdate(prevProps) {
         if (this.state.match !== this.props.match) {
@@ -28,6 +31,7 @@ class _BoardDetails extends Component {
         const { boardId, cardId } = this.state.match.params
         var id
         if (boardId) {
+            socketService.emit('listen board', boardId);
             id = boardId;
             this.props.setCard(null);
             boardService.getById(id)
@@ -45,6 +49,7 @@ class _BoardDetails extends Component {
                         return acc;
                     }, {});
                     const { setCard, setBoard } = this.props;
+                    socketService.emit('lisen board', currBoard._id);
                     setBoard(currBoard);
                     setCard(currCard);
                 })
@@ -138,6 +143,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = {
     setBoard,
     updateBoard,
+    updateBoardSync,
     loadBoards,
     setCard,
     removeCard

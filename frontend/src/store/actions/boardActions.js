@@ -1,5 +1,7 @@
 import { boardService } from '../../services/boardService';
 import { utilService } from '../../services/utilService';//makeid for lists and cards
+import { socketService } from '../../services/socketService';
+socketService.setup();
 
 
 export function loadBoards(criteria) {
@@ -25,20 +27,23 @@ export function setCard(card = null) {
     return dispatch => dispatch({ type: 'SET_CARD', card })
 }
 export function addBoard(board) {
+    socketService.emit('boards updated');
     return dispatch => {
         return boardService.add(board)
             .then(dispatch({ type: 'ADD_BOARD', board }))
     }
 }
+
+export function updateBoardSync(board) {
+    return dispatch => dispatch({ type: 'UPDATE_BOARD', board });
+
+}
 export function updateBoard(board) {
-    console.log('%c 1','color:green;')
-    
+      socketService.emit('board updated',board)
     return dispatch => {
-        console.log('%c 2','color:yellow;')
         dispatch({ type: 'UPDATE_BOARD', board });
         return boardService.update(board)
-        .then(res => {
-            console.log('%c 3','color:red;')
+            .then(res => {
                 dispatch({ type: 'UPDATE_BOARD', board: res })
                 return res;
             });
@@ -61,15 +66,15 @@ function _createCard(title, createdBy) {
         attachments: []
     }
 }
-export function removeCard(board,list, cardId) {
+export function removeCard(board, list, cardId) {
     const idx = board.cardLists.findIndex(currList => currList.id === list.id)
-    const cardIdx=board.cardLists[idx].cards.findIndex(card=>card.id===cardId);
+    const cardIdx = board.cardLists[idx].cards.findIndex(card => card.id === cardId);
     console.log({
-        board,list, cardId,idx,cardIdx
+        board, list, cardId, idx, cardIdx
     });
-    
+
     const newBoard = { ...board }
-    newBoard.cardLists[idx].cards.splice(cardIdx,1)
+    newBoard.cardLists[idx].cards.splice(cardIdx, 1)
     // const { listIdx, cardIdx } = board.cardLists.reduce((acc, list, listIdx) => {
     //     if (!((acc.cardIdx) && (acc.listIdx))) {
     //         const idx = utilService.getIdxById(cardId,list.cards);
@@ -78,7 +83,7 @@ export function removeCard(board,list, cardId) {
     //     return acc;
     // }, {});
     // console.log("po",listIdx,cardIdx)
-    
+
     return updateBoard(newBoard);
 }
 export function removeList(board, listId) {
