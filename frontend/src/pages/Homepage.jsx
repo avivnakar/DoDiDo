@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { NavBar } from '../cmps/NavBar';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { logout,login } from '../store/actions/userActions';
+import { logout, login } from '../store/actions/userActions';
 
 class _Homepage extends Component {
-    componentDidUpdate(){
-        !this.props.user&&console.log(this.props.user)
+    componentDidUpdate() {
+        !this.props.user && console.log(this.props.user)
     }
     render() {
-        const { user,logout,login } = this.props
+        const { user, logout, login } = this.props
         return (
             <div>
-                <header>
+                <header className="homepage-head">
                     <NavBar user={user} logout={logout} login={login} />
                     <section className="flex justify-center align-center">
                         <div className="desc">

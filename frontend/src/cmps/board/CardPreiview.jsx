@@ -10,11 +10,12 @@ export function CardPreiview(props) {
     return (
         <Draggable draggableId={card.id} index={props.index}>
             {(provided) => (
-                <article className="card" /*onClick={() => props.getCurrCard(card)}*/
-                    onClick={() => history.push(`/c/${card.id}/${card.title}`)}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                    ref={provided.innerRef}
+                <div className="card-warpper">
+                    <article className="card" /*onClick={() => props.getCurrCard(card)}*/
+                        onClick={() => history.push(`/c/${card.id}/${card.title}`)}
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        ref={provided.innerRef}
                     // onMouseOver={(ev=>{
                     //     isHover=true;
                     //     console.log(isHover);
@@ -23,20 +24,22 @@ export function CardPreiview(props) {
                     //     isHover=false;
                     //     console.log(isHover);
                     // })}
-                >
-                    <button className="del" onClick={onCardRemove(card.id)}>⨯</button>
-                    <div>
-                        {card.labels && <LabelList labels={card.labels} />}
-                    </div>
-                    <span>{card.title}</span>
-                    <div className="card-stat flex">
-                        {card.desc && <div title="Description"><FaRegListAlt /></div>}
-                        {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
-                        {card.cheklists.length > 0 && <div title="Checklist items">{card.cheklists.length}{<FaRegCheckSquare />}</div>}
-                        {card.dueDate && <span>{<FaRegClock />}</span>}
-                        {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
-                    </div>
-                </article>
+                    >
+                        <button className="del" onClick={onCardRemove(card.id)}>⨯</button>
+                        <div>
+                            {card.labels && <LabelList labels={card.labels} />}
+                        </div>
+                        <span className="card-title">{card.title}</span>
+                        <div className="card-stat flex">
+                            {card.desc && <div title="Description"><FaRegListAlt /></div>}
+                            {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
+                            {card.cheklists.length > 0 && <div title="Checklist items">{card.cheklists.length}{<FaRegCheckSquare />}</div>}
+                            {card.dueDate && <span>{<FaRegClock />}</span>}
+                            {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
+                        </div>
+                    </article>
+                </div>
+
             )}
         </Draggable>
     )
