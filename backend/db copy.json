@@ -84,19 +84,21 @@
       "activities": [],
       "cardLists": [
         {
+<<<<<<< HEAD
+          "id": "vumj",
+          "title": "Lןדאט",
+          "cards": [
+            {
+              "id": "5539",
+              "title": "Done PLS",
+=======
           "title": "Grabage bin",
           "id": "recycleBin_5c09",
           "cards": [
             {
               "id": "zL4H",
               "title": "TEST",
-              "labels": [
-                {
-                  "id": "c0003",
-                  "title": null,
-                  "color": "green"
-                }
-              ],
+              "labels": [],
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
@@ -137,6 +139,7 @@
             {
               "id": "5c09",
               "title": "Do It",
+>>>>>>> origin/yuval
               "labels": [
                 {
                   "id": "c0001",
@@ -252,6 +255,7 @@
                   "imgUrl": "adf.png"
                 }
               ],
+<<<<<<< HEAD
               "desc": "הנימעצמנ",
               "dueDate": null,
               "cheklists": [],
@@ -261,12 +265,18 @@
               "id": "zL4H",
               "title": "TEST",
               "labels": [
+=======
+              "desc": "aklhsfsdgfasdg ",
+              "dueDate": 5413234551234,
+              "cheklists": [
+>>>>>>> origin/yuval
                 {
                   "id": "KfgJ",
                   "title": "DAMN",
                   "color": "#ff0080"
                 }
               ],
+<<<<<<< HEAD
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
@@ -277,6 +287,20 @@
               "dueDate": null,
               "cheklists": [],
               "attachments": []
+=======
+              "attachments": [
+                {
+                  "id": "24s4",
+                  "name": "lorem",
+                  "url": "././img/ape.jpg",
+                  "addedBy": {
+                    "_id": "u401",
+                    "fullName": "Aviv Nakar",
+                    "imgUrl": "adf.jpg"
+                  }
+                }
+              ]
+>>>>>>> origin/yuval
             }
           ]
         }
