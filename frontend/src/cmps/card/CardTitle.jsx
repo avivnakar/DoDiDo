@@ -9,22 +9,35 @@ export class CardTitle extends Component {
             isEdit: true
         })
     }
-    handleKeyDown(e) {
-        this.props.card.desc = e.target.value
-        if (e.key === 'Enter') {
-            this.setState({
-                isEdit: false
-            })
+    onBlur(e) {
+        this.handleKeyDown(e, true)
+    }
+    handleKeyDown(e, blur = false) {
+        const { board, card, updateBoard } = this.props
+        if (e.key === 'Enter' || blur) {
+            if (!e.target.value) {
+                card.title = e.target.placeholder
+                this.setState({
+                    isEdit: false
+                })
+            }
+            else {
+                card.title = e.target.value
+                this.setState({
+                    isEdit: null
+                })
+            }
+            updateBoard(board)
         }
     }
-    editEnd=()=>{}
+    getTitle() {
+        if (this.props.card.title && !this.state.isEdit) {
+            return <h2 onClick={() => this.onEdit()}>{this.props.card.title}</h2>
+        } else if (this.props.card.title) return <input placeholder={this.props.card.title} onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
+    }
     render() {
-        const { onEdit } = this
-        const { title, updateBoard } = this.props
-        return this.state.isEdit ?
-            <input type="text" onBlur={updateBoard} placeholder="Ent" value={this.props.card.desc} onKeyDown={(e) => { this.handleKeyDown(e) }} /> :
-            <h3 onClick={onEdit} className="card-title">{title}</h3>
-
-
+        return (
+            this.getTitle()
+        )
     }
 }
