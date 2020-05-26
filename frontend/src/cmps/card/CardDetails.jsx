@@ -56,6 +56,10 @@ export class CardDetails extends Component {
                                 <h4>Description</h4>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
+                            <div>
+                                <h4>Activity</h4>
+                                <input placeholder="enter comment"/>
+                            </div>
                             {card.checklists && 'popo'}
                             {this.state.addTo === 'check' && <h1>X</h1>}
                         </div>
