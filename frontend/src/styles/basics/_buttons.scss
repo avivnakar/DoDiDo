@@ -35,3 +35,30 @@ button {
     border-radius: 8px;
     background-color: $clr3;
 }
+
+.list-menu-btn {
+    all: unset;
+    font-size: 0.925rem;
+    height: 30px;
+    width: 30px;
+    outline: 0;
+    color: #bdc5d8;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+    // background-color: black;
+    & a {
+        color: #bdc5d8;
+        & :hover {
+            color: #002d3d;
+        }
+    }
+}
+.list-menu-btn:hover {
+    color: #002d3d;
+    background-color: rgba(9, 30, 66, 0.08);
+}
