@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
 import { CardTitle } from './CardTitle.jsx';
+import { CardCheckLists } from './CardCheckLists.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
@@ -60,7 +61,7 @@ export class CardDetails extends Component {
                                 <h4>Activity</h4>
                                 <input placeholder="enter comment"/>
                             </div>
-                            {card.checklists && 'popo'}
+                            {card.checklists && <CardCheckLists card={card} updateBoard={updateBoard} board={board}/>}
                             {this.state.addTo === 'check' && <h1>X</h1>}
                         </div>
                         <div className="card-btns flex column">
