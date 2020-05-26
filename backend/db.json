@@ -67,6 +67,11 @@
           "id": "KfgJ",
           "title": "DAMN",
           "color": "#ff0080"
+        },
+        {
+          "id": "UEly",
+          "title": "dfs",
+          "color": "#ff8000"
         }
       ],
       "members": [
@@ -86,6 +91,49 @@
         {
           "id": "vumj",
           "title": "Lןדאט",
+          "cards": [
+            {
+              "id": "xIZ0",
+              "title": "another card",
+              "labels": [
+                {
+                  "id": "KfgJ",
+                  "title": "DAMN",
+                  "color": "#ff0080"
+                },
+                {
+                  "id": "UEly",
+                  "title": "dfs",
+                  "color": "#ff8000"
+                },
+                {
+                  "id": "c0003",
+                  "title": null,
+                  "color": "green"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": "הנימעצמנ",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            }
+          ]
+        },
+        {
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
           "cards": [
             {
               "id": "5539",
@@ -127,13 +175,7 @@
                 "fullName": "Aviv Nakar",
                 "imgUrl": "adf.jpg"
               },
-              "cardMembers": [
-                {
-                  "_id": "u101",
-                  "fullName": "Gal Rondel",
-                  "imgUrl": "adf.png"
-                }
-              ],
+              "cardMembers": [],
               "desc": "aklhsfsdgfasdg ",
               "dueDate": 5413234551234,
               "cheklists": [
@@ -166,39 +208,6 @@
                   }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Grabage bin",
-          "id": "recycleBin_5c09",
-          "cards": [
-            {
-              "id": "xIZ0",
-              "title": "another card",
-              "labels": [
-                {
-                  "id": "KfgJ",
-                  "title": "DAMN",
-                  "color": "#ff0080"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u101",
-                  "fullName": "Gal Rondel",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": "הנימעצמנ",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
             },
             {
               "id": "zL4H",

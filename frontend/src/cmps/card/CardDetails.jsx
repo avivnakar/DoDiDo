@@ -35,9 +35,11 @@ export class CardDetails extends Component {
     }
     removeMember = (userId) => {
         const { cardMembers, updateBoard, board } = this.props;
-        var idx = cardMembers.findIndex(member => member._id = userId)
-        cardMembers.splice(idx, 1)
-        updateBoard(board)
+        if (cardMembers) {
+            var idx = cardMembers.findIndex(member => member._id = userId)
+            cardMembers.splice(idx, 1)
+            updateBoard(board)
+        }
     }
     onAddChecklist = (ev) => {
 
@@ -55,8 +57,8 @@ export class CardDetails extends Component {
                         <div >
                             <CardTitle title={card.title} />
                             <div className="flex">
-                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log}/><button>+Add Label</button></div>}
-                                {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} command={this.removeMember} /><button>+Add Member</button></div>}
+                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
+                                {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} command={this.removeMember} /><button onClick={() => this.addMembers()}>+</button></div>}
                             </div>
                             <div>
                                 <h4>Description</h4>
