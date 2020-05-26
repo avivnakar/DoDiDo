@@ -22,7 +22,6 @@ export class AddList extends Component {
             if (!e.target.value) this.setState({ isEdit: false })
             else {
                 this.setState({ isEdit: false })
-                console.log(this.props.board);
                 var newList ={
                     id: this.makeId(),
                     title: e.target.value,
