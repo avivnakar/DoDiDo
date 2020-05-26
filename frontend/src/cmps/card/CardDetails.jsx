@@ -8,7 +8,8 @@ import { MiniUser } from '../MiniUser';
 
 export class CardDetails extends Component {
     state = {
-        addTo: null
+        addTo: null,
+        isAddChecklist:false
     }
     addTo(string) {
         switch (string) {
@@ -33,10 +34,11 @@ export class CardDetails extends Component {
         }
     }
     onAddChecklist = (ev) => {
-
+        this.setState(prevstate=>({isAddChecklist:!prevstate.isAddChecklist}))
     }
     render() {
         const { card, board, updateBoard, history } = this.props
+        const { isAddChecklist} = this.state
         const backToBoard = (ev) => {
             history.push(`/b/${board._id}/${board.name}`);
         }
