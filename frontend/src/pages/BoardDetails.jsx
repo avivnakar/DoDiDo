@@ -3,9 +3,11 @@ import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
 import { AddList } from '../cmps/board/AddList.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
-import { setBoard, updateBoard, setCard, loadBoards,removeCard } from '../store/actions/boardActions.js';
+import { setBoard, updateBoard, setCard, loadBoards, removeCard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
+import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
+
 class _BoardDetails extends Component {
     state = {
         currCard: null,
@@ -78,14 +80,15 @@ class _BoardDetails extends Component {
         this.props.updateBoard(board)
     };
     render() {
-        const { board, card, history,updateBoard} = this.props;
-        const listProps={history,updateBoard,board}
+        const { board, card, history, updateBoard } = this.props;
+        const listProps = { history, updateBoard, board }
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
                 backgroundImage: `url(${bg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
+                opacity: 0.9,
                 // backgroundColor: 'pink',
                 backgroundRepeat: 'no-repeat'
             }
@@ -99,8 +102,12 @@ class _BoardDetails extends Component {
                             >
                                 {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
+                                <div className="board-head">
+                                    <BoardHeadNav />
+                                </div>
                                 <div className="board" style={styleLi}>
-                                    <div className="div">dsfsdfsfsd</div>
+
+                                    {/* <div className="div">dsfsdfsfsd</div> */}
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
                                         {...listProps} />)}
