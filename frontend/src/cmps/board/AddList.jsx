@@ -4,18 +4,24 @@ import { Link } from 'react-router-dom';
 
 export class AddList extends Component {
     state = {
-        isEdit: null
+        isEdit: false
     }
     onEdit() {
         this.setState({
             isEdit: true
         })
     }
-    handleKeyDown(e) {
-        if (e.key === 'Enter') {
-            if (!e.target.value) this.setState({ isEdit: null })
+    onBlur(e){
+        console.log(!e.target.value);
+        
+        if (!e.target.value) this.setState({ isEdit: false })
+        else this.handleKeyDown(e,true)
+    }
+    handleKeyDown(e,blur=false) {
+        if (e.key === 'Enter' || blur) {
+            if (!e.target.value) this.setState({ isEdit: false })
             else {
-                this.setState({ isEdit: null })
+                this.setState({ isEdit: false })
                 console.log(this.props.board);
                 var newList ={
                     id: this.makeId(),
@@ -42,7 +48,7 @@ export class AddList extends Component {
             return <Link to="#" className="add-card-btn"><span><FaPlus /></span>Add List</Link>
         } else {
             return (
-                <input placeholder="enter list name" onKeyDown={(e) => { this.handleKeyDown(e) }} />
+                <input placeholder="enter list name" onKeyDown={(e) => { this.handleKeyDown(e) }}  onBlur={(e) => { this.onBlur(e) }}/>
             )
         }
     }
