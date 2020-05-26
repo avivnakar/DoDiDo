@@ -49,7 +49,7 @@ class _BoardDetails extends Component {
                         return acc;
                     }, {});
                     const { setCard, setBoard } = this.props;
-                    socketService.emit('lisen board', currBoard._id);
+                    socketService.emit('listen board', currBoard._id);
                     setBoard(currBoard);
                     setCard(currCard);
                 })
