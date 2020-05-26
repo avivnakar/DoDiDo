@@ -9,7 +9,7 @@ class _Homepage extends Component {
         !this.props.user && console.log(this.props.user)
     }
     render() {
-        const { user, logout, login } = this.props
+        const { user, logout, login } = this.props;
         return (
             <div>
                 <header className="homepage-head">
@@ -18,7 +18,7 @@ class _Homepage extends Component {
                         <div className="desc">
                             <h2>DoDiDo lets you work more collaboratively and get more done.</h2>
                             <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
-                            <Link to="/:username/boards" className="home-btn" >Try DoDiDo Now</Link>
+                            <Link to={`/${user && user.username ? user.username : 'guest'}/boards`} className="home-btn" >Try DoDiDo Now</Link>
                         </div>
                         <img src={require('../assets/imgs/home2.png')} alt="" />
                     </section>
@@ -73,7 +73,7 @@ class _Homepage extends Component {
                     </div>
                     <div className="footer-txt">
                         <p>Start Planning Today Sign up and become one of the millions of people around the world using Trello to get more done.</p>
-                        <Link to="/:username/boards" className="home-btn" >Start Now, It's Free</Link>
+                        <Link to={`/${user && user.username ? user.username : 'guest'}/boards`} className="home-btn" >Start Now, It's Free</Link>
                     </div>
 
                     <div className="footer-img">
