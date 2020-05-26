@@ -61,10 +61,10 @@ function _ListPreiview(props) {
                                         listHover={isHover}
                                     />)}
                                     {provided.placeholder}
+                                    <AddCard updateBoard={updateBoard} list={list} board={board} />
                                 </div>
                             )}
                         </Droppable>
-                        <AddCard updateBoard={updateBoard} list={list} board={board} />
                     </section>
                 </div>
             )}

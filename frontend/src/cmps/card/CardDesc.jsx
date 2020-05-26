@@ -13,7 +13,7 @@ export class CardDesc extends Component {
         this.props.card.desc = e.target.value
         if (e.key === 'Enter') {
             this.setState({
-                isEdit: null
+                isEdit: false
             })
             this.props.updateBoard(this.props.board)
         }
@@ -21,7 +21,7 @@ export class CardDesc extends Component {
     getDesc() {
         if (this.props.card.desc && !this.state.isEdit) {
             return <div onClick={() => this.onEdit()}>{this.props.card.desc}</div>
-        } else if (this.props.card.desc) return <textarea placeholder={this.props.card.desc} onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea >
+        } else if (this.props.card.desc) return <textarea placeholder={this.props.card.desc} rows="1" onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea >
         else return <textarea placeholder="Add a more detailed description" onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea>
     }
     render() {

@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "BoardMcBoardy",
       "desc": "this board is board",
-      "background": "basic.jpg",
+      "background": "11.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -67,11 +67,6 @@
           "id": "KfgJ",
           "title": "DAMN",
           "color": "#ff0080"
-        },
-        {
-          "id": "UEly",
-          "title": "dfs",
-          "color": "#ff8000"
         }
       ],
       "members": [
@@ -89,42 +84,62 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "mq6o",
-          "title": "חלעיי",
+<<<<<<< HEAD
+          "id": "vumj",
+          "title": "Lןדאט",
           "cards": [
             {
-              "id": "djW3",
-              "title": "sadsadsadas",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "MS6i",
-              "title": "fhfghfgh",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
               "id": "5539",
-              "title": "gfgdf",
+              "title": "Done PLS",
+=======
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
+          "cards": [
+            {
+              "id": "zL4H",
+              "title": "TEST",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "gfdgsdfgfd",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            },
+            {
+              "id": "wzv9",
+              "title": "gdfgdfgsfdd",
+              "labels": [],
+              "createdBy": {},
+              "cardMembers": [],
+              "desc": "gfdgf",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            },
+            {
+              "id": "juat",
+              "title": "gdsfgd",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "gsdgfd",
+              "dueDate": null,
+              "cheklists": [],
+              "attachments": []
+            },
+            {
+              "id": "5c09",
+              "title": "Do It",
+>>>>>>> origin/yuval
               "labels": [
                 {
                   "id": "c0001",
@@ -164,20 +179,20 @@
               },
               "cardMembers": [
                 {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
                   "imgUrl": "adf.png"
                 }
               ],
-              "desc": "fgsgdfgd",
+              "desc": "testin testin testing",
               "dueDate": 5413234551234,
               "cheklists": [
                 {
-                  "id": "14s3",
+                  "id": "14h3",
                   "title": "checklist22",
                   "todos": [
                     {
-                      "id": "14sf3",
+                      "id": "14s6f3",
                       "text": "lorem blabla bla bla bla",
                       "doneAt": 14325434545,
                       "doneBy": {
@@ -191,7 +206,7 @@
               ],
               "attachments": [
                 {
-                  "id": "23s4",
+                  "id": "24s4",
                   "name": "lorem",
                   "url": "././img/ape.jpg",
                   "addedBy": {
@@ -203,29 +218,9 @@
               ]
             },
             {
-              "id": "NfQo",
-              "title": "fghfghgfhhf",
+              "title": "gfdgsdf",
               "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "X0UR",
-              "title": "asdasda",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
+              "createdBy": {},
               "cardMembers": [],
               "desc": null,
               "dueDate": null,
@@ -235,27 +230,17 @@
           ]
         },
         {
-          "id": "h1Rj",
-          "title": "Done",
+          "title": "fgdfgsg",
+          "id": "s100",
           "cards": [
             {
               "id": "xIZ0",
-              "title": "fsf",
+              "title": "another card",
               "labels": [
                 {
                   "id": "KfgJ",
                   "title": "DAMN",
                   "color": "#ff0080"
-                },
-                {
-                  "id": "UEly",
-                  "title": "dfs",
-                  "color": "#ff8000"
-                },
-                {
-                  "id": "c0003",
-                  "title": null,
-                  "color": "green"
                 }
               ],
               "createdBy": {
@@ -270,143 +255,54 @@
                   "imgUrl": "adf.png"
                 }
               ],
+<<<<<<< HEAD
               "desc": "הנימעצמנ",
               "dueDate": null,
               "cheklists": [],
               "attachments": []
             },
             {
-              "id": "xL6v",
-              "title": "fghfhfghgf",
-              "labels": [],
+              "id": "zL4H",
+              "title": "TEST",
+              "labels": [
+=======
+              "desc": "aklhsfsdgfasdg ",
+              "dueDate": 5413234551234,
+              "cheklists": [
+>>>>>>> origin/yuval
+                {
+                  "id": "KfgJ",
+                  "title": "DAMN",
+                  "color": "#ff0080"
+                }
+              ],
+<<<<<<< HEAD
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
                 "imgUrl": "././img/troll.jpg"
               },
               "cardMembers": [],
-              "desc": null,
+              "desc": "gfdgsdfgfd",
               "dueDate": null,
               "cheklists": [],
               "attachments": []
-            },
-            {
-              "id": "8TVF",
-              "title": "Done",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
+=======
+              "attachments": [
+                {
+                  "id": "24s4",
+                  "name": "lorem",
+                  "url": "././img/ape.jpg",
+                  "addedBy": {
+                    "_id": "u401",
+                    "fullName": "Aviv Nakar",
+                    "imgUrl": "adf.jpg"
+                  }
+                }
+              ]
+>>>>>>> origin/yuval
             }
           ]
-        },
-        {
-          "title": "Grabage bin",
-          "id": "recycleBin_5c09",
-          "cards": []
-        },
-        {
-          "id": "HmBZ",
-          "title": "gd",
-          "cards": [
-            {
-              "id": "L5x8",
-              "title": "fghfghfh",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "sjau",
-              "title": "hfghfhfghgf",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "DeAD",
-              "title": "hbgfgh",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "added new description",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "KYob",
-              "title": "fghfghgfh",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            },
-            {
-              "id": "beb8",
-              "title": "JESUS",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "LOL",
-              "dueDate": null,
-              "cheklists": [],
-              "attachments": []
-            }
-          ]
-        },
-        {
-          "id": "iCrY",
-          "title": "דגככדג",
-          "cards": []
-        },
-        {
-          "id": "JoHL",
-          "title": "דגכדגכד",
-          "cards": []
-        },
-        {
-          "id": "8UWf",
-          "title": "דגכדכדג",
-          "cards": []
         }
       ]
     }
