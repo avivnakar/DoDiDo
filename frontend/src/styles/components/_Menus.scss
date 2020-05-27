@@ -12,7 +12,8 @@ position: relative;
     width: rem(280px);
     height: rem(270px);
     border-radius: 3px;
-    background-color: $list-bgc;
+    background-color: #fff;
+    border: 1px solid #172b4d;
     & &-title {
         color: hsl(218, 17%, 44%);
         display: flex;

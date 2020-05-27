@@ -11,7 +11,7 @@ import { MiniUser } from '../MiniUser';
 export class CardDetails extends Component {
     state = {
         addTo: null,
-        isAddChecklist:false
+        isAddChecklist: false
     }
     addTo(string) {
         switch (string) {
@@ -36,7 +36,7 @@ export class CardDetails extends Component {
         }
     }
     onAddChecklist = (ev) => {
-        this.setState(prevstate=>({isAddChecklist:!prevstate.isAddChecklist}))
+        this.setState(prevstate => ({ isAddChecklist: !prevstate.isAddChecklist }))
     }
     render() {
         const { card, board, updateBoard, history } = this.props
@@ -47,21 +47,24 @@ export class CardDetails extends Component {
             return (
                 <section className="screen flex justify-center" onClick={backToBoard}>
                     <div className="card-details flex" onClick={(ev) => ev.stopPropagation()}>
-                        <div >
+                        <div className="card-des" >
                             <CardTitle board={board} card={card} updateBoard={updateBoard} />
                             <div className="flex">
                                 {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} command={this.removeMember} /><button onClick={() => this.addMembers()}>+</button></div>}
                             </div>
                             <div>
-                                <h4>Description</h4>
+                                <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
                             {card.checkLists && card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card}  checkList={checkList} updateBoard={updateBoard} board={board}/>)}
                             {this.state.addTo === 'check' && <AddCheckList card={card} updateBoard={updateBoard} board={board}/>}
                             <div>
-                                <h4>Activity</h4>
-                                <input placeholder="enter comment"/>
+                                <div className="card-title">Activity</div>
+                            </div>
+                            <div>
+                                <div className="card-title">comment</div>
+                                <input placeholder="enter comment" />
                             </div>
                         </div>
                         <aside className="card-btns flex column">

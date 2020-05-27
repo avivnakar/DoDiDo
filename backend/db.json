@@ -133,36 +133,6 @@
           "title": "חלעיי",
           "cards": [
             {
-              "id": "djW3",
-              "title": "sadsadsadas",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": []
-            },
-            {
-              "id": "MS6i",
-              "title": "fhfghfgh",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": []
-            },
-            {
               "id": "5539",
               "title": "gfgdf",
               "labels": [
@@ -246,53 +216,6 @@
                   }
                 }
               ]
-            },
-            {
-              "id": "X0UR",
-              "title": "asdasda",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": []
-            },
-            {
-              "id": "NfQo",
-              "title": "fghfghgfhhf",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [
-                {
-                  "id": "y4x0",
-                  "title": "fdsfsd",
-                  "todos": [
-                    {
-                      "id": "FOAk",
-                      "title": "gdfg",
-                      "isDone": false
-                    },
-                    {
-                      "id": "0ojg",
-                      "title": "ייייי",
-                      "isDone": false
-                    }
-                  ]
-                }
-              ],
-              "attachments": []
             }
           ]
         },
@@ -493,6 +416,11 @@
         {
           "id": "8UWf",
           "title": "דגכדכדג",
+          "cards": []
+        },
+        {
+          "id": "aoTW",
+          "title": "דגכדגכד",
           "cards": []
         }
       ]
