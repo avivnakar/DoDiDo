@@ -1,20 +1,26 @@
 .list-menu {
+    &-btn{
+position: relative;
+    }
     position: absolute;
-    left: 50%;
-    top: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
     text-align: center;
-    width: 280px;
-    height: 270px;
+    width: rem(280px);
+    height: rem(270px);
     border-radius: 3px;
     background-color: $list-bgc;
-    & .list-menu-title {
+    & &-title {
         color: hsl(218, 17%, 44%);
         display: flex;
         line-height: 40px;
         border-bottom: 1px solid rgba(9, 30, 66, 0.13);
         margin: 0 12px;
         padding: 0 10px;
-        position: relative;
+        // position: relative;
         text-overflow: ellipsis;
         white-space: nowrap;
         z-index: 1;

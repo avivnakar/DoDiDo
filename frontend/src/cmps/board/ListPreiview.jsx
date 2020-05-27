@@ -11,9 +11,11 @@ import { Link } from 'react-router-dom';
 import { removeCard } from '../../store/actions/boardActions.js';
 // import { removeList, removeCard } from '../../store/actions/boardActions.js';
 import { connect } from 'react-redux'
+import { ListMenu } from './ListMenu.jsx';
 
 function _ListPreiview(props) {
-    var isHover = useState(false)
+    var [isMenuOpened, setMenuOpened] = useState(false)
+    console.log(isMenuOpened)
     const { list, board, updateBoard, removeCard } = props
     const onCardRemove = (cardId) => (ev) => {
         ev.stopPropagation();
@@ -25,9 +27,15 @@ function _ListPreiview(props) {
         updateBoard(board);
     }
     const onOpenMenu = () => {
-        console.log('open menu');
-
+        props.setOnClickAway(onCloseMenu)
+        setMenuOpened(true);
     }
+    const onCloseMenu = (ev) => {
+        ev.stopPropagation()
+        props.setOnClickAway(null)
+        setMenuOpened(false);
+    }
+
     return (
         <Draggable draggableId={list.id} index={props.index}>
             {(provided) => (
@@ -51,6 +59,7 @@ function _ListPreiview(props) {
                             <button className="del" onClick={onListRemove}>⨯</button>
                             <div className="list-menu-btn" onClick={onOpenMenu}>
                                 <Link to="#"><FaEllipsisH /></Link>
+                                {isMenuOpened && <ListMenu closeMenu={onCloseMenu} />}
                             </div>
                         </div>
                         <Droppable droppableId={list.id} type="task">
@@ -62,7 +71,7 @@ function _ListPreiview(props) {
                                     {list.cards && list.cards.map((card, index) => <CardPreiview
                                         index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
                                         onCardRemove={onCardRemove} history={props.history}
-                                        listHover={isHover}
+                                    // listHover={isHover}
                                     />)}
                                     {provided.placeholder}
                                     <AddCard updateBoard={updateBoard} list={list} board={board} />

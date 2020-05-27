@@ -1,7 +1,10 @@
 .screen {
     background: #18191acc;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     z-index: 11;
     width: 100%;
+    // &.invisible{
+    //     background: #00000000;
+    // }
 }

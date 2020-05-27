@@ -9,12 +9,14 @@ import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
 import { socketService } from '../services/socketService.js';
+import { ClickAway } from '../cmps/ClickAway.jsx';
 
 
 class _BoardDetails extends Component {
     state = {
         currCard: null,
-        match: null
+        match: null,
+        onClickAway: null
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -85,9 +87,14 @@ class _BoardDetails extends Component {
         }
         this.props.updateBoard(board)
     };
+    setOnClickAway = (callback) => {
+        this.setState({ onClickAway: callback })
+    }
     render() {
+        const { setOnClickAway } = this;
+        const {onClickAway} = this.state;
         const { board, card, history, updateBoard } = this.props;
-        const listProps = { history, updateBoard, board }
+        const listProps = { history, updateBoard, board, setOnClickAway }
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
@@ -106,13 +113,14 @@ class _BoardDetails extends Component {
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                             >
+                                {/* {onClickAway&&<ClickAway onClick={onClickAway}/>} */}
                                 {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
                                 <div className="board-head">
                                     <BoardHeadNav />
                                 </div>
                                 <div className="board" style={styleLi}>
-                                    <ListMenu />
+                                    {/* <ListMenu /> */}
                                     {/* <div className="div">dsfsdfsfsd</div> */}
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
