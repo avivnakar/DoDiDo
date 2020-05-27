@@ -6,8 +6,6 @@ import { connect } from "react-redux";
 import { logout } from '../../store/actions/userActions';
 
 function _BoardNav(props) {
-    console.log(props.user);
-    
     return props.match.isExact ? '' : (
         <nav className="board-nav flex space-between align-center justify-center">
             <ul className="main-links left-links flex space-even">
