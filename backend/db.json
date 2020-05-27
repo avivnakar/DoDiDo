@@ -29,7 +29,7 @@
   "board": [
     {
       "_id": "5c09",
-      "name": "BoardMcBoardy",
+      "name": "Testing",
       "desc": "this board is board",
       "background": "basic.jpg",
       "createdBy": {
