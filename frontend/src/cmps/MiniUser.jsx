@@ -7,13 +7,13 @@ export function MiniUser(props) {
         .toUpperCase();
 
     return (
-        <ul className="mini-user-list flex">
+        <ul className="mini-user-list flex align-center">
             {users && users.map(({ _id, imgUrl, fullName }) =>
                 <li key={_id} className="mini-user" onClick={() => command(_id)}>
                     <img className="mini-user-img"
                         src={require(`../assets/imgs/${imgUrl}`)}
                         alt={initials(fullName)} />
-                    {isOpen && <span>{fullName}</span>}
+                    {isOpen && <span className="user-name">{fullName}</span>}
                 </li>)}
         </ul>
     )

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { MiniUser } from '../MiniUser';
 
 export class CommentPreview extends Component {
-    getTime(){
+    getTime() {
         const date = new Date(this.props.comment.createdAt)
         var H = date.getHours()
         var Min = date.getMinutes()
@@ -20,10 +20,12 @@ export class CommentPreview extends Component {
         const users = []
         users.push(comment.createdBy)
         return (
-            <div>
-                <MiniUser users={users} command={console.log()} isOpen={true}/>
-                <span>{this.getTime()}</span>
-                <div>{comment.text}</div>
+            <div className="comments-container">
+                <div className="com-head flex  align-center">
+                    <MiniUser users={users} command={console.log()} isOpen={true} />
+                    <span className="com-time">{this.getTime()}</span>
+                </div>
+                <div className="comment">{comment.text}</div>
             </div>
         )
     }
