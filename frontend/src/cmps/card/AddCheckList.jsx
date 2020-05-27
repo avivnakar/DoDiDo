@@ -33,6 +33,7 @@ export class AddCheckList extends Component {
                 card.checkLists.push(newChxList)
             }
             this.props.updateBoard(board)
+            this.props.clearAddTo();
         }
     }
     makeId(length = 4) {

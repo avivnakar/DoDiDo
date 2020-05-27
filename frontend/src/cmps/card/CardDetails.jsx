@@ -29,6 +29,9 @@ export class CardDetails extends Component {
 
         }
     }
+    clearAddTo = () => {
+        this.setState({ addTo: null });
+    }
     removeMember = (userId) => {
         const { cardMembers, updateBoard, board } = this.props;
         if (cardMembers) {
@@ -41,6 +44,7 @@ export class CardDetails extends Component {
         this.setState(prevstate => ({ isAddChecklist: !prevstate.isAddChecklist }))
     }
     render() {
+        const {clearAddTo} = this;
         const { card, board, updateBoard, history } = this.props
         const backToBoard = (ev) => {
             history.push(`/b/${board._id}/${board.name}`);
@@ -60,10 +64,10 @@ export class CardDetails extends Component {
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
                             {card.checkLists && card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
-                            {this.state.addTo === 'check' && <AddCheckList card={card} updateBoard={updateBoard} board={board} />}
+                            {this.state.addTo === 'check' && <AddCheckList clearAddTo={clearAddTo}  card={card} updateBoard={updateBoard} board={board} />}
                             <div>
                                 <div className="card-title">Activity</div>
-                                <AddComment card={card} updateBoard={updateBoard} board={board}/>
+                                <AddComment card={card} updateBoard={updateBoard} board={board} />
                                 {card.comments && <CardComments card={card} updateBoard={updateBoard} board={board} />}
                             </div>
                         </div>
