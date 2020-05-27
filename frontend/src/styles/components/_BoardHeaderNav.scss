@@ -14,6 +14,18 @@
     // opacity: 0.8;
 }
 
+.user-logo {
+    height: rem(32px);
+    width: rem(32px);
+    align-items: center;
+    background-color: #dfe1e6;
+    border-radius: 100%;
+    color: #172b4d;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
 .board-sec-nav-icons {
     background-color: rgba(0, 0, 0, 0.5);
     // min-width: 30px;
@@ -25,7 +37,7 @@
     transition: all 0.1s ease;
     cursor: pointer;
     color: #ffefd5;
-    border: 1px solid wheat;
+    // border: 1px solid wheat;
     font-size: 0.9rem;
     &.trash {
         // color: blue;
@@ -33,7 +45,9 @@
         padding-right: 10px;
     }
 }
-
+.board-sec-nav-icons:hover {
+    background-color: rgba(255, 255, 255, 0.397);
+}
 .board-menu {
     margin-right: 15px;
 }

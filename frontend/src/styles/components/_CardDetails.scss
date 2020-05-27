@@ -4,11 +4,14 @@
     // }
     background-color: $card-bcg;
     margin-top: 10%;
-    width: 50%;
-    height: 50%;
+    width: rem(800px);
+    height: rem(400px);
     border-radius: 5px;
     .card-btns {
         //aside
+        // background-color: red;
+        width: 20%;
+        padding: rem(30px);
         & button {
             border: none;
             margin: 3px;
@@ -22,6 +25,7 @@
     }
     button {
         border: none;
+        width: 100%;
         background-color: $card-btn;
     }
     textarea {
@@ -33,4 +37,24 @@
     .todo {
         background-color: #fff;
     }
+}
+.card-des {
+    width: rem(450px);
+    width: 80%;
+    text-align: left;
+    padding: rem(20px);
+    // background-color: red;
+    &.card-title {
+        font-size: 1.3rem;
+        line-height: rem(20px);
+        color: #172b4d;
+        font-weight: 600;
+    }
+}
+
+.card-title input {
+    height: rem(20px);
+    padding: 8px 12px;
+    margin: -8px -12px;
+    width: 100%;
 }

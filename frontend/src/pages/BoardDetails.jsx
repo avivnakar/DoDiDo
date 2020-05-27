@@ -109,7 +109,7 @@ class _BoardDetails extends Component {
                                 </div>
                                 <div className="board" style={styleLi}>
                                     {/* <ListMenu /> */}
-                                    <CardMenu />
+                                    {/* <CardMenu /> */}
                                     {/* <div className="div">dsfsdfsfsd</div> */}
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}

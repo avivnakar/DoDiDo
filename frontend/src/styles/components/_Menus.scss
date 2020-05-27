@@ -6,7 +6,8 @@
     width: 280px;
     height: 270px;
     border-radius: 3px;
-    background-color: $list-bgc;
+    background-color: #fff;
+    border: 1px solid #172b4d;
     & .list-menu-title {
         color: hsl(218, 17%, 44%);
         display: flex;
