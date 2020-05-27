@@ -24,6 +24,10 @@ function _ListPreiview(props) {
         board.cardLists.splice(idx, 1);
         updateBoard(board);
     }
+    const onOpenMenu = () => {
+        console.log('open menu');
+
+    }
     return (
         <Draggable draggableId={list.id} index={props.index}>
             {(provided) => (
@@ -45,7 +49,7 @@ function _ListPreiview(props) {
                             {...provided.dragHandleProps}>
                             <ListTitle updateBoard={updateBoard} list={list} board={board} />
                             <button className="del" onClick={onListRemove}>⨯</button>
-                            <div className="list-menu-btn">
+                            <div className="list-menu-btn" onClick={onOpenMenu}>
                                 <Link to="#"><FaEllipsisH /></Link>
                             </div>
                         </div>

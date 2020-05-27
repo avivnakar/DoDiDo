@@ -3,32 +3,34 @@
     //     border: 1px solid red;
     // }
     background-color: $card-bcg;
-    // width: 50%;
-    // height: 50%;
+    margin-top: 10%;
+    width: 50%;
+    height: 50%;
     border-radius: 5px;
-    .card-btns {    //aside
+    .card-btns {
+        //aside
         & button {
             border: none;
             margin: 3px;
         }
-        .add-members   {
+        .add-members {
             background-color: springgreen;
         }
         .add-labels {
             background-color: darkslateblue;
         }
-     }
+    }
     button {
         border: none;
         background-color: $card-btn;
     }
-    textarea{
+    textarea {
         resize: none;
     }
-    .pop-over{
+    .pop-over {
         position: absolute;
     }
-    .todo{
+    .todo {
         background-color: #fff;
     }
 }
