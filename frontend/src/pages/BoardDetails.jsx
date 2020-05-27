@@ -118,7 +118,7 @@ class _BoardDetails extends Component {
                                 {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
                                 <div className="board-head">
-                                    <BoardHeadNav />
+                                    <BoardHeadNav board={board} updateBoard={updateBoard}/>
                                 </div>
                                 <div className="board" style={styleLi}>
                                     {/* <ListMenu /> */}

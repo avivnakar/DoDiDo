@@ -7,7 +7,7 @@ export function MiniUser(props) {
         .toUpperCase();
 
     return (
-        <ul className="mini-user-list">
+        <ul className="mini-user-list flex">
             {users && users.map(({ _id, imgUrl, fullName }) =>
                 <li key={_id} className="mini-user" onClick={() => command(_id)}>
                     <img className="mini-user-img"

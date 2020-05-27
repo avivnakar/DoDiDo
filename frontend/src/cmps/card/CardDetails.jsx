@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
 import { CardTitle } from './CardTitle.jsx';
+import { AddComment } from './AddComment.jsx';
+import { CardComments } from './CardComments.jsx';
 import { CardCheckList } from './CardCheckList.jsx';
 import { AddCheckList } from './AddCheckList.jsx';
 import { AddLabels } from './AddLabels.jsx';
@@ -57,14 +59,12 @@ export class CardDetails extends Component {
                                 <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
-                            {card.checkLists && card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card}  checkList={checkList} updateBoard={updateBoard} board={board}/>)}
-                            {this.state.addTo === 'check' && <AddCheckList card={card} updateBoard={updateBoard} board={board}/>}
+                            {card.checkLists && card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
+                            {this.state.addTo === 'check' && <AddCheckList card={card} updateBoard={updateBoard} board={board} />}
                             <div>
                                 <div className="card-title">Activity</div>
-                            </div>
-                            <div>
-                                <div className="card-title">comment</div>
-                                <input placeholder="enter comment" />
+                                <AddComment card={card} updateBoard={updateBoard} board={board}/>
+                                {card.comments && <CardComments card={card} updateBoard={updateBoard} board={board} />}
                             </div>
                         </div>
                         <aside className="card-btns flex column">
@@ -72,7 +72,7 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('labels')}>Labels</button>
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
-                            <button>Attachment</button>
+                            <button onClick={() => this.addTo('cover')}>Images</button>
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'labels' && <AddLabels cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
                         </aside>

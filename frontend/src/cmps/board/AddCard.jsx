@@ -30,8 +30,9 @@ export class AddCard extends Component {
                     cardMembers: [],
                     desc: null,
                     dueDate: null,
-                    cheklists: [],
-                    attachments: []
+                    checkLists: [],
+                    attachments: [],
+                    comments: []
                 }
                 const idx = board.cardLists.findIndex(currList => currList.id === list.id)
                 const newBoard = { ...board }
