@@ -43,7 +43,7 @@ function _ListPreiview(props) {
                     <section className="list"
                         {...provided.draggableProps}
                         ref={provided.innerRef}
-                        >
+                    >
 
                         <div className="list-title flex space-between justify-center align-center"
                             {...provided.dragHandleProps}>
@@ -57,14 +57,16 @@ function _ListPreiview(props) {
                         <Droppable droppableId={list.id} type="task">
                             {(provided) => (
                                 <div className="list-bg"
-                                ref={provided.innerRef}
+                                    ref={provided.innerRef}
                                     {...provided.droppableProps}
                                 >
-                                    {list.cards && list.cards.map((card, index) => <CardPreiview
-                                        index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
-                                        onCardRemove={onCardRemove} history={props.history}
-                                    // listHover={isHover}
-                                    />)}
+                                    <div className="list-cards">
+                                        {list.cards && list.cards.map((card, index) => <CardPreiview
+                                            index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
+                                            onCardRemove={onCardRemove} history={props.history}
+                                        // listHover={isHover}
+                                        />)}
+                                    </div>
                                     {provided.placeholder}
                                     <AddCard updateBoard={updateBoard} list={list} board={board} />
                                 </div>
@@ -79,7 +81,7 @@ function _ListPreiview(props) {
 
 const mapStateToProps = (state) => {
     return {}
-    
+
 }
 const mapDispatchToProps = {
     removeCard

@@ -18,10 +18,10 @@
 .list {
     &-warpper {
         // all: unset;
+        padding-top: 100px;
         // height: 100%;
         // display: table-cell;
         // vertical-align: top;
-        padding-top: 100px;
         // position: absolute;
         // top: 80px;
     }
@@ -52,32 +52,32 @@
     }
     @include del-btns;
     &-bg {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        max-height: 60vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-        margin-right: 2px;
-        margin-left: 10px;
-
-        &::-webkit-scrollbar {
-            background-color: $list-bgc;
-            width: 6.5px;
-            height: 100px;
-            &-thumb {
-                border: 16px solid #bdc5d8;
-                border-radius: 10px;
-            }
-            &-track {
-                // border: 16px solid #bdc5d8;
-                border-radius: 10px;
+        .list-cards {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            max-height: 70vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-right: 2px;
+            margin-left: 10px;
+            &::-webkit-scrollbar {
+                background-color: $list-bgc;
+                width: 6.5px;
                 height: 100px;
+                &-thumb {
+                    border: 16px solid #bdc5d8;
+                    border-radius: 10px;
+                }
+                &-track {
+                    // border: 16px solid #bdc5d8;
+                    border-radius: 10px;
+                    height: 100px;
+                }
             }
         }
     }
 }
-
 .add-card-container {
     height: 50px;
     // padding: 5px;
