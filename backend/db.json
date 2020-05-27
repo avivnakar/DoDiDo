@@ -29,7 +29,7 @@
   "board": [
     {
       "_id": "5c09",
-      "name": "Testing",
+      "name": "yteurty",
       "desc": "this board is board",
       "background": "basic.jpg",
       "createdBy": {
@@ -158,11 +158,21 @@
                 "imgUrl": "././img/troll.jpg"
               },
               "cardMembers": [],
-              "desc": null,
+              "desc": "gf",
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
               "comments": [
+                {
+                  "id": "gkrV",
+                  "text": "fgf",
+                  "createdAt": 1590569366232,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
                 {
                   "id": "comn1",
                   "text": "testin testin",
@@ -197,6 +207,16 @@
                   "id": "wD9V",
                   "text": "fssf",
                   "createdAt": 1590538340856,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "ytOn",
+                  "text": "TEST",
+                  "createdAt": 1590569303844,
                   "createdBy": {
                     "_id": "u101",
                     "fullName": "Gal Rondel",
