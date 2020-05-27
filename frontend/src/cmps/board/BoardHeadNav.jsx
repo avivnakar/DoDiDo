@@ -11,7 +11,7 @@ export function BoardHeadNav(props) {
                 <Link to="#" className="board-sec-nav-icons trash"><FaTrashAlt /></Link>
                 <Link to="#" className="board-sec-nav-icons">Add Members</Link>
                 <Link to="#" className="board-sec-nav-icons">Statistics</Link>
-                <Link to="#" className="board-sec-nav-icons">Menu</Link>
+                <Link to="#" className="board-sec-nav-icons">Board Menu</Link>
             </div>
         </header>
     )
