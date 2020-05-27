@@ -4,6 +4,9 @@ import { FaRegCheckSquare, FaRegClock, FaRegUser, FaRegListAlt } from "react-ico
 // import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
 import { AiOutlineDatabase } from "react-icons/ai";
 import { LabelList } from '../board/LabelList.jsx';
+import { FaPencilAlt } from "react-icons/fa";
+
+
 export function CardPreiview(props) {
     const { card, history, onCardRemove } = props
     var isHover = useState(false);
@@ -29,7 +32,10 @@ export function CardPreiview(props) {
                         <div>
                             {card.labels && <LabelList labels={card.labels} />}
                         </div>
-                        <span className="card-title">{card.title}</span>
+                        <div className="card-title-container flex space-between">
+                            <span className="card-title">{card.title}</span>
+                            <span className="edit-icon"><FaPencilAlt /></span>
+                        </div>
                         <div className="card-stat flex">
                             {card.desc && <div title="Description"><FaRegListAlt /></div>}
                             {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}

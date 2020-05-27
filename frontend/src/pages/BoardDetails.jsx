@@ -4,6 +4,7 @@ import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
 import { ListMenu } from '../cmps/board/ListMenu.jsx';
 import { AddList } from '../cmps/board/AddList.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
+import { CardMenu } from '../cmps/card/CardMenu.jsx';
 import { setBoard, updateBoard, setCard, loadBoards, removeCard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
@@ -107,7 +108,8 @@ class _BoardDetails extends Component {
                                     <BoardHeadNav />
                                 </div>
                                 <div className="board" style={styleLi}>
-                                    <ListMenu />
+                                    {/* <ListMenu /> */}
+                                    <CardMenu />
                                     {/* <div className="div">dsfsdfsfsd</div> */}
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
