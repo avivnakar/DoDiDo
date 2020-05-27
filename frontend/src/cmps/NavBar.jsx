@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function NavBar(props) {
     const { user,logout,login } = props
@@ -14,7 +15,7 @@ export function NavBar(props) {
                         <li>Hi {user.fullName}</li>
                     </>}
                     <li className="login" onClick={user?logout:login} >{user ? 'Logout' : 'Login'}</li>
-                    {!user && <li className="sign-up">Sign Up</li>}
+                    {!user && <Link to="/signup"><li className="sign-up">Sign Up</li></Link>}
                 </ul>
             </div>
         </nav>
