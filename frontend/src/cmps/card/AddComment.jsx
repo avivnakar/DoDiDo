@@ -17,6 +17,7 @@ export class AddComment extends Component {
                         "imgUrl": "adf.png"
                     }
                 }
+                e.target.value = null
                 this.props.card.comments.push(newComment)
                 this.props.updateBoard(this.props.board)
             }
