@@ -1,0 +1,47 @@
+.list-menu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    width: 280px;
+    height: 270px;
+    border-radius: 3px;
+    background-color: $list-bgc;
+    & .list-menu-title {
+        color: hsl(218, 17%, 44%);
+        display: flex;
+        line-height: 40px;
+        border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+        margin: 0 12px;
+        padding: 0 10px;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 1;
+        & .close-btn {
+            cursor: pointer;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+    & ul {
+        list-style: none;
+        text-align: left;
+        color: #172b4d;
+        cursor: pointer;
+        // background-color: blue;
+        & :hover {
+            background-color: $hover;
+        }
+    }
+    & li {
+        padding: 6px 30px;
+        position: relative;
+    }
+    & .list-footer {
+        border-top: 1px solid rgba(9, 30, 66, 0.13);
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+}
