@@ -62,3 +62,15 @@ button {
     color: #002d3d;
     background-color: rgba(9, 30, 66, 0.08);
 }
+
+.edit-icon {
+    cursor: pointer;
+    text-align: center;
+    color: #002d3d;
+    padding-top: 5px;
+    background-color: $hover;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.7rem;
+}
