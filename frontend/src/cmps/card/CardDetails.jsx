@@ -61,6 +61,8 @@ export class CardDetails extends Component {
                     <div className="card-details flex" onClick={(ev) => ev.stopPropagation()}>
                         <div className="card-des" >
                             <CardTitle board={board} card={card} updateBoard={updateBoard} />
+                            <CardToWhatsapp card={card}/>
+
                             <div className="flex">
                                 {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} command={this.removeMember} /><button onClick={() => this.addMembers()}>+</button></div>}
