@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import { FaRegComment, FaRegCheckSquare, FaRegClock, FaRegUser, FaRegListAlt } from "react-icons/fa";
+import { FaRegComment, FaRegCheckSquare, FaRegUser, FaRegListAlt } from "react-icons/fa";
 // import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
 import { AiOutlineDatabase } from "react-icons/ai";
 import { LabelList } from '../board/LabelList.jsx';
+import { Due } from '../board/Due.jsx';
 import { FaPencilAlt } from "react-icons/fa";
 import { CardMenu } from '../card/CardMenu.jsx';
 import { ClickAway } from '../ClickAway.jsx';
@@ -50,7 +51,7 @@ export function CardPreiview(props) {
                                 {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
                                 {card.checkLists.length > 0 && <div title="Checklist items">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
                                 {card.comments.length > 0 && <div title="Comments items">{card.comments.length}{<FaRegComment />}</div>}
-                                {card.dueDate && <span>{<FaRegClock />}</span>}
+                                {card.dueDate && <span><Due dueDate={card.dueDate}/></span>}
                                 {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                             </div>
                         </article>
