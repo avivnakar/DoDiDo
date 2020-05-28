@@ -7,23 +7,24 @@ import { LabelList } from '../board/LabelList.jsx';
 import { Due } from '../board/Due.jsx';
 import { FaPencilAlt } from "react-icons/fa";
 
-
+const Div = (props) => {
+    return <div className={`card-wrapper ${props.isDragging ? 'tilt' : ''}`}>
+        {props.children}
+    </div>
+}
 export function CardPreiview(props) {
     const { card, history, onCardRemove } = props
     var isHover = useState(false);
-    function styleDrag(snapshot) {
-        console.log('is draggin from his pos:',snapshot.isDragging);
-    }
     return (
         <Draggable draggableId={card.id} index={props.index}>
             {(provided, snapshot) => (
-                <div className="card-warpper" style={props.styleCardDrag}>
+                <Div isDragging={snapshot.isDragging}>
                     <article className="card" /*onClick={() => props.getCurrCard(card)}*/
                         onClick={() => history.push(`/c/${card.id}/${card.title}`)}
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}
-                        isdragging={snapshot.isdragging}
+                        
                     >
                         <button className="del" onClick={onCardRemove(card.id)}>⨯</button>
                         <div>
@@ -42,7 +43,7 @@ export function CardPreiview(props) {
                             {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                         </div>
                     </article>
-                </div>
+                </Div>
             )}
         </Draggable>
     )
