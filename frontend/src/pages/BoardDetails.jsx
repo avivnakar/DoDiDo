@@ -17,7 +17,8 @@ class _BoardDetails extends Component {
     state = {
         currCard: null,
         match: null,
-        onClickAway: null
+        onClickAway: null,
+        style: {}
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -65,17 +66,30 @@ class _BoardDetails extends Component {
         })
     }
     onPick = (start) =>{
-
+        const { board } = this.props
+        const idx = board.cardLists.findIndex(list=> list.id === start.source.droppableId)
+        var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId )
+        console.log('card you dragging:',card);
+        if(start.type === 'task'){
+            this.setState({style:{backgroundColor: '#c7c7c7'}})
+        }  
     }
     onMark = (update) =>{
         if(!update.destination) return
         const { board } = this.props
         var idx = board.cardLists.findIndex(list => list.id === update.destination.droppableId)
-        var placeholder = board.cardLists[idx]
+        var placeholderSpot = board.cardLists[idx].cards[update.destination.index]
+        console.log('to where:',placeholderSpot);
+        if(placeholderSpot){
+            
+        }
     }
     onDragEnd = result => {
         const { board } = this.props
         const { destination, source, draggableId, type } = result;
+        if(result.type === 'task'){
+            this.setState({style:{}})
+        }  
         if (!destination) return;
         if (destination.droppableId === source.droppableId && destination.index === source.index) return;
         if (type === 'column') {
@@ -135,7 +149,7 @@ class _BoardDetails extends Component {
                                     {/* <div className="div">dsfsdfsfsd</div> */}
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
-                                        {...listProps} />)}
+                                        {...listProps} styleCardDrag={this.state.style}/>)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
                                 {provided.placeholder}

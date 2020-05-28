@@ -71,6 +71,7 @@ function _ListPreiview(props) {
                                         index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
                                         onCardRemove={onCardRemove} history={props.history}
                                     // listHover={isHover}
+                                    styleCardDrag={props.styleCardDrag}
                                     />)}
                                     {provided.placeholder}
                                     <AddCard updateBoard={updateBoard} list={list} board={board} />

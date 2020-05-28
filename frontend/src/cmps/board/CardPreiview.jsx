@@ -11,23 +11,19 @@ import { FaPencilAlt } from "react-icons/fa";
 export function CardPreiview(props) {
     const { card, history, onCardRemove } = props
     var isHover = useState(false);
+    function styleDrag(snapshot) {
+        console.log('is draggin from his pos:',snapshot.isDragging);
+    }
     return (
         <Draggable draggableId={card.id} index={props.index}>
-            {(provided) => (
-                <div className="card-warpper">
+            {(provided, snapshot) => (
+                <div className="card-warpper" style={props.styleCardDrag}>
                     <article className="card" /*onClick={() => props.getCurrCard(card)}*/
                         onClick={() => history.push(`/c/${card.id}/${card.title}`)}
                         {...provided.draggableProps}
                         {...provided.dragHandleProps}
                         ref={provided.innerRef}
-                    // onMouseOver={(ev=>{
-                    //     isHover=true;
-                    //     console.log(isHover);
-                    // })}
-                    // onMouseLeave={(ev=>{
-                    //     isHover=false;
-                    //     console.log(isHover);
-                    // })}
+                        isdragging={snapshot.isdragging}
                     >
                         <button className="del" onClick={onCardRemove(card.id)}>⨯</button>
                         <div>
@@ -42,7 +38,7 @@ export function CardPreiview(props) {
                             {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
                             {card.checkLists.length > 0 && <div title="Checklist items">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
                             {card.comments.length > 0 && <div title="Comments items">{card.comments.length}{<FaRegComment />}</div>}
-                            {card.dueDate && <span><Due dueDate={card.dueDate}/></span>}
+                            {card.dueDate && <span><Due dueDate={card.dueDate} /></span>}
                             {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                         </div>
                     </article>

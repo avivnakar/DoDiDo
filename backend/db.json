@@ -81,6 +81,33 @@
         {
           "id": "XtEc",
           "title": "Done",
+          "cards": []
+        },
+        {
+          "title": "Grabage bin",
+          "id": "recycleBin_5c09",
+          "cards": [
+            {
+              "id": "Crya",
+              "title": "yrthdthg",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "id": "JoHL",
+          "title": "דגכדגכד",
           "cards": [
             {
               "id": "kzjl",
@@ -141,13 +168,7 @@
                   }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Grabage bin",
-          "id": "recycleBin_5c09",
-          "cards": [
+            },
             {
               "id": "Wekw",
               "title": "dfgsdfsd",
@@ -226,11 +247,6 @@
               ]
             }
           ]
-        },
-        {
-          "id": "JoHL",
-          "title": "דגכדגכד",
-          "cards": []
         }
       ]
     }
