@@ -1,7 +1,11 @@
 import { boardService } from '../../services/boardService';
 import { utilService } from '../../services/utilService';//makeid for lists and cards
 import { socketService } from '../../services/socketService';
-socketService.setup();
+import { httpService } from '../../services/httpService';
+// httpService.checkServer('.','brew coffee')
+// .then(res=>console.log(res))
+// .catch(err=>console.error(err))
+// socketService.setup();
 
 
 export function loadBoards(criteria) {
@@ -43,10 +47,10 @@ export function updateBoard(board) {
     return dispatch => {
         dispatch({ type: 'UPDATE_BOARD', board });
         return boardService.update(board)
-            .then(res => {
-                dispatch({ type: 'UPDATE_BOARD', board: res })
-                return res;
-            });
+            // .then(res => {
+            //     dispatch({ type: 'UPDATE_BOARD', board: res })
+            //     return res;
+            // });
     }
 }
 

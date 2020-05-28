@@ -38,6 +38,7 @@ const connectSockets = require('./api/socket/socket.routes')
 
 // routes
 app.get('/', (req, res) => {
+    console.log(req)
     res.status(418).json({
         test: "stam test"
     })

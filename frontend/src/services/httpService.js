@@ -21,18 +21,33 @@ export const httpService = {
     },
     delete(endpoint, data) {
         return ajax(endpoint, 'DELETE', data)
+    },
+    checkServer(endpoint, data) {
+        return checkServer(endpoint, 'GET', data)
     }
 }
 
 
+
+async function checkServer(endpoint, method = 'get', data = null) {
+    // try {
+    const res = await axios({
+        url: `${BASE_URL}${endpoint}`,
+        method,
+        data
+    })
+    return res;
+
+}
+
 async function ajax(endpoint, method = 'get', data = null) {
     // try {
-        const res = await axios({
-            url: `${BASE_URL}${endpoint}`,
-            method,
-            data
-        })
-        return res.data;
+    const res = await axios({
+        url: `${BASE_URL}${endpoint}`,
+        method,
+        data
+    })
+    return res.data;
     // } catch (err) {
     //     console.log(`Had Issues ${method}ing to the backend, endpoint: ${endpoint}, with data: ${data}`);
     //     console.dir(err);
