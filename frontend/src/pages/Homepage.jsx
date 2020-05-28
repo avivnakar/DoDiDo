@@ -11,7 +11,7 @@ class _Homepage extends Component {
     render() {
         const { user, logout, login } = this.props;
         return (
-            <div>
+            <div className="homepage">
                 <header className="homepage-head">
                     <NavBar user={user} logout={logout} login={login} />
                     <section className="flex justify-center align-center">
@@ -23,7 +23,7 @@ class _Homepage extends Component {
                         <img src={require('../assets/imgs/home2.png')} alt="" />
                     </section>
                 </header>
-                <main>
+                <main className="homepage-body">
                     <div className="frs-para flex space-even align-center">
                         <img src={require('../assets/imgs/home3.png')} alt="" />
                         <div className="txt-para">

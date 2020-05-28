@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { TodoPreview } from './TodoPreview.jsx';
 import { AddTodo } from './AddTodo.jsx';
+import { FaTimes } from "react-icons/fa";
 
 export class CardCheckList extends Component {
     progressBar() {
@@ -11,21 +12,26 @@ export class CardCheckList extends Component {
         checkList.todos.forEach(todo => {
             if (todo.isDone) done++;
         });
-        return done * multi;
+        const number = done * multi;
+        console.log(number); 
+        if(isNaN(number)) return 'no todos yet'
+        else return number
     }
     remove = () => {
         const { checkList, card, board, updateBoard } = this.props
         var idx = card.checkLists.findIndex(chxlist => chxlist.id === checkList.id)
-        card.checkLists.splice(idx,1)
+        card.checkLists.splice(idx, 1)
         updateBoard(board)
     }
     render() {
         const { checkList, board, updateBoard } = this.props
         return (
             <div>
-                <h2>{checkList.title}</h2>
-                {checkList.todos && <h4>{this.progressBar()}<span>%</span></h4>}
-                <button onClick={this.remove}>Remove</button>
+                <div className="chacklist-title flex space-between align-center">
+                    <div>{checkList.title}</div>
+                    {checkList.todos && <div>{this.progressBar()}<span>%</span></div>}
+                    <button className="del-chack-btn" onClick={this.remove}>Delete</button>
+                </div>
                 {checkList.todos && checkList.todos.map((todo) => <TodoPreview board={board} updateBoard={updateBoard} key={todo.id} todo={todo} />)}
                 <AddTodo board={board} updateBoard={updateBoard} checkList={checkList} />
             </div>

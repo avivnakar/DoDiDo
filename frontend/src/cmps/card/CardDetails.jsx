@@ -34,6 +34,9 @@ export class CardDetails extends Component {
 
         }
     }
+    clearAddTo = () => {
+        this.setState({ addTo: null });
+    }
     removeMember = (userId) => {
         const { cardMembers, updateBoard, board } = this.props;
         if (cardMembers) {
@@ -46,6 +49,7 @@ export class CardDetails extends Component {
         this.setState(prevstate => ({ isAddChecklist: !prevstate.isAddChecklist }))
     }
     render() {
+        const { clearAddTo } = this;
         const { card, board, updateBoard, history } = this.props
         const backToBoard = (ev) => {
             history.push(`/b/${board._id}/${board.name}`);
@@ -64,12 +68,15 @@ export class CardDetails extends Component {
                                 <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
-                            <div>
+                            {card.dueDate && <div>
                                 Due Time
-                                {card.dueDate && <div><Due dueDate={card.dueDate} /></div>}
-                            </div>
-                            {card.checkLists && card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
-                            {this.state.addTo === 'check' && <AddCheckList card={card} updateBoard={updateBoard} board={board} />}
+                                <div><Due dueDate={card.dueDate} /></div>
+                            </div>}
+                            {card.checkLists.length > 0 && <div>
+                                <div className="card-title">Chacklist</div>
+                                {card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
+                            </div>}
+                            {this.state.addTo === 'check' && <AddCheckList clearAddTo={clearAddTo} card={card} updateBoard={updateBoard} board={board} />}
                             <div>
                                 <div className="card-title">Activity</div>
                                 <AddComment card={card} updateBoard={updateBoard} board={board} />
@@ -77,11 +84,17 @@ export class CardDetails extends Component {
                             </div>
                         </div>
                         <aside className="card-btns flex column">
+                            <div className="card-title add-buttons">ADD TO CARD</div>
                             <button onClick={() => this.addTo('members')}>Members</button>
                             <button onClick={() => this.addTo('labels')}>Labels</button>
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
                             <button onClick={() => this.addTo('cover')}>Images</button>
+                            <div className="card-title">ACTIONS</div>
+                            <button onClick={() => this.addTo('members')}>Move</button>
+                            <button onClick={() => this.addTo('labels')}>Copy</button>
+                            <button onClick={() => this.addTo('check')}>Share</button>
+                            <button onClick={() => this.addTo('date')}>Archive</button>
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'labels' && <AddLabels cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'date' && <AddDueTime card={card} board={board} updateBoard={updateBoard} />}

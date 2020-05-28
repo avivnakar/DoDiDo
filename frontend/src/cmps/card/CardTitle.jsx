@@ -32,7 +32,7 @@ export class CardTitle extends Component {
     }
     getTitle() {
         if (this.props.card.title && !this.state.isEdit) {
-            return <div className="card-title" onClick={() => this.onEdit()}>{this.props.card.title}</div>
+            return <div className="card-name" onClick={() => this.onEdit()}>{this.props.card.title}</div>
         } else if (this.props.card.title) return <input placeholder={this.props.card.title} onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
     }
     render() {

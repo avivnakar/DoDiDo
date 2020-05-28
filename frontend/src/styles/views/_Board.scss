@@ -15,16 +15,16 @@
     }
 }
 
-.list-warpper {
-    all: unset;
-    // height: 100%;
-    display: table-cell;
-    vertical-align: top;
-    padding-top: 100px;
-    // position: absolute;
-    // top: 80px;
-}
 .list {
+    &-warpper {
+        // all: unset;
+        padding-top: 100px;
+        // height: 100%;
+        // display: table-cell;
+        // vertical-align: top;
+        // position: absolute;
+        // top: 80px;
+    }
     font-family: OpenSans-Bold, sans-serif;
     font-size: 0.8125rem;
     background-color: #ebecf0;
@@ -35,7 +35,7 @@
 
     cursor: pointer;
     margin-left: 10px;
-    & .list-title {
+    & &-title {
         width: 272px;
         padding: 5px 10px;
         padding-right: 5px;
@@ -51,26 +51,67 @@
         cursor: pointer;
     }
     @include del-btns;
+    &-bg {
+        .list-cards {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            max-height: 70vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-right: 2px;
+            margin-left: 10px;
+            &::-webkit-scrollbar {
+                background-color: $list-bgc;
+                width: 6.5px;
+                height: 100px;
+                &-thumb {
+                    border: 16px solid #bdc5d8;
+                    border-radius: 10px;
+                }
+                &-track {
+                    // border: 16px solid #bdc5d8;
+                    border-radius: 10px;
+                    height: 100px;
+                }
+            }
+        }
+    }
 }
-
 .add-card-container {
-    height: 50px;
-    // padding: 5px;
+    text-align: left;
+    // margin-top: 10px;
+    padding: 10px;
+    // padding-bottom: 10px;
+    display: flex;
     & .add-card-btn {
-        height: 34px;
-        margin: 10px;
+        all: unset;
+        // height: 34px;
+        margin-left: 5px;
         padding: 4px 8px;
         border-radius: 3px;
         font-family: OpenSans-semiBold, sans-serif;
-        color: #5e6c84;
+        color: #ffffff;
         /* width: 93%; */
         text-align: left;
         /* position: absolute; */
+        background-color: green;
         bottom: 0;
+        &:hover {
+            background-color: rgba(0, 128, 0, 0.472);
+        }
     }
 
-    & :hover {
-        color: $clr1;
+    & textarea {
+        all: unset;
+        height: 30px;
+        text-align: center;
+        // width: 100%;
+        border-radius: 3px;
+        background-color: $clr4;
+        padding: 5px;
+        margin: 10px auto;
+        // margin-right: 10px;
     }
 }
 
@@ -79,49 +120,23 @@
     max-width: 100%;
     height: 100vh;
     // height: 100vh;
-    overflow-y: auto;
-}
-
-.board::-webkit-scrollbar {
-    margin-bottom: 20px;
-    height: 10px;
-    width: 100px;
-    cursor: move;
-}
-.board::-webkit-scrollbar-thumb {
-    border: 16px solid #0000008f;
-    border-radius: 20px;
-}
-.board::-webkit-scrollbar-track {
-    border: 16px solid #ffffff81;
-    border-radius: 10px;
-    height: 100px;
-}
-
-.list-bg {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    max-height: 60vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    margin-right: 2px;
-    margin-left: 10px;
-}
-
-.list-bg::-webkit-scrollbar {
-    background-color: $list-bgc;
-    width: 6.5px;
-    height: 100px;
-}
-.list-bg::-webkit-scrollbar-thumb {
-    border: 16px solid #bdc5d8;
-    border-radius: 10px;
-}
-.list-bg::-webkit-scrollbar-track {
-    // border: 16px solid #bdc5d8;
-    border-radius: 10px;
-    height: 100px;
+    // overflow-y: none;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        margin-bottom: 20px;
+        // height: 10px;
+        // width: 100px;
+        cursor: move;
+    }
+    &::-webkit-scrollbar-thumb {
+        border: 16px solid #0000008f;
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-track {
+        border: 16px solid #ffffff81;
+        border-radius: 10px;
+        height: 100px;
+    }
 }
 
 .card {
@@ -135,18 +150,18 @@
     box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
     font-size: 0.875rem;
     max-width: 250px;
+    word-break: break-all;
     cursor: pointer;
     text-align: left;
     // background-color: burlywood;
     @include del-btns;
-    & .card-title {
+    & &-title {
         font-size: 0.875rem;
         cursor: pointer;
         margin-bottom: 4px;
     }
-}
-
-.card-stat {
-    font-size: 0.8rem;
-    text-align: right;
+    &-stat {
+        font-size: 0.8rem;
+        text-align: right;
+    }
 }

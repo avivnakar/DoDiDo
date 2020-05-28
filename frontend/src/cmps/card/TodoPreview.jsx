@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FaTextHeight } from 'react-icons/fa'
+import { FaTextHeight, FaBluetooth } from 'react-icons/fa'
 
 export class TodoPreview extends Component {
     state = {
@@ -16,9 +16,9 @@ export class TodoPreview extends Component {
                     display: 'inline-block',
                     width: 15,
                     height: 15,
-                    border: '1px solid black',
-                    borderRadius: 4,
-                    backgroundColor: 'red'
+                    border: '1px solid #0000008f',
+                    borderRadius: 2,
+                    backgroundColor: 'rgba(9, 30, 66, 0.25)'
                 }
             })
         }
@@ -28,8 +28,11 @@ export class TodoPreview extends Component {
                     display: 'inline-block',
                     width: 15,
                     height: 15,
-                    border: '1px solid black',
-                    borderRadius: 4
+                    border: '1px solid #0000008f',
+                    borderRadius: 2,
+                    backgroundColor: '#fff',
+                    boxshadow: 'inset 0 0 0 2px #dfe1e6'
+
                 }
             })
         }

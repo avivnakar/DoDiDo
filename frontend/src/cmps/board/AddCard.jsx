@@ -45,7 +45,7 @@ export class AddCard extends Component {
         var text = '';
         var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-        for (let i = 0; i < length; i++) {
+        for (let i = 0;i < length;i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
 
@@ -60,10 +60,9 @@ export class AddCard extends Component {
             )
         } else {
             return (
-                <div className="add-card-container">
+                <div className="add-card-container flex align-center">
                     <textarea placeholder="enter title for this card" onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea>
-                    <button>X</button>
-                    <button>save</button>
+                    <button className="add-card-btn">save</button>
                 </div>
             )
         }

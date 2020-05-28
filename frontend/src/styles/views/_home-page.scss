@@ -63,10 +63,12 @@
         }
     }
 }
-
-main {
+.homepage{
+    height: 100vh;
+    overflow-y: scroll;
+}
+.homepage-body {
     // background-color: rgba(0, 0, 0, 0.021);
-
     margin: 30px auto;
     width: 80%;
     margin: auto;
