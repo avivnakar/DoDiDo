@@ -3,9 +3,10 @@
     //     border: 1px solid red;
     // }
     background-color: $card-bcg;
-    margin-top: 10%;
+    margin-top: 5%;
+    max-height: 80%;
     width: rem(800px);
-    height: rem(400px);
+    // height: rem(400px);
     border-radius: 5px;
     .card-btns {
         //aside
@@ -48,12 +49,27 @@
     }
 }
 .card-des {
-    width: rem(450px);
+    // width: rem(450px);
     width: 80%;
     text-align: left;
     padding: rem(20px);
     // background-color: red;
     overflow: auto;
+    &::-webkit-scrollbar {
+        margin-bottom: 20px;
+        height: 10px;
+        width: 6px;
+        cursor: move;
+    }
+    &::-webkit-scrollbar-thumb {
+        border: 16px solid #0000008f;
+        border-radius: 20px;
+    }
+    &::-webkit-scrollbar-track {
+        border: 16px solid #ffffff81;
+        border-radius: 10px;
+        height: 100px;
+    }
 }
 
 .card-name {
@@ -63,13 +79,14 @@
 }
 
 .card-title {
+    // border-bottom: 1px solid rgba(0, 0, 0, 0.055);
     font-size: 1.3rem;
     line-height: rem(20px);
     color: #172b4d;
     // background-color: yellow;
     font-weight: 300;
-    margin-bottom: rem(10px);
-    margin-top: rem(10px);
+    margin-bottom: rem(15px);
+    margin-top: rem(30px);
 }
 
 .com-time {
@@ -83,21 +100,51 @@
     border: 1px solid rgb(255, 255, 255);
     border-radius: 3px;
     // text-align: center;
-    background-color: rgba(9, 30, 66, 0.04);
+    background-color: rgba(9, 30, 66, 0.226);
     padding: 5px;
     font-family: OpenSans-reg;
-    color: #8f8f94ca;
+    color: #131212ca;
 }
 
 .new-comm {
     width: 100%;
+    margin: 0px;
     font-family: OpenSans-reg;
-    background-color: rgba(9, 30, 66, 0.04);
+    background-color: rgba(25, 25, 26, 0.192);
     border: 1px solid white;
 
     &::placeholder {
         font-family: OpenSans-reg;
-        color: #8f8f94a4;
-        font-size: 1.1rem;
+        color: #fdfdfda4;
+        font-size: 0.9rem;
     }
+}
+
+textarea {
+    all: unset;
+    width: 100%;
+    border-radius: 3px;
+    background-color: rgba(25, 25, 26, 0.192);
+}
+
+.chacklist-title {
+    // background-color: rgba(0, 0, 255, 0.075);
+    margin-bottom: 10px;
+    & .del-chack-btn {
+        all: unset;
+        background-color: rgba(25, 25, 26, 0.082);
+        padding: 5px;
+        color: black;
+        font-size: 0.9rem;
+        border-radius: 3px;
+
+        cursor: pointer;
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.add-buttons {
+    margin-top: 0px;
 }

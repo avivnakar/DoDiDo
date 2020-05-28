@@ -28,8 +28,8 @@ export class TodoPreview extends Component {
                     display: 'inline-block',
                     width: 15,
                     height: 15,
-                    border: '1px solid black',
-                    borderRadius: 4
+                    border: '1px solid #0000008f',
+                    borderRadius: 3
                 }
             })
         }
