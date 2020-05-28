@@ -95,9 +95,9 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('labels')}>Copy</button>
                             <button onClick={() => this.addTo('check')}>Share</button>
                             <button onClick={() => this.addTo('date')}>Archive</button>
-                            {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
-                            {this.state.addTo === 'labels' && <AddLabels cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
-                            {this.state.addTo === 'date' && <AddDueTime card={card} board={board} updateBoard={updateBoard} />}
+                            {this.state.addTo === 'members' && <AddMembers clearAddTo={this.clearAddTo} boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
+                            {this.state.addTo === 'labels' && <AddLabels clearAddTo={this.clearAddTo} cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
+                            {this.state.addTo === 'date' && <AddDueTime clearAddTo={this.clearAddTo} card={card} board={board} updateBoard={updateBoard} />}
                         </aside>
                     </div>
                 </section>
