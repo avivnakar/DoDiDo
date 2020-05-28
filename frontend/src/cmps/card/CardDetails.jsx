@@ -18,7 +18,12 @@ export class CardDetails extends Component {
     state = {
         addTo: null,
         background: '#f5f6f6',
-        isAddChecklist: false
+        isAddChecklist: false,
+        isOpenBgColor: false
+    }
+    componentDidMount() {
+        const { card } = this.props
+        if (card.background) this.setState({ background: card.background })
     }
     addTo(string) {
         switch (string) {
@@ -33,6 +38,9 @@ export class CardDetails extends Component {
                 break;
             case 'date':
                 this.setState({ addTo: 'date' })
+                break;
+            case 'bg':
+                this.setState({ addTo: 'bg', isOpenBgColor: true })
                 break;
 
         }
@@ -53,7 +61,15 @@ export class CardDetails extends Component {
     }
 
     handleChangeComplete = (color) => {
+        const { card, board, updateBoard } = this.props
+        console.log(card.background, 'ssssssssssssssssssssssssssssssssss');
+
         this.setState({ background: color.hex });
+        card.background = color.hex;
+        updateBoard(board);
+        this.setState({ isOpenBgColor: false });
+        console.log(card.background, 'ssssssssssssssssssssssssssssssssss');
+
     };
 
     render() {
@@ -62,18 +78,18 @@ export class CardDetails extends Component {
         const backToBoard = (ev) => {
             history.push(`/b/${board._id}/${board.name}`);
         }
+        const { isOpenBgColor } = this.state;
+
         if (card && board) {
             var bgCard = {
-                backgroundColor: this.state.background,
-                borderTopLeftRadius: '3px',
-                borderBottomLeftRadius: '3px',
+                backgroundColor: this.state.background
             }
             return (
                 <section className="screen flex justify-center" onClick={backToBoard}>
-                    <div className="card-details flex" onClick={(ev) => ev.stopPropagation()}>
-                        <div className="card-des" style={bgCard}>
+                    <div className="card-details flex" style={bgCard} onClick={(ev) => ev.stopPropagation()}>
+                        <div className="card-des" >
                             <CardTitle board={board} card={card} updateBoard={updateBoard} />
-                            <CardToWhatsapp card={card}/>
+                            <CardToWhatsapp card={card} />
 
                             <div className="flex">
                                 {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
@@ -103,12 +119,12 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('date')}>Due Date</button>
                             <button onClick={() => this.addTo('cover')}>Images</button>
                             <button onClick={() => this.addTo('bg')}>Backgroud Color</button>
-                            <div className="bg-modal">
+                            {isOpenBgColor && <div className="bg-modal">
                                 <TwitterPicker
                                     color={this.state.background}
                                     onChangeComplete={this.handleChangeComplete}
                                 />
-                            </div>
+                            </div>}
 
                             <div className="card-title">ACTIONS</div>
                             <button onClick={() => this.addTo('members')}>Move</button>
