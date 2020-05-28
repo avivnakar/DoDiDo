@@ -27,6 +27,7 @@
     }
     font-family: OpenSans-Bold, sans-serif;
     font-size: 0.8125rem;
+    font-size: rem(14px);
     background-color: #ebecf0;
     border-radius: 3px;
     // width: 272px;
@@ -39,6 +40,7 @@
         width: 272px;
         padding: 5px 10px;
         padding-right: 5px;
+
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -137,15 +139,38 @@
     word-break: break-all;
     cursor: pointer;
     text-align: left;
+    &:hover{
+        background-color: $hover;
+    }
     // background-color: burlywood;
     @include del-btns;
     & &-title {
         font-size: 0.875rem;
         cursor: pointer;
         margin-bottom: 4px;
+        margin-left: rem(3px);
     }
     &-stat {
         font-size: 0.8rem;
         text-align: right;
     }
+    & &-label {
+        width: 25px;
+        height: 7px;
+        border-radius: 6px;
+        margin-left: rem(3px);
+    }
+    &-wrapper.active-card{
+        overflow: visible;
+        position: relative;
+        z-index: 11;
+    }
+    &-preview-editor{
+        position: relative;
+    }
 }
+
+// [data-rbd-placeholder-context-id="1"]{
+//     // background-color:rgba(255, 0, 0, 0.281);
+//     flex-shrink: 1;
+// }

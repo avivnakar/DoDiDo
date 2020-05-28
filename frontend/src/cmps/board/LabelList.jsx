@@ -3,7 +3,7 @@ import { LabelPreiview } from './LabelPreiview.jsx';
 export function LabelList(props) {
         const {labels,command} = props
         return (
-            <div className="flex">
+            <div className="flex label-list">
                 {labels.map(label => <LabelPreiview  key={label.color} label={label} command={command}/>)}
             </div>
         )

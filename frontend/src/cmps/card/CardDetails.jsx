@@ -9,6 +9,7 @@ import { AddCheckList } from './AddCheckList.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
+import { CardToWhatsapp } from '../CardToWhatsapp.jsx';
 
 export class CardDetails extends Component {
     state = {

@@ -5,14 +5,10 @@ export class LabelPreiview extends Component {
     render() {
         const { label } = this.props
         var styleLab = {
-            backgroundColor: label.color,
-            width: 25,
-            height: 7,
-            borderRadius: 6,
-            marginLeft: 3
+            backgroundColor: label.color
         }
         return (
-            <div style={styleLab}  onClick={() => this.props.command(label.id)}>
+            <div className="card-label" style={styleLab}  onClick={() => this.props.command(label.id)}>
             </div>
         )
     }
