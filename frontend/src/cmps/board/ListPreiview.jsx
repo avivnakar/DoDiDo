@@ -43,14 +43,6 @@ function _ListPreiview(props) {
                     <section className="list"
                         {...provided.draggableProps}
                         ref={provided.innerRef}
-                    // onMouseOver={(ev=>{
-                    //     isHover=true;
-                    //     console.log(isHover);
-                    // })}
-                    // onMouseLeave={(ev=>{
-                    //     isHover=false;
-                    //     console.log(isHover);
-                    // })}
                     >
 
                         <div className="list-title flex space-between justify-center align-center"
@@ -68,11 +60,13 @@ function _ListPreiview(props) {
                                     ref={provided.innerRef}
                                     {...provided.droppableProps}
                                 >
-                                    {list.cards && list.cards.map((card, index) => <CardPreiview
-                                        index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
-                                        onCardRemove={onCardRemove} history={props.history}
-                                    // listHover={isHover}
-                                    />)}
+                                    <div className="list-cards">
+                                        {list.cards && list.cards.map((card, index) => <CardPreiview
+                                            index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
+                                            onCardRemove={onCardRemove} history={props.history}
+                                        // listHover={isHover}
+                                        />)}
+                                    </div>
                                     {provided.placeholder}
                                     <AddCard updateBoard={updateBoard} list={list} board={board} />
                                 </div>
@@ -93,3 +87,12 @@ const mapDispatchToProps = {
     removeCard
 }
 export const ListPreiview = connect(mapStateToProps, mapDispatchToProps)(_ListPreiview)
+
+// onMouseOver={(ev=>{
+//     isHover=true;
+//     console.log(isHover);
+// })}
+// onMouseLeave={(ev=>{
+//     isHover=false;
+//     console.log(isHover);
+// })}
