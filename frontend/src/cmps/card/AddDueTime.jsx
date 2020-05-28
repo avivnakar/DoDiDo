@@ -13,6 +13,7 @@ export class AddDueTime extends Component {
         const DATE = this.state.date.getTime()
         card.dueDate = DATE
         updateBoard(board)
+        this.props.clearAddTo()
     }
     render() {
         return (

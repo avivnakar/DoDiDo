@@ -25,6 +25,7 @@ export class AddMembers extends Component {
         var user = boardUsers.find(user => user._id === userId)
         cardMembers.push(user)
         updateBoard(board)
+        this.props.clearAddTo()
     }
 
     render() {
