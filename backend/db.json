@@ -194,11 +194,6 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "XtEc",
-          "title": "sdsadsadsa",
-          "cards": []
-        },
-        {
           "id": "vUOW",
           "title": "kjk",
           "cards": [
@@ -219,6 +214,11 @@
               "comments": []
             }
           ]
+        },
+        {
+          "id": "XtEc",
+          "title": "sdsadsadsa",
+          "cards": []
         },
         {
           "id": "FG9r",

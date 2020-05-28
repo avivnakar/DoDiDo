@@ -138,7 +138,9 @@
         height: 100px;
     }
 }
-
+.tilt{
+    transform: rotate(12deg);
+}
 .card {
     font-family: OpenSans-reg;
     position: relative;
