@@ -17,7 +17,8 @@ class _BoardDetails extends Component {
     state = {
         currCard: null,
         match: null,
-        onClickAway: null
+        onClickAway: null,
+        style: {}
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -64,18 +65,33 @@ class _BoardDetails extends Component {
             currCard: card
         })
     }
-    onPick = (start) =>{
-
-    }
-    onMark = (update) =>{
-        if(!update.destination) return
+    onPick = (start) => {
         const { board } = this.props
-        var idx = board.cardLists.findIndex(list => list.id === update.destination.droppableId)
-        var placeholder = board.cardLists[idx]
+        if (start.type === 'task') {
+            const idx = board.cardLists.findIndex(list => list.id === start.source.droppableId)
+            var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId)
+            console.log('card you dragging:', card);
+            this.setState({ style: { backgroundColor: '#c7c7c7' } })
+        }
+    }
+    onMark = (update) => {
+        if (!update.destination) return
+        if (update.type === 'task') {
+            const { board } = this.props
+            var idx = board.cardLists.findIndex(list => list.id === update.destination.droppableId)
+            var placeholderSpot = board.cardLists[idx].cards[update.destination.index]
+            console.log('to where:', placeholderSpot);
+            if (placeholderSpot) {
+
+            }
+        }
     }
     onDragEnd = result => {
         const { board } = this.props
         const { destination, source, draggableId, type } = result;
+        if (result.type === 'task') {
+            this.setState({ style: {} })
+        }
         if (!destination) return;
         if (destination.droppableId === source.droppableId && destination.index === source.index) return;
         if (type === 'column') {
@@ -102,7 +118,7 @@ class _BoardDetails extends Component {
     }
     render() {
         const { setOnClickAway } = this;
-        const {onClickAway} = this.state;
+        const { onClickAway } = this.state;
         const { board, card, history, updateBoard } = this.props;
         const listProps = { history, updateBoard, board, setOnClickAway }
         if (board) {
@@ -127,7 +143,7 @@ class _BoardDetails extends Component {
                                 {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
                                 <div className="board-head">
-                                    <BoardHeadNav board={board} updateBoard={updateBoard}/>
+                                    <BoardHeadNav board={board} updateBoard={updateBoard} />
                                 </div>
                                 <div className="board" style={styleLi}>
                                     {/* <ListMenu /> */}
@@ -135,7 +151,7 @@ class _BoardDetails extends Component {
                                     {/* <div className="div">dsfsdfsfsd</div> */}
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
-                                        {...listProps} />)}
+                                        {...listProps} styleCardDrag={this.state.style} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
                                 {provided.placeholder}

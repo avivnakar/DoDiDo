@@ -13,12 +13,11 @@ export class AddLabels extends Component {
         const { board, cardLabels } = this.props
         var label = board.labels.find(label => label.id === labelId)
         var idxLabel = cardLabels.findIndex(cardLabel => cardLabel.id === labelId)
-        console.log(idxLabel);
         if (idxLabel != -1) {
             cardLabels.splice(idxLabel, 1)
         } else cardLabels.push(label)
-        console.log('labels:', cardLabels);
         this.props.updateBoard(board)
+        this.props.clearAddTo()
     }
     render() {
         const { board, updateBoard, cardLabels } = this.props

@@ -5,7 +5,7 @@ import { httpService } from '../../services/httpService';
 // httpService.checkServer('.','brew coffee')
 // .then(res=>console.log(res))
 // .catch(err=>console.error(err))
-// socketService.setup();
+socketService.setup();
 
 
 export function loadBoards(criteria) {

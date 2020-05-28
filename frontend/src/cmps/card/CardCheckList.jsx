@@ -12,7 +12,10 @@ export class CardCheckList extends Component {
         checkList.todos.forEach(todo => {
             if (todo.isDone) done++;
         });
-        return done * multi;
+        const number = done * multi;
+        console.log(number); 
+        if(isNaN(number)) return 'no todos yet'
+        else return number
     }
     remove = () => {
         const { checkList, card, board, updateBoard } = this.props
@@ -24,7 +27,6 @@ export class CardCheckList extends Component {
         const { checkList, board, updateBoard } = this.props
         return (
             <div>
-                <div className="card-title">Chacklist</div>
                 <div className="chacklist-title flex space-between align-center">
                     <div>{checkList.title}</div>
                     {checkList.todos && <div>{this.progressBar()}<span>%</span></div>}

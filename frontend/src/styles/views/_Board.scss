@@ -155,7 +155,7 @@
     word-break: break-all;
     cursor: pointer;
     text-align: left;
-    &:hover{
+    &:hover {
         background-color: $hover;
     }
     // background-color: burlywood;
@@ -176,13 +176,21 @@
         border-radius: 6px;
         margin-left: rem(3px);
     }
-    &-wrapper.active-card{
-        overflow: visible;
-        position: relative;
-        z-index: 11;
+    &-wrapper {
+        &.active-card {
+            overflow: visible;
+            position: relative;
+            z-index: 11;
+        }
     }
-    &-preview-editor{
+
+    &-preview-editor {
         position: relative;
+    }
+    &.tilt {
+        // z-index: 1000;
+        transform: rotate(12deg);
+        border: 1px solid hotpink;
     }
 }
 

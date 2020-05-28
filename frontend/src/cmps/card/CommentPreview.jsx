@@ -22,7 +22,7 @@ export class CommentPreview extends Component {
         return (
             <div className="comments-container">
                 <div className="com-head flex  align-center">
-                    <MiniUser users={users} command={console.log()} isOpen={true} />
+                    <MiniUser users={users} command={()=> {}} isOpen={true} />
                     <span className="com-time">{this.getTime()}</span>
                 </div>
                 <div className="comment">{comment.text}</div>
