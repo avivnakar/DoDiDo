@@ -64,6 +64,15 @@ class _BoardDetails extends Component {
             currCard: card
         })
     }
+    onPick = (start) =>{
+
+    }
+    onMark = (update) =>{
+        if(!update.destination) return
+        const { board } = this.props
+        var idx = board.cardLists.findIndex(list => list.id === update.destination.droppableId)
+        var placeholder = board.cardLists[idx]
+    }
     onDragEnd = result => {
         const { board } = this.props
         const { destination, source, draggableId, type } = result;
@@ -107,7 +116,7 @@ class _BoardDetails extends Component {
                 backgroundRepeat: 'no-repeat'
             }
             return (
-                <DragDropContext onDragEnd={this.onDragEnd}>
+                <DragDropContext onDragStart={this.onPick} onDragEnd={this.onDragEnd} onDragUpdate={this.onMark}>
                     <Droppable droppableId='all' direction="horizontal" type="column">
                         {(provided) => (
                             <div

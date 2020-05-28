@@ -104,7 +104,7 @@
               },
               "cardMembers": [],
               "desc": "fhgfdhg",
-              "dueDate": null,
+              "dueDate": 1595321539436,
               "checkLists": [
                 {
                   "id": "Y0EL",
@@ -159,7 +159,7 @@
               },
               "cardMembers": [],
               "desc": "gf",
-              "dueDate": null,
+              "dueDate": 1590914554890,
               "checkLists": [],
               "attachments": [],
               "comments": [
@@ -229,16 +229,6 @@
         },
         {
           "id": "JoHL",
-          "title": "דגכדגכד",
-          "cards": []
-        },
-        {
-          "id": "8UWf",
-          "title": "דגכדכדג",
-          "cards": []
-        },
-        {
-          "id": "aoTW",
           "title": "דגכדגכד",
           "cards": []
         }

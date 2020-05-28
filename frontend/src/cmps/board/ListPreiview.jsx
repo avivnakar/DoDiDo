@@ -15,7 +15,6 @@ import { ListMenu } from './ListMenu.jsx';
 
 function _ListPreiview(props) {
     var [isMenuOpened, setMenuOpened] = useState(false)
-    console.log(isMenuOpened)
     const { list, board, updateBoard, removeCard } = props
     const onCardRemove = (cardId) => (ev) => {
         ev.stopPropagation();

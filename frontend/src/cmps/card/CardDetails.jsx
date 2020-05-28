@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Due } from '../board/Due.jsx';
 import { CardDesc } from './CardDesc.jsx';
 import { AddMembers } from './AddMembers.jsx';
 import { CardTitle } from './CardTitle.jsx';
@@ -7,6 +8,7 @@ import { CardComments } from './CardComments.jsx';
 import { CardCheckList } from './CardCheckList.jsx';
 import { AddCheckList } from './AddCheckList.jsx';
 import { AddLabels } from './AddLabels.jsx';
+import { AddDueTime } from './AddDueTime.jsx';
 import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
 
@@ -25,6 +27,9 @@ export class CardDetails extends Component {
                 break;
             case 'check':
                 this.setState({ addTo: 'check' })
+                break;
+            case 'date':
+                this.setState({ addTo: 'date' })
                 break;
 
         }
@@ -59,11 +64,15 @@ export class CardDetails extends Component {
                                 <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
+                            <div>
+                                Due Time
+                                {card.dueDate && <div><Due dueDate={card.dueDate} /></div>}
+                            </div>
                             {card.checkLists && card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
                             {this.state.addTo === 'check' && <AddCheckList card={card} updateBoard={updateBoard} board={board} />}
                             <div>
                                 <div className="card-title">Activity</div>
-                                <AddComment card={card} updateBoard={updateBoard} board={board}/>
+                                <AddComment card={card} updateBoard={updateBoard} board={board} />
                                 {card.comments && <CardComments card={card} updateBoard={updateBoard} board={board} />}
                             </div>
                         </div>
@@ -75,6 +84,7 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('cover')}>Images</button>
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'labels' && <AddLabels cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
+                            {this.state.addTo === 'date' && <AddDueTime card={card} board={board} updateBoard={updateBoard} />}
                         </aside>
                     </div>
                 </section>

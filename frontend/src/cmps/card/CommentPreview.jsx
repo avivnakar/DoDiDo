@@ -21,7 +21,7 @@ export class CommentPreview extends Component {
         users.push(comment.createdBy)
         return (
             <div>
-                <MiniUser users={users} command={console.log()} isOpen={true}/>
+                <MiniUser users={users} command={()=> {}} isOpen={true}/>
                 <span>{this.getTime()}</span>
                 <div>{comment.text}</div>
             </div>
