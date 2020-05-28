@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { TodoPreview } from './TodoPreview.jsx';
 import { AddTodo } from './AddTodo.jsx';
-import { FaTimes } from "react-icons/fa";
+// import { FaTimes } from "react-icons/fa";
 
 export class CardCheckList extends Component {
     progressBar() {
@@ -26,11 +26,11 @@ export class CardCheckList extends Component {
     render() {
         const { checkList, board, updateBoard } = this.props
         return (
-            <div>
-                <div className="chacklist-title flex space-between align-center">
+            <div className='checklist'>
+                <div className="checklist-title flex space-between align-center">
                     <div>{checkList.title}</div>
                     {checkList.todos && <div>{this.progressBar()}<span>%</span></div>}
-                    <button className="del-chack-btn" onClick={this.remove}>Delete</button>
+                    <button className="del-check-btn" onClick={this.remove}>Delete</button>
                 </div>
                 {checkList.todos && checkList.todos.map((todo) => <TodoPreview board={board} updateBoard={updateBoard} key={todo.id} todo={todo} />)}
                 <AddTodo board={board} updateBoard={updateBoard} checkList={checkList} />

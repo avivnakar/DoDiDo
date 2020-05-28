@@ -16,7 +16,7 @@ import { ListMenu } from './ListMenu.jsx';
 function _ListPreiview(props) {
     var [isMenuOpened, setMenuOpened] = useState(false)
     var [isLeft, setDirection] = useState(false)
-    var [isAddingCard, toggleAddCard] = useState(false)
+    // var [isAddingCard, toggleAddCard] = useState(false)
     const { list, board, updateBoard, removeCard } = props
     const onCardRemove = (cardId) => (ev) => {
         ev.stopPropagation();
