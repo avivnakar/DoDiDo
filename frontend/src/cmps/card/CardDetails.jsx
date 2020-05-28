@@ -9,10 +9,12 @@ import { AddCheckList } from './AddCheckList.jsx';
 import { AddLabels } from './AddLabels.jsx';
 import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
+import { TwitterPicker } from 'react-color'
 
 export class CardDetails extends Component {
     state = {
         addTo: null,
+        background: '#f5f6f6',
         isAddChecklist: false
     }
     addTo(string) {
@@ -43,6 +45,11 @@ export class CardDetails extends Component {
     onAddChecklist = (ev) => {
         this.setState(prevstate => ({ isAddChecklist: !prevstate.isAddChecklist }))
     }
+
+    handleChangeComplete = (color) => {
+        this.setState({ background: color.hex });
+    };
+
     render() {
         const { clearAddTo } = this;
         const { card, board, updateBoard, history } = this.props
@@ -50,10 +57,15 @@ export class CardDetails extends Component {
             history.push(`/b/${board._id}/${board.name}`);
         }
         if (card && board) {
+            var bgCard = {
+                backgroundColor: this.state.background,
+                borderTopLeftRadius: '3px',
+                borderBottomLeftRadius: '3px',
+            }
             return (
                 <section className="screen flex justify-center" onClick={backToBoard}>
                     <div className="card-details flex" onClick={(ev) => ev.stopPropagation()}>
-                        <div className="card-des" >
+                        <div className="card-des" style={bgCard}>
                             <CardTitle board={board} card={card} updateBoard={updateBoard} />
                             <div className="flex">
                                 {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
@@ -78,11 +90,20 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
                             <button onClick={() => this.addTo('cover')}>Images</button>
+                            <button onClick={() => this.addTo('bg')}>Backgroud Color</button>
+                            <div className="bg-modal">
+                                <TwitterPicker
+                                    color={this.state.background}
+                                    onChangeComplete={this.handleChangeComplete}
+                                />
+                            </div>
+
                             <div className="card-title">ACTIONS</div>
                             <button onClick={() => this.addTo('members')}>Move</button>
                             <button onClick={() => this.addTo('labels')}>Copy</button>
                             <button onClick={() => this.addTo('check')}>Share</button>
                             <button onClick={() => this.addTo('date')}>Archive</button>
+
                             {this.state.addTo === 'members' && <AddMembers boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'labels' && <AddLabels cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
                         </aside>
