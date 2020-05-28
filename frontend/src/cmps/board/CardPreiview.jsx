@@ -22,7 +22,7 @@ export function CardPreiview(props) {
         props.setOnClickAway(null);
         setMenuOpened(false);
     }
-
+    const { background } = card
     return (
 
         <Draggable draggableId={card.id} index={props.index}>
@@ -35,12 +35,13 @@ export function CardPreiview(props) {
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
                             ref={provided.innerRef}
+                            style={{ background, ...provided.draggableProps.style }}
                         >
                             {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
                             <div>
                                 {card.labels && <LabelList labels={card.labels} />}
                             </div>
-                            <div className="card-title-container flex space-between">
+                            <div className="card-title-container flex space-between" >
                                 <span className="card-title">{card.title}</span>
                                 <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt />
 
@@ -51,7 +52,7 @@ export function CardPreiview(props) {
                                 {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
                                 {card.checkLists.length > 0 && <div title="Checklist items">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
                                 {card.comments.length > 0 && <div title="Comments items">{card.comments.length}{<FaRegComment />}</div>}
-                                {card.dueDate && <span><Due dueDate={card.dueDate}/></span>}
+                                {card.dueDate && <span><Due dueDate={card.dueDate} /></span>}
                                 {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
                             </div>
                         </article>
