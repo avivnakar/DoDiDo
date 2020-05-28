@@ -579,7 +579,8 @@
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
-              "comments": []
+              "comments": [],
+              "background": "#8ed1fc"
             },
             {
               "id": "6eFX",
