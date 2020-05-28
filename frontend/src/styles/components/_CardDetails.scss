@@ -47,103 +47,104 @@
     .todo {
         background-color: #fff;
     }
-}
-.card-des {
-    // width: rem(450px);
-    width: 80%;
-    text-align: left;
-    padding: rem(20px);
-    // background-color: red;
-    overflow: auto;
-    &::-webkit-scrollbar {
-        margin-bottom: 20px;
-        height: 10px;
-        width: 6px;
-        cursor: move;
-    }
-    &::-webkit-scrollbar-thumb {
-        border: 16px solid #0000008f;
-        border-radius: 20px;
-    }
-    &::-webkit-scrollbar-track {
-        border: 16px solid #ffffff81;
-        border-radius: 10px;
-        height: 100px;
-    }
-    & textarea {
-        all: unset;
-        width: 100%;
-        border-radius: 3px;
-        background-color: rgba(25, 25, 26, 0.192);
-    }
-}
 
-.card-name {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.card-title {
-    // border-bottom: 1px solid rgba(0, 0, 0, 0.055);
-    font-size: 1.3rem;
-    line-height: rem(20px);
-    color: #172b4d;
-    // background-color: yellow;
-    font-weight: 300;
-    margin-bottom: rem(15px);
-    margin-top: rem(30px);
-}
-
-.com-time {
-    font-size: 0.75rem;
-    margin-left: rem(15px);
-    padding-top: rem(3px);
-    color: #8f8f8f;
-}
-
-.comment {
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 3px;
-    // text-align: center;
-    background-color: rgba(9, 30, 66, 0.226);
-    padding: 5px;
-    font-family: OpenSans-reg;
-    color: #131212ca;
-}
-
-.new-comm {
-    width: 100%;
-    margin: 0px;
-    font-family: OpenSans-reg;
-    background-color: rgba(25, 25, 26, 0.192);
-    border: 1px solid white;
-
-    &::placeholder {
-        font-family: OpenSans-reg;
-        color: #fdfdfda4;
-        font-size: 0.9rem;
-    }
-}
-
-.chacklist-title {
-    // background-color: rgba(0, 0, 255, 0.075);
-    margin-bottom: 10px;
-    & .del-chack-btn {
-        all: unset;
-        background-color: rgba(25, 25, 26, 0.082);
-        padding: 5px;
-        color: black;
-        font-size: 0.9rem;
-        border-radius: 3px;
-
-        cursor: pointer;
-        &:hover {
-            color: red;
+    .card-des {
+        // width: rem(450px);
+        width: 80%;
+        text-align: left;
+        padding: rem(20px);
+        // background-color: red;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            margin-bottom: 20px;
+            height: 10px;
+            width: 6px;
+            cursor: move;
+        }
+        &::-webkit-scrollbar-thumb {
+            border: 16px solid #0000008f;
+            border-radius: 20px;
+        }
+        &::-webkit-scrollbar-track {
+            border: 16px solid #ffffff81;
+            border-radius: 10px;
+            height: 100px;
+        }
+        & textarea {
+            all: unset;
+            width: 100%;
+            border-radius: 3px;
+            background-color: rgba(25, 25, 26, 0.192);
         }
     }
-}
 
-.add-buttons {
-    margin-top: 0px;
+    .card-name {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .card-title {
+        // border-bottom: 1px solid rgba(0, 0, 0, 0.055);
+        font-size: 1.3rem;
+        line-height: rem(20px);
+        color: #172b4d;
+        // background-color: yellow;
+        font-weight: 300;
+        margin-bottom: rem(15px);
+        margin-top: rem(30px);
+    }
+
+    .com-time {
+        font-size: 0.75rem;
+        margin-left: rem(15px);
+        padding-top: rem(3px);
+        color: #8f8f8f;
+    }
+
+    .comment {
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 3px;
+        // text-align: center;
+        background-color: rgba(9, 30, 66, 0.226);
+        padding: 5px;
+        font-family: OpenSans-reg;
+        color: #131212ca;
+    }
+
+    .new-comm {
+        width: 100%;
+        margin: 0px;
+        font-family: OpenSans-reg;
+        background-color: rgba(25, 25, 26, 0.192);
+        border: 1px solid white;
+
+        &::placeholder {
+            font-family: OpenSans-reg;
+            color: #fdfdfda4;
+            font-size: 0.9rem;
+        }
+    }
+
+    .chacklist-title {
+        // background-color: rgba(0, 0, 255, 0.075);
+        margin-bottom: 10px;
+        & .del-chack-btn {
+            all: unset;
+            background-color: rgba(25, 25, 26, 0.082);
+            padding: 5px;
+            color: black;
+            font-size: 0.9rem;
+            border-radius: 3px;
+
+            cursor: pointer;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+
+    .add-buttons {
+        margin-top: 0px;
+    }
 }

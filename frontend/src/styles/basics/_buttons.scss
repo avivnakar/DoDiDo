@@ -72,12 +72,14 @@ button {
     text-align: center;
     color: #002d3d;
     padding-top: 5px;
-    background-color: $hover;
     border-radius: 3px;
     width: 30px;
     height: 30px;
     font-size: 0.7rem;
     .card:hover & {
         visibility: unset;
+        &:hover{
+            background-color: $hover;
+        }
     }
 }
