@@ -106,12 +106,12 @@
     max-width: 100%;
     height: 100vh;
     // height: 100vh;
-    overflow-y: none;
-
+    // overflow-y: none;
+    overflow: auto;
     &::-webkit-scrollbar {
         margin-bottom: 20px;
-        height: 10px;
-        width: 100px;
+        // height: 10px;
+        // width: 100px;
         cursor: move;
     }
     &::-webkit-scrollbar-thumb {
