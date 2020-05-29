@@ -140,7 +140,6 @@
         border-radius: 10px;
     }
 }
-
 .card {
     font-family: OpenSans-reg;
     position: relative;
@@ -188,8 +187,8 @@
         position: relative;
     }
     &.tilt {
-        transform: rotate(12deg);
-        border: 1px solid hotpink;
+        transform: rotate(4deg);
+        transition: .6;
     }
 }
 
