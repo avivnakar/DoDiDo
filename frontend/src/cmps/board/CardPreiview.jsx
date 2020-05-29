@@ -11,7 +11,7 @@ import { ClickAway } from '../ClickAway.jsx';
 
 
 export function CardPreiview(props) {
-    const { card, history/* , onCardRemove  */} = props
+    const { card, history/* , onCardRemove  */ } = props
     var [isMenuOpened, setMenuOpened] = useState(false)
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
@@ -29,7 +29,7 @@ export function CardPreiview(props) {
         <Draggable draggableId={card.id} index={props.index}>
             {(provided, snapshot) => (
                 <div className={`card-preview-editor${''}`}>
-                    {isMenuOpened && <ClickAway onClick={onCloseMenu}/>}
+                    {isMenuOpened && <ClickAway onClick={onCloseMenu} />}
                     <div className={`card-wrapper ${isMenuOpened ? ' active-card' : ''}`}>
                         <div className="dnd-provider" /*onClick={() => props.getCurrCard(card)}*/
                             onClick={() => history.push(`/c/${card.id}/${card.title}`)}
@@ -52,13 +52,17 @@ export function CardPreiview(props) {
 
                                     </span>
                                 </div>
-                                <div className="card-stat flex">
-                                    {card.desc && <div title="Description"><FaRegListAlt /></div>}
-                                    {card.cardMembers.length > 0 && <div title="Members assigned">{card.cardMembers.length}{<FaRegUser />}</div>}
-                                    {card.checkLists.length > 0 && <div title="Checklist items">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
-                                    {card.comments.length > 0 && <div title="Comments items">{card.comments.length}{<FaRegComment />}</div>}
-                                    {card.dueDate && <span><Due dueDate={card.dueDate} /></span>}
-                                    {card.attachments.length > 0 && <div title="Attachments">{card.attachments.length}{<AiOutlineDatabase />}</div>}
+                                <div className="card-stat">
+                                    <div className="due-time">
+                                        {card.dueDate && <span><Due dueDate={card.dueDate} /></span>}
+                                    </div>
+                                    <div className="stat flex">
+                                        {card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
+                                        {card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
+                                        {card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
+                                        {card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
+                                        {card.attachments.length > 0 && <div title="Attachments" className="flex align-center">{card.attachments.length}{<AiOutlineDatabase />}</div>}
+                                    </div>
                                 </div>
                             </article>
                         </div>

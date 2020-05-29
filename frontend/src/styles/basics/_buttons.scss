@@ -78,8 +78,59 @@ button {
     font-size: 0.7rem;
     .card:hover & {
         visibility: unset;
-        &:hover{
+        &:hover {
             background-color: $hover;
         }
     }
+}
+
+.add-list-btn {
+    all: unset;
+    min-width: 200px;
+    margin-left: 5px;
+    padding: 5px 20px;
+    // padding: 4px 48px;
+    border-radius: 3px;
+    font-family: OpenSans-semiBold, sans-serif;
+    color: #ffffff;
+    text-align: left;
+    background-color: green;
+    display: flex;
+    min-width: 80px;
+    margin-right: 50px;
+    &:hover {
+        background-color: rgba(0, 128, 0, 0.472);
+    }
+}
+
+.card-stat {
+    // background-color: rgb(235, 90, 70);
+    color: rgb(0, 0, 0);
+
+    & svg {
+        margin-right: 6npx;
+        margin-left: 2px;
+    }
+}
+
+.due-time {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: OpenSans-semiBold, sans-serif;
+    & span {
+        // border: 1px solid pink;
+        border-radius: 3px;
+        color: rgb(70, 70, 70);
+    }
+}
+
+.time-container {
+    padding: 2px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 80px;
+    border: 1px solid rgba(59, 59, 59, 0.13);
+    margin-bottom: 5px;
 }
