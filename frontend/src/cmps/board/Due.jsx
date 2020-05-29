@@ -27,6 +27,9 @@ export class Due extends Component {
                 return 'Nov'
             case 12:
                 return 'Dec'
+                default:
+                    console.log('getMonthName switch case reached default state');
+                    break;
         }
     }
     getDueTime = () => {

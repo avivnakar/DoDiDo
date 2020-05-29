@@ -2,11 +2,11 @@ import React from 'react'
 import { FaTrashAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { BoardTitle } from './BoardTitle.jsx'
-import { MiniUser } from '../MiniUser';
+// import { MiniUser } from '../MiniUser';
 export function BoardHeadNav(props) {
-    function notFunc() {
-        return
-    }
+    // function notFunc() {
+    //     return
+    // }
     return (
         <header className="board-header flex space-between justify-center align-center">
             <div className="name-container flex space-between">

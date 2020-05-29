@@ -11,7 +11,7 @@ import { ClickAway } from '../ClickAway.jsx';
 
 
 export function CardPreiview(props) {
-    const { card, history, onCardRemove } = props
+    const { card, history/* , onCardRemove  */} = props
     var [isMenuOpened, setMenuOpened] = useState(false)
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
@@ -27,9 +27,9 @@ export function CardPreiview(props) {
     return (
 
         <Draggable draggableId={card.id} index={props.index}>
-            {(provided, snapshot) => (<>
+            {(provided, snapshot) => (
                 <div className={`card-preview-editor${''}`}>
-                    {isMenuOpened && <ClickAway />}
+                    {isMenuOpened && <ClickAway onClick={onCloseMenu}/>}
                     <div className={`card-wrapper ${isMenuOpened ? ' active-card' : ''}`}>
                         <div className="dnd-provider" /*onClick={() => props.getCurrCard(card)}*/
                             onClick={() => history.push(`/c/${card.id}/${card.title}`)}
@@ -65,7 +65,6 @@ export function CardPreiview(props) {
                     </div>
                     {isMenuOpened && <CardMenu closeMenu={onCloseMenu} />}
                 </div>
-            </>
             )}
         </Draggable>
     )

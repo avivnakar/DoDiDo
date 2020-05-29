@@ -13,6 +13,7 @@ import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
 import { CardToWhatsapp } from '../CardToWhatsapp.jsx';
 import { TwitterPicker } from 'react-color'
+import { ShareCard } from './ShareCard.jsx';
 
 export class CardDetails extends Component {
     state = {
@@ -42,7 +43,9 @@ export class CardDetails extends Component {
             case 'bg':
                 this.setState({ addTo: 'bg', isOpenBgColor: true })
                 break;
-
+            default:
+                console.log('addTo switch case reached default state');
+                break;
         }
     }
     clearAddTo = () => {
@@ -104,7 +107,7 @@ export class CardDetails extends Component {
                                 <div><Due dueDate={card.dueDate} /></div>
                             </div>}
                             {card.checkLists.length > 0 && <div>
-                                <div className="card-title">Chacklist</div>
+                                <div className="card-title">Checklist</div>
                                 {card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
                             </div>}
                             {this.state.addTo === 'check' && <AddCheckList clearAddTo={clearAddTo} card={card} updateBoard={updateBoard} board={board} />}
@@ -133,6 +136,7 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('members')}>Move</button>
                             <button onClick={() => this.addTo('labels')}>Copy</button>
                             <button onClick={() => this.addTo('check')}>Share</button>
+                            <ShareCard card={card} />
                             <button onClick={() => this.addTo('date')}>Archive</button>
                             {this.state.addTo === 'members' && <AddMembers clearAddTo={this.clearAddTo} boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'labels' && <AddLabels clearAddTo={this.clearAddTo} cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
