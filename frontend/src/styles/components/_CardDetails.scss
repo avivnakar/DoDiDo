@@ -22,9 +22,9 @@
             height: 32px;
             max-width: 300px;
             padding: 6px 12px;
-        }
-        & :hover {
-            background-color: rgba(9, 30, 66, 0.08);
+            &:hover    {
+                background-color: rgba(9, 30, 66, 0.08);
+            }
         }
         .add-members {
             background-color: springgreen;
@@ -38,9 +38,12 @@
         width: 100%;
         background-color: $card-btn;
     }
-    textarea {
-        resize: none;
+    .description-container{
+width: 100%;
     }
+    // textarea {
+    //     resize: none;
+    // }
     .pop-over {
         position: absolute;
     }
@@ -166,4 +169,7 @@
 .mark-cube {
     cursor: pointer;
     margin-right: 10px;
+}
+.whatsapp-link{
+    color: #25D366;
 }

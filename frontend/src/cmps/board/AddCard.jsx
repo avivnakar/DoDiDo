@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { FaPlus } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export class AddCard extends Component {
     state = {
@@ -61,7 +62,7 @@ export class AddCard extends Component {
         } else {
             return (
                 <div className="add-card-container flex align-center">
-                    <textarea placeholder="enter title for this card" onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea>
+                    <TextareaAutosize placeholder="enter title for this card" onKeyDown={(e) => { this.handleKeyDown(e) }}></TextareaAutosize>
                     <button className="add-card-btn">save</button>
                 </div>
             )

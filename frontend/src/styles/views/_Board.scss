@@ -154,16 +154,34 @@
     word-break: break-all;
     cursor: pointer;
     text-align: left;
-    &:hover {
+    &:hover :not() {
         background-color: $hover;
     }
     // background-color: burlywood;
     @include del-btns;
     & &-title {
         font-size: 0.875rem;
-        cursor: pointer;
         margin-bottom: 4px;
         margin-left: rem(3px);
+        :not(.edit) {
+            cursor: pointer;
+        }
+        &-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: minmax(1fr, 100%);
+        }
+        &.edit {
+            font: inherit;
+            line-height: inherit;
+            padding: inherit;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            resize: none;
+            border: none;
+            background: none;
+            width: 100%;
+        }
     }
     &-stat {
         font-size: 0.8rem;
@@ -186,11 +204,11 @@
     &-preview-editor {
         position: relative;
     }
-    &.tilt {
-        transform: rotate(4deg);
-        transition: .6;
-    }
 }
+        .tilt {
+            transform: rotate(4deg);
+            transition: 0.6;
+        }
 
 // [data-rbd-placeholder-context-id="1"]{
 //     // background-color:rgba(255, 0, 0, 0.281);

@@ -98,7 +98,7 @@ export class CardDetails extends Component {
                                 {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} command={this.removeMember} /><button onClick={() => this.addMembers()}>+</button></div>}
                             </div>
-                            <div>
+                            <div className="description-container">
                                 <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
@@ -124,7 +124,7 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
                             <button onClick={() => this.addTo('cover')}>Images</button>
-                            <button onClick={() => this.addTo('bg')}>Backgroud Color</button>
+                            <button onClick={() => this.addTo('bg')}>Background Color</button>
                             {isOpenBgColor && <div className="bg-modal">
                                 <TwitterPicker
                                     color={this.state.background}

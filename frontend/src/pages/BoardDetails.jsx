@@ -17,15 +17,15 @@ class _BoardDetails extends Component {
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
-        socketService.on('update board', this.props.updateBoardSync)
+        socketService.on('update board', board => {
+            if (board.updatedAt > this.props.board.updatedAt)
+                this.props.updateBoardSync(board)
+        });
     }
     componentDidUpdate(prevProps) {
         if (this.state.match !== this.props.match) {
             this.setState({ match: this.props.match }, this.switchRoute)
         }
-    }
-    onSwitchRoute = () => {
-
     }
     switchRoute = () => {
         const { boardId, cardId } = this.state.match.params
@@ -110,9 +110,8 @@ class _BoardDetails extends Component {
     };
 
     render() {
-        const { setOnClickAway } = this;
         const { board, card, history, updateBoard } = this.props;
-        const listProps = { history, updateBoard, board, setOnClickAway }
+        const listProps = { history, updateBoard, board }
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
@@ -120,7 +119,6 @@ class _BoardDetails extends Component {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 opacity: 0.9,
-                // backgroundColor: 'pink',
                 backgroundRepeat: 'no-repeat'
             }
             return (
@@ -131,16 +129,12 @@ class _BoardDetails extends Component {
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                             >
-                                {/* {onClickAway&&<ClickAway onClick={onClickAway}/>} */}
                                 {card && <CardDetails card={this.props.card} board={board}
                                     updateBoard={this.props.updateBoard} history={this.props.history} />}
                                 <div className="board-head">
                                     <BoardHeadNav board={board} updateBoard={updateBoard} />
                                 </div>
                                 <div className="board" style={styleLi}>
-                                    {/* <ListMenu /> */}
-                                    {/* <CardMenu /> */}
-                                    {/* <div className="div">dsfsdfsfsd</div> */}
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
                                         {...listProps} styleCardDrag={this.state.style} />)}
