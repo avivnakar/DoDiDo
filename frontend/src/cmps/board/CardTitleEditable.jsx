@@ -6,8 +6,6 @@ export class CardTitleEditable extends Component {
         txt: ''
     }
     componentDidMount() {
-        console.log('CardTitleEditable', this);
-        console.log('CardTitleEditable.render()', this.render());
         const { txt } = this.props;
         this.setState({ txt });
     }

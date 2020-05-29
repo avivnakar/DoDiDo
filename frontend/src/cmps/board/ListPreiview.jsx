@@ -25,7 +25,7 @@ function _ListPreiview(props) {
         onCloseMenu(ev);
     }
     const onOpenMenu = (ev) => {
-        const direction=(window.innerWidth-ev.clientX > 300 )
+        const direction = (window.innerWidth - ev.clientX > 300)
         setDirection(direction)
         setMenuOpened(true);
     }
@@ -37,40 +37,41 @@ function _ListPreiview(props) {
 
     return (
         <Draggable draggableId={list.id} index={props.index}>
-            {(provided,snapshot) => (
+            {(provided, snapshot) => (
                 <div className="list-warpper">
-                    <section className="list"
+                    <div className="dnd-provider"
                         {...!isMenuOpened ? (provided.draggableProps) : {}}
-                        ref={provided.innerRef}
-                    >
-
-                        <div className={`list-title flex space-between justify-center align-center${snapshot.isDragging ? 'tilt' : ''}`}
-                            {...provided.dragHandleProps}>
-                            <ListTitle updateBoard={updateBoard} list={list} board={board} />
-                            <div className="list-menu-btn" onClick={onOpenMenu}>
-                                <Link to="#" style={{ content: "pop" }}><FaEllipsisH style={{ pointerEvents: 'none' }} /></Link>
-                                {isMenuOpened && <ListMenu side={isLeft?'left':'right'} closeMenu={onCloseMenu} onListRemove={onListRemove} />}
-                            </div>
-                        </div>
-                        <Droppable droppableId={list.id} type="task">
-                            {(provided) => (
-                                <div className="list-bg"
-                                    ref={provided.innerRef}
-                                    {...provided.droppableProps}
-                                >
-                                    <div className="list-cards">
-                                        {list.cards && list.cards.map((card, index) => <CardPreiview
-                                            index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
-                                            onCardRemove={onCardRemove} history={props.history} 
-                                        />)}
-                                    </div>
-                                    {provided.placeholder}
-                                    <AddCard updateBoard={updateBoard} list={list} board={board} />
+                        ref={provided.innerRef} >
+                        <section className={`list${snapshot.isDragging ? ' tilt' : ''}`}>
+                            <div className="list-title flex space-between justify-center align-center"
+                                {...provided.dragHandleProps}>
+                                <ListTitle updateBoard={updateBoard} list={list} board={board} />
+                                <div className="list-menu-btn" onClick={onOpenMenu}>
+                                    <Link to="#" style={{ content: "pop" }}><FaEllipsisH style={{ pointerEvents: 'none' }} /></Link>
+                                    {isMenuOpened && <ListMenu side={isLeft ? 'left' : 'right'} closeMenu={onCloseMenu} onListRemove={onListRemove} />}
                                 </div>
-                            )}
-                        </Droppable>
-                    </section>
+                            </div>
+                            <Droppable droppableId={list.id} type="task">
+                                {(provided) => (
+                                    <div className="list-bg"
+                                        ref={provided.innerRef}
+                                        {...provided.droppableProps}
+                                    >
+                                        <div className="list-cards">
+                                            {list.cards && list.cards.map((card, index) => <CardPreiview
+                                                index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
+                                                onCardRemove={onCardRemove} history={props.history}
+                                            />)}
+                                        </div>
+                                        {provided.placeholder}
+                                        <AddCard updateBoard={updateBoard} list={list} board={board} />
+                                    </div>
+                                )}
+                            </Droppable>
+                        </section>
+                    </div>
                 </div>
+
             )}
         </Draggable>
     )

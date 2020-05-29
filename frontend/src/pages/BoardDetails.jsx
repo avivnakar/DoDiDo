@@ -13,7 +13,8 @@ class _BoardDetails extends Component {
     state = {
         currCard: null,
         match: null,
-        style: {}
+        style: {},
+        drag: {}
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -63,6 +64,7 @@ class _BoardDetails extends Component {
     onPick = (start) => {
         const { board } = this.props
         if (start.type === 'task') {
+            this.setState({ drag: start })
             const idx = board.cardLists.findIndex(list => list.id === start.source.droppableId)
             var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId)
             console.log('card you dragging:', card);
@@ -72,6 +74,8 @@ class _BoardDetails extends Component {
     onMark = (update) => {
         if (!update.destination) return
         if (update.type === 'task') {
+            this.setState({ drag: update })
+            console.log(update)
             const { board } = this.props
             var idx = board.cardLists.findIndex(list => list.id === update.destination.droppableId)
             var placeholderSpot = board.cardLists[idx].cards[update.destination.index]
@@ -85,7 +89,7 @@ class _BoardDetails extends Component {
         const { board } = this.props
         const { destination, source, draggableId, type } = result;
         if (result.type === 'task') {
-            this.setState({ style: {} })
+            this.setState({ style: {}, drag: result })
         }
         if (!destination) return;
         if (destination.droppableId === source.droppableId && destination.index === source.index) return;
@@ -111,6 +115,8 @@ class _BoardDetails extends Component {
 
     render() {
         const { board, card, history, updateBoard } = this.props;
+        const { drag } = this.state;
+        const { source, destination } = drag || {};
         const listProps = { history, updateBoard, board }
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
@@ -137,6 +143,8 @@ class _BoardDetails extends Component {
                                 <div className="board" style={styleLi}>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
+                                        {...source && source.droppableId === list.id ? drag : {}}
+                                        {...destination && destination.droppableId === list.id ? drag : {}}
                                         {...listProps} styleCardDrag={this.state.style} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
