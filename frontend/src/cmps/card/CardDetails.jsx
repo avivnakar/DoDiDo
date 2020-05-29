@@ -107,7 +107,7 @@ export class CardDetails extends Component {
                                 <div><Due dueDate={card.dueDate} /></div>
                             </div>}
                             {card.checkLists.length > 0 && <div>
-                                <div className="card-title">Chacklist</div>
+                                <div className="card-title">Checklist</div>
                                 {card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
                             </div>}
                             {this.state.addTo === 'check' && <AddCheckList clearAddTo={clearAddTo} card={card} updateBoard={updateBoard} board={board} />}
