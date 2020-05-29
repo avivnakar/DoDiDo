@@ -1,30 +1,39 @@
 .list-menu {
-    &-btn{
-position: relative;
+    &-btn {
+        position: relative;
     }
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10000;
+    .right {
+        left: 0;
+    }
+    .left {
+        right: 0;
+    }
+    // bottom: 0;
+    z-index: 11;
     text-align: center;
-    width: rem(280px);
-    height: rem(270px);
     border-radius: 3px;
-    background-color: #fff;
     border: 1px solid #172b4d;
+    min-height: min-content;
+    & > * {
+        width: rem(280px);
+        background-color: #fff;
+        // background-color: indigo;
+    }
     & &-title {
         color: hsl(218, 17%, 44%);
         display: flex;
         line-height: 40px;
         border-bottom: 1px solid rgba(9, 30, 66, 0.13);
-        margin: 0 12px;
-        padding: 0 10px;
+        // margin: 0 12px;
+        padding: 0 22px;
         // position: relative;
         text-overflow: ellipsis;
         white-space: nowrap;
         z-index: 1;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
         & .close-btn {
             cursor: pointer;
             &:hover {
@@ -33,9 +42,16 @@ position: relative;
         }
     }
     & ul {
+        // position: relative;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-block-start: 1em;
+        padding-block-end: 1em;
         list-style: none;
         text-align: left;
         color: #172b4d;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
         cursor: pointer;
         // background-color: blue;
         & :hover {
@@ -44,20 +60,27 @@ position: relative;
     }
     & li {
         padding: 6px 30px;
-        position: relative;
+        width: rem(280px);
+
+        // position: relative;
     }
     & .list-footer {
         border-top: 1px solid rgba(9, 30, 66, 0.13);
         margin-top: 15px;
         padding-top: 10px;
     }
+    .list-remove {
+        color: red;
+    }
 }
-
+// .card .edit-icon {
+//     position: absolute;
+// }
 .card-menu {
     position: absolute;
-    left: 50%;
-    top: 50%;
-
+    // left: -50px;
+    top: 0;
+    z-index: 9999999;
     & li {
         text-align: left;
         cursor: pointer;
@@ -66,7 +89,7 @@ position: relative;
         clear: both;
         color: #e6e6e6;
         display: block;
-        float: left;
+        // float: left;
         margin: 0 0 4px 8px;
         padding: 6px 12px 6px 8px;
         text-decoration: none;

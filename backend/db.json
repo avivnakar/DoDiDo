@@ -194,22 +194,27 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "XtEc",
-          "title": "sdsadsadsa",
-          "cards": []
-        },
-        {
-          "id": "FG9r",
-          "title": "hfgdgf",
+          "id": "aoTW",
+          "title": "דגכדגכד",
           "cards": [
             {
-              "id": "Npub",
-              "title": "fdgsgdf",
+              "id": "kzjl",
+              "title": "xccxcxzc",
               "labels": [
                 {
-                  "id": "NfzG",
+                  "id": "c0002",
                   "title": null,
-                  "color": "#00ffff"
+                  "color": "orange"
+                },
+                {
+                  "id": "c0004",
+                  "title": null,
+                  "color": "blue"
+                },
+                {
+                  "id": "c0003",
+                  "title": null,
+                  "color": "green"
                 }
               ],
               "createdBy": {

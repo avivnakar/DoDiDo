@@ -1,23 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { ListPreiview } from '../cmps/board/ListPreiview.jsx';
-import { ListMenu } from '../cmps/board/ListMenu.jsx';
 import { AddList } from '../cmps/board/AddList.jsx';
 import { CardDetails } from '../cmps/card/CardDetails.jsx';
-import { CardMenu } from '../cmps/card/CardMenu.jsx';
 import { setBoard, updateBoard, updateBoardSync, setCard, loadBoards, removeCard } from '../store/actions/boardActions.js';
 import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
 import { socketService } from '../services/socketService.js';
-import { ClickAway } from '../cmps/ClickAway.jsx';
-
 
 class _BoardDetails extends Component {
     state = {
         currCard: null,
         match: null,
-        onClickAway: null,
         style: {}
     }
     componentDidMount() {
@@ -113,12 +108,9 @@ class _BoardDetails extends Component {
         }
         this.props.updateBoard(board)
     };
-    setOnClickAway = (callback) => {
-        this.setState({ onClickAway: callback })
-    }
+
     render() {
         const { setOnClickAway } = this;
-        const { onClickAway } = this.state;
         const { board, card, history, updateBoard } = this.props;
         const listProps = { history, updateBoard, board, setOnClickAway }
         if (board) {

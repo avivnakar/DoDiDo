@@ -1,42 +1,30 @@
 import React, { Component } from 'react'
-import { FaTextHeight, FaBluetooth } from 'react-icons/fa'
+// import { FaTextHeight, FaBluetooth } from 'react-icons/fa'
 
 export class TodoPreview extends Component {
     state = {
         isEdit: false,
-        styleCube: {}
+        // styleCube: {}
     }
-    componentDidMount() {
-        this.isDone()
-    }
-    isDone() {
-        if (this.props.todo.isDone) {
-            this.setState({
-                styleCube: {
-                    display: 'inline-block',
-                    width: 15,
-                    height: 15,
-                    border: '1px solid #0000008f',
-                    borderRadius: 2,
-                    backgroundColor: 'rgba(9, 30, 66, 0.25)'
-                }
-            })
-        }
-        else {
-            this.setState({
-                styleCube: {
-                    display: 'inline-block',
-                    width: 15,
-                    height: 15,
-                    border: '1px solid #0000008f',
-                    borderRadius: 2,
-                    backgroundColor: '#fff',
-                    boxshadow: 'inset 0 0 0 2px #dfe1e6'
+    // componentDidMount() {
+    //     this.isDone()
+    // }
+    // isDone() {
+    //     if (this.props.todo.isDone) {
+    //         this.setState({
+    //             styleCube: {
 
-                }
-            })
-        }
-    }
+    //             }
+    //         })
+    //     }
+    //     else {
+    //         this.setState({
+    //             styleCube: {
+
+    //             }
+    //         })
+    //     }
+    // }
     isEdit = () => {
         this.setState(prevState => ({ isEdit: !prevState.isEdit }))
     }
@@ -79,10 +67,10 @@ export class TodoPreview extends Component {
         this.isDone()
     }
     render() {
-        const { todo } = this.props
-        return (
+        const {isDone} = this.props.todo
+        return (          
             <div>
-                <span className='mark-cube' style={this.state.styleCube} onClick={this.doneTodo}></span>
+                <span className={`mark-cube${isDone?' done':''}`} /* style={this.state.styleCube} */ onClick={this.doneTodo}></span>
                 {this.getTitle()}
             </div>
         )

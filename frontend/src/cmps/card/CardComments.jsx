@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { CommentPreview } from './CommentPreview.jsx';
 export function CardComments(props) {
     const { card } = props
