@@ -1,30 +1,17 @@
 .homepage-head {
-    height: rem(600px);
+    // height: rem(600px);
+    height: 100vh;
     background-color: $clr1;
-    & section {
-        max-width: 60%;
-        margin: auto;
-
-        & h2 {
-            margin-top: 5%;
-            font-family: $mainFont;
-            font-size: 2.6rem;
-            justify-content: center;
-            width: 30vw;
-            color: $clr5;
-        }
-        & p {
-            font-family: $mainFont;
-            font-size: 1.6rem;
-            line-height: 2rem;
-            width: 30vw;
-            color: $clr4;
-            margin-bottom: 2.3rem;
-        }
+       & .main-img{
         & img {
-            width: 50%;
+                bottom: 0px;
+    position: absolute;
+    width: 60%;
+    right: 0px;
         }
-    }
+    
+       }
+
 }
 
 .nav-container {
@@ -63,10 +50,7 @@
         }
     }
 }
-.homepage{
-    height: 100vh;
-    overflow-y: scroll;
-}
+
 .homepage-body {
     // background-color: rgba(0, 0, 0, 0.021);
     margin: 30px auto;
@@ -152,4 +136,10 @@
         line-height: 2rem;
         margin-bottom: 15%;
     }
+}
+
+.footer-txt{
+    position: absolute;
+    color: white;
+    font-size: 2rem;
 }
