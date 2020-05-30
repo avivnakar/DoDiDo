@@ -4,6 +4,8 @@ export class LabelPreiview extends Component {
 
     render() {
         const { label } = this.props
+        console.log(label);
+        
         var styleLab = {
             backgroundColor: label.color
         }

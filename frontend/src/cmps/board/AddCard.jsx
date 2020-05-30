@@ -11,6 +11,13 @@ export class AddCard extends Component {
             isEdit: true
         })
     }
+    addCard = () =>{
+        var e = {
+            key: 'Enter',
+            target: document.querySelector('.add-card-inp')
+        }
+        this.handleKeyDown(e)
+    }
     handleKeyDown(e) {
         const user = {
             "_id": "u101",
@@ -45,7 +52,7 @@ export class AddCard extends Component {
         var text = '';
         var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-        for (let i = 0;i < length;i++) {
+        for (let i = 0; i < length; i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
 
@@ -61,8 +68,8 @@ export class AddCard extends Component {
         } else {
             return (
                 <div className="add-card-container flex align-center">
-                    <textarea placeholder="enter title for this card" onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea>
-                    <button className="add-card-btn">save</button>
+                    <textarea className="add-card-inp" placeholder="enter title for this card" onKeyDown={(e) => { this.handleKeyDown(e) }}></textarea>
+                    <button className="add-card-btn" onClick={this.addCard}>save</button>
                 </div>
             )
         }
