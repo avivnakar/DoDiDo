@@ -3,19 +3,43 @@ import { connect } from "react-redux";
 import { updateUser } from "../store/actions/userActions";
 
 class _Profile extends Component {
-    componentDidUpdate(){
+    componentDidUpdate() {
 
     }
+    getPassword(){
+        const { user } = this.props
+        var text =''
+        for(var i=0;i<user.password.length;i++){
+            text += '*'
+        }
+        return text
+    }
     render() {
-        const { user} = this.props
+        const { user } = this.props
         return <section className="profile">
-            <img src={`https://robohash.org/set_set3/${user.username}`} alt="" />
-            <pre>{JSON.stringify(user, null, 2).split('"').join('')}</pre>
+            <h2>Hello {user.fullName}</h2>
+            <div style={{height:150,width:150,border: '.3px solid',borderRadius: '100%',backgroundColor: '#dfe3ec'}}>
+                <img src={user.imgUrl} alt={user.usermame}/>
+            </div>
+            <div>
+                User Name
+                <div>{user.username}</div>
+            </div>
+            <div>
+                Password
+                <div>{this.getPassword()}</div>
+            </div>
+            <div>
+                Phone
+                <div>{user.phone}</div>
+            </div>
         </section>
 
     }
 }
 const mapStateToProps = (state) => {
+    console.log(state.user.user);
+
     return {
         user: state.user.user
     }

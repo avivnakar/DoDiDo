@@ -5,7 +5,9 @@ export class LabelPreiview extends Component {
     render() {
         const { label } = this.props
         var styleLab = {
-            backgroundColor: label.color
+            backgroundColor: label.color,
+            width: 37,
+            height: 8
         }
         return (
             <div className="card-label" style={styleLab}  onClick={() => this.props.command(label.id)}>

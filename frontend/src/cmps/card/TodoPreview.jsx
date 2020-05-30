@@ -64,7 +64,7 @@ export class TodoPreview extends Component {
         const { todo, updateBoard, board } = this.props
         todo.isDone = (todo.isDone) ? false : true
         updateBoard(board)
-        this.isDone()
+        // this.isDone()
     }
     render() {
         const {isDone} = this.props.todo

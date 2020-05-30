@@ -15,7 +15,7 @@ export class CardCheckList extends Component {
         const number = done * multi;
         console.log(number); 
         if(isNaN(number)) return 'no todos yet'
-        else return number
+        else return Math.round(number)
     }
     remove = () => {
         const { checkList, card, board, updateBoard } = this.props
@@ -28,7 +28,7 @@ export class CardCheckList extends Component {
         return (
             <div className='checklist'>
                 <div className="checklist-title flex space-between align-center">
-                    <div>{checkList.title}</div>
+                    <div className="chx-title">{checkList.title}</div>
                     {checkList.todos && <div>{this.progressBar()}<span>%</span></div>}
                     <button className="del-check-btn" onClick={this.remove}>Delete</button>
                 </div>

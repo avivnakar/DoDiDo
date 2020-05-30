@@ -65,14 +65,10 @@ export class CardDetails extends Component {
 
     handleChangeComplete = (color) => {
         const { card, board, updateBoard } = this.props
-        console.log(card.background, 'ssssssssssssssssssssssssssssssssss');
-
         this.setState({ background: color.hex });
         card.background = color.hex;
         updateBoard(board);
         this.setState({ isOpenBgColor: false });
-        console.log(card.background, 'ssssssssssssssssssssssssssssssssss');
-
     };
 
     render() {
@@ -95,12 +91,11 @@ export class CardDetails extends Component {
                             <CardToWhatsapp card={card} />
 
                             <div className="flex">
-                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 {card.cardMembers.length > 0 && <div className="flex align-center"><MiniUser users={card.cardMembers} command={this.removeMember} />
-                                <button className="add-mem" onClick={() => this.addMembers()}>+</button>
+                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 </div>}
                             </div>
-                            <div>
+                            <div className="description-container">
                                 <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
                             </div>
@@ -109,7 +104,7 @@ export class CardDetails extends Component {
                                 <div><Due dueDate={card.dueDate} /></div>
                             </div>}
                             {card.checkLists.length > 0 && <div>
-                                <div className="card-title">Checklist</div>
+                                <div className="card-title">Checklists</div>
                                 {card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
                             </div>}
                             {this.state.addTo === 'check' && <AddCheckList clearAddTo={clearAddTo} card={card} updateBoard={updateBoard} board={board} />}
@@ -126,7 +121,7 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
                             <button onClick={() => this.addTo('cover')}>Images</button>
-                            <button onClick={() => this.addTo('bg')}>Backgroud Color</button>
+                            <button onClick={() => this.addTo('bg')}>Background Color</button>
                             {isOpenBgColor && <div className="bg-modal">
                                 <TwitterPicker
                                     color={this.state.background}

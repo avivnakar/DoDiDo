@@ -31,9 +31,9 @@ export class AddMembers extends Component {
     render() {
         return (
             <div className="add-members">
-                <span>Task To:</span>
+                <span className="member-title">Task To:</span>
                     {this.props.cardMembers && <MiniUser users={this.props.cardMembers} isOpen={true} command={this.removeMember}/>}
-                <span>Other Board Members:</span>
+                <span className="member-title">Other Board Members:</span>
                     <MiniUser users={this.getUnPickedUsers()} command={this.addMember} isOpen={true}/>
             </div>
         )

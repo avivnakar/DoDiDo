@@ -1,5 +1,4 @@
 .card-details {
-
     background-color: $card-bcg;
     margin-top: 5%;
     max-height: 80%;
@@ -20,40 +19,45 @@
             height: 32px;
             max-width: 300px;
             padding: 6px 12px;
+            &:hover {
+                background-color: rgba(9, 30, 66, 0.08);
+            }
         }
-        & :hover {
-            background-color: rgba(9, 30, 66, 0.08);
-        }
-        .add-members, .add-labels {
-    width: rem(276px);
-    background: rgb(255, 255, 255);
-    border: 0px solid rgba(0, 0, 0, 0.25);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
-    border-radius: 4px;
-    position: relative; 
-           }
+        .add-members,
         .add-labels {
-                text-align: left;
-    padding: 10px;
+            width: rem(276px);
+            background: rgb(255, 255, 255);
+            border: 0px solid rgba(0, 0, 0, 0.25);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+            border-radius: 4px;
+            position: relative;
         }
-        & .add-member-btn{
-        all: unset;
-        margin-left: 5px;
-        padding: 4px 8px;
-        border-radius: 3px;
-        font-family: OpenSans-semiBold, sans-serif;
-        color: #ffffff;
-        text-align: left;
-        background-color: green;
-        bottom: 0;        }
+        .add-labels {
+            text-align: left;
+            padding: 10px;
+        }
+        & .add-member-btn {
+            all: unset;
+            margin-left: 5px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-family: OpenSans-semiBold, sans-serif;
+            color: #ffffff;
+            text-align: left;
+            background-color: green;
+            bottom: 0;
+        }
     }
     button {
         border: none;
         background-color: $card-btn;
     }
-    textarea {
-        resize: none;
+    .description-container {
+        width: 100%;
     }
+    // textarea {
+    //     resize: none;
+    // }
     .pop-over {
         position: absolute;
     }
@@ -175,21 +179,37 @@
         margin-top: 0px;
     }
 }
-
+.label-list {
+    max-width: rem(300px);
+    flex-wrap: wrap;
+    margin-bottom: rem(13px);
+    margin-top: rem(10px);
+}
+.chx-title{
+    font-weight: bold;
+}
+.card-label{
+    margin-left: rem(5px);
+    border-radius: 5px;
+}
 .mark-cube {
     cursor: pointer;
     margin-right: 10px;
 }
-
-.label-modal{
-    & input {
-    margin-top: 10px;
-    margin-bottom: 10px;
-background-color: #ebecf0;
-color: white;
-&::placeholder{
-    color: black;
-
+.whatsapp-link {
+    color: #25d366;
 }
+.member-title{
+    font-weight: bold;
+}
+.label-modal {
+    & input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #ebecf0;
+        color: white;
+        &::placeholder {
+            color: black;
+        }
     }
 }

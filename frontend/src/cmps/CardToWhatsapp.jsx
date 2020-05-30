@@ -8,11 +8,11 @@ export function CardToWhatsapp(props) {
 
 
 
-function WhatsappLink({ card, number = '972525090552' }) {
+function WhatsappLink({ card, number = '972502494210' }) {
 
     var { title, desc, checkLists, dueDate } = card
     title = `*${title}*`;
-    desc = desc ? '\n\n' + desc : '';
+    desc = desc ? `${'\n\n' + desc}` : '';
     checkLists = checkLists ? '\n\n' + checkLists.reduce((msg, checkList) => {
         const todos = checkList.todos.reduce((acc, { title, isDone }) => {
             acc.push(`• ${isDone ? `~${title}~` : title}`);
@@ -24,7 +24,7 @@ function WhatsappLink({ card, number = '972525090552' }) {
     dueDate = dueDate ? `${'\n'}Due: ${new Date(dueDate).toLocaleString()}` : '';
     const message = title + desc + checkLists + dueDate
     return <a target="_blank" rel="noopener noreferrer"
-        href={`https://api.whatsapp.com/send/?phone=${
+        className="whatsapp-link" href={`https://api.whatsapp.com/send/?phone=${
             number}&text=${encodeURI(message)}&source&data&app_absent`}
     >Send To Whatsapp <FaWhatsapp /></a>
 }

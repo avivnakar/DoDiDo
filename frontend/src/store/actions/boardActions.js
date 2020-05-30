@@ -43,14 +43,15 @@ export function updateBoardSync(board) {
 
 }
 export function updateBoard(board) {
-      socketService.emit('board updated',board)
+    board.updatedAt = Date.now();
+    socketService.emit('board updated', board)
     return dispatch => {
         dispatch({ type: 'UPDATE_BOARD', board });
         return boardService.update(board)
-            // .then(res => {
-            //     dispatch({ type: 'UPDATE_BOARD', board: res })
-            //     return res;
-            // });
+        // .then(res => {
+        //     dispatch({ type: 'UPDATE_BOARD', board: res })
+        //     return res;
+        // });
     }
 }
 

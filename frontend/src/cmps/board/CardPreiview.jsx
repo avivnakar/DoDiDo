@@ -8,19 +8,17 @@ import { Due } from '../board/Due.jsx';
 import { FaPencilAlt } from "react-icons/fa";
 import { CardMenu } from '../card/CardMenu.jsx';
 import { ClickAway } from '../ClickAway.jsx';
-
+import { CardTitleEditable } from './CardTitleEditable.jsx';
 
 export function CardPreiview(props) {
     const { card, history/* , onCardRemove  */ } = props
     var [isMenuOpened, setMenuOpened] = useState(false)
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
-        props.setOnClickAway(onCloseMenu);
         setMenuOpened(true);
     }
     const onCloseMenu = (ev) => {
         ev.stopPropagation();
-        props.setOnClickAway(null);
         setMenuOpened(false);
     }
     const { background } = card
@@ -32,8 +30,8 @@ export function CardPreiview(props) {
                     {isMenuOpened && <ClickAway onClick={onCloseMenu} />}
                     <div className={`card-wrapper ${isMenuOpened ? ' active-card' : ''}`}>
                         <div className="dnd-provider" /*onClick={() => props.getCurrCard(card)}*/
-                            onClick={() => history.push(`/c/${card.id}/${card.title}`)}
-                            {...provided.draggableProps}
+                            onClick={() => (!isMenuOpened)&&history.push(`/c/${card.id}/${card.title}`)}
+                            {...!isMenuOpened?provided.draggableProps:{}}
                             {...provided.dragHandleProps}
                             ref={provided.innerRef}
                         >
@@ -41,13 +39,12 @@ export function CardPreiview(props) {
                                 style={{ background }}
 
                             >
-                                {console.log(provided.draggableProps.style)}
                                 {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
                                 <div>
                                     {card.labels && <LabelList labels={card.labels} />}
                                 </div>
                                 <div className="card-title-container flex space-between" >
-                                    <span className="card-title">{card.title}</span>
+                                    <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
                                     <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt />
 
                                     </span>
@@ -73,3 +70,8 @@ export function CardPreiview(props) {
         </Draggable>
     )
 }
+
+
+
+// {isMenuOpened ? <textarea class="card-title edit"
+//                                     dir="auto" rows="1"/*  style="height: 90px;" */>{card.title}</textarea> : <span className="card-title">{card.title}</span>}
