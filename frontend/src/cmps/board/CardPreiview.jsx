@@ -15,6 +15,10 @@ export function CardPreiview(props) {
     var [isMenuOpened, setMenuOpened] = useState(false)
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
+        console.log(ev)
+        console.log('page x,y',ev.pageX,ev.pageY)
+        console.log('client x,y',ev.clientX,ev.clientX)
+        console.dir('target',ev.target)
         setMenuOpened(true);
     }
     const onCloseMenu = (ev) => {

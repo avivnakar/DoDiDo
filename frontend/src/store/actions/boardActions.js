@@ -38,6 +38,10 @@ export function addBoard(board) {
     }
 }
 
+export function toggleMenu(cardId) {
+    return dispatch => dispatch({ type: 'TOGGLE_CARD_MENU', cardId });
+
+}
 export function updateBoardSync(board) {
     return dispatch => dispatch({ type: 'UPDATE_BOARD', board });
 

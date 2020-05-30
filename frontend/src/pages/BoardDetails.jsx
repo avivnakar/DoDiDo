@@ -8,6 +8,8 @@ import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
 import { socketService } from '../services/socketService.js';
+import { ClickAway } from '../cmps/ClickAway.jsx';
+import { CardMenu } from '../cmps/card/CardMenu.jsx';
 
 class _BoardDetails extends Component {
     state = {
@@ -149,6 +151,8 @@ class _BoardDetails extends Component {
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                 </div>
                                 {provided.placeholder}
+                                {/* <ClickAway /> */}
+                                        {/* isMenuOpened &&  <CardMenu /* closeMenu={onCloseMenu}  />*/}
                             </div>
                         )}
                     </Droppable>
