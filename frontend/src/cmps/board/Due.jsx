@@ -19,7 +19,7 @@ export class Due extends Component {
                 return 'Jul'
             case 8:
                 return 'Aug'
-            case '9':
+            case 9:
                 return 'Sep'
             case 10:
                 return 'Oct'
@@ -67,7 +67,8 @@ export class Due extends Component {
     render() {
         return (
             <span className="time-container" style={this.getStyle()}>
-                {<FaRegClock />}{this.getDueTime()}
+                {<FaRegClock />}
+                {this.getDueTime()}
             </span>
         )
     }

@@ -6,7 +6,7 @@ export class LabelPreiview extends Component {
         const { label } = this.props
         var styleLab = {
             backgroundColor: label.color,
-            width: 35,
+            width: 37,
             height: 8
         }
         return (

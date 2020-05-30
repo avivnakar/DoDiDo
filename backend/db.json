@@ -59,79 +59,9 @@
           "color": "blue"
         },
         {
-          "id": "ypWK",
-          "title": "fsf",
-          "color": "#ff80c0"
-        },
-        {
-          "id": "zEqT",
+          "id": "Bi2d",
           "title": null,
-          "color": "#008040"
-        },
-        {
-          "id": "OCWJ",
-          "title": null,
-          "color": "#0080ff"
-        },
-        {
-          "id": "WgdH",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "lIIu",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "CwJb",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "cHMU",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "E2CF",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "gASb",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "oqdp",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "zz6F",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "e3OP",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "fKcp",
-          "title": null,
-          "color": null
-        },
-        {
-          "id": "dlLD",
-          "title": "gjkh",
-          "color": "#8080ff"
-        },
-        {
-          "id": "J5ry",
-          "title": "fdhgfhfh",
-          "color": null
+          "color": "#ff0080"
         }
       ],
       "members": [
@@ -149,117 +79,39 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "XtEc",
-          "title": "sdsadsadsa",
-          "cards": [
-            {
-              "id": "Npub",
-              "title": "fdgsgdf",
-              "labels": [
-                {
-                  "id": "NfzG",
-                  "title": null,
-                  "color": "#00ffff"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": "חעכיחיע",
-              "dueDate": 1621104844409,
-              "checkLists": [
-                {
-                  "id": "XVCG",
-                  "title": "dfd",
-                  "todos": [
-                    {
-                      "id": "HhCN",
-                      "title": "fdgfdgfd",
-                      "isDone": false
-                    },
-                    {
-                      "id": "LlbU",
-                      "title": "dfgfdgfd",
-                      "isDone": false
-                    }
-                  ]
-                }
-              ],
-              "attachments": [],
-              "comments": [
-                {
-                  "id": "0k4l",
-                  "text": "dfgffdg",
-                  "createdAt": 1590776501411,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                },
-                {
-                  "id": "z8i6",
-                  "text": "fgfdg",
-                  "createdAt": 1590776500062,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                },
-                {
-                  "id": "0IWv",
-                  "text": "FAMN",
-                  "createdAt": 1590672954501,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                }
-              ],
-              "background": "#ff6900"
-            },
-            {
-              "id": "EHKd",
-              "title": "djhjhggd",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": []
-            }
-          ]
-        },
-        {
-          "id": "FG9r",
-          "title": "hfgdgf",
-          "cards": []
-        },
-        {
           "id": "vUOW",
           "title": "bdfghdgf",
           "cards": [
             {
               "id": "YT18",
               "title": "zxxzxczx",
-              "labels": [],
+              "labels": [
+                {
+                  "id": "c0001",
+                  "title": null,
+                  "color": "red"
+                },
+                {
+                  "id": "c0002",
+                  "title": null,
+                  "color": "orange"
+                },
+                {
+                  "id": "c0003",
+                  "title": null,
+                  "color": "green"
+                },
+                {
+                  "id": "c0004",
+                  "title": null,
+                  "color": "blue"
+                },
+                {
+                  "id": "Bi2d",
+                  "title": null,
+                  "color": "#ff0080"
+                }
+              ],
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
@@ -267,13 +119,18 @@
               },
               "cardMembers": [
                 {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                },
+                {
                   "_id": "u401",
                   "fullName": "Aviv Nakar",
                   "imgUrl": "adf.png"
                 }
               ],
               "desc": null,
-              "dueDate": null,
+              "dueDate": 1590753191978,
               "checkLists": [
                 {
                   "id": "KMaF",
@@ -299,9 +156,14 @@
               ],
               "attachments": [],
               "comments": [],
-              "background": "#7bdcb5"
+              "background": "#ffffff"
             }
           ]
+        },
+        {
+          "id": "FG9r",
+          "title": "hfgdgf",
+          "cards": []
         },
         {
           "id": "ZL1Y",
@@ -367,7 +229,7 @@
           "cards": []
         }
       ],
-      "updatedAt": 1590836828773
+      "updatedAt": 1590839594198
     }
   ]
 }

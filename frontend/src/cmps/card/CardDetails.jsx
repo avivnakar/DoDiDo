@@ -91,9 +91,8 @@ export class CardDetails extends Component {
                             <CardToWhatsapp card={card} />
 
                             <div className="flex">
-                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 {card.cardMembers.length > 0 && <div className="flex align-center"><MiniUser users={card.cardMembers} command={this.removeMember} />
-                                <button className="add-mem" onClick={() => this.addMembers()}>+</button>
+                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 </div>}
                             </div>
                             <div className="description-container">
@@ -105,7 +104,7 @@ export class CardDetails extends Component {
                                 <div><Due dueDate={card.dueDate} /></div>
                             </div>}
                             {card.checkLists.length > 0 && <div>
-                                <div className="card-title">Checklist</div>
+                                <div className="card-title">Checklists</div>
                                 {card.checkLists.map((checkList) => <CardCheckList key={checkList.id} card={card} checkList={checkList} updateBoard={updateBoard} board={board} />)}
                             </div>}
                             {this.state.addTo === 'check' && <AddCheckList clearAddTo={clearAddTo} card={card} updateBoard={updateBoard} board={board} />}
