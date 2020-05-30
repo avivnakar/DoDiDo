@@ -33,11 +33,13 @@ export class AddLabelBoard extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="label-modal">
+            <div className="flex space-between align-center">
                 <input onChange={this.titlePick} placeholder="add new Label title" />
                 <input type="color" onChange={this.colorPick} />
-                <button onClick={this.add}>Save</button>
             </div>
+                <button className="add-member-btn" onClick={this.add}>Save</button>
+</div>
         )
     }
 }

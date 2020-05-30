@@ -11,18 +11,18 @@ export class AddList extends Component {
             isEdit: true
         })
     }
-    onBlur(e){
+    onBlur(e) {
         console.log(!e.target.value);
-        
+
         if (!e.target.value) this.setState({ isEdit: false })
-        else this.handleKeyDown(e,true)
+        else this.handleKeyDown(e, true)
     }
-    handleKeyDown(e,blur=false) {
+    handleKeyDown(e, blur = false) {
         if (e.key === 'Enter' || blur) {
             if (!e.target.value) this.setState({ isEdit: false })
             else {
                 this.setState({ isEdit: false })
-                var newList ={
+                var newList = {
                     id: this.makeId(),
                     title: e.target.value,
                     cards: []
@@ -32,22 +32,22 @@ export class AddList extends Component {
             }
         }
     }
-    makeId(length=4) {
+    makeId(length = 4) {
         var text = '';
         var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    
-        for(let i=0; i < length; i++) {
+
+        for (let i = 0;i < length;i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
-    
+
         return text;
     }
     getAddList() {
         if (!this.state.isEdit) {
-            return <Link to="#" className="add-card-btn"><span><FaPlus /></span>Add List</Link>
+            return <Link to="#" className="add-list-btn"><span><FaPlus /></span>Add List</Link>
         } else {
             return (
-                <input placeholder="enter list name" onKeyDown={(e) => { this.handleKeyDown(e) }}  onBlur={(e) => { this.onBlur(e) }}/>
+                <input placeholder="enter list name" onKeyDown={(e) => { this.handleKeyDown(e) }} onBlur={(e) => { this.onBlur(e) }} />
             )
         }
     }

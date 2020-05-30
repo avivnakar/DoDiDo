@@ -1,7 +1,4 @@
 .card-details {
-    // *{
-    //     border: 1px solid red;
-    // }
     background-color: $card-bcg;
     margin-top: 5%;
     max-height: 80%;
@@ -22,24 +19,41 @@
             height: 32px;
             max-width: 300px;
             padding: 6px 12px;
-            &:hover    {
+            &:hover {
                 background-color: rgba(9, 30, 66, 0.08);
             }
         }
-        .add-members {
-            background-color: springgreen;
+        .add-members,
+        .add-labels {
+            width: rem(276px);
+            background: rgb(255, 255, 255);
+            border: 0px solid rgba(0, 0, 0, 0.25);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+            border-radius: 4px;
+            position: relative;
         }
         .add-labels {
-            background-color: darkslateblue;
+            text-align: left;
+            padding: 10px;
+        }
+        & .add-member-btn {
+            all: unset;
+            margin-left: 5px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-family: OpenSans-semiBold, sans-serif;
+            color: #ffffff;
+            text-align: left;
+            background-color: green;
+            bottom: 0;
         }
     }
     button {
         border: none;
-        width: 100%;
         background-color: $card-btn;
     }
-    .description-container{
-width: 100%;
+    .description-container {
+        width: 100%;
     }
     // textarea {
     //     resize: none;
@@ -165,11 +179,37 @@ width: 100%;
         margin-top: 0px;
     }
 }
-
+.label-list {
+    max-width: rem(300px);
+    flex-wrap: wrap;
+    margin-bottom: rem(13px);
+    margin-top: rem(10px);
+}
+.chx-title{
+    font-weight: bold;
+}
+.card-label{
+    margin-left: rem(5px);
+    border-radius: 5px;
+}
 .mark-cube {
     cursor: pointer;
     margin-right: 10px;
 }
-.whatsapp-link{
-    color: #25D366;
+.whatsapp-link {
+    color: #25d366;
+}
+.member-title{
+    font-weight: bold;
+}
+.label-modal {
+    & input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #ebecf0;
+        color: white;
+        &::placeholder {
+            color: black;
+        }
+    }
 }

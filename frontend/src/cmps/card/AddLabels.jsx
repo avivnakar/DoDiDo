@@ -7,7 +7,7 @@ export class AddLabels extends Component {
         isOpen: false
     }
     toggleAdd = () => {
-        this.setState(prevState =>({ isOpen: !prevState.isOpen }))
+        this.setState(prevState => ({ isOpen: !prevState.isOpen }))
     }
     addLabel = (labelId) => {
         const { board, cardLabels } = this.props
@@ -27,8 +27,10 @@ export class AddLabels extends Component {
         }
         return (
             <div className="add-labels">
-                Labels
-                <LabelList labels={board.labels} command={this.addLabel} /><button onClick={this.toggleAdd}>+Add Label</button>
+            <div className="lab-container">
+            <div className="labels-title">Labels</div>
+                <LabelList labels={board.labels} command={this.addLabel} /><button className="add-member-btn" onClick={this.toggleAdd}>+Add Label</button>
+            </div>
                 {this.state.isOpen && <AddLabelBoard board={board} updateBoard={updateBoard} />}
             </div>
         )
