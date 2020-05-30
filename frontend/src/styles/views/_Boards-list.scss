@@ -25,6 +25,10 @@
         margin-top: 70px;
         margin-left: 20px;
         // background-color: $clr4;
+        display: flex;
+        > * {
+            margin: 10px;
+        }
     }
 }
 
@@ -77,8 +81,12 @@
 }
 
 .board-prev {
-    padding: 50px;
-    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(25px);
+    width: rem(280px);
+    height: rem(170px);
     border-radius: 12px;
     display: flex;
     justify-content: center;

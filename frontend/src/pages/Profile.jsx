@@ -19,7 +19,7 @@ class _Profile extends Component {
         return <section className="profile">
             <h2>Hello {user.fullName}</h2>
             <div style={{height:150,width:150,border: '.3px solid',borderRadius: '100%',backgroundColor: '#dfe3ec'}}>
-                <img src={user.imgUrl}/>
+                <img src={user.imgUrl} alt={user.usermame}/>
             </div>
             <div>
                 User Name

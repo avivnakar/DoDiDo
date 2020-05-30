@@ -44,9 +44,12 @@
     &.space-between {
         justify-content: space-between;
     }
+    &.wrap {
+        flex-wrap: wrap;
+    }
 }
 //grid helpers
-.grid{
+.grid {
     display: grid;
 }
 // Media helpers

@@ -3,7 +3,7 @@
 }
 
 html {
-    font-family: montserrat;
+    // font-family: montserrat;
     color: $clr2;
     line-height: 1.5em;
     text-align: center;
@@ -30,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: caveat;
+    // font-family: caveat;
     line-height: 1.2em;
     margin: 0 0 rem(20px);
     color: darken($clr1, 36);
@@ -54,7 +54,19 @@ input {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
-
+input[type="text"],
+textarea {
+    cursor: text;
+}
+textarea{
+    resize: none;
+    font: inherit;
+    line-height: inherit;
+    padding: inherit;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
 a {
     text-decoration: none;
 }
