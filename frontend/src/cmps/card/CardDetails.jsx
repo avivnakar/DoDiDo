@@ -92,7 +92,9 @@ export class CardDetails extends Component {
 
                             <div className="flex">
                                 {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
-                                {card.cardMembers.length > 0 && <div className="flex"><MiniUser users={card.cardMembers} command={this.removeMember} /><button onClick={() => this.addTo('members')}>+</button></div>}
+                                {card.cardMembers.length > 0 && <div className="flex align-center"><MiniUser users={card.cardMembers} command={this.removeMember} />
+                                <button className="add-mem" onClick={() => this.addMembers()}>+</button>
+                                </div>}
                             </div>
                             <div className="description-container">
                                 <div className="card-title">Description</div>

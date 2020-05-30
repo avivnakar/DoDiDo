@@ -27,10 +27,10 @@ export class AddLabels extends Component {
         }
         return (
             <div className="add-labels">
-                Labels
-                <div>
-                    <LabelList labels={board.labels} command={this.addLabel} /><button onClick={this.toggleAdd}>+Add Label</button>
-                </div>
+            <div className="lab-container flex space-between">
+            <div className="labels-title">Labels</div>
+                <LabelList labels={board.labels} command={this.addLabel} /><button className="add-member-btn" onClick={this.toggleAdd}>+Add Label</button>
+            </div>
                 {this.state.isOpen && <AddLabelBoard board={board} updateBoard={updateBoard} />}
             </div>
         )

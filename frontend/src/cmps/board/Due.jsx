@@ -27,9 +27,9 @@ export class Due extends Component {
                 return 'Nov'
             case 12:
                 return 'Dec'
-                default:
-                    console.log('getMonthName switch case reached default state');
-                    break;
+            default:
+                console.log('getMonthName switch case reached default state');
+                break;
         }
     }
     getDueTime = () => {
@@ -46,27 +46,27 @@ export class Due extends Component {
         const { dueDate } = this.props
         const now = new Date()
         const due = new Date(dueDate)
-        if (due.getFullYear() - now.getFullYear() < 0) return { backgroundColor: 'red' }
+        if (due.getFullYear() - now.getFullYear() < 0) return { backgroundColor: 'rgb(235, 90, 70)' }
         else {
             if (due.getFullYear() - now.getFullYear() === 0) {
-                if (due.getMonth() - now.getMonth() < 0) return { backgroundColor: 'red' }
+                if (due.getMonth() - now.getMonth() < 0) return { backgroundColor: 'rgb(235, 90, 70)' }
                 else {
                     if (due.getMonth() - now.getMonth() === 0) {
-                        if (due.getDate() - now.getDate() < 1) return { backgroundColor: 'red' }
+                        if (due.getDate() - now.getDate() < 1) return { backgroundColor: 'rgb(235, 90, 70)' }
                         else {
-                            if (due.getDate() - now.getDate() < 5) return { backgroundColor: 'yellow' }
-                            else return { backgroundColor: 'transpert' }
+                            if (due.getDate() - now.getDate() < 5) return { backgroundColor: 'rgb(251, 255, 36)' }
+                            else return { backgroundColor: 'rgba(0, 128, 0, 0.472)' }
                         }
                     }
-                    else return { backgroundColor: 'transpert' }
+                    else return { backgroundColor: 'rgba(0, 128, 0, 0.472)' }
                 }
             }
-            else return { backgroundColor: 'transpert' }
+            else return { backgroundColor: 'rgba(0, 128, 0, 0.472)' }
         }
     }
     render() {
         return (
-            <span style={this.getStyle()}>
+            <span className="time-container" style={this.getStyle()}>
                 {<FaRegClock />}{this.getDueTime()}
             </span>
         )
