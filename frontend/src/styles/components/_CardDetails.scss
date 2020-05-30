@@ -1,7 +1,5 @@
 .card-details {
-    // *{
-    //     border: 1px solid red;
-    // }
+
     background-color: $card-bcg;
     margin-top: 5%;
     max-height: 80%;
@@ -26,16 +24,31 @@
         & :hover {
             background-color: rgba(9, 30, 66, 0.08);
         }
-        .add-members {
-            background-color: springgreen;
-        }
+        .add-members, .add-labels {
+    width: rem(276px);
+    background: rgb(255, 255, 255);
+    border: 0px solid rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+    border-radius: 4px;
+    position: relative; 
+           }
         .add-labels {
-            background-color: darkslateblue;
+                text-align: left;
+    padding: 10px;
         }
+        & .add-member-btn{
+        all: unset;
+        margin-left: 5px;
+        padding: 4px 8px;
+        border-radius: 3px;
+        font-family: OpenSans-semiBold, sans-serif;
+        color: #ffffff;
+        text-align: left;
+        background-color: green;
+        bottom: 0;        }
     }
     button {
         border: none;
-        width: 100%;
         background-color: $card-btn;
     }
     textarea {
@@ -166,4 +179,17 @@
 .mark-cube {
     cursor: pointer;
     margin-right: 10px;
+}
+
+.label-modal{
+    & input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+background-color: #ebecf0;
+color: white;
+&::placeholder{
+    color: black;
+
+}
+    }
 }
