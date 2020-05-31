@@ -30,8 +30,8 @@ export function CardPreiview(props) {
                     {isMenuOpened && <ClickAway onClick={onCloseMenu} />}
                     <div className={`card-wrapper ${isMenuOpened ? ' active-card' : ''}`}>
                         <div className="dnd-provider" /*onClick={() => props.getCurrCard(card)}*/
-                            onClick={() => (!isMenuOpened)&&history.push(`/c/${card.id}/${card.title}`)}
-                            {...!isMenuOpened?provided.draggableProps:{}}
+                            onClick={() => (!isMenuOpened) && history.push(`/c/${card.id}/${card.title}`)}
+                            {...!isMenuOpened ? provided.draggableProps : {}}
                             {...provided.dragHandleProps}
                             ref={provided.innerRef}
                         >
@@ -40,9 +40,9 @@ export function CardPreiview(props) {
 
                             >
                                 {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
-                                <div>
+                                {card.labels && <div>
                                     {card.labels && <LabelList labels={card.labels} />}
-                                </div>
+                                </div>}
                                 <div className="card-title-container flex space-between" >
                                     <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
                                     <img src={card.attachments[0]} />
