@@ -15,9 +15,11 @@
     // z-index: 3;
     z-index: 1;
     opacity: 0.8;
+
     input:focus {
         width: 100%;
     }
+
     & .main-links {
         // font-size: 1.6rem;
         width: 350px;
@@ -25,34 +27,42 @@
         // margin: 0px;
         text-align: center;
         font-size: 1.8rem;
+
         // align-items: center;
         &.right-links {
             justify-content: flex-end;
             margin-right: 20px;
         }
+
         & span {
             background-color: $clr4;
         }
+
         & svg {
             background-color: $clr4;
             border-radius: 5px;
             cursor: pointer;
             padding: 12%;
         }
+
         & li {
             margin-left: 10px;
+
             @include a-clear {
                 &.active {
                     color: $clr3;
                 }
             }
+
             &:hover {
                 color: $clr7;
             }
         }
     }
+
     & .logo {
         display: flex;
+
         & img {
             line-height: 0em;
             padding: 0px;

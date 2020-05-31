@@ -1,17 +1,33 @@
 .homepage-head {
-    // height: rem(600px);
-    height: 100vh;
+    height: rem(600px);
     background-color: $clr1;
-       & .main-img{
-        & img {
-                bottom: 0px;
-    position: absolute;
-    width: 60%;
-    right: 0px;
-        }
-    
-       }
 
+    & section {
+        max-width: 60%;
+        margin: auto;
+
+        & h2 {
+            margin-top: 5%;
+            font-family: $mainFont;
+            font-size: 2.6rem;
+            justify-content: center;
+            width: 30vw;
+            color: $clr5;
+        }
+
+        & p {
+            font-family: $mainFont;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            width: 30vw;
+            color: $clr4;
+            margin-bottom: 2.3rem;
+        }
+
+        & img {
+            width: 50%;
+        }
+    }
 }
 
 .nav-container {
@@ -29,15 +45,18 @@
 }
 
 .pages {
+
     // padding: 10px;
     & ul {
         display: flex;
         color: $clr6;
+
         // background-color: yellow;
         & li {
             padding: 10px;
             cursor: pointer;
         }
+
         & .sign-up {
             // margin-right: 2rem;
             margin-left: 1rem;
@@ -45,10 +64,16 @@
             color: $clr1;
             margin-right: 10px;
         }
+
         &li:last-child {
             background-color: $clr3;
         }
     }
+}
+
+.homepage {
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .homepage-body {
@@ -58,27 +83,33 @@
     margin: auto;
     display: flex;
     flex-direction: column;
+
     // background-color: $clr5;
     & img {
         width: 30%;
     }
+
     & .frs-para {
         margin-bottom: 5rem;
+
         & p {
             font-size: 1.2rem;
             // width: 25%;
         }
+
         & .start-emil {
             border: none;
             // height: 3rem;
             // background-color: yellow;
         }
+
         & button {
             border-radius: 0;
             height: 100%;
             // padding: 8px auto;
         }
     }
+
     & input {
         all: unset;
         // padding: 15px;
@@ -86,18 +117,30 @@
         background-color: $clr5;
         border-radius: 0px;
         border: 2px solid $clr5;
+
         &::placeholder {
             padding: 15px;
             font-size: 1rem;
         }
     }
+
     & .sec-para {
-        background-color: $clr5;
+        background-color: $clr1;
         margin: auto;
+        color: rgba(255,
+                255,
+                255,
+                0.856);
+
+        & h2 {
+            color: $clr2;
+        }
+
         & .sec-head {
             margin: 2rem auto;
             font-size: 2.5rem;
         }
+
         & .desc {
             & p {
                 margin: auto;
@@ -105,6 +148,7 @@
                 margin-bottom: 2rem;
             }
         }
+
         & img {
             width: 10%;
         }
@@ -115,6 +159,7 @@
             margin-top: 3rem;
             margin-bottom: 3rem;
         }
+
         & .main-trh-para {
             & img {
                 margin-top: 0px;
@@ -136,10 +181,4 @@
         line-height: 2rem;
         margin-bottom: 15%;
     }
-}
-
-.footer-txt{
-    position: absolute;
-    color: white;
-    font-size: 2rem;
 }
