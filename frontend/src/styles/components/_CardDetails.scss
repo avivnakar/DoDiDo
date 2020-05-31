@@ -10,7 +10,7 @@
         // background-color: red;
         width: 30%;
         padding: rem(30px);
-        & button {
+        & button,& .button {
             border: none;
             margin-bottom: 10px;
             background-color: rgba(9, 30, 66, 0.04);
@@ -48,7 +48,7 @@
             bottom: 0;
         }
     }
-    button {
+    button,.button {
         border: none;
         background-color: $card-btn;
     }
@@ -64,7 +64,23 @@
     .todo {
         background-color: #fff;
     }
-
+    .color-picker{
+        & ::-webkit-scrollbar {
+            margin-bottom: 20px;
+            height: 10px;
+            width: 6px;
+            cursor: move;
+        }
+        & ::-webkit-scrollbar-thumb {
+            border: 16px solid #0000008f;
+            border-radius: 20px;
+        }
+        & ::-webkit-scrollbar-track {
+            border: 16px solid #ffffff81;
+            border-radius: 10px;
+            height: 100px;
+        }   
+    }
     .card-des {
         // width: rem(450px);
         width: 80%;

@@ -136,6 +136,7 @@ class _BoardDetails extends Component {
                 backgroundImage: `url(${bg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
+                // backgroundColor: 'pink',
                 opacity: 0.9,
                 backgroundRepeat: 'no-repeat'
             }

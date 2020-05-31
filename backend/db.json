@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "חיעכלחח",
       "desc": "this board is board",
-      "background": "basic.jpg",
+      "background": "86.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -80,7 +80,34 @@
       "cardLists": [
         {
           "id": "vUOW",
-          "title": "bdfghdgf",
+          "title": "sketch",
+          "cards": [
+            {
+              "id": "xREl",
+              "title": "img",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [
+                null,
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590923263/enifaeq94guetx2qzy3t.jpg",
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590923296/ej1hgnlippbq6lqtrvib.jpg",
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590923319/opkps76sgg9b6ixubnbw.jpg"
+              ],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "id": "FG9r",
+          "title": "Using a wax model",
           "cards": [
             {
               "id": "YT18",
@@ -102,14 +129,14 @@
                   "color": "green"
                 },
                 {
-                  "id": "c0004",
-                  "title": null,
-                  "color": "blue"
-                },
-                {
                   "id": "Bi2d",
                   "title": null,
                   "color": "#ff0080"
+                },
+                {
+                  "id": "c0004",
+                  "title": null,
+                  "color": "blue"
                 }
               ],
               "createdBy": {
@@ -129,7 +156,7 @@
                   "imgUrl": "adf.png"
                 }
               ],
-              "desc": null,
+              "desc": "גכעדגכעדגכ",
               "dueDate": 1590753191978,
               "checkLists": [
                 {
@@ -154,21 +181,33 @@
                   ]
                 }
               ],
-              "attachments": [],
-              "comments": [],
+              "attachments": [
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590908946/wewii5sykkppfvwlyxpt.png"
+              ],
+              "comments": [
+                {
+                  "id": "WcWB",
+                  "text": "עגדכ",
+                  "createdAt": 1590909633195,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "onjk",
+                  "text": "כדגשכדגכ",
+                  "createdAt": 1590909631383,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ],
               "background": "#ffffff"
-            }
-          ]
-        },
-        {
-          "id": "FG9r",
-          "title": "hfgdgf",
-          "cards": []
-        },
-        {
-          "id": "ZL1Y",
-          "title": "cxzczxc",
-          "cards": [
+            },
             {
               "id": "ZhIB",
               "title": "cxvbcv",
@@ -180,56 +219,151 @@
               },
               "cardMembers": [],
               "desc": null,
+              "dueDate": 1589354475424,
+              "checkLists": [],
+              "attachments": [
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590916318/b1qywzw7lsdw6babmdrf.png"
+              ],
+              "comments": [],
+              "background": "#ffecb3"
+            },
+            {
+              "id": "awZN",
+              "title": "sdsadsad",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "sadsadsa",
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
-              "comments": [],
-              "background": "#7bdcb5"
+              "comments": [
+                {
+                  "id": "t1ze",
+                  "text": "sa",
+                  "createdAt": 1590918066594,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "rGPi",
+                  "text": "asd",
+                  "createdAt": 1590918065179,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "AyDO",
+                  "text": "asd",
+                  "createdAt": 1590918065032,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "2VN3",
+                  "text": "asdsadsa",
+                  "createdAt": 1590918064726,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "T8lX",
+                  "text": "sadsadsa",
+                  "createdAt": 1590918064051,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "cqSn",
+                  "text": "asdsadsa",
+                  "createdAt": 1590918062995,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ],
+              "background": "#ffccbc"
             }
           ]
         },
         {
-          "id": "wLmH",
-          "title": "dsfdsfsd",
-          "cards": []
-        },
-        {
-          "id": "EMcx",
-          "title": "fvcvcxv",
-          "cards": []
-        },
-        {
-          "id": "xkys",
-          "title": "rwrwere",
-          "cards": []
-        },
-        {
-          "id": "xHhH",
-          "title": "dsfdsfds",
-          "cards": []
-        },
-        {
-          "id": "2dTD",
-          "title": "sdfdsfds",
-          "cards": []
-        },
-        {
           "id": "JC9l",
-          "title": "dfsdfdfsdfd",
-          "cards": []
+          "title": "Casting the metal liquid",
+          "cards": [
+            {
+              "id": "fdMP",
+              "title": "גכעגדע",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "cvcvc",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590920057/bfiygpe5sp9jpbr8ysfa.jpg"
+              ],
+              "comments": [
+                {
+                  "id": "YBXb",
+                  "text": "dsfdsfds",
+                  "createdAt": 1590920031274,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "BCD0",
+                  "text": "dsfdsfds",
+                  "createdAt": 1590920030361,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "WjVQ",
-          "title": "asdsadsadsa",
+          "title": "Jewelery Processing",
           "cards": []
         },
         {
           "id": "fQku",
-          "title": "dfsfsdfdf",
+          "title": "Polishing",
           "cards": []
         }
       ],
-      "updatedAt": 1590839594198
+      "updatedAt": 1590923689016
     }
   ]
 }

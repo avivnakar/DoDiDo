@@ -12,8 +12,9 @@ import { AddDueTime } from './AddDueTime.jsx';
 import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
 import { CardToWhatsapp } from '../CardToWhatsapp.jsx';
-import { TwitterPicker } from 'react-color'
+import { SwatchesPicker } from 'react-color';
 import { ShareCard } from './ShareCard.jsx';
+import { utilService } from '../../services/utilService.js';
 
 export class CardDetails extends Component {
     state = {
@@ -25,6 +26,15 @@ export class CardDetails extends Component {
     componentDidMount() {
         const { card } = this.props
         if (card.background) this.setState({ background: card.background })
+    }
+    addImage = (ev) => {
+        const { card } = this.props
+        utilService.uploadImg(ev)
+            .then(url => {
+                if (card.attachments[0]) card.attachments[0] = url
+                else card.attachments.push(url)
+                this.props.updateBoard(this.props.board)
+            })
     }
     addTo(string) {
         switch (string) {
@@ -70,7 +80,6 @@ export class CardDetails extends Component {
         updateBoard(board);
         this.setState({ isOpenBgColor: false });
     };
-
     render() {
         const { clearAddTo } = this;
         const { card, board, updateBoard, history } = this.props
@@ -92,9 +101,10 @@ export class CardDetails extends Component {
 
                             <div className="flex">
                                 {card.cardMembers.length > 0 && <div className="flex align-center"><MiniUser users={card.cardMembers} command={this.removeMember} />
-                                {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
+                                    {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 </div>}
                             </div>
+                            <img src={card.attachments[0]} />
                             <div className="description-container">
                                 <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
@@ -120,10 +130,13 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('labels')}>Labels</button>
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
-                            <button onClick={() => this.addTo('cover')}>Images</button>
+                            <label className="button" htmlFor="imgUpload" /* onClick={() => this.addTo('cover')} */>Images</label>
+                            <input name="imgUpload" id="imgUpload" type="file" onChange={(ev) => this.addImage(ev)} hidden />
                             <button onClick={() => this.addTo('bg')}>Background Color</button>
                             {isOpenBgColor && <div className="bg-modal">
-                                <TwitterPicker
+
+                                <SwatchesPicker
+                                    className="color-picker"
                                     color={this.state.background}
                                     onChangeComplete={this.handleChangeComplete}
                                 />

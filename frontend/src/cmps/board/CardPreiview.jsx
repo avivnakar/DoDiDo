@@ -35,53 +35,54 @@ export function CardPreiview(props) {
     }
     const { background } = card
     return (
-        <>
-        {props.children}
-            <Draggable draggableId={card.id} index={props.index}>
-                {(provided, snapshot) => (
-                    <div className={`card-preview-editor${''}`}>
-                        {isMenuOpened && <ClickAway onClick={onCloseMenu} />}
-                        <div className={`card-wrapper ${isMenuOpened ? ' active-card' : ''}`}>
-                            <div className="dnd-provider" /*onClick={() => props.getCurrCard(card)}*/
-                                onClick={() => (!isMenuOpened) && history.push(`/c/${card.id}/${card.title}`)}
-                                {...!isMenuOpened ? provided.draggableProps : {}}
-                                {...provided.dragHandleProps}
-                                ref={provided.innerRef}
+
+        <Draggable draggableId={card.id} index={props.index}>
+            {(provided, snapshot) => (
+                <div className={`card-preview-editor${''}`}>
+                    {isMenuOpened && <ClickAway onClick={onCloseMenu} />}
+                    <div className={`card-wrapper ${isMenuOpened ? ' active-card' : ''}`}>
+                        <div className="dnd-provider" /*onClick={() => props.getCurrCard(card)}*/
+                            onClick={() => (!isMenuOpened) && history.push(`/c/${card.id}/${card.title}`)}
+                            {...!isMenuOpened ? provided.draggableProps : {}}
+                            {...provided.dragHandleProps}
+                            ref={provided.innerRef}
+                        >
+                            <article className={`card ${snapshot.isDragging ? 'tilt' : ''}`}
+                                style={{ background }}
+
                             >
-                                <article className={`card ${snapshot.isDragging ? 'tilt' : ''}`}
-                                    style={{ background }}
-
-                                >
-                                    {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
-                                    <div>
-                                        {card.labels && <LabelList labels={card.labels} />}
+                                {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
+                                {card.labels.length > 0 && <div>
+                                    <LabelList labels={card.labels} />
+                                </div>}
+                                <div className="card-title-container flex space-between" >
+                                    <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
+                                    <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt style={{ pointerEvents: 'none' }}  />
+                                    </span>
+                                </div>
+                                {card.attachments[0] && <div className="img-prev">
+                                    <img src={card.attachments[0]} />
+                                </div>}
+                                <div className="card-stat">
+                                    {card.dueDate && <div className="due-time">
+                                        <span><Due dueDate={card.dueDate} /></span>
+                                    </div>}
+                                    <div className="stat flex">
+                                        {card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
+                                        {card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
+                                        {card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
+                                        {card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
+                                        {/* {card.attachments.length > 0 && <div title="Attachments" className="flex align-center">{card.attachments.length}{<AiOutlineDatabase />}</div>} */}
                                     </div>
-                                    <div className="card-title-container flex space-between" >
-                                        <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
-                                        <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt style={{ pointerEvents: 'none' }} />
-
-                                        </span>
-                                    </div>
-                                    <div className="card-stat">
-                                        <div className="due-time">
-                                            {card.dueDate && <span><Due dueDate={card.dueDate} /></span>}
-                                        </div>
-                                        <div className="stat flex">
-                                            {card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
-                                            {card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
-                                            {card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
-                                            {card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
-                                            {card.attachments.length > 0 && <div title="Attachments" className="flex align-center">{card.attachments.length}{<AiOutlineDatabase />}</div>}
-                                        </div>
                                     </div>
                                 </article>
                             </div>
                         </div>
-                        {isMenuOpened && <CardMenu closeMenu={onCloseMenu} />}
+                        {/* {isMenuOpened && <CardMenu closeMenu={onCloseMenu} />} */}
                     </div>
                 )}
             </Draggable>
-        </>
+        
     )
 }
 

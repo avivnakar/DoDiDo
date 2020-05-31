@@ -2,10 +2,12 @@
     height: 100vh;
     background-color: $clr1;
 }
+
 .list-container {
     width: 80%;
     margin: auto;
     display: flex;
+
     // background-color: $board-container;
     // height: 100vh;
     & .add-board {
@@ -19,6 +21,7 @@
         font-size: 1.2rem;
         cursor: pointer;
     }
+
     & .board-list {
         // position: absolute;
         // top: 50px;
@@ -53,6 +56,7 @@
             height: 150px;
             border-radius: 12px;
         }
+
         & h2 {
             border-radius: 12px;
             font-family: $mainFont;
@@ -60,6 +64,7 @@
             font-size: 1.7rem;
             background-color: $clr4;
         }
+
         & input {
             position: absolute;
             width: 10%;
@@ -67,10 +72,12 @@
             text-align: center;
             top: 25%;
             background-color: $clr5;
+
             & ::placeholder {
                 color: $clr7;
             }
         }
+
         & button {
             position: absolute;
             width: 10%;
@@ -105,6 +112,7 @@
     color: $clr5;
     border-radius: 12px;
     padding: 10px;
+
     & .photos,
     .colors {
         // display: none;
