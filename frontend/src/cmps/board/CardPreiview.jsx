@@ -45,6 +45,7 @@ export function CardPreiview(props) {
                                 </div>
                                 <div className="card-title-container flex space-between" >
                                     <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
+                                    <img src={card.attachments[0]} />
                                     <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt />
 
                                     </span>
@@ -58,7 +59,7 @@ export function CardPreiview(props) {
                                         {card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
                                         {card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
                                         {card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
-                                        {card.attachments.length > 0 && <div title="Attachments" className="flex align-center">{card.attachments.length}{<AiOutlineDatabase />}</div>}
+                                        {/* {card.attachments.length > 0 && <div title="Attachments" className="flex align-center">{card.attachments.length}{<AiOutlineDatabase />}</div>} */}
                                     </div>
                                 </div>
                             </article>
