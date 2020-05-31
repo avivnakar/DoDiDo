@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaTimes } from "react-icons/fa";
-import { ClickAway } from '../ClickAway';
+// import { FaTimes } from "react-icons/fa";
+// import { ClickAway } from '../ClickAway';
 import { CirclePicker } from 'react-color';
 
 export function BoardMenu(props) {

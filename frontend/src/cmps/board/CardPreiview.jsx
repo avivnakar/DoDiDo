@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { FaRegComment, FaRegCheckSquare, FaRegUser, FaRegListAlt } from "react-icons/fa";
 // import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
-import { AiOutlineDatabase } from "react-icons/ai";
+// import { AiOutlineDatabase } from "react-icons/ai";
 import { LabelList } from '../board/LabelList.jsx';
 import { Due } from '../board/Due.jsx';
 import { FaPencilAlt } from "react-icons/fa";
-import { CardMenu } from '../card/CardMenu.jsx';
+// import { CardMenu } from '../card/CardMenu.jsx';
 import { ClickAway } from '../ClickAway.jsx';
 import { CardTitleEditable } from './CardTitleEditable.jsx';
 import { eventBus } from '../../services/eventBusService.js';
@@ -24,7 +24,7 @@ export function CardPreiview(props) {
         console.log('bounduing rect', ev.target.offsetParent.getBoundingClientRect());
         console.log('client rect', ev.target.offsetParent.getClientRects());
         setMenuOpened(true);
-        const direction = (window.innerWidth - ev.clientX > 300)
+        // const direction = (window.innerWidth - ev.clientX > 300)
 
         eventBus.emit('open_card_menu', ev.target.offsetParent.getBoundingClientRect())
     }
@@ -61,7 +61,7 @@ export function CardPreiview(props) {
                                     </span>
                                 </div>
                                 {card.attachments[0] && <div className="img-prev">
-                                    <img src={card.attachments[0]} />
+                                    <img src={card.attachments[0]} alt={`attachment-${0}`} />
                                 </div>}
                                 <div className="card-stat">
                                     {card.dueDate && <div className="due-time">

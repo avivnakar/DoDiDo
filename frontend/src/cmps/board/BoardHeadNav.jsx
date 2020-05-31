@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { FaTrashAlt } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { BoardTitle } from './BoardTitle.jsx'
-import { MiniUser } from '../MiniUser';
+// import { MiniUser } from '../MiniUser';
 import { BoardMenu } from '../board/BoardMenu';
 
 // export function BoardHeadNav(props) {

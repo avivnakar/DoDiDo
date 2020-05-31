@@ -8,8 +8,8 @@ import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
 import { socketService } from '../services/socketService.js';
-import { ClickAway } from '../cmps/ClickAway.jsx';
-import { CardMenu } from '../cmps/card/CardMenu.jsx';
+// import { ClickAway } from '../cmps/ClickAway.jsx';
+// import { CardMenu } from '../cmps/card/CardMenu.jsx';
 import { eventBus } from '../services/eventBusService.js';
 
 class _BoardDetails extends Component {
@@ -28,7 +28,7 @@ class _BoardDetails extends Component {
         });
         eventBus.on('open_card_menu', ev => {
             console.log('ev', ev)
-            const { bottom, height, left, right, top, width, x, y } = ev
+            const { height, left,  top, width, x, y } = ev
             
             const style = {  height, left, top, width, x, y, backgroundColor: 'red', position: 'absolute' }
             console.log('style', style)

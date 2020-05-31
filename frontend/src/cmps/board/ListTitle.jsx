@@ -9,10 +9,10 @@ export class ListTitle extends Component {
             isEdit: true
         })
     }
-    onBlur(e){
-        this.handleKeyDown(e,true)
+    onBlur(e) {
+        this.handleKeyDown(e, true)
     }
-    handleKeyDown(e,blur=false) {
+    handleKeyDown(e, blur = false) {
         const { board, list } = this.props
         if (e.key === 'Enter' || blur) {
             if (!e.target.value) {
@@ -33,7 +33,10 @@ export class ListTitle extends Component {
     getTitle() {
         if (this.props.list.title && !this.state.isEdit) {
             return <div onClick={() => this.onEdit()}>{this.props.list.title}</div>
-        } else if (this.props.list.title) return <input placeholder={this.props.list.title} onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
+        } else if (this.props.list.title) return <input placeholder={this.props.list.title}
+            defaultValue={this.props.list.title}
+            onBlur={(e) => { this.onBlur(e) }}
+            onKeyDown={(e) => { this.handleKeyDown(e) }} />
     }
     render() {
         return (

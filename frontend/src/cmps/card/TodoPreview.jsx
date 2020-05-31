@@ -32,7 +32,10 @@ export class TodoPreview extends Component {
         const { todo } = this.props
         if (this.state.isEdit) {
             return (
-                <input placeholder={todo.title} onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
+                <input placeholder={todo.title}
+                    defaultValue={todo.title}
+                    onBlur={(e) => { this.onBlur(e) }}
+                    onKeyDown={(e) => { this.handleKeyDown(e) }} />
             )
         }
         else {
@@ -67,10 +70,10 @@ export class TodoPreview extends Component {
         // this.isDone()
     }
     render() {
-        const {isDone} = this.props.todo
-        return (          
+        const { isDone } = this.props.todo
+        return (
             <div>
-                <span className={`mark-cube${isDone?' done':''}`} /* style={this.state.styleCube} */ onClick={this.doneTodo}></span>
+                <span className={`mark-cube${isDone ? ' done' : ''}`} /* style={this.state.styleCube} */ onClick={this.doneTodo}></span>
                 {this.getTitle()}
             </div>
         )
