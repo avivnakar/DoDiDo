@@ -40,7 +40,7 @@ export function CardPreiview(props) {
 
                             >
                                 {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
-                                {card.labels && <div>
+                                {card.labels.length > 0 && <div>
                                     {card.labels && <LabelList labels={card.labels} />}
                                 </div>}
                                 <div className="card-title-container flex space-between" >

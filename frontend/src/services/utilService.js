@@ -36,8 +36,6 @@ function uploadImg(ev) {
 
     return axios.post(UPLOAD_URL, formData)
         .then(res => {
-            console.log(res);
-            console.log(res.data.url);
             return res.data.url
         })
         .catch(err => console.error(err))
