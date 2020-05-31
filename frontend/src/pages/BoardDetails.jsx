@@ -10,13 +10,15 @@ import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
 import { socketService } from '../services/socketService.js';
 import { ClickAway } from '../cmps/ClickAway.jsx';
 import { CardMenu } from '../cmps/card/CardMenu.jsx';
+import { eventBus } from '../services/eventBusService.js';
 
 class _BoardDetails extends Component {
     state = {
         currCard: null,
         match: null,
         style: {},
-        drag: {}
+        drag: {},
+        div: null
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -24,6 +26,14 @@ class _BoardDetails extends Component {
             if (board.updatedAt > this.props.board.updatedAt)
                 this.props.updateBoardSync(board)
         });
+        eventBus.on('open_card_menu', ev => {
+            console.log('ev', ev)
+            const { bottom, height, left, right, top, width, x, y } = ev
+            
+            const style = {  height, left, top, width, x, y, backgroundColor: 'red', position: 'absolute' }
+            console.log('style', style)
+            this.setState({ div: style })
+        })
     }
     componentDidUpdate(prevProps) {
         if (this.state.match !== this.props.match) {
@@ -117,7 +127,7 @@ class _BoardDetails extends Component {
 
     render() {
         const { board, card, history, updateBoard } = this.props;
-        const { drag } = this.state;
+        const { drag, div } = this.state;
         const { source, destination } = drag || {};
         const listProps = { history, updateBoard, board }
         if (board) {
@@ -149,10 +159,13 @@ class _BoardDetails extends Component {
                                         {...destination && destination.droppableId === list.id ? drag : {}}
                                         {...listProps} styleCardDrag={this.state.style} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
+                                        {/* <div style={div}>
+                                            here will be a menu
+                                        </div> */}
                                 </div>
                                 {provided.placeholder}
                                 {/* <ClickAway /> */}
-                                        {/* isMenuOpened &&  <CardMenu /* closeMenu={onCloseMenu}  />*/}
+                                {/* isMenuOpened &&  <CardMenu /* closeMenu={onCloseMenu}  />*/}
                             </div>
                         )}
                     </Droppable>

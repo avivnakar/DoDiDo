@@ -13,7 +13,7 @@ function _ListPreiview(props) {
     var [isMenuOpened, setMenuOpened] = useState(false)
     var [isLeft, setDirection] = useState(false)
     // var [isAddingCard, toggleAddCard] = useState(false)
-    const { list, board, updateBoard, removeCard } = props
+    const { list, board, updateBoard, removeCard, history, getCurrCard, source, destination } = props
     const onCardRemove = (cardId) => (ev) => {
         ev.stopPropagation();
         removeCard(board, list, cardId)
@@ -34,7 +34,7 @@ function _ListPreiview(props) {
         setDirection(false);
         setMenuOpened(false);
     }
-
+    // console.log(props)
     return (
         <Draggable draggableId={list.id} index={props.index}>
             {(provided, snapshot) => (
@@ -58,12 +58,15 @@ function _ListPreiview(props) {
                                         {...provided.droppableProps}
                                     >
                                         <div className="list-cards">
-                                            {list.cards && list.cards.map((card, index) => <CardPreiview
+                                            {list.cards ? <MapLists cards={list.cards} cardProps={{ history, onCardRemove, getCurrCard }} shadow={provided.placeholder}
+                                                source={source} destination={destination}
+                                            /> : {} /* provided.placeholder */}
+                                            {/* list.cards.map((card, index) => <CardPreiview
                                                 index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
-                                                onCardRemove={onCardRemove} history={props.history}
-                                            />)}
+                                                onCardRemove={onCardRemove} history={props.history} */}
+                                            {/* />)} */}
                                         </div>
-                                        {provided.placeholder}
+                                        {isShadowLast(source,destination,list.cards) && provided.placeholder}
                                         <AddCard updateBoard={updateBoard} list={list} board={board} />
                                     </div>
                                 )}
@@ -86,3 +89,14 @@ const mapDispatchToProps = {
 }
 export const ListPreiview = connect(mapStateToProps, mapDispatchToProps)(_ListPreiview)
 
+function MapLists(props) {
+    const { cards, cardProps, destination, source, shadow } = props
+    return cards && cards.map((card, index) => <CardPreiview index={index} key={card.id} card={card} {...cardProps}
+    >{(isShadowPlace(source, index,cards.length) || isShadowPlace(destination, index,cards.length)) && shadow}</CardPreiview>)
+}
+function isShadowPlace(obj, index) {
+    return obj && (obj.index === index);
+}
+function isShadowLast(src,dest,{length}){
+return (src&&src.index===length)||(dest&&dest.index===length)||(length===0)||(!src&&!dest)
+}
