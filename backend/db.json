@@ -138,7 +138,7 @@
               },
               "cardMembers": [],
               "desc": null,
-              "dueDate": null,
+              "dueDate": 1589354475424,
               "checkLists": [],
 <<<<<<< HEAD
               "attachments": [],
@@ -165,14 +165,20 @@
                   "color": "green"
                 },
                 {
-                  "id": "c0004",
+                  "id": "Bi2d",
                   "title": null,
-                  "color": "blue"
+                  "color": "#ff0080"
                 },
                 {
+<<<<<<< HEAD
                   "id": "DIDe",
                   "title": "עיחיחעח",
                   "color": "#cf0c0c"
+=======
+                  "id": "c0004",
+                  "title": null,
+                  "color": "blue"
+>>>>>>> origin/test
                 }
               ],
               "createdBy": {
@@ -192,8 +198,13 @@
                   "imgUrl": "adf.png"
                 }
               ],
+<<<<<<< HEAD
               "desc": "dfvdsfddd",
               "dueDate": 1588835461247,
+=======
+              "desc": "גכעדגכעדגכ",
+              "dueDate": 1590753191978,
+>>>>>>> origin/test
               "checkLists": [
                 {
                   "id": "N7UG",
@@ -375,7 +386,28 @@
               "attachments": [
                 "http://res.cloudinary.com/rondeliahu/image/upload/v1590908946/wewii5sykkppfvwlyxpt.png"
               ],
-              "comments": [],
+              "comments": [
+                {
+                  "id": "WcWB",
+                  "text": "עגדכ",
+                  "createdAt": 1590909633195,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "onjk",
+                  "text": "כדגשכדגכ",
+                  "createdAt": 1590909631383,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ],
               "background": "#ffffff"
             }
           ]
@@ -383,6 +415,7 @@
         {
           "id": "FG9r",
           "title": "hfgdgf",
+<<<<<<< HEAD
           "cards": []
         },
         {
@@ -395,6 +428,28 @@
           "id": "5MB3",
           "title": "sdasdsads",
           "cards": []
+=======
+          "cards": [
+            {
+              "id": "fdMP",
+              "title": "גכעגדע",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590909616/pdf4urqttwmvan61ez1o.png"
+              ],
+              "comments": []
+            }
+          ]
+>>>>>>> origin/test
         },
         {
           "id": "JC9l",
@@ -403,9 +458,13 @@
         }
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       "updatedAt": 1590909557615
 =======
       "updatedAt": 1590908947996
+>>>>>>> origin/test
+=======
+      "updatedAt": 1590909724840
 >>>>>>> origin/test
     }
   ]
