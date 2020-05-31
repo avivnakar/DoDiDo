@@ -41,20 +41,20 @@ export function CardPreiview(props) {
                             >
                                 {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
                                 {card.labels.length > 0 && <div>
-                                    {card.labels && <LabelList labels={card.labels} />}
+                                    <LabelList labels={card.labels} />
                                 </div>}
                                 <div className="card-title-container flex space-between" >
                                     <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
                                     <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt />
                                     </span>
                                 </div>
-                                <div className="img-prev">
+                                {card.attachments[0] && <div className="img-prev">
                                     <img src={card.attachments[0]} />
-                                </div>
+                                </div>}
                                 <div className="card-stat">
-                                    <div className="due-time">
-                                        {card.dueDate && <span><Due dueDate={card.dueDate} /></span>}
-                                    </div>
+                                    {card.dueDate && <div className="due-time">
+                                        <span><Due dueDate={card.dueDate} /></span>
+                                    </div>}
                                     <div className="stat flex">
                                         {card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
                                         {card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}

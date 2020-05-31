@@ -12,6 +12,7 @@ export function BoardMenu(props) {
         const x = ev.target.getAttribute('data-img');
         board.background = x
         updateBoard(board)
+        props.toggleBoardMenu()
     }
     return (
         <div className="board-menu-list flex column">

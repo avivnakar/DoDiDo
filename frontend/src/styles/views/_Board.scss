@@ -211,6 +211,10 @@
     &-stat {
         font-size: 0.8rem;
         text-align: right;
+
+        & div:not(:first-child) {
+            margin-left: rem(8px);
+        }
     }
 
     & &-label {

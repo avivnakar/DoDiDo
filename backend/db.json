@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "חיעכלחח",
       "desc": "this board is board",
-      "background": "100.jpg",
+      "background": "86.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -80,16 +80,11 @@
       "cardLists": [
         {
           "id": "vUOW",
-          "title": "bdfghdgf",
-          "cards": []
-        },
-        {
-          "id": "FG9r",
-          "title": "hfgdgf",
+          "title": "sketch",
           "cards": [
             {
-              "id": "fdMP",
-              "title": "גכעגדע",
+              "id": "xREl",
+              "title": "img",
               "labels": [],
               "createdBy": {
                 "_id": "u101",
@@ -97,35 +92,23 @@
                 "imgUrl": "././img/troll.jpg"
               },
               "cardMembers": [],
-              "desc": "cvcvc",
+              "desc": null,
               "dueDate": null,
               "checkLists": [],
               "attachments": [
-                "http://res.cloudinary.com/rondeliahu/image/upload/v1590920057/bfiygpe5sp9jpbr8ysfa.jpg"
+                null,
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590923263/enifaeq94guetx2qzy3t.jpg",
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590923296/ej1hgnlippbq6lqtrvib.jpg",
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590923319/opkps76sgg9b6ixubnbw.jpg"
               ],
-              "comments": [
-                {
-                  "id": "YBXb",
-                  "text": "dsfdsfds",
-                  "createdAt": 1590920031274,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                },
-                {
-                  "id": "BCD0",
-                  "text": "dsfdsfds",
-                  "createdAt": 1590920030361,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                }
-              ]
-            },
+              "comments": []
+            }
+          ]
+        },
+        {
+          "id": "FG9r",
+          "title": "Using a wax model",
+          "cards": [
             {
               "id": "YT18",
               "title": "zxxzxczx",
@@ -326,21 +309,61 @@
         },
         {
           "id": "JC9l",
-          "title": "dfsdfdfsdfd",
-          "cards": []
+          "title": "Casting the metal liquid",
+          "cards": [
+            {
+              "id": "fdMP",
+              "title": "גכעגדע",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "cvcvc",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590920057/bfiygpe5sp9jpbr8ysfa.jpg"
+              ],
+              "comments": [
+                {
+                  "id": "YBXb",
+                  "text": "dsfdsfds",
+                  "createdAt": 1590920031274,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                },
+                {
+                  "id": "BCD0",
+                  "text": "dsfdsfds",
+                  "createdAt": 1590920030361,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "WjVQ",
-          "title": "asdsadsadsa",
+          "title": "Jewelery Processing",
           "cards": []
         },
         {
           "id": "fQku",
-          "title": "dfsfsdfdf",
+          "title": "Polishing",
           "cards": []
         }
       ],
-      "updatedAt": 1590920711698
+      "updatedAt": 1590923689016
     }
   ]
 }

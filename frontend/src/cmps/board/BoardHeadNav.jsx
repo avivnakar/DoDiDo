@@ -10,7 +10,7 @@ export class BoardHeadNav extends Component {
     state = {
         isOpenMenu: false
     }
-    openBoardMenu = () => {
+    toggleBoardMenu = () => {
         this.setState(prevState => ({ isOpenMenu: !prevState.isOpenMenu }))
         console.log(this.state.isOpenMenu);
 
@@ -20,7 +20,7 @@ export class BoardHeadNav extends Component {
             <header className="board-header flex space-between justify-center align-center" >
                 <div className="name-container flex space-between">
                     <BoardTitle board={this.props.board} updateBoard={this.props.updateBoard} />
-                    {this.state.isOpenMenu && <BoardMenu board={this.props.board} updateBoard={this.props.updateBoard} />}
+                    {this.state.isOpenMenu && <BoardMenu toggleBoardMenu={this.toggleBoardMenu} board={this.props.board} updateBoard={this.props.updateBoard} />}
                     {/* <MiniUser users={props.board.members} command={() => { }} /> */}
                     <span className="user-logo">Y</span>
                     <span className="user-logo">G</span>
@@ -30,7 +30,7 @@ export class BoardHeadNav extends Component {
                     <Link to="#" className="board-sec-nav-icons trash"><FaTrashAlt /></Link>
                     <Link to="#" className="board-sec-nav-icons">Add Members</Link>
                     {/* <Link to="#" className="board-sec-nav-icons">Statistics</Link> */}
-                    <Link to="#" className="board-sec-nav-icons" onClick={this.openBoardMenu}>Board Menu</Link>
+                    <Link to="#" className="board-sec-nav-icons" onClick={this.toggleBoardMenu}>Board Menu</Link>
                 </div>
             </header>
         )
