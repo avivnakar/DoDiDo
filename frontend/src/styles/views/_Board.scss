@@ -2,6 +2,7 @@
     &:hover .del {
         opacity: 0.5;
     }
+
     .del {
         float: right;
         opacity: 0;
@@ -9,6 +10,7 @@
         font-size: rem(20px);
         @include button-clear;
         @include round;
+
         &:hover {
             opacity: 1;
         }
@@ -26,7 +28,9 @@
         // position: absolute;
         // top: 80px;
     }
-    font-family: OpenSans-Bold, sans-serif;
+
+    font-family: OpenSans-Bold,
+    sans-serif;
     font-size: rem(14px);
     background-color: #ebecf0;
     border-radius: 3px;
@@ -36,6 +40,7 @@
 
     cursor: pointer;
     margin-left: 10px;
+
     & &-title {
         width: 272px;
         padding: 5px 10px;
@@ -52,8 +57,11 @@
         justify-content: space-between;
         cursor: pointer;
     }
+
     @include del-btns;
+
     &-bg {
+
         // background-color: cyan;
         .list-cards {
             -webkit-box-flex: 1;
@@ -64,14 +72,17 @@
             overflow-y: auto;
             margin-right: 2px;
             margin-left: 10px;
+
             &::-webkit-scrollbar {
                 background-color: $list-bgc;
                 width: 6.5px;
                 height: 100px;
+
                 &-thumb {
                     border: 16px solid #bdc5d8;
                     border-radius: 10px;
                 }
+
                 &-track {
                     // border: 16px solid #bdc5d8;
                     border-radius: 10px;
@@ -81,13 +92,16 @@
         }
     }
 }
+
 .add-card-container {
     text-align: left;
     // margin-top: 10px;
     padding: 10px;
     // padding-bottom: 10px;
     display: flex;
-    & .add-card-btn, .add-list-btn {
+
+    & .add-card-btn,
+    .add-list-btn {
         all: unset;
         // height: 34px;
         margin-left: 5px;
@@ -100,6 +114,7 @@
         /* position: absolute; */
         background-color: green;
         bottom: 0;
+
         &:hover {
             background-color: rgba(0, 128, 0, 0.472);
         }
@@ -131,15 +146,18 @@
         width: 10px;
         cursor: move;
     }
+
     &::-webkit-scrollbar-thumb {
         border: 16px solid #0000008f;
         border-radius: 20px;
     }
+
     &::-webkit-scrollbar-track {
         border: 16px solid #ffffff81;
         border-radius: 10px;
     }
 }
+
 .card {
     font-family: OpenSans-reg;
     position: relative;
@@ -154,23 +172,29 @@
     word-break: break-all;
     cursor: pointer;
     text-align: left;
+
     &:hover :not() {
         background-color: $hover;
     }
+
     // background-color: burlywood;
     @include del-btns;
+
     & &-title {
         font-size: 0.875rem;
         margin-bottom: 4px;
         margin-left: rem(3px);
+
         :not(.edit) {
             cursor: pointer;
         }
+
         &-container {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: minmax(1fr, 100%);
         }
+
         &.edit {
             font: inherit;
             line-height: inherit;
@@ -183,16 +207,19 @@
             width: 100%;
         }
     }
+
     &-stat {
         font-size: 0.8rem;
         text-align: right;
     }
+
     & &-label {
         width: 25px;
         height: 7px;
         border-radius: 6px;
         margin-left: rem(3px);
     }
+
     &-wrapper {
         &.active-card {
             overflow: visible;
@@ -204,16 +231,27 @@
     &-preview-editor {
         position: relative;
     }
+
+    & .img-prev {
+        margin-bottom: rem(5px);
+
+        & img {
+            border-radius: 5px;
+
+        }
+    }
 }
+
 .tilt {
     transform: rotate(4deg);
     transition: 0.6;
 }
 
 [data-rbd-placeholder-context-id="1"] {
-    background-color:rgba(255, 0, 0, 0.281);
+    background-color: rgba(255, 0, 0, 0.281);
     flex-shrink: 1;
 }
+
 .bg-modal {
     position: absolute;
     top: 45%;

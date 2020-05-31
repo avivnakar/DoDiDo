@@ -2,25 +2,31 @@
     &-btn {
         position: relative;
     }
+
     position: absolute;
     top: 0;
+
     .right {
         left: 0;
     }
+
     .left {
         right: 0;
     }
+
     // bottom: 0;
     z-index: 11;
     text-align: center;
     border-radius: 3px;
     border: 1px solid #172b4d2c;
     min-height: min-content;
-    & > * {
+
+    &>* {
         width: rem(280px);
         background-color: #fff;
         // background-color: indigo;
     }
+
     & &-title {
         color: hsl(218, 17%, 44%);
         display: flex;
@@ -34,13 +40,16 @@
         z-index: 1;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
+
         & .close-btn {
             cursor: pointer;
+
             &:hover {
                 color: red;
             }
         }
     }
+
     & ul {
         // position: relative;
         margin-block-start: 0;
@@ -53,26 +62,31 @@
         border-bottom-right-radius: 3px;
         border-bottom-left-radius: 3px;
         cursor: pointer;
+
         // background-color: blue;
         & :hover {
             background-color: $hover;
         }
     }
+
     & li {
         padding: 6px 30px;
         width: rem(280px);
 
         // position: relative;
     }
+
     & .list-footer {
         border-top: 1px solid rgba(9, 30, 66, 0.13);
         margin-top: 15px;
         padding-top: 10px;
     }
+
     .list-remove {
         color: red;
     }
 }
+
 // .card .edit-icon {
 //     position: absolute;
 // }
@@ -81,6 +95,7 @@
     // left: -50px;
     top: 0;
     z-index: 9999999;
+
     & li {
         text-align: left;
         cursor: pointer;
@@ -95,4 +110,73 @@
         text-decoration: none;
         transition: transform 85ms ease-in;
     }
+}
+
+.board-menu-list {
+    background-color: $list-bgc;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    border-radius: 3px;
+
+
+    & .board-menu-title {
+        line-height: 20px;
+        font-size: 1.1rem;
+        margin: 14px 32px;
+        text-align: center;
+        font-weight: 600;
+        color: #172b4d;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue, sans-serif;
+    }
+
+    & .sub-title {
+        font-size: 0.95rem;
+        background-color: rgba(225, 0, 255, 0.102);
+        border-radius: 5px;
+    }
+
+    & .bgimg {
+        padding: rem(10px);
+        overflow: auto;
+        max-height: 500px;
+        margin-right: 5px;
+
+        &::-webkit-scrollbar {
+            margin-bottom: 20px;
+            height: 10px;
+            width: 6px;
+            cursor: move;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border: 16px solid #0000008f;
+            border-radius: 20px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border: 16px solid #ffffff81;
+            border-radius: 10px;
+            height: 100px;
+        }
+    }
+
+    & .bgclr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: rem(30px);
+
+    }
+
+    & img {
+        cursor: pointer;
+        width: 100px;
+        height: 70px;
+        margin: rem(5px);
+        border-radius: 5px;
+
+    }
+
+
 }

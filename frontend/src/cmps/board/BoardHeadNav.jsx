@@ -20,7 +20,7 @@ export class BoardHeadNav extends Component {
             <header className="board-header flex space-between justify-center align-center" >
                 <div className="name-container flex space-between">
                     <BoardTitle board={this.props.board} updateBoard={this.props.updateBoard} />
-                    {this.state.isOpenMenu && <BoardMenu />}
+                    {this.state.isOpenMenu && <BoardMenu board={this.props.board} updateBoard={this.props.updateBoard} />}
                     {/* <MiniUser users={props.board.members} command={() => { }} /> */}
                     <span className="user-logo">Y</span>
                     <span className="user-logo">G</span>
