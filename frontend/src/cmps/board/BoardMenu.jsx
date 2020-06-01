@@ -37,7 +37,7 @@ export function BoardMenu(props) {
                 <div className="img-container">
                     <img src={require('../../assets/imgs/91.jpg')} data-img="91.jpg" onClick={(ev) => changeBg(ev)} alt="" />
                     <img src={require('../../assets/imgs/90.jpg')} data-img="90.jpg" onClick={(ev) => changeBg(ev)} alt="" />
-                    <img src={require('../../assets/imgs/89.png')} data-img="pmg.jpg" onClick={(ev) => changeBg(ev)} alt="" />
+                    <img src={require('../../assets/imgs/89.png')} data-img="89.png" onClick={(ev) => changeBg(ev)} alt="" />
                 </div>
                 <div className="img-container">
                     <img src={require('../../assets/imgs/88.jpg')} data-img="88.jpg" onClick={(ev) => changeBg(ev)} alt="" />

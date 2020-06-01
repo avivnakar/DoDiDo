@@ -14,7 +14,7 @@ class _Homepage extends Component {
             <div className="homepage">
                 <header className="homepage-head">
                     <NavBar user={user} logout={logout} login={login} />
-                    <section className="flex justify-center align-center">
+                    <section className="hero flex justify-center align-center">
                         <div className="desc">
                             <h2>DoDiDo lets you work more collaboratively and get more done.</h2>
                             <p>DoDiDo’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.</p>
@@ -29,10 +29,10 @@ class _Homepage extends Component {
                         <div className="txt-para">
                             <h1>Work with any team</h1>
                             <p>Whether it’s for work, a side project or even the next family vacation, DoDiDo helps your team stay organized.</p>
-                            <div className="start-emil">
+                            {/* <div className="start-emil">
                                 <input type="text" placeholder="Email" />
                                 <button className="home-btn">Start doing</button>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="sec-para flex column space-even align-center">

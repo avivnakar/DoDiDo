@@ -17,21 +17,20 @@ export function CardPreiview(props) {
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
         console.log(ev)
+        const elCard=ev.target.offsetParent
+        const elBoard=elCard.offsetParent.offsetParent
         console.log('page x,y', ev.pageX, ev.pageY)
-        console.log('client x,y', ev.clientX, ev.clientX)
-        console.dir(ev.target.offsetParent)
-        console.dir(ev.target.offsetParent.clientHeight)
-        console.log('bounduing rect', ev.target.offsetParent.getBoundingClientRect());
-        console.log('client rect', ev.target.offsetParent.getClientRects());
+        console.log('client x,y', ev.clientX, ev.clientY)
+        // console.dir(elCard)
+        // console.dir(elBoard)
         setMenuOpened(true);
         // const direction = (window.innerWidth - ev.clientX > 300)
-
-        eventBus.emit('open_card_menu', ev.target.offsetParent.getBoundingClientRect())
+        eventBus.emit('open_card_menu', [elCard.getBoundingClientRect(),elBoard.scrollLeft])
     }
     const onCloseMenu = (ev) => {
         ev.stopPropagation();
         setMenuOpened(false);
-        eventBus.emit('close_card_menu', {});
+        eventBus.emit('close_card_menu', card)
     }
     const { background } = card
     return (
