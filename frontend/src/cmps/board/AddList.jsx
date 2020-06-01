@@ -29,7 +29,7 @@ export class AddList extends Component {
                 }
                 this.props.board.cardLists.push(newList)
                 this.props.updateBoard(this.props.board)
-                this.props.setActivites({ fullName: 'Guest' }, {name: 'Add',item: e.target.value})
+                this.props.setActivites({ fullName: 'Guest' }, {name: 'Add',item: `new list:\"${e.target.value}\"`})
             }
         }
     }
