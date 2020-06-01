@@ -10,9 +10,9 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #cacaca98;
+    background-color: #000000;
     height: 2.5rem;
-    // z-index: 3;
+    color: $clr7;
     z-index: 1;
     opacity: 0.8;
 
@@ -23,7 +23,7 @@
     & .main-links {
         // font-size: 1.6rem;
         width: 350px;
-        color: rgba(0, 0, 0, 0.39);
+        color: $clr7;
         // margin: 0px;
         text-align: center;
         font-size: 1.8rem;
@@ -58,10 +58,16 @@
                 color: $clr7;
             }
         }
+
+        & svg {
+            color: $clr7;
+
+        }
     }
 
     & .logo {
         display: flex;
+        background-color: red;
 
         & img {
             line-height: 0em;
