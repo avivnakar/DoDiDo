@@ -79,9 +79,9 @@ class _BoardDetails extends Component {
             if (action.name === 'Moved') var text = `${action.item} was moved from ${action.src} to ${action.dest} By ${user.fullName}`
             var activity = {
                 id: utilService.makeId(),
-                dontBy: user,
+                donetBy: user,
                 text,
-                dontAte: Date.now()
+                donetAte: Date.now()
             }
             console.log(activity.text);  
             board.activities.push(activity)
