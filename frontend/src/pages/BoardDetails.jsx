@@ -67,24 +67,10 @@ class _BoardDetails extends Component {
             this.setState({ drag: start })
             const idx = board.cardLists.findIndex(list => list.id === start.source.droppableId)
             var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId)
-            console.log('card you dragging:', card);
             this.setState({ style: { backgroundColor: '#c7c7c7' } })
         }
     }
-    onMark = (update) => {
-        if (!update.destination) return
-        if (update.type === 'task') {
-            this.setState({ drag: update })
-            console.log(update)
-            const { board } = this.props
-            var idx = board.cardLists.findIndex(list => list.id === update.destination.droppableId)
-            var placeholderSpot = board.cardLists[idx].cards[update.destination.index]
-            console.log('to where:', placeholderSpot);
-            if (placeholderSpot) {
 
-            }
-        }
-    }
     onDragEnd = result => {
         const { board } = this.props
         const { destination, source, draggableId, type } = result;
