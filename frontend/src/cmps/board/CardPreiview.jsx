@@ -45,9 +45,8 @@ export function CardPreiview(props) {
                                 </div>}
                                 <div className="card-title-container flex space-between" >
                                     <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
-                                    <img src={card.attachments[0]} />
+                                    {card.attachments && <img src={card.attachments[0]} />}
                                     <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt />
-
                                     </span>
                                 </div>
                                 <div className="card-stat">

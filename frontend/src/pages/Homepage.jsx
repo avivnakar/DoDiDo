@@ -75,7 +75,6 @@ class _Homepage extends Component {
                         <p>Start Planning Today Sign up and become one of the millions of people around the world using Trello to get more done.</p>
                         <Link to={`/${user && user.username ? user.username : 'guest'}/boards`} className="home-btn" >Start Now, It's Free</Link>
                     </div>
-
                     <div className="footer-img">
                         <img src={require('../assets/imgs/footer2.png')} alt="" />
                     </div>
