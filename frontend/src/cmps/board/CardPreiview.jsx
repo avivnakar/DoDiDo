@@ -12,20 +12,14 @@ import { CardTitleEditable } from './CardTitleEditable.jsx';
 import { eventBus } from '../../services/eventBusService.js';
 
 export function CardPreiview(props) {
-    const { card, history/* , onCardRemove  */ } = props
+    const { card, history, onCardRemove } = props
     var [isMenuOpened, setMenuOpened] = useState(false)
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
-        console.log(ev)
-        const elCard=ev.target.offsetParent
-        const elBoard=elCard.offsetParent.offsetParent
-        console.log('page x,y', ev.pageX, ev.pageY)
-        console.log('client x,y', ev.clientX, ev.clientY)
-        // console.dir(elCard)
-        // console.dir(elBoard)
+        const elCard = ev.target.offsetParent
+        const elBoard = elCard.offsetParent.offsetParent
         setMenuOpened(true);
-        // const direction = (window.innerWidth - ev.clientX > 300)
-        eventBus.emit('open_card_menu', [elCard.getBoundingClientRect(),elBoard.scrollLeft])
+        eventBus.emit('open_card_menu', [elCard.getBoundingClientRect(), elBoard.scrollLeft, onCardRemove(card.id)])
     }
     const onCloseMenu = (ev) => {
         ev.stopPropagation();
@@ -56,7 +50,7 @@ export function CardPreiview(props) {
                                 </div>}
                                 <div className="card-title-container flex space-between" >
                                     <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
-                                    <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt style={{ pointerEvents: 'none' }}  />
+                                    <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt style={{ pointerEvents: 'none' }} />
                                     </span>
                                 </div>
                                 {card.attachments[0] && <div className="img-prev">
@@ -67,21 +61,21 @@ export function CardPreiview(props) {
                                         <span><Due dueDate={card.dueDate} /></span>
                                     </div>}
                                     <div className="stat flex">
-                                        {card&&card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
-                                        {card&&card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
-                                        {card&&card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
-                                        {card&&card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
+                                        {card && card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
+                                        {card && card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
+                                        {card && card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
+                                        {card && card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
                                         {/* {card.attachments.length > 0 && <div title="Attachments" className="flex align-center">{card.attachments.length}{<AiOutlineDatabase />}</div>} */}
                                     </div>
-                                    </div>
-                                </article>
-                            </div>
+                                </div>
+                            </article>
                         </div>
-                        {/* {isMenuOpened && <CardMenu closeMenu={onCloseMenu} />} */}
                     </div>
-                )}
-            </Draggable>
-        
+                    {/* {isMenuOpened && <CardMenu closeMenu={onCloseMenu} />} */}
+                </div>
+            )}
+        </Draggable>
+
     )
 }
 

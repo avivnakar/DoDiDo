@@ -18,7 +18,8 @@ class _BoardDetails extends Component {
         match: null,
         style: {},
         drag: {},
-        div: null
+        div: null,
+        onCardRemove
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -26,15 +27,17 @@ class _BoardDetails extends Component {
             if (board.updatedAt > this.props.board.updatedAt)
                 this.props.updateBoardSync(board)
         });
-        eventBus.on('open_card_menu', ([cardBoundries, boardScroll]) => {
+        eventBus.on('open_card_menu', ([cardBoundries, boardScroll,onCardRemove]) => {
             const { height, left, top, width, x, y } = cardBoundries
             const style = { height, left: left + boardScroll, top, width, x, y, position: 'absolute' }
             console.log('style', style)
             console.log('style.x, .width', style.x, style.width,'window', window.innerWidth,'diff', window.innerWidth - style.x,window.innerWidth-style.width)
             this.setState({ div: style })
+            this.setState({onCardRemove});
         })
         eventBus.on('close_card_menu', (card) => {
             this.setState({ div: null })
+            this.setState({onCardRemove:null});
         })
     }
     componentDidUpdate(prevProps) {
@@ -129,9 +132,10 @@ class _BoardDetails extends Component {
 
     render() {
         const { board, card, history, updateBoard } = this.props;
-        const { drag, div } = this.state;
+        const { drag, div,onCardRemove } = this.state;
         const { source, destination } = drag || {};
         const listProps = { history, updateBoard, board }
+        const cardMenuFuncs={onCardRemove}
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
@@ -163,7 +167,7 @@ class _BoardDetails extends Component {
                                         {...listProps} styleCardDrag={this.state.style} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                     <div style={div}>
-                                        {div && <CardMenu className={window.innerWidth - div.x<window.innerWidth-div.width ? 'left' : 'right'} />}
+                                        {div && <CardMenu {...cardMenuFuncs} className={window.innerWidth - div.x<window.innerWidth-div.width ? 'left' : 'right'} />}
                                     </div>
                                 </div>
                                 {provided.placeholder}
