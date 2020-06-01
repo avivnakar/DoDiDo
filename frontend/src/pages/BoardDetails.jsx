@@ -19,7 +19,7 @@ class _BoardDetails extends Component {
         style: {},
         drag: {},
         div: null,
-        onCardRemove
+        onCardRemove:null
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
