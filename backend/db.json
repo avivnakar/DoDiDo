@@ -76,7 +76,350 @@
           "imgUrl": "adf.png"
         }
       ],
-      "activities": [],
+      "activities": [
+        {
+          "id": "L4m",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "fsdfdsdds was added By Guest",
+          "dontAte": 1591017638012
+        },
+        {
+          "id": "lHB",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "גכעגדע was moved from Casting the metal liquid to fsdfdsdds By Guest",
+          "dontAte": 1591018136911
+        },
+        {
+          "id": "PtM",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "fsdfdsdds was moved from 2 to 3 By Guest",
+          "dontAte": 1591018316968
+        },
+        {
+          "id": "BJr",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board title was changed to TEST By Guest",
+          "dontAte": 1591018789059
+        },
+        {
+          "id": "hSn",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 95.jpg By Guest",
+          "dontAte": 1591018869072
+        },
+        {
+          "id": "F89",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "zxxzxczx was moved from Using a wax model to fsdfdsdds By Guest",
+          "dontAte": 1591018972493
+        },
+        {
+          "id": "vpA",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "zxxzxczx was moved from fsdfdsdds to Using a wax model By Guest",
+          "dontAte": 1591019376341
+        },
+        {
+          "id": "N4M",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "fsdfdsdds was deleted By Guest",
+          "dontAte": 1591019557959
+        },
+        {
+          "id": "heX",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "fsf was added By Guest",
+          "dontAte": 1591019706878
+        },
+        {
+          "id": "G5w",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card dhg was added By Guest",
+          "dontAte": 1591019730632
+        },
+        {
+          "id": "1zV",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "list tile: fsf was added By Guest",
+          "dontAte": 1591019764907
+        },
+        {
+          "id": "LUK",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "list tile: \"gd\" was added By Guest",
+          "dontAte": 1591019786587
+        },
+        {
+          "id": "Y8u",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "fsf was deleted By Guest",
+          "dontAte": 1591019790546
+        },
+        {
+          "id": "6Qy",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card tile:\"gddg\" was added By Guest",
+          "dontAte": 1591019812953
+        },
+        {
+          "id": "Xtw",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"fsd\" was added By Guest",
+          "dontAte": 1591019833478
+        },
+        {
+          "id": "Tgk",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"hfg\" was added By Guest",
+          "dontAte": 1591019845295
+        },
+        {
+          "id": "GzA",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "new list:\"hgdf\" was added By Guest",
+          "dontAte": 1591019849761
+        },
+        {
+          "id": "Wcj",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "gd was deleted By Guest",
+          "dontAte": 1591019853229
+        },
+        {
+          "id": "Rpx",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "color was changed to #f8bbd0 By Guest",
+          "dontAte": 1591020724816
+        },
+        {
+          "id": "PTk",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "fsd was changed to color #e57373 By Guest",
+          "dontAte": 1591020769253
+        },
+        {
+          "id": "vvl",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "fsd was changed to color #f06292 By Guest",
+          "dontAte": 1591020773097
+        },
+        {
+          "id": "eiI",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card description:\"\" was added By Guest",
+          "dontAte": 1591021370327
+        },
+        {
+          "id": "6iN",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card description:\"g\" was added By Guest",
+          "dontAte": 1591021370373
+        },
+        {
+          "id": "Y5r",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to  By Guest",
+          "dontAte": 1591021377420
+        },
+        {
+          "id": "iCt",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card description:\"d\" was added By Guest",
+          "dontAte": 1591021377457
+        },
+        {
+          "id": "7MY",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to df By Guest",
+          "dontAte": 1591021377497
+        },
+        {
+          "id": "qet",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfg By Guest",
+          "dontAte": 1591021377600
+        },
+        {
+          "id": "JwM",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgd By Guest",
+          "dontAte": 1591021377624
+        },
+        {
+          "id": "uUs",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdf By Guest",
+          "dontAte": 1591021377784
+        },
+        {
+          "id": "Id0",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdfg By Guest",
+          "dontAte": 1591021377801
+        },
+        {
+          "id": "r6S",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdfgd By Guest",
+          "dontAte": 1591021377822
+        },
+        {
+          "id": "jtI",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdfgdf By Guest",
+          "dontAte": 1591021377854
+        },
+        {
+          "id": "Rze",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdfgdfg By Guest",
+          "dontAte": 1591021377926
+        },
+        {
+          "id": "zA2",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdfgdfgd By Guest",
+          "dontAte": 1591021377937
+        },
+        {
+          "id": "kIb",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdfgdfgdf By Guest",
+          "dontAte": 1591021378051
+        },
+        {
+          "id": "Uvc",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to dfgdfgdfgdfd By Guest",
+          "dontAte": 1591021378067
+        },
+        {
+          "id": "DdJ",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"img\" description was changed to sfdfsdd By Guest",
+          "dontAte": 1591021496391
+        },
+        {
+          "id": "BFE",
+          "dontBy": {
+            "fullName": "Guest"
+          },
+          "text": "card description:\"fsdfsdds\" was added By Guest",
+          "dontAte": 1591021535564
+        },
+        {
+          "id": "z1j",
+          "dontBy": {},
+          "text": "dhg was moved from Casting the metal liquid to hgdf By undefined",
+          "dontAte": 1591022038801
+        },
+        {
+          "id": "Fgz",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from 3D modal to 3D modal By Guest",
+          "donetAte": 1591080867343
+        },
+        {
+          "id": "NKI",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "3D modal was moved from 2 to 1 By Guest",
+          "donetAte": 1591080874560
+        },
+        {
+          "id": "NAY",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from 3D modal to Customer Notes By Guest",
+          "donetAte": 1591080877543
+        },
+        {
+          "id": "fR7",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from Customer Notes to 3D modal By Guest",
+          "donetAte": 1591080881876
+        }
+      ],
       "cardLists": [
         {
           "id": "wjgm",
@@ -142,74 +485,13 @@
               "attachments": [
                 "https://res.cloudinary.com/rondeliahu/image/upload/v1590930367/d9htdsi0excyqb2nc2pf.jpg"
               ],
-              "comments": [
-                {
-                  "id": "18kk",
-                  "text": "look nice ",
-                  "createdAt": 1590930618900,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "uSaQ",
-              "title": "important notes",
-              "labels": [
-                {
-                  "id": "c0001",
-                  "title": null,
-                  "color": "red"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": ".",
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#e57373"
-            },
-            {
-              "id": "YuXB",
-              "title": "ideas",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u101",
-                  "fullName": "Gal Rondel",
-                  "imgUrl": "adf.png"
-                },
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
               "comments": []
             }
           ]
         },
         {
-          "id": "LGK2",
-          "title": "Design",
+          "id": "sdKF",
+          "title": "3D modal",
           "cards": [
             {
               "id": "FuWD",
@@ -311,9 +593,60 @@
           ]
         },
         {
-          "id": "sdKF",
-          "title": "3D modal",
-          "cards": []
+          "id": "wjgm",
+          "title": "Customer Notes",
+          "cards": [
+            {
+              "id": "uSaQ",
+              "title": "important notes",
+              "labels": [
+                {
+                  "id": "c0001",
+                  "title": null,
+                  "color": "red"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": ".",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#e57373"
+            },
+            {
+              "id": "YuXB",
+              "title": "ideas",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                },
+                {
+                  "_id": "u401",
+                  "fullName": "Aviv Nakar",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
+            }
+          ]
         },
         {
           "id": "F3LB",
@@ -502,7 +835,7 @@
           ]
         }
       ],
-      "updatedAt": 1591019741893
+      "updatedAt": 1591080881877
     },
     {
       "_id": "5c07",

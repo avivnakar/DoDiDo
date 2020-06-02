@@ -8,11 +8,12 @@ export function BoardMenu(props) {
 
 
     function changeBg(ev) {
-        // console.log(ev.target.attributes);
         const x = ev.target.getAttribute('data-img');
         board.background = x
         updateBoard(board)
         props.toggleBoardMenu()
+        props.setActivites({ fullName: 'Guest' }, {name: 'Change',item: 'Board background', dest: board.background})
+
     }
     return (
         <div className="board-menu-list flex column">

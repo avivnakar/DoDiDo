@@ -13,14 +13,19 @@ class _LoginModal extends Component {
         const isShown = ev.target.checked
         this.setState({ isShown });
     }
-    render() {
-        const { toggleShow } = this
-        const { isShown } = this.state;
-        const onLogin=(ev)=>{
-            ev.preventDefault();
-            ev.stopPropagation();
-            console.log(ev.target)
+    onLogin = (ev) => {
+        const credentials = {
+            username: ev.target.password.value,
+            password: ev.target.username.value
         }
+        ev.preventDefault();
+        ev.stopPropagation();
+        login(credentials)
+    }
+    render() {
+        const { toggleShow, onLogin } = this
+        const { isShown } = this.state;
+
         return <section>
             <form method="post" onSubmit={onLogin}>
                 <ul>
@@ -34,7 +39,8 @@ class _LoginModal extends Component {
                         {<input type={isShown ? 'text' : 'password'} name="password" placeholder="Password" required />}
                     </fieldset></li>
                 </ul>
-            </form>
+                <input type="submit" hidden/>
+                            </form>
         </section>
     }
 

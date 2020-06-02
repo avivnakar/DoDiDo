@@ -45,6 +45,7 @@ export class AddCard extends Component {
                 const idx = board.cardLists.findIndex(currList => currList.id === list.id)
                 const newBoard = { ...board }
                 newBoard.cardLists[idx].cards.push(newCard)
+                this.props.setActivites({ fullName: 'Guest' }, {name: 'Add',item: `new card:"${e.target.value}"`})
                 updateBoard(newBoard)
             }
         }

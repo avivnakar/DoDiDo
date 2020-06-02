@@ -14,11 +14,14 @@ function _ListPreiview(props) {
     var [isLeft, setDirection] = useState(false)
     const { list, board, updateBoard, removeCard } = props
     const onCardRemove = (cardId) => (ev) => {
+        var card = list.cardLists.find(card => card.id === cardId)
+        props.setActivites({ fullName: 'Guest' }, {name: 'Del',item: `card:"${card.title}"`})
         ev.stopPropagation();
         removeCard(board, list, cardId)
     }
     const onListRemove = (ev) => {
         const idx = board.cardLists.findIndex(l => l.id === list.id);
+        props.setActivites({ fullName: 'Guest' }, {name: 'Del',item: `list:"${board.cardLists[idx].title}"`})
         board.cardLists.splice(idx, 1);
         updateBoard(board);
         onCloseMenu(ev);
@@ -44,7 +47,7 @@ function _ListPreiview(props) {
                         <section className={`list${snapshot.isDragging ? ' tilt' : ''}`}>
                             <div className="list-title flex space-between justify-center align-center"
                                 {...provided.dragHandleProps}>
-                                <ListTitle updateBoard={updateBoard} list={list} board={board} />
+                                <ListTitle updateBoard={updateBoard} list={list} board={board} setActivites={props.setActivites}/>
                                 <div className="list-menu-btn" onClick={onOpenMenu}>
                                     <Link to="#" style={{ content: "pop" }}
                                     ><FaEllipsisH style={{ pointerEvents: 'none' }} /></Link>
@@ -67,10 +70,11 @@ function _ListPreiview(props) {
                                                 getCurrCard={props.getCurrCard}
                                                 onCardRemove={onCardRemove}
                                                 history={props.history}
+                                                setActivites={props.setActivites}
                                             />)}
                                             {provided.placeholder}
                                         </div>
-                                        <AddCard updateBoard={updateBoard} list={list} board={board} />
+                                        <AddCard setActivites={props.setActivites} updateBoard={updateBoard} list={list} board={board} />
                                     </div>
                                 )}
                             </Droppable>
