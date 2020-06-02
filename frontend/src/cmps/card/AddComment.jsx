@@ -19,6 +19,7 @@ export class AddComment extends Component {
                 }
                 e.target.value = null
                 this.props.card.comments.unshift(newComment)
+                this.props.setActivites({ fullName: 'Guest' }, {name: 'Add',item: `new comment`})
                 this.props.updateBoard(this.props.board)
             }
         }

@@ -75,7 +75,6 @@ class _BoardDetails extends Component {
             if (action.name === 'Del') var text = `${action.item} was deleted By ${user.fullName}`
             if (action.name === 'Change') var text = `${action.item} was changed to ${action.dest} By ${user.fullName}`
             if (action.name === 'Add') var text = `${action.item} was added By ${user.fullName}`
-            if (action.name === 'Add') var text = `${action.item} was added By ${user.fullName}`
             if (action.name === 'Moved') var text = `${action.item} was moved from ${action.src} to ${action.dest} By ${user.fullName}`
             var activity = {
                 id: utilService.makeId(),
