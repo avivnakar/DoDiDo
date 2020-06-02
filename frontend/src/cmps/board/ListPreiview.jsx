@@ -64,28 +64,17 @@ function _ListPreiview(props) {
                                     >
                                         <div className="list-cards">
                                             {list.cards && list.cards.map((card, index) => <CardPreiview
-<<<<<<< HEAD
-                                                index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
-                                                onCardRemove={onCardRemove} history={props.history}
-                                                setActivites={props.setActivites}
-=======
                                                 index={index}
                                                 key={card.id}
                                                 card={card}
                                                 getCurrCard={props.getCurrCard}
                                                 onCardRemove={onCardRemove}
                                                 history={props.history}
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
+                                                setActivites={props.setActivites}
                                             />)}
                                             {provided.placeholder}
                                         </div>
-<<<<<<< HEAD
-                                        {provided.placeholder}
-                                        <AddCard updateBoard={updateBoard} list={list} board={board}
-                                        setActivites={props.setActivites} />
-=======
-                                        <AddCard updateBoard={updateBoard} list={list} board={board} />
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
+                                        <AddCard setActivites={props.setActivites} updateBoard={updateBoard} list={list} board={board} />
                                     </div>
                                 )}
                             </Droppable>

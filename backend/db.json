@@ -29,15 +29,9 @@
   "board": [
     {
       "_id": "5c09",
-<<<<<<< HEAD
-      "name": "TEST",
-      "desc": "this board is board",
-      "background": "95.jpg",
-=======
       "name": "Jewelry",
       "desc": "this board is board",
       "background": "94.jpg",
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -392,6 +386,38 @@
           "dontBy": {},
           "text": "dhg was moved from Casting the metal liquid to hgdf By undefined",
           "dontAte": 1591022038801
+        },
+        {
+          "id": "Fgz",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from 3D modal to 3D modal By Guest",
+          "donetAte": 1591080867343
+        },
+        {
+          "id": "NKI",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "3D modal was moved from 2 to 1 By Guest",
+          "donetAte": 1591080874560
+        },
+        {
+          "id": "NAY",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from 3D modal to Customer Notes By Guest",
+          "donetAte": 1591080877543
+        },
+        {
+          "id": "fR7",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from Customer Notes to 3D modal By Guest",
+          "donetAte": 1591080881876
         }
       ],
       "cardLists": [
@@ -409,73 +435,12 @@
                 "imgUrl": "././img/troll.jpg"
               },
               "cardMembers": [],
-<<<<<<< HEAD
-              "desc": "sfdfsdd",
-              "dueDate": null,
-=======
               "desc": null,
               "dueDate": 1594300007001,
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
               "checkLists": [],
               "attachments": [
                 "https://res.cloudinary.com/rondeliahu/image/upload/v1590930367/d9htdsi0excyqb2nc2pf.jpg"
               ],
-              "comments": []
-            }
-          ]
-        },
-        {
-          "id": "wjgm",
-          "title": "Customer Notes",
-          "cards": [
-            {
-              "id": "uSaQ",
-              "title": "important notes",
-              "labels": [
-                {
-                  "id": "c0001",
-                  "title": null,
-                  "color": "red"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": ".",
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#e57373"
-            },
-            {
-              "id": "YuXB",
-              "title": "ideas",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u101",
-                  "fullName": "Gal Rondel",
-                  "imgUrl": "adf.png"
-                },
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
               "comments": []
             }
           ]
@@ -574,6 +539,62 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "wjgm",
+          "title": "Customer Notes",
+          "cards": [
+            {
+              "id": "uSaQ",
+              "title": "important notes",
+              "labels": [
+                {
+                  "id": "c0001",
+                  "title": null,
+                  "color": "red"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": ".",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#e57373"
+            },
+            {
+              "id": "YuXB",
+              "title": "ideas",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                },
+                {
+                  "_id": "u401",
+                  "fullName": "Aviv Nakar",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
             }
           ]
         },
@@ -713,13 +734,8 @@
           "title": "Done",
           "cards": [
             {
-<<<<<<< HEAD
-              "id": "cfy8",
-              "title": "fsf",
-=======
               "id": "FuWD",
               "title": "Final Product",
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
               "labels": [],
               "createdBy": {
                 "_id": "u101",
@@ -730,44 +746,14 @@
               "desc": null,
               "dueDate": null,
               "checkLists": [],
-<<<<<<< HEAD
-              "attachments": [],
-              "comments": []
-            },
-            {
-              "id": "buBz",
-              "title": "fsd",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#f06292"
-=======
               "attachments": [
                 "http://res.cloudinary.com/rondeliahu/image/upload/v1590931276/gcrsmzucqier8wextnps.webp"
               ],
               "comments": []
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
             }
           ]
         },
         {
-<<<<<<< HEAD
-          "id": "spds",
-          "title": "hgdf",
-          "cards": [
-            {
-              "id": "gfPY",
-              "title": "dhg",
-=======
           "id": "obcQ",
           "title": "Delivery",
           "cards": []
@@ -779,7 +765,6 @@
             {
               "id": "LnhM",
               "title": "'kl;'l;;l",
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
               "labels": [],
               "createdBy": {
                 "_id": "u101",
@@ -787,43 +772,21 @@
                 "imgUrl": "././img/troll.jpg"
               },
               "cardMembers": [],
-<<<<<<< HEAD
-              "desc": "fsdfsdds",
-=======
               "desc": null,
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
               "comments": []
             },
             {
-<<<<<<< HEAD
-              "id": "04Kl",
-              "title": "gddg",
-=======
               "id": "zdJR",
               "title": "90 Hashel Street",
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
               "labels": [],
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
                 "imgUrl": "././img/troll.jpg"
               },
-<<<<<<< HEAD
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": []
-            }
-          ]
-        }
-      ],
-      "updatedAt": 1591022038802
-=======
               "cardMembers": [
                 {
                   "_id": "u401",
@@ -841,7 +804,7 @@
           ]
         }
       ],
-      "updatedAt": 1590939699840
+      "updatedAt": 1591080881877
     },
     {
       "_id": "5c07",
@@ -1022,7 +985,6 @@
       "members": [],
       "activities": [],
       "cardLists": []
->>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
     }
   ]
 }
