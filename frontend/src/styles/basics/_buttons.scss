@@ -98,22 +98,25 @@ button {
     font-family: OpenSans-semiBold, sans-serif;
     color: #ffffff;
     text-align: left;
-    background-color: green;
+    background-color: rgba(255, 0, 0, 0.685);
     display: flex;
     min-width: 80px;
     cursor: pointer;
     margin-right: 50px;
 
     &:hover {
-        background-color: rgba(0, 128, 0, 0.472);
+        background-color: rgba(255, 0, 0, 0.37);
     }
 }
 
 .add-todo-btn {
+    margin-top: rem(10px);
+    margin-bottom: rem(10px);
+    margin-left: 0px;
     justify-content: center;
     width: rem(100px);
     padding: 2px;
-    margin: 0px;
+    // margin: 0px;
 }
 
 .card-stat {

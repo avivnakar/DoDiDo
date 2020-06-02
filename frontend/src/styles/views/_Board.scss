@@ -99,21 +99,17 @@
     display: flex;
     & .add-card-btn,
     .add-list-btn {
-        all: unset;
-        // height: 34px;
         margin-left: 5px;
         padding: 4px 8px;
         border-radius: 3px;
         font-family: OpenSans-semiBold, sans-serif;
-        color: #ffffff;
-        /* width: 93%; */
+        color: #1f1f1f5e;
         text-align: left;
-        /* position: absolute; */
-        background-color: green;
+        // background-color: rgba(255, 0, 0, 0.096);
         bottom: 0;
 
         &:hover {
-            background-color: rgba(0, 128, 0, 0.472);
+            color: #ff0000c7;
         }
     }
 
@@ -256,3 +252,17 @@
     position: absolute;
     top: 45%;
 }
+<<<<<<< HEAD
+=======
+
+.card-title-container {
+    & .card-title {
+        font-weight: 700;
+        letter-spacing: 0.01rem;
+    }
+}
+
+.list-title {
+    color: red;
+}
+>>>>>>> origin/yuval

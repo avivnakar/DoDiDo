@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "Jewelry",
       "desc": "this board is board",
-      "background": "94.jpg",
+      "background": "90.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -112,8 +112,13 @@
       ],
       "cardLists": [
         {
+<<<<<<< HEAD
           "id": "wjfm",
           "title": "Customer Notes",
+=======
+          "id": "LGK2",
+          "title": "Design",
+>>>>>>> origin/yuval
           "cards": [
             {
               "id": "1Scv",
@@ -170,9 +175,15 @@
                       "isDone": false
                     }
                   ]
+                },
+                {
+                  "id": "ZkpV",
+                  "title": "sdsd",
+                  "todos": []
                 }
               ],
               "attachments": [
+<<<<<<< HEAD
                 "https://res.cloudinary.com/rondeliahu/image/upload/v1590930367/d9htdsi0excyqb2nc2pf.jpg"
               ],
               "comments": [],
@@ -184,6 +195,52 @@
           "id": "sdKF",
           "title": "3D modal",
           "cards": [
+=======
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1590930534/ssy9czmp6pmxtug6mbne.webp"
+              ],
+              "comments": [
+                {
+                  "id": "18kk",
+                  "text": "look nice ",
+                  "createdAt": 1590930618900,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "GmbJ",
+              "title": "Blue Daimond",
+              "labels": [
+                {
+                  "id": "c0001",
+                  "title": null,
+                  "color": "red"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#2196f3"
+            },
+>>>>>>> origin/yuval
             {
               "id": "FuWD",
               "title": "Final Product",
@@ -284,6 +341,7 @@
           ]
         },
         {
+<<<<<<< HEAD
           "id": "wjgm",
           "title": "Customer Notes",
           "cards": [
@@ -386,6 +444,8 @@
           ]
         },
         {
+=======
+>>>>>>> origin/yuval
           "id": "F3LB",
           "title": "Materials",
           "cards": [
@@ -498,9 +558,88 @@
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
+<<<<<<< HEAD
               "comments": []
             },
             {
+=======
+              "comments": [],
+              "background": "#b2ebf2"
+            }
+          ]
+        },
+        {
+          "id": "wjgm",
+          "title": "Customer Notes",
+          "cards": [
+            {
+              "id": "uSaQ",
+              "title": "important notes",
+              "labels": [
+                {
+                  "id": "c0001",
+                  "title": null,
+                  "color": "red"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": ".",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#c2185b"
+            },
+            {
+              "id": "YuXB",
+              "title": "ideas",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                },
+                {
+                  "_id": "u401",
+                  "fullName": "Aviv Nakar",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "id": "sdKF",
+          "title": "3D modal",
+          "cards": []
+        },
+        {
+          "id": "73z7",
+          "title": "Done",
+          "cards": []
+        },
+        {
+          "id": "obcQ",
+          "title": "Delivery",
+          "cards": [
+            {
+>>>>>>> origin/yuval
               "id": "zdJR",
               "title": "90 Hashel Street",
               "labels": [],
@@ -526,7 +665,11 @@
           ]
         }
       ],
+<<<<<<< HEAD
       "updatedAt": 1591084614105
+=======
+      "updatedAt": 1591084537728
+>>>>>>> origin/yuval
     },
     {
       "_id": "5c07",
@@ -808,7 +951,14 @@
       "labels": [],
       "members": [],
       "activities": [],
-      "cardLists": []
+      "cardLists": [
+        {
+          "id": "lnNO",
+          "title": "yuval",
+          "cards": []
+        }
+      ],
+      "updatedAt": 1591040025871
     },
     {
       "_id": "r4by",

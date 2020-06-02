@@ -21,12 +21,15 @@
     }
 
     & .main-links {
-        // font-size: 1.6rem;
         width: 350px;
         color: $clr7;
-        // margin: 0px;
         text-align: center;
         font-size: 1.8rem;
+
+        & a {
+            display: flex;
+            justify-content: center;
+        }
 
         // align-items: center;
         &.right-links {
@@ -67,7 +70,7 @@
 
     & .logo {
         display: flex;
-        background-color: red;
+        // background-color: red;
 
         & img {
             line-height: 0em;
