@@ -49,13 +49,9 @@ export class AddCheckList extends Component {
     }
     render() {
         return (
-<<<<<<< HEAD
             <input placeholder="CheckList Title"
                 onBlur={(e) => { this.onBlur(e) }}
                 onKeyDown={(e) => { this.handleKeyDown(e) }} />
-=======
-            <input placeholder="CheckList Title" className="cheaklist-name" onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
->>>>>>> origin/yuval
         )
     }
 }

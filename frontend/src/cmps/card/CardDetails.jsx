@@ -131,7 +131,7 @@ export class CardDetails extends Component {
                             </div>}
                             {this.state.addTo === 'check' && <AddCheckList setActivites={this.props.setActivites} clearAddTo={clearAddTo} card={card} updateBoard={updateBoard} board={board} />}
                             <div>
-                                <div className="card-title">Activity</div>
+                                <div className="card-title">Comments</div>
                                 <AddComment setActivites={this.props.setActivites} card={card} updateBoard={updateBoard} board={board} />
                                 {card.comments && <CardComments card={card} updateBoard={updateBoard} board={board} />}
                             </div>
@@ -159,25 +159,14 @@ export class CardDetails extends Component {
                             </div>}
 
                             <div className="card-title">ACTIONS</div>
-<<<<<<< HEAD
-                            <button onClick={() => this.addTo('members')}>Move</button>
+                            {/* <button onClick={() => this.addTo('members')}>Move</button>
                             <button onClick={() => this.addTo('labels')}>Copy</button>
+                            <button onClick={() => this.addTo('date')}>Archive</button> */}
                             <button onClick={() => this.addTo('check')}>Share</button>
                             <ShareCard card={card} />
-                            <button onClick={() => this.addTo('date')}>Archive</button>
                             {this.state.addTo === 'members' && <AddMembers setActivites={this.props.setActivites} clearAddTo={this.clearAddTo} boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'labels' && <AddLabels setActivites={this.props.setActivites} clearAddTo={this.clearAddTo} cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
                             {this.state.addTo === 'date' && <AddDueTime setActivites={this.props.setActivites} clearAddTo={this.clearAddTo} card={card} board={board} updateBoard={updateBoard} />}
-=======
-                            {/* <button onClick={() => this.addTo('members')}>Move</button>
-                            <button onClick={() => this.addTo('labels')}>Copy</button> */}
-                            <button onClick={() => this.addTo('share')}>Share</button>
-                            {this.state.isShare && <ShareCard card={card} />}
-                            {/* <button onClick={() => this.addTo('date')}>Archive</button> */}
-                            {this.state.addTo === 'members' && <AddMembers clearAddTo={this.clearAddTo} boardUsers={board.members} cardMembers={card.cardMembers} board={board} updateBoard={updateBoard} />}
-                            {this.state.addTo === 'labels' && <AddLabels clearAddTo={this.clearAddTo} cardLabels={card.labels} board={board} updateBoard={updateBoard} />}
-                            {this.state.addTo === 'date' && <AddDueTime clearAddTo={this.clearAddTo} card={card} board={board} updateBoard={updateBoard} />}
->>>>>>> origin/yuval
                         </aside>
                     </div>
                 </section>
