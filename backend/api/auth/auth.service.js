@@ -4,25 +4,25 @@ const logger = require('../../services/logger.service')
 
 const saltRounds = 10
 
-async function login(email, password) {
-    logger.debug(`auth.service - login with email: ${email}`)
-    if (!email || !password) return Promise.reject('email and password are required!')
+async function login(username, password) {   
+    logger.debug(`auth.service - login with username: ${username    }`)
+    if (!username || !password) return Promise.reject('username and password are required!')
 
-    const user = await userService.getByEmail(email)
-    if (!user) return Promise.reject('Invalid email or password')
+    const user = await userService.getByUsername(username)
+    if (!user) return Promise.reject('Invalid username or password')
     const match = await bcrypt.compare(password, user.password)
-    if (!match) return Promise.reject('Invalid email or password')
+    if (!match) return Promise.reject('Invalid username or password')
 
     delete user.password;
     return user;
 }
 
-async function signup(email, password, username) {
-    logger.debug(`auth.service - signup with email: ${email}, username: ${username}`)
-    if (!email || !password || !username) return Promise.reject('email, username and password are required!')
+async function signup(fullName, password, username,phone,imgUrl) {
+    logger.debug(`auth.service - signup with full name: ${fullName}, username: ${username}`)
+    if (!fullName || !password || !username) return Promise.reject('full name, username and password are required!')
 
     const hash = await bcrypt.hash(password, saltRounds)
-    return userService.add({email, password: hash, username})
+    return userService.add({fullName, password: hash, username,phone,imgUrl})
 }
 
 module.exports = {

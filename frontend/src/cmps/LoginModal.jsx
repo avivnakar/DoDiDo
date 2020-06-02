@@ -15,12 +15,12 @@ class _LoginModal extends Component {
     }
     onLogin = (ev) => {
         const credentials = {
-            username: ev.target.password.value,
-            password: ev.target.username.value
+            username: ev.target.username.value,
+            password: ev.target.password.value
         }
         ev.preventDefault();
         ev.stopPropagation();
-        login(credentials)
+        this.props.login(credentials)
     }
     render() {
         const { toggleShow, onLogin } = this
@@ -39,8 +39,8 @@ class _LoginModal extends Component {
                         {<input type={isShown ? 'text' : 'password'} name="password" placeholder="Password" required />}
                     </fieldset></li>
                 </ul>
-                <input type="submit" hidden/>
-                            </form>
+                <input type="submit" hidden />
+            </form>
         </section>
     }
 

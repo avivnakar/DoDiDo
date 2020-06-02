@@ -174,7 +174,7 @@ class _BoardDetails extends Component {
                                         {...destination && destination.droppableId === list.id ? drag : {}}
                                         {...listProps} styleCardDrag={this.state.style} 
                                         setActivites={this.setActivites} />)}
-                                    <AddList board={board} updateBoard={this.props.updateBoard} />
+                                    <AddList board={board} setActivites={this.setActivites} updateBoard={this.props.updateBoard} />
                                     <div style={div}>
                                         {div && <CardMenu {...cardMenuFuncs} className={window.innerWidth - div.x<window.innerWidth-div.width ? 'left' : 'right'} />}
                                     </div>

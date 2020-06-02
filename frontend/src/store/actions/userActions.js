@@ -14,7 +14,6 @@ export function login(credentials) {
     return dispatch => authService.login(credentials)
         .catch(err => {
             alert(err);
-            // return DEFAULT_USER;
         })
         .then((user) => dispatch({ type: 'SET_USER', user }));
 }

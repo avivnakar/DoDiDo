@@ -1,6 +1,7 @@
+import { authService } from "../../services/authService"
 
 const initialState = {
-    user: null
+    user: authService.setLoggedInUser()
 }
 
 export function userReducer(state = initialState, action) {

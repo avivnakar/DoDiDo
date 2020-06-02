@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoginModal } from '../pages/LoginModal'
+import { LoginModal } from './LoginModal'
 
 export function NavBar(props) {
     const { user, logout, login } = props

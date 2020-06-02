@@ -25,10 +25,10 @@ class _Profile extends Component {
                 User Name
                 <div>{user.username}</div>
             </div>
-            <div>
+            {/* <div>
                 Password
                 <div>{this.getPassword()}</div>
-            </div>
+            </div> */}
             <div>
                 Phone
                 <div>{user.phone}</div>

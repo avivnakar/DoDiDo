@@ -3,10 +3,15 @@ import { httpService } from './httpService';
 export const authService = {
     login,
     logout,
-    signup
+    signup,
+    setLoggedInUser() {
+        return JSON.parse(sessionStorage.getItem('user'));
+    }
 }
 
 async function login(userCred) {
+    console.log('authService', userCred);
+
     const user = await httpService.post('auth/login', userCred)
     return _handleLogin(user)
 }
