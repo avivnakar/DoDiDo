@@ -29,9 +29,9 @@
   "board": [
     {
       "_id": "5c09",
-      "name": "חיעכלחח",
+      "name": "Jewelry",
       "desc": "this board is board",
-      "background": "basic.jpg",
+      "background": "94.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -79,58 +79,109 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "vUOW",
-          "title": "bdfghdgf",
+          "id": "wjgm",
+          "title": "Customer Notes",
           "cards": [
             {
-              "id": "ZhIB",
-              "title": "cxvbcv",
-              "labels": [],
+              "id": "1Scv",
+              "title": "Here is my frs 3d modal",
+              "labels": [
+                {
+                  "id": "c0002",
+                  "title": null,
+                  "color": "orange"
+                }
+              ],
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
                 "imgUrl": "././img/troll.jpg"
               },
               "cardMembers": [],
-              "desc": null,
-              "dueDate": 1589354475424,
-              "checkLists": [],
-              "attachments": [
-                "http://res.cloudinary.com/rondeliahu/image/upload/v1590908869/knjqvccbhpipomihiggt.png"
+              "desc": "Ring 3D modal",
+              "dueDate": null,
+              "checkLists": [
+                {
+                  "id": "9FKM",
+                  "title": "Add to the modal",
+                  "todos": [
+                    {
+                      "id": "iru1",
+                      "title": "change ring color",
+                      "isDone": true
+                    },
+                    {
+                      "id": "0BrO",
+                      "title": "add more daimonds",
+                      "isDone": false
+                    },
+                    {
+                      "id": "rzff",
+                      "title": "change to blue daimond",
+                      "isDone": false
+                    }
+                  ]
+                },
+                {
+                  "id": "h2Ro",
+                  "title": "yuval",
+                  "todos": [
+                    {
+                      "id": "YiV0",
+                      "title": "yuval",
+                      "isDone": false
+                    },
+                    {
+                      "id": "BPu9",
+                      "title": "yuval",
+                      "isDone": false
+                    }
+                  ]
+                }
               ],
-              "comments": [],
-              "background": "#7bdcb5"
+              "attachments": [
+                "https://res.cloudinary.com/rondeliahu/image/upload/v1590930367/d9htdsi0excyqb2nc2pf.jpg"
+              ],
+              "comments": [
+                {
+                  "id": "18kk",
+                  "text": "look nice ",
+                  "createdAt": 1590930618900,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ]
             },
             {
-              "id": "YT18",
-              "title": "zxxzxczx",
+              "id": "uSaQ",
+              "title": "important notes",
               "labels": [
                 {
                   "id": "c0001",
                   "title": null,
                   "color": "red"
-                },
-                {
-                  "id": "c0002",
-                  "title": null,
-                  "color": "orange"
-                },
-                {
-                  "id": "c0003",
-                  "title": null,
-                  "color": "green"
-                },
-                {
-                  "id": "Bi2d",
-                  "title": null,
-                  "color": "#ff0080"
-                },
-                {
-                  "id": "c0004",
-                  "title": null,
-                  "color": "blue"
                 }
               ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": ".",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#e57373"
+            },
+            {
+              "id": "YuXB",
+              "title": "ideas",
+              "labels": [],
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
@@ -148,39 +199,39 @@
                   "imgUrl": "adf.png"
                 }
               ],
-              "desc": "גכעדגכעדגכ",
-              "dueDate": 1590753191978,
-              "checkLists": [
-                {
-                  "id": "KMaF",
-                  "title": "xczxczxczx",
-                  "todos": [
-                    {
-                      "id": "Wx0T",
-                      "title": "zxczxc",
-                      "isDone": false
-                    },
-                    {
-                      "id": "Z6D4",
-                      "title": "zxcxcx",
-                      "isDone": true
-                    },
-                    {
-                      "id": "ckxj",
-                      "title": "zxcxzc",
-                      "isDone": false
-                    }
-                  ]
-                }
-              ],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "id": "LGK2",
+          "title": "Design",
+          "cards": [
+            {
+              "id": "FuWD",
+              "title": "Final Product",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "dddd",
+              "dueDate": null,
+              "checkLists": [],
               "attachments": [
-                "http://res.cloudinary.com/rondeliahu/image/upload/v1590908946/wewii5sykkppfvwlyxpt.png"
+                "https://res.cloudinary.com/rondeliahu/image/upload/v1590931276/gcrsmzucqier8wextnps.webp"
               ],
               "comments": [
                 {
-                  "id": "WcWB",
-                  "text": "עגדכ",
-                  "createdAt": 1590909633195,
+                  "id": "rnVt",
+                  "text": "ddd",
+                  "createdAt": 1591019741892,
                   "createdBy": {
                     "_id": "u101",
                     "fullName": "Gal Rondel",
@@ -188,21 +239,79 @@
                   }
                 },
                 {
-                  "id": "onjk",
-                  "text": "כדגשכדגכ",
-                  "createdAt": 1590909631383,
+                  "id": "f0PE",
+                  "text": "dddd",
+                  "createdAt": 1591019739597,
                   "createdBy": {
                     "_id": "u101",
                     "fullName": "Gal Rondel",
                     "imgUrl": "adf.png"
                   }
                 }
+              ]
+            },
+            {
+              "id": "ZdTN",
+              "title": "Hi this is the sketch",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": 1594300007001,
+              "checkLists": [],
+              "attachments": [
+                "https://res.cloudinary.com/rondeliahu/image/upload/v1590930367/d9htdsi0excyqb2nc2pf.jpg"
               ],
-              "background": "#ffffff"
+              "comments": []
+            },
+            {
+              "id": "oICY",
+              "title": "sec 3d modal",
+              "labels": [
+                {
+                  "id": "c0002",
+                  "title": null,
+                  "color": "orange"
+                },
+                {
+                  "id": "c0004",
+                  "title": null,
+                  "color": "blue"
+                },
+                {
+                  "id": "Bi2d",
+                  "title": null,
+                  "color": "#ff0080"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u401",
+                  "fullName": "Aviv Nakar",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": "sec attempt for the ring",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [
+                "https://res.cloudinary.com/rondeliahu/image/upload/v1590930697/mkbj9qxh8b0qbzim4okm.jpg"
+              ],
+              "comments": []
             }
           ]
         },
         {
+<<<<<<< HEAD
           "id": "FG9r",
           "title": "hfgdgf",
           "cards": []
@@ -210,10 +319,47 @@
         {
           "id": "JC9l",
           "title": "dfsdfdfsdfd",
+=======
+          "id": "sdKF",
+          "title": "3D modal",
+          "cards": []
+        },
+        {
+          "id": "F3LB",
+          "title": "Materials",
+>>>>>>> origin/master
           "cards": [
             {
-              "id": "fdMP",
-              "title": "גכעגדע",
+              "id": "zU4M",
+              "title": "Gold",
+              "labels": [
+                {
+                  "id": "c0003",
+                  "title": null,
+                  "color": "green"
+                },
+                {
+                  "id": "c0002",
+                  "title": null,
+                  "color": "orange"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#ffd54f"
+            },
+            {
+              "id": "6xUL",
+              "title": "Silver",
               "labels": [],
               "createdBy": {
                 "_id": "u101",
@@ -224,14 +370,13 @@
               "desc": null,
               "dueDate": null,
               "checkLists": [],
-              "attachments": [
-                "http://res.cloudinary.com/rondeliahu/image/upload/v1590909616/pdf4urqttwmvan61ez1o.png"
-              ],
-              "comments": []
+              "attachments": [],
+              "comments": [],
+              "background": "#d9d9d9"
             },
             {
-              "id": "o8n9",
-              "title": "fgsfdf",
+              "id": "RsOl",
+              "title": "Black Silver",
               "labels": [],
               "createdBy": {
                 "_id": "u101",
@@ -239,26 +384,489 @@
                 "imgUrl": "././img/troll.jpg"
               },
               "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#c5cae9"
+            },
+            {
+              "id": "JWQT",
+              "title": "Daimond",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#b2ebf2"
+            },
+            {
+              "id": "65up",
+              "title": "Wood",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#ffe0b2"
+            },
+            {
+              "id": "GmbJ",
+              "title": "Blue Daimond",
+              "labels": [
+                {
+                  "id": "c0001",
+                  "title": null,
+                  "color": "red"
+                }
+              ],
+<<<<<<< HEAD
+              "comments": []
+            },
+            {
+              "id": "o8n9",
+              "title": "fgsfdf",
+              "labels": [],
+=======
+>>>>>>> origin/master
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+<<<<<<< HEAD
+              "cardMembers": [],
               "desc": "gsfdgfd",
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
               "comments": []
+=======
+              "cardMembers": [
+                {
+                  "_id": "u101",
+                  "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#2196f3"
+>>>>>>> origin/master
             }
           ]
         },
         {
+<<<<<<< HEAD
           "id": "WjVQ",
           "title": "asdsadsadsa",
+=======
+          "id": "73z7",
+          "title": "Done",
           "cards": []
         },
         {
-          "id": "fQku",
-          "title": "dfsfsdfdf",
+          "id": "obcQ",
+          "title": "Delivery",
+          "cards": []
+        },
+        {
+          "id": "3sNJ",
+          "title": "l;lk'",
+          "cards": [
+            {
+              "id": "LnhM",
+              "title": "'kl;'l;;l",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
+            },
+            {
+              "id": "zdJR",
+              "title": "90 Hashel Street",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [
+                {
+                  "_id": "u401",
+                  "fullName": "Aviv Nakar",
+                  "imgUrl": "adf.png"
+                }
+              ],
+              "desc": null,
+              "dueDate": 1595596960745,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#fff9c4"
+            }
+          ]
+        }
+      ],
+      "updatedAt": 1591019741893
+    },
+    {
+      "_id": "5c07",
+      "name": "Ringly4Me",
+      "desc": "this board is board",
+      "background": "99.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": [
+        {
+          "id": "Xt6I",
+          "title": "Card forcard",
           "cards": []
         }
       ],
+      "updatedAt": 1590935081752
+    },
+    {
+      "_id": "5c04",
+      "name": "Castle for me",
+      "desc": "this board is board",
+      "background": "88.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": [],
+      "updatedAt": 1590935139686
+    },
+    {
+      "_id": "1Est",
+      "name": "Castle for me",
+      "desc": "this board is board",
+      "background": "94.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "6uG0",
+      "name": "test",
+      "desc": "",
+      "background": "97.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "Xq1q",
+      "name": "toast for me ",
+      "desc": "",
+      "background": "93.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "kz5T",
+      "name": "gsl t",
+      "desc": "",
+      "background": "98.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "WHQZ",
+      "name": "driver test",
+      "desc": "",
+      "background": "92.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "YhhT",
+      "name": "yuval",
+      "desc": "",
+      "background": "100.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "Qai9",
+      "name": "ben",
+      "desc": "",
+      "background": "95.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "vOBa",
+      "name": "yuval",
+      "desc": "",
+      "background": "86.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": [
+        {
+          "id": "fFca",
+          "title": "dfdfd",
+>>>>>>> origin/master
+          "cards": []
+        }
+      ],
+      "updatedAt": 1590937146298
+    },
+    {
+      "_id": "hmgF",
+      "name": "gal",
+      "desc": "",
+      "background": "82.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "BXAC",
+      "name": "ffff",
+      "desc": "",
+      "background": "94.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "zvQb",
+      "name": "fff",
+      "desc": "",
+      "background": "96.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "lhOe",
+      "name": "yuval",
+      "desc": "",
+      "background": "99.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": [
+        {
+          "id": "1V1U",
+          "title": "yuval",
+          "cards": [
+            {
+              "id": "KE40",
+              "title": "yuval",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": "yuval",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [
+                "https://res.cloudinary.com/rondeliahu/image/upload/v1591002008/wdtt77nj3ej33mwngzqn.jpg"
+              ],
+              "comments": [
+                {
+                  "id": "DCIo",
+                  "text": "ddd",
+                  "createdAt": 1591002001755,
+                  "createdBy": {
+                    "_id": "u101",
+                    "fullName": "Gal Rondel",
+                    "imgUrl": "adf.png"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "B7Lr",
+          "title": "yuval",
+          "cards": []
+        }
+      ],
+<<<<<<< HEAD
       "updatedAt": 1591015570495
+=======
+      "updatedAt": 1591002045576
+    },
+    {
+      "_id": "4E1G",
+      "name": "yuval",
+      "desc": "",
+      "background": "91.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "r4by",
+      "name": "yuvak",
+      "desc": "",
+      "background": "89.png",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "heM7",
+      "name": "טוהשך",
+      "desc": "",
+      "background": "96.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+    },
+    {
+      "_id": "EEgY",
+      "name": "yuval",
+      "desc": "",
+      "background": "83.jpg",
+      "createdBy": {
+        "_id": "u101",
+        "fullName": "Gal Rondel",
+        "imgUrl": "././img/troll.jpg"
+      },
+      "labels": [],
+      "members": [],
+      "activities": [],
+      "cardLists": []
+>>>>>>> origin/master
     }
   ]
 }

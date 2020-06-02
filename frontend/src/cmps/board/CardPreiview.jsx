@@ -2,24 +2,29 @@ import React, { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { FaRegComment, FaRegCheckSquare, FaRegUser, FaRegListAlt } from "react-icons/fa";
 // import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
-import { AiOutlineDatabase } from "react-icons/ai";
+// import { AiOutlineDatabase } from "react-icons/ai";
 import { LabelList } from '../board/LabelList.jsx';
 import { Due } from '../board/Due.jsx';
 import { FaPencilAlt } from "react-icons/fa";
-import { CardMenu } from '../card/CardMenu.jsx';
+// import { CardMenu } from '../card/CardMenu.jsx';
 import { ClickAway } from '../ClickAway.jsx';
 import { CardTitleEditable } from './CardTitleEditable.jsx';
+import { eventBus } from '../../services/eventBusService.js';
 
 export function CardPreiview(props) {
-    const { card, history/* , onCardRemove  */ } = props
+    const { card, history, onCardRemove } = props
     var [isMenuOpened, setMenuOpened] = useState(false)
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
+        const elCard = ev.target.offsetParent
+        const elBoard = elCard.offsetParent.offsetParent
         setMenuOpened(true);
+        eventBus.emit('open_card_menu', [elCard.getBoundingClientRect(), elBoard.scrollLeft, onCardRemove(card.id)])
     }
     const onCloseMenu = (ev) => {
         ev.stopPropagation();
         setMenuOpened(false);
+        eventBus.emit('close_card_menu', card)
     }
     const { background } = card
     return (
@@ -41,33 +46,41 @@ export function CardPreiview(props) {
                             >
                                 {/* <button className="del" onClick={onCardRemove(card.id)}>⨯</button> */}
                                 {card.labels.length > 0 && <div>
-                                    {card.labels && <LabelList labels={card.labels} />}
+                                    <LabelList labels={card.labels} />
                                 </div>}
                                 <div className="card-title-container flex space-between" >
                                     <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
+<<<<<<< HEAD
                                     {card.attachments && <img src={card.attachments[0]} />}
                                     <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt />
+=======
+                                    <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt style={{ pointerEvents: 'none' }} />
+>>>>>>> origin/master
                                     </span>
                                 </div>
+                                {card.attachments[0] && <div className="img-prev">
+                                    <img src={card.attachments[0]} alt={`attachment-${0}`} />
+                                </div>}
                                 <div className="card-stat">
-                                    <div className="due-time">
-                                        {card.dueDate && <span><Due dueDate={card.dueDate} /></span>}
-                                    </div>
+                                    {card.dueDate && <div className="due-time">
+                                        <span><Due dueDate={card.dueDate} /></span>
+                                    </div>}
                                     <div className="stat flex">
-                                        {card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
-                                        {card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
-                                        {card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
-                                        {card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
+                                        {card && card.desc && <div title="Description flex" className="flex align-center"><FaRegListAlt /></div>}
+                                        {card && card.cardMembers.length > 0 && <div title="Members assigned" className="flex align-center">{card.cardMembers.length}{<FaRegUser />}</div>}
+                                        {card && card.checkLists.length > 0 && <div title="Checklist items" className="flex align-center">{card.checkLists.length}{<FaRegCheckSquare />}</div>}
+                                        {card && card.comments.length > 0 && <div title="Comments items" className="flex align-center">{card.comments.length}{<FaRegComment />}</div>}
                                         {/* {card.attachments.length > 0 && <div title="Attachments" className="flex align-center">{card.attachments.length}{<AiOutlineDatabase />}</div>} */}
                                     </div>
                                 </div>
                             </article>
                         </div>
                     </div>
-                    {isMenuOpened && <CardMenu closeMenu={onCloseMenu} />}
+                    {/* {isMenuOpened && <CardMenu closeMenu={onCloseMenu} />} */}
                 </div>
             )}
         </Draggable>
+
     )
 }
 

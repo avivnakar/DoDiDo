@@ -14,6 +14,8 @@ $list-title: #172b4d;
 $list-bgc: #ebecf0;
 $board-container: #4f3a6573;
 $hover: rgba(9, 30, 66, 0.04);
+$clr20:rgb(87, 79, 125)d;
+$clr21: #dff0ea81;
 
 //CardDetails
 
@@ -26,5 +28,14 @@ $narrow-breakpoint: 720px;
 $normal-breakpoint: 960px;
 
 //font family
-$mainFont: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+$mainFont: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Roboto",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+sans-serif;

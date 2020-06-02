@@ -47,7 +47,9 @@ export class AddTodo extends Component {
     getAddTodo() {
         if (!this.state.isEdit) {
             return <div onClick={() => this.onEdit()} className="add-list-btn add-todo-btn">Add an Item</div>
-        } else return <input placeholder="Add an Item" onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
+        } else return <input placeholder="Add an Item"
+            onBlur={(e) => { this.onBlur(e) }}
+            onKeyDown={(e) => { this.handleKeyDown(e) }} />
     }
     render() {
         return (

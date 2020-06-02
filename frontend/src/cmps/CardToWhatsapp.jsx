@@ -8,7 +8,7 @@ export function CardToWhatsapp(props) {
 
 
 
-function WhatsappLink({ card, number = '972502494210' }) {
+function WhatsappLink({ card, number = '972525090552' }) {
 
     var { title, desc, checkLists, dueDate } = card
     title = `*${title}*`;

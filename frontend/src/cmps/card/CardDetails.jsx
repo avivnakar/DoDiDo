@@ -12,7 +12,7 @@ import { AddDueTime } from './AddDueTime.jsx';
 import { LabelList } from '../board/LabelList.jsx';
 import { MiniUser } from '../MiniUser';
 import { CardToWhatsapp } from '../CardToWhatsapp.jsx';
-import { TwitterPicker } from 'react-color'
+import { SwatchesPicker } from 'react-color';
 import { ShareCard } from './ShareCard.jsx';
 import { utilService } from '../../services/utilService.js';
 
@@ -31,7 +31,7 @@ export class CardDetails extends Component {
         const { card } = this.props
         utilService.uploadImg(ev)
             .then(url => {
-                if(card.attachments[0]) card.attachments[0]= url
+                if (card.attachments[0]) card.attachments[0] = url
                 else card.attachments.push(url)
                 this.props.updateBoard(this.props.board)
             })
@@ -104,7 +104,7 @@ export class CardDetails extends Component {
                                     {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 </div>}
                             </div>
-                            <img src={card.attachments[0]}/>
+                            <img src={card.attachments[0]} alt={`attachment-${0}`} />
                             <div className="description-container">
                                 <div className="card-title">Description</div>
                                 <CardDesc card={card} updateBoard={updateBoard} board={board} />
@@ -130,11 +130,17 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('labels')}>Labels</button>
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
-                            <label for="imgUpload" onClick={() => this.addTo('cover')}>Images</label>
-                            <input name="imgUpload" id="imgUpload" type="file" onChange={(ev) => this.addImage(ev)} hidden />
+                            <label className="button" htmlFor="imgUpload" /* onClick={() => this.addTo('cover')} */>Images</label>
+                            <input name="imgUpload"
+                                id="imgUpload"
+                                type="file"
+                                onChange={(ev) => this.addImage(ev)}
+                                hidden />
                             <button onClick={() => this.addTo('bg')}>Background Color</button>
                             {isOpenBgColor && <div className="bg-modal">
-                                <TwitterPicker
+
+                                <SwatchesPicker
+                                    className="color-picker"
                                     color={this.state.background}
                                     onChangeComplete={this.handleChangeComplete}
                                 />

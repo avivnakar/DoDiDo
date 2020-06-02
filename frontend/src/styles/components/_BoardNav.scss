@@ -10,49 +10,65 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #cacaca98;
+    background-color: #000000;
     height: 2.5rem;
-    // z-index: 3;
+    color: $clr7;
     z-index: 1;
     opacity: 0.8;
+
     input:focus {
         width: 100%;
     }
+
     & .main-links {
         // font-size: 1.6rem;
         width: 350px;
-        color: rgba(0, 0, 0, 0.39);
+        color: $clr7;
         // margin: 0px;
         text-align: center;
         font-size: 1.8rem;
+
         // align-items: center;
         &.right-links {
             justify-content: flex-end;
             margin-right: 20px;
         }
+
         & span {
             background-color: $clr4;
         }
+
         & svg {
             background-color: $clr4;
             border-radius: 5px;
             cursor: pointer;
             padding: 12%;
         }
+
         & li {
             margin-left: 10px;
+
             @include a-clear {
                 &.active {
                     color: $clr3;
                 }
             }
+
             &:hover {
                 color: $clr7;
             }
         }
+
+        & svg {
+            color: $clr7;
+
+        }
     }
+
     & .logo {
         display: flex;
+        background-color: red;
+
         & img {
             line-height: 0em;
             padding: 0px;

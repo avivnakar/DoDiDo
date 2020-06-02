@@ -34,7 +34,10 @@ export class BoardTitle extends Component {
         const { board } = this.props
         if (!this.state.isEdit) {
             return <div className="board-name" onClick={() => this.onEdit()}>{board.name}</div>
-        } else return <input placeholder={board.name} onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
+        } else return <input placeholder={board.name}
+            defaultValue={board.name}
+            onBlur={(e) => { this.onBlur(e) }}
+            onKeyDown={(e) => { this.handleKeyDown(e) }} />
     }
     render() {
         return (

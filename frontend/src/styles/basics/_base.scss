@@ -5,14 +5,42 @@
 html {
     // font-family: montserrat;
     color: $clr2;
-    line-height: 1.5em;
     text-align: center;
+    @include for-mobile-layout {
+        font-size: 12px;
+    }
+
+    @include for-narrow-layout {
+        font-size: 14px;
+    }
+
+    @include for-normal-layout {
+        font-size: 16px;
+    }
 }
 
 body {
     margin: 0;
     background-color: $clr6;
-    overflow-y: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        margin-bottom: 20px;
+        height: 10px;
+        width: 6px;
+        cursor: move;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 16px solid #0000008f;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+        opacity: 0.5;
+        background-color: #0000000c;
+        // border-radius: 10px;
+    }
 }
 
 ul {
@@ -54,11 +82,13 @@ input {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
+
 input[type="text"],
 textarea {
     cursor: text;
 }
-textarea{
+
+textarea {
     resize: none;
     font: inherit;
     line-height: inherit;
@@ -67,6 +97,11 @@ textarea{
     overflow-wrap: break-word;
     white-space: pre-wrap;
 }
+
 a {
     text-decoration: none;
+}
+button,
+input {
+    font-size: rem(13.3333px);
 }

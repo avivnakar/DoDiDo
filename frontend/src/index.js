@@ -15,4 +15,4 @@ ReactDOM.render(
 );
 
 //register before build
-serviceWorker.unregister();
+serviceWorker.register();

@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { BoardsList } from '../cmps/board/BoardsList.jsx';
 import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
-import { loadBoards } from '../store/actions/boardActions.js';
-import { Link } from 'react-router-dom';
+import { loadBoards, addBoard } from '../store/actions/boardActions.js';
 import { socketService } from '../services/socketService.js';
 
 class _Boards extends Component {
@@ -23,19 +22,18 @@ class _Boards extends Component {
         }
     }
 
-    addBoard = () => {
+    toggleBoardMenu = () => {
         this.setState(prevState => ({ isAddBoard: !prevState.isAddBoard }))
     }
 
     render() {
         return (
             <section className="list-warper">
-                <div className="list-container flex">
-                    <Link to="#" onClick={this.addBoard} className="add-board">+Create new board</Link>
-                    <BoardsList boards={this.props.boards} />
+                <div className="list-container">
+                    <BoardsList boards={this.props.boards} toggleBoardMenu={this.toggleBoardMenu} />
                 </div>
                 <div className="side-bar">
-                    {this.state.isAddBoard && <CreateBoard addBoard={this.state.isAddBoard} />}
+                    {this.state.isAddBoard && <CreateBoard toggleBoardMenu={this.toggleBoardMenu} addBoard={this.props.addBoard} />}
                 </div>
             </section>
         )
@@ -43,8 +41,6 @@ class _Boards extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
-
     return {
         boards: state.board.boards,
         user: state.user.user
@@ -56,7 +52,7 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = {
     loadBoards
-    //, addBoard
+    , addBoard
     //, updateBoards
 }
 export const Boards = connect(mapStateToProps, mapDispatchToProps)(_Boards)

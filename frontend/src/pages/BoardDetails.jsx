@@ -8,13 +8,18 @@ import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
 import { socketService } from '../services/socketService.js';
+// import { ClickAway } from '../cmps/ClickAway.jsx';
+import { CardMenu } from '../cmps/card/CardMenu.jsx';
+import { eventBus } from '../services/eventBusService.js';
 
 class _BoardDetails extends Component {
     state = {
         currCard: null,
         match: null,
         style: {},
-        drag: {}
+        drag: {},
+        div: null,
+        onCardRemove:null
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -22,6 +27,18 @@ class _BoardDetails extends Component {
             if (board.updatedAt > this.props.board.updatedAt)
                 this.props.updateBoardSync(board)
         });
+        eventBus.on('open_card_menu', ([cardBoundries, boardScroll,onCardRemove]) => {
+            const { height, left, top, width, x, y } = cardBoundries
+            const style = { height, left: left + boardScroll, top, width, x, y, position: 'absolute' }
+            console.log('style', style)
+            console.log('style.x, .width', style.x, style.width,'window', window.innerWidth,'diff', window.innerWidth - style.x,window.innerWidth-style.width)
+            this.setState({ div: style })
+            this.setState({onCardRemove});
+        })
+        eventBus.on('close_card_menu', (card) => {
+            this.setState({ div: null })
+            this.setState({onCardRemove:null});
+        })
     }
     componentDidUpdate(prevProps) {
         if (this.state.match !== this.props.match) {
@@ -66,25 +83,11 @@ class _BoardDetails extends Component {
         if (start.type === 'task') {
             this.setState({ drag: start })
             const idx = board.cardLists.findIndex(list => list.id === start.source.droppableId)
-            var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId)
-            console.log('card you dragging:', card);
+            // var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId)
             this.setState({ style: { backgroundColor: '#c7c7c7' } })
         }
     }
-    onMark = (update) => {
-        if (!update.destination) return
-        if (update.type === 'task') {
-            this.setState({ drag: update })
-            console.log(update)
-            const { board } = this.props
-            var idx = board.cardLists.findIndex(list => list.id === update.destination.droppableId)
-            var placeholderSpot = board.cardLists[idx].cards[update.destination.index]
-            console.log('to where:', placeholderSpot);
-            if (placeholderSpot) {
 
-            }
-        }
-    }
     onDragEnd = result => {
         const { board } = this.props
         const { destination, source, draggableId, type } = result;
@@ -115,15 +118,17 @@ class _BoardDetails extends Component {
 
     render() {
         const { board, card, history, updateBoard } = this.props;
-        const { drag } = this.state;
+        const { drag, div,onCardRemove } = this.state;
         const { source, destination } = drag || {};
         const listProps = { history, updateBoard, board }
+        const cardMenuFuncs={onCardRemove}
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
                 backgroundImage: `url(${bg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
+                // backgroundColor: 'pink',
                 opacity: 0.9,
                 backgroundRepeat: 'no-repeat'
             }
@@ -147,8 +152,13 @@ class _BoardDetails extends Component {
                                         {...destination && destination.droppableId === list.id ? drag : {}}
                                         {...listProps} styleCardDrag={this.state.style} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
+                                    <div style={div}>
+                                        {div && <CardMenu {...cardMenuFuncs} className={window.innerWidth - div.x<window.innerWidth-div.width ? 'left' : 'right'} />}
+                                    </div>
                                 </div>
                                 {provided.placeholder}
+                                {/* <ClickAway /> */}
+                                {/* isMenuOpened &&  <CardMenu /* closeMenu={onCloseMenu}  />*/}
                             </div>
                         )}
                     </Droppable>

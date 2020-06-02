@@ -12,7 +12,6 @@ import { ListMenu } from './ListMenu.jsx';
 function _ListPreiview(props) {
     var [isMenuOpened, setMenuOpened] = useState(false)
     var [isLeft, setDirection] = useState(false)
-    // var [isAddingCard, toggleAddCard] = useState(false)
     const { list, board, updateBoard, removeCard } = props
     const onCardRemove = (cardId) => (ev) => {
         ev.stopPropagation();
@@ -47,8 +46,11 @@ function _ListPreiview(props) {
                                 {...provided.dragHandleProps}>
                                 <ListTitle updateBoard={updateBoard} list={list} board={board} />
                                 <div className="list-menu-btn" onClick={onOpenMenu}>
-                                    <Link to="#" style={{ content: "pop" }}><FaEllipsisH style={{ pointerEvents: 'none' }} /></Link>
-                                    {isMenuOpened && <ListMenu side={isLeft ? 'left' : 'right'} closeMenu={onCloseMenu} onListRemove={onListRemove} />}
+                                    <Link to="#" style={{ content: "pop" }}
+                                    ><FaEllipsisH style={{ pointerEvents: 'none' }} /></Link>
+                                    {isMenuOpened && <ListMenu side={isLeft ? 'left' : 'right'}
+                                        closeMenu={onCloseMenu}
+                                        onListRemove={onListRemove} />}
                                 </div>
                             </div>
                             <Droppable droppableId={list.id} type="task">
@@ -59,11 +61,15 @@ function _ListPreiview(props) {
                                     >
                                         <div className="list-cards">
                                             {list.cards && list.cards.map((card, index) => <CardPreiview
-                                                index={index} key={card.id} card={card} getCurrCard={props.getCurrCard}
-                                                onCardRemove={onCardRemove} history={props.history}
+                                                index={index}
+                                                key={card.id}
+                                                card={card}
+                                                getCurrCard={props.getCurrCard}
+                                                onCardRemove={onCardRemove}
+                                                history={props.history}
                                             />)}
+                                            {provided.placeholder}
                                         </div>
-                                        {provided.placeholder}
                                         <AddCard updateBoard={updateBoard} list={list} board={board} />
                                     </div>
                                 )}

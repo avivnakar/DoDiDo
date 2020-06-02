@@ -1,7 +1,8 @@
 const initialState = {
     boards: [],
     currBoard: null,
-    currCard:null
+    currCard: null,
+    cardMenuOpen: false
 }
 //consts in the reducer 
 export function boardReducer(state = initialState, action) {
@@ -30,6 +31,8 @@ export function boardReducer(state = initialState, action) {
             };
         case 'SET_BOARDS':
             return { ...state, boards: action.boards };
+        case 'TOGGLE_CARD_MENU':
+            return { ...state, cardMenuOpen: !state.cardMenuOpen }
         default:
             return state
 
