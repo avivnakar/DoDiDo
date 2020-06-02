@@ -311,15 +311,6 @@
           ]
         },
         {
-<<<<<<< HEAD
-          "id": "FG9r",
-          "title": "hfgdgf",
-          "cards": []
-        },
-        {
-          "id": "JC9l",
-          "title": "dfsdfdfsdfd",
-=======
           "id": "sdKF",
           "title": "3D modal",
           "cards": []
@@ -327,7 +318,6 @@
         {
           "id": "F3LB",
           "title": "Materials",
->>>>>>> origin/master
           "cards": [
             {
               "id": "zU4M",
@@ -435,28 +425,11 @@
                   "color": "red"
                 }
               ],
-<<<<<<< HEAD
-              "comments": []
-            },
-            {
-              "id": "o8n9",
-              "title": "fgsfdf",
-              "labels": [],
-=======
->>>>>>> origin/master
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
                 "imgUrl": "././img/troll.jpg"
               },
-<<<<<<< HEAD
-              "cardMembers": [],
-              "desc": "gsfdgfd",
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": []
-=======
               "cardMembers": [
                 {
                   "_id": "u101",
@@ -470,15 +443,10 @@
               "attachments": [],
               "comments": [],
               "background": "#2196f3"
->>>>>>> origin/master
             }
           ]
         },
         {
-<<<<<<< HEAD
-          "id": "WjVQ",
-          "title": "asdsadsadsa",
-=======
           "id": "73z7",
           "title": "Done",
           "cards": []
@@ -696,7 +664,6 @@
         {
           "id": "fFca",
           "title": "dfdfd",
->>>>>>> origin/master
           "cards": []
         }
       ],
@@ -802,9 +769,6 @@
           "cards": []
         }
       ],
-<<<<<<< HEAD
-      "updatedAt": 1591015570495
-=======
       "updatedAt": 1591002045576
     },
     {
@@ -866,7 +830,6 @@
       "members": [],
       "activities": [],
       "cardLists": []
->>>>>>> origin/master
     }
   ]
 }

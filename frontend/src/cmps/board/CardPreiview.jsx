@@ -50,12 +50,7 @@ export function CardPreiview(props) {
                                 </div>}
                                 <div className="card-title-container flex space-between" >
                                     <CardTitleEditable editMode={isMenuOpened} txt={card.title} />
-<<<<<<< HEAD
-                                    {card.attachments && <img src={card.attachments[0]} />}
-                                    <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt />
-=======
                                     <span className="edit-icon" onClick={onOpenMenu}><FaPencilAlt style={{ pointerEvents: 'none' }} />
->>>>>>> origin/master
                                     </span>
                                 </div>
                                 {card.attachments[0] && <div className="img-prev">
