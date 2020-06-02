@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { LoginModal } from '../pages/LoginModal'
 
 export function NavBar(props) {
     const { user, logout, login } = props
+    var [modalIsOpen, toggleModal] = useState(false)
     return (
         <nav className="nav-container flex">
             <div className="logo">
@@ -10,11 +12,11 @@ export function NavBar(props) {
             </div>
             <div className="pages">
                 <ul className="flex space-between">
-                    {user && <>
+                    {user ? <>
                         <li><img src={user.imgUrl} alt={user.username} /></li>
                         <li>Hi {user.fullName}</li>
-                    </>}
-                    <li className="login" onClick={user ? logout : login} >{user ? 'Logout' : 'Login'}</li>
+                    </> : modalIsOpen ? <LoginModal /> : ''}
+                    <li className="login" onClick={user ? logout : ()=>toggleModal(!modalIsOpen)} >{user ? 'Logout' : 'Login'}</li>
                     {!user && <Link to="/signup"><li className="sign-up">Sign Up</li></Link>}
                 </ul>
             </div>
