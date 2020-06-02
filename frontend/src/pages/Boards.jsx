@@ -3,7 +3,6 @@ import { BoardsList } from '../cmps/board/BoardsList.jsx';
 import { CreateBoard } from '../cmps/board/CreateBoard.jsx';
 import { connect } from 'react-redux';
 import { loadBoards, addBoard } from '../store/actions/boardActions.js';
-import { Link } from 'react-router-dom';
 import { socketService } from '../services/socketService.js';
 
 class _Boards extends Component {
@@ -30,9 +29,8 @@ class _Boards extends Component {
     render() {
         return (
             <section className="list-warper">
-                <div className="list-container flex">
-                    <Link to="#" onClick={this.toggleBoardMenu} className="add-board">+Create new board</Link>
-                    <BoardsList boards={this.props.boards} />
+                <div className="list-container">
+                    <BoardsList boards={this.props.boards} toggleBoardMenu={this.toggleBoardMenu} />
                 </div>
                 <div className="side-bar">
                     {this.state.isAddBoard && <CreateBoard toggleBoardMenu={this.toggleBoardMenu} addBoard={this.props.addBoard} />}

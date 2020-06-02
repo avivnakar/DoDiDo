@@ -15,7 +15,7 @@ function _ListPreiview(props) {
     // var [isAddingCard, toggleAddCard] = useState(false)
     const { list, board, updateBoard, removeCard, history, getCurrCard, source, destination } = props
     const onCardRemove = (cardId) => (ev) => {
-        ev.stopPropagation();
+        ev&&ev.stopPropagation();
         removeCard(board, list, cardId)
     }
     const onListRemove = (ev) => {
