@@ -102,6 +102,11 @@
             height: 100px;
         }
 
+        & img {
+            margin-top: rem(20px);
+            width: 50%;
+        }
+
         & textarea {
             all: unset;
             width: 100%;
@@ -122,7 +127,7 @@
         line-height: rem(20px);
         color: #172b4d;
         // background-color: yellow;
-        font-weight: 300;
+        font-weight: 400;
         margin-bottom: rem(15px);
         margin-top: rem(30px);
     }
@@ -146,14 +151,16 @@
 
     .new-comm {
         width: 100%;
-        margin: 0px;
+        // padding: 5px;
+        // padding-left: 3px;
+        color: red;
         font-family: OpenSans-reg;
-        background-color: rgba(25, 25, 26, 0.192);
+        background-color: rgba(25, 25, 26, 0.068);
         border: 1px solid white;
 
         &::placeholder {
             font-family: OpenSans-reg;
-            color: #fdfdfda4;
+            color: red;
             font-size: 0.9rem;
         }
     }
@@ -177,6 +184,7 @@
                     color: red;
                 }
             }
+
         }
 
         .mark-cube {
@@ -238,5 +246,16 @@
         &::placeholder {
             color: black;
         }
+    }
+}
+
+.cheaklist-name {
+    margin-top: rem(10px);
+    margin-bottom: rem(10px);
+    width: 100%;
+
+    &::placeholder {
+        color: red;
+
     }
 }

@@ -79,8 +79,8 @@
       "activities": [],
       "cardLists": [
         {
-          "id": "wjgm",
-          "title": "Customer Notes",
+          "id": "LGK2",
+          "title": "Design",
           "cards": [
             {
               "id": "1Scv",
@@ -137,6 +137,11 @@
                       "isDone": false
                     }
                   ]
+                },
+                {
+                  "id": "ZkpV",
+                  "title": "sdsd",
+                  "todos": []
                 }
               ],
               "attachments": [
@@ -156,8 +161,8 @@
               ]
             },
             {
-              "id": "uSaQ",
-              "title": "important notes",
+              "id": "GmbJ",
+              "title": "Blue Daimond",
               "labels": [
                 {
                   "id": "c0001",
@@ -170,32 +175,10 @@
                 "fullName": "Gal Rondel",
                 "imgUrl": "././img/troll.jpg"
               },
-              "cardMembers": [],
-              "desc": ".",
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#e57373"
-            },
-            {
-              "id": "YuXB",
-              "title": "ideas",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
               "cardMembers": [
                 {
                   "_id": "u101",
                   "fullName": "Gal Rondel",
-                  "imgUrl": "adf.png"
-                },
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
                   "imgUrl": "adf.png"
                 }
               ],
@@ -203,14 +186,9 @@
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
-              "comments": []
-            }
-          ]
-        },
-        {
-          "id": "LGK2",
-          "title": "Design",
-          "cards": [
+              "comments": [],
+              "background": "#2196f3"
+            },
             {
               "id": "FuWD",
               "title": "Final Product",
@@ -311,11 +289,6 @@
           ]
         },
         {
-          "id": "sdKF",
-          "title": "3D modal",
-          "cards": []
-        },
-        {
           "id": "F3LB",
           "title": "Materials",
           "cards": [
@@ -414,10 +387,16 @@
               "attachments": [],
               "comments": [],
               "background": "#b2ebf2"
-            },
+            }
+          ]
+        },
+        {
+          "id": "wjgm",
+          "title": "Customer Notes",
+          "cards": [
             {
-              "id": "GmbJ",
-              "title": "Blue Daimond",
+              "id": "uSaQ",
+              "title": "important notes",
               "labels": [
                 {
                   "id": "c0001",
@@ -430,10 +409,32 @@
                 "fullName": "Gal Rondel",
                 "imgUrl": "././img/troll.jpg"
               },
+              "cardMembers": [],
+              "desc": ".",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#c2185b"
+            },
+            {
+              "id": "YuXB",
+              "title": "ideas",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
               "cardMembers": [
                 {
                   "_id": "u101",
                   "fullName": "Gal Rondel",
+                  "imgUrl": "adf.png"
+                },
+                {
+                  "_id": "u401",
+                  "fullName": "Aviv Nakar",
                   "imgUrl": "adf.png"
                 }
               ],
@@ -441,10 +442,14 @@
               "dueDate": null,
               "checkLists": [],
               "attachments": [],
-              "comments": [],
-              "background": "#2196f3"
+              "comments": []
             }
           ]
+        },
+        {
+          "id": "sdKF",
+          "title": "3D modal",
+          "cards": []
         },
         {
           "id": "73z7",
@@ -481,7 +486,7 @@
           ]
         }
       ],
-      "updatedAt": 1591019741893
+      "updatedAt": 1591084237203
     },
     {
       "_id": "5c07",
@@ -763,7 +768,14 @@
       "labels": [],
       "members": [],
       "activities": [],
-      "cardLists": []
+      "cardLists": [
+        {
+          "id": "lnNO",
+          "title": "yuval",
+          "cards": []
+        }
+      ],
+      "updatedAt": 1591040025871
     },
     {
       "_id": "r4by",

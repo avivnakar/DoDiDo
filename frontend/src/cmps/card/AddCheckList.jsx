@@ -40,7 +40,7 @@ export class AddCheckList extends Component {
         var text = '';
         var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-        for (let i = 0; i < length; i++) {
+        for (let i = 0;i < length;i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
 
@@ -48,7 +48,7 @@ export class AddCheckList extends Component {
     }
     render() {
         return (
-            <input placeholder="CheckList Title" onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
+            <input placeholder="CheckList Title" className="cheaklist-name" onBlur={(e) => { this.onBlur(e) }} onKeyDown={(e) => { this.handleKeyDown(e) }} />
         )
     }
 }

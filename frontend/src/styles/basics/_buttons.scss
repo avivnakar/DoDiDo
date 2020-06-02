@@ -98,7 +98,7 @@ button {
     font-family: OpenSans-semiBold, sans-serif;
     color: #ffffff;
     text-align: left;
-    background-color: green;
+    background-color: rgb(255, 0, 0);
     display: flex;
     min-width: 80px;
     cursor: pointer;
@@ -110,10 +110,13 @@ button {
 }
 
 .add-todo-btn {
+    margin-top: rem(10px);
+    margin-bottom: rem(10px);
+    margin-left: 0px;
     justify-content: center;
     width: rem(100px);
     padding: 2px;
-    margin: 0px;
+    // margin: 0px;
 }
 
 .card-stat {
