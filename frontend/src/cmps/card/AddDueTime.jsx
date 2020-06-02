@@ -10,7 +10,8 @@ export class AddDueTime extends Component {
     }
     setDue = () => {
         const { card, board, updateBoard } = this.props
-        const DATE = this.state.date.getTime()
+        const {date} = this.state
+        const DATE = date? date.getTime():null;
         card.dueDate = DATE
         updateBoard(board)
         this.props.clearAddTo()

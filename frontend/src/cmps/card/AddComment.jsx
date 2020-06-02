@@ -28,7 +28,7 @@ export class AddComment extends Component {
         var text = '';
         var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
-        for (let i = 0;i < length;i++) {
+        for (let i = 0; i < length; i++) {
             text += possible.charAt(Math.floor(Math.random() * possible.length));
         }
 
@@ -36,7 +36,10 @@ export class AddComment extends Component {
     }
     render() {
         return (
-            <input className="new-comm" placeholder="Enter new comment" onKeyDown={(e) => { this.handleKeyDown(e) }} onBlur={(e) => { this.onBlur(e) }} />
+            <input className="new-comm"
+                placeholder="Enter new comment"
+                onKeyDown={(e) => { this.handleKeyDown(e) }}
+                onBlur={(e) => { this.onBlur(e) }} />
         )
     }
 }

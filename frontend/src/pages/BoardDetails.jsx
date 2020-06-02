@@ -8,7 +8,7 @@ import { boardService } from '../services/boardService.js';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import { BoardHeadNav } from '../cmps/board/BoardHeadNav.jsx';
 import { socketService } from '../services/socketService.js';
-import { ClickAway } from '../cmps/ClickAway.jsx';
+// import { ClickAway } from '../cmps/ClickAway.jsx';
 import { CardMenu } from '../cmps/card/CardMenu.jsx';
 import { eventBus } from '../services/eventBusService.js';
 import { utilService } from '../services/utilService.js';
@@ -27,13 +27,23 @@ class _BoardDetails extends Component {
             if (board.updatedAt > this.props.board.updatedAt)
                 this.props.updateBoardSync(board)
         });
+<<<<<<< HEAD
         eventBus.on('open_card_menu', ev => {
             console.log('ev', ev)
             const { bottom, height, left, right, top, width, x, y } = ev
 
             const style = { height, left, top, width, x, y, backgroundColor: 'red', position: 'absolute' }
+=======
+        eventBus.on('open_card_menu', ([cardBoundries, boardScroll]) => {
+            const { height, left, top, width, x, y } = cardBoundries
+            const style = { height, left: left + boardScroll, top, width, x, y, position: 'absolute' }
+>>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
             console.log('style', style)
+            console.log('style.x, .width', style.x, style.width,'window', window.innerWidth,'diff', window.innerWidth - style.x,window.innerWidth-style.width)
             this.setState({ div: style })
+        })
+        eventBus.on('close_card_menu', (card) => {
+            this.setState({ div: null })
         })
     }
     componentDidUpdate(prevProps) {
@@ -180,12 +190,20 @@ class _BoardDetails extends Component {
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
                                         {...source && source.droppableId === list.id ? drag : {}}
                                         {...destination && destination.droppableId === list.id ? drag : {}}
+<<<<<<< HEAD
                                         {...listProps} styleCardDrag={this.state.style}
                                         setActivites={this.setActivites} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} setActivites={this.setActivites} />
                                     {/* <div style={div}>
                                             here will be a menu
                                         </div> */}
+=======
+                                        {...listProps} styleCardDrag={this.state.style} />)}
+                                    <AddList board={board} updateBoard={this.props.updateBoard} />
+                                    <div style={div}>
+                                        {div && <CardMenu className={window.innerWidth - div.x<window.innerWidth-div.width ? 'left' : 'right'} />}
+                                    </div>
+>>>>>>> bd79fc43c828133e9226bdf9205717e0ce5eb24b
                                 </div>
                                 {provided.placeholder}
                                 {/* <ClickAway /> */}

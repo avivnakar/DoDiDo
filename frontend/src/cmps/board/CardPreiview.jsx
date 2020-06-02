@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
 import { FaRegComment, FaRegCheckSquare, FaRegUser, FaRegListAlt } from "react-icons/fa";
 // import { FaEye, FaRegCheckSquare, FaRegClock, FaRegCommentAlt, FaRegUser,FaRegListAlt } from "react-icons/fa";
-import { AiOutlineDatabase } from "react-icons/ai";
+// import { AiOutlineDatabase } from "react-icons/ai";
 import { LabelList } from '../board/LabelList.jsx';
 import { Due } from '../board/Due.jsx';
 import { FaPencilAlt } from "react-icons/fa";
-import { CardMenu } from '../card/CardMenu.jsx';
+// import { CardMenu } from '../card/CardMenu.jsx';
 import { ClickAway } from '../ClickAway.jsx';
 import { CardTitleEditable } from './CardTitleEditable.jsx';
 import { eventBus } from '../../services/eventBusService.js';
@@ -17,21 +17,20 @@ export function CardPreiview(props) {
     const onOpenMenu = (ev) => {
         ev.stopPropagation();
         console.log(ev)
+        const elCard=ev.target.offsetParent
+        const elBoard=elCard.offsetParent.offsetParent
         console.log('page x,y', ev.pageX, ev.pageY)
-        console.log('client x,y', ev.clientX, ev.clientX)
-        console.dir(ev.target.offsetParent)
-        console.dir(ev.target.offsetParent.clientHeight)
-        console.log('bounduing rect', ev.target.offsetParent.getBoundingClientRect());
-        console.log('client rect', ev.target.offsetParent.getClientRects());
+        console.log('client x,y', ev.clientX, ev.clientY)
+        // console.dir(elCard)
+        // console.dir(elBoard)
         setMenuOpened(true);
-        const direction = (window.innerWidth - ev.clientX > 300)
-
-        eventBus.emit('open_card_menu', ev.target.offsetParent.getBoundingClientRect())
+        // const direction = (window.innerWidth - ev.clientX > 300)
+        eventBus.emit('open_card_menu', [elCard.getBoundingClientRect(),elBoard.scrollLeft])
     }
     const onCloseMenu = (ev) => {
         ev.stopPropagation();
         setMenuOpened(false);
-        eventBus.emit('close_card_menu', {});
+        eventBus.emit('close_card_menu', card)
     }
     const { background } = card
     return (
@@ -61,7 +60,7 @@ export function CardPreiview(props) {
                                     </span>
                                 </div>
                                 {card.attachments[0] && <div className="img-prev">
-                                    <img src={card.attachments[0]} />
+                                    <img src={card.attachments[0]} alt={`attachment-${0}`} />
                                 </div>}
                                 <div className="card-stat">
                                     {card.dueDate && <div className="due-time">

@@ -112,7 +112,7 @@ export class CardDetails extends Component {
                                     {card.labels && <div className="flex"><LabelList labels={card.labels} command={console.log} /></div>}
                                 </div>}
                             </div>
-                            <img src={card.attachments[0]} />
+                            <img src={card.attachments[0]} alt={`attachment-${0}`} />
                             <div className="description-container">
                                 <div className="card-title">Description</div>
                                 <CardDesc setActivites={this.props.setActivites} card={card} updateBoard={updateBoard} board={board} />
@@ -139,7 +139,11 @@ export class CardDetails extends Component {
                             <button onClick={() => this.addTo('check')}>Checklist</button>
                             <button onClick={() => this.addTo('date')}>Due Date</button>
                             <label className="button" htmlFor="imgUpload" /* onClick={() => this.addTo('cover')} */>Images</label>
-                            <input name="imgUpload" id="imgUpload" type="file" onChange={(ev) => this.addImage(ev)} hidden />
+                            <input name="imgUpload"
+                                id="imgUpload"
+                                type="file"
+                                onChange={(ev) => this.addImage(ev)}
+                                hidden />
                             <button onClick={() => this.addTo('bg')}>Background Color</button>
                             {isOpenBgColor && <div className="bg-modal">
 

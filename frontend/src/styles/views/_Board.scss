@@ -29,8 +29,7 @@
         // top: 80px;
     }
 
-    font-family: OpenSans-Bold,
-    sans-serif;
+    font-family: OpenSans-Bold, sans-serif;
     font-size: rem(14px);
     background-color: #ebecf0;
     border-radius: 3px;
@@ -61,7 +60,6 @@
     @include del-btns;
 
     &-bg {
-
         // background-color: cyan;
         .list-cards {
             -webkit-box-flex: 1;
@@ -240,7 +238,6 @@
 
         & img {
             border-radius: 5px;
-
         }
     }
 }
@@ -251,8 +248,8 @@
 }
 
 [data-rbd-placeholder-context-id="1"] {
-    background-color: rgba(255, 0, 0, 0.281);
-    flex-shrink: 1;
+    // background-color: rgba(255, 0, 0, 0.281);
+    flex:0 ,1 ,0;
 }
 
 .bg-modal {
