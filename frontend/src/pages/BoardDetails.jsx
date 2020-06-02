@@ -20,7 +20,7 @@ class _BoardDetails extends Component {
         style: {},
         drag: {},
         div: null,
-        onCardRemove:null
+        onCardRemove: null
     }
     componentDidMount() {
         this.setState({ match: this.props.match }, this.switchRoute);
@@ -28,17 +28,17 @@ class _BoardDetails extends Component {
             if (board.updatedAt > this.props.board.updatedAt)
                 this.props.updateBoardSync(board)
         });
-        eventBus.on('open_card_menu', ([cardBoundries, boardScroll,onCardRemove]) => {
+        eventBus.on('open_card_menu', ([cardBoundries, boardScroll, onCardRemove]) => {
             const { height, left, top, width, x, y } = cardBoundries
             const style = { height, left: left + boardScroll, top, width, x, y, position: 'absolute' }
             console.log('style', style)
-            console.log('style.x, .width', style.x, style.width,'window', window.innerWidth,'diff', window.innerWidth - style.x,window.innerWidth-style.width)
+            console.log('style.x, .width', style.x, style.width, 'window', window.innerWidth, 'diff', window.innerWidth - style.x, window.innerWidth - style.width)
             this.setState({ div: style })
-            this.setState({onCardRemove});
+            this.setState({ onCardRemove });
         })
         eventBus.on('close_card_menu', (card) => {
             this.setState({ div: null })
-            this.setState({onCardRemove:null});
+            this.setState({ onCardRemove: null });
         })
     }
     componentDidUpdate(prevProps) {
@@ -87,8 +87,8 @@ class _BoardDetails extends Component {
                 text,
                 donetAte: Date.now()
             }
-            console.log(activity.text);  
-            board.activities.push(activity)
+            console.log(activity.text);
+            board.activities.unshift(activity)
             updateBoard(board)
         }
 
@@ -139,10 +139,10 @@ class _BoardDetails extends Component {
 
     render() {
         const { board, card, history, updateBoard } = this.props;
-        const { drag, div,onCardRemove } = this.state;
+        const { drag, div, onCardRemove } = this.state;
         const { source, destination } = drag || {};
         const listProps = { history, updateBoard, board }
-        const cardMenuFuncs={onCardRemove}
+        const cardMenuFuncs = { onCardRemove }
         if (board) {
             var bg = require('../assets/imgs/' + board.background.toString())
             var styleLi = {
@@ -165,18 +165,18 @@ class _BoardDetails extends Component {
                                     updateBoard={this.props.updateBoard} history={this.props.history}
                                     setActivites={this.setActivites} />}
                                 <div className="board-head">
-                                    <BoardHeadNav board={board} updateBoard={updateBoard} setActivites={this.setActivites}/>
+                                    <BoardHeadNav board={board} updateBoard={updateBoard} setActivites={this.setActivites} />
                                 </div>
                                 <div className="board" style={styleLi}>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
                                         {...source && source.droppableId === list.id ? drag : {}}
                                         {...destination && destination.droppableId === list.id ? drag : {}}
-                                        {...listProps} styleCardDrag={this.state.style} 
+                                        {...listProps} styleCardDrag={this.state.style}
                                         setActivites={this.setActivites} />)}
-                                    <AddList board={board} updateBoard={this.props.updateBoard} />
+                                    <AddList board={board} updateBoard={this.props.updateBoard} setActivites={this.setActivites} />
                                     <div style={div}>
-                                        {div && <CardMenu {...cardMenuFuncs} className={window.innerWidth - div.x<window.innerWidth-div.width ? 'left' : 'right'} />}
+                                        {div && <CardMenu {...cardMenuFuncs} className={window.innerWidth - div.x < window.innerWidth - div.width ? 'left' : 'right'} />}
                                     </div>
                                 </div>
                                 {provided.placeholder}

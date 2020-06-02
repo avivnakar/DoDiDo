@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "Jewelry",
       "desc": "this board is board",
-      "background": "90.jpg",
+      "background": "83.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -78,6 +78,62 @@
       ],
       "activities": [
         {
+          "id": "8XO",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"sdsdsdss\" was deleted By Guest",
+          "donetAte": 1591088138456
+        },
+        {
+          "id": "1nB",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"Customer Notes\" was deleted By Guest",
+          "donetAte": 1591088135894
+        },
+        {
+          "id": "WrJ",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 83.jpg By Guest",
+          "donetAte": 1591088111029
+        },
+        {
+          "id": "MQl",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 89.png By Guest",
+          "donetAte": 1591088103978
+        },
+        {
+          "id": "H7G",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "ideas was moved from l;lk' to 3D modal By Guest",
+          "donetAte": 1591088093295
+        },
+        {
+          "id": "Z45",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "important notes was moved from sdsdss to 3D modal By Guest",
+          "donetAte": 1591088090975
+        },
+        {
+          "id": "g8u",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "important notes was moved from 3D modal to sdsdss By Guest",
+          "donetAte": 1591088088497
+        },
+        {
           "id": "HmM",
           "donetBy": {
             "fullName": "Guest"
@@ -108,314 +164,281 @@
           },
           "text": "card:\"Here is my frs 3d modal\" was changed to color #ffcdd2 By Guest",
           "donetAte": 1591084614047
+        },
+        {
+          "id": "EJm",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Here is my frs 3d modal was moved from Design to Materials By Guest",
+          "donetAte": 1591087100192
+        },
+        {
+          "id": "U9h",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Final Product was moved from Design to l;lk' By Guest",
+          "donetAte": 1591087107595
+        },
+        {
+          "id": "Blb",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Here is my frs 3d modal was moved from Materials to l;lk' By Guest",
+          "donetAte": 1591087195126
+        },
+        {
+          "id": "9Ho",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from Design to l;lk' By Guest",
+          "donetAte": 1591087197993
+        },
+        {
+          "id": "xFs",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Hi this is the sketch was moved from Design to l;lk' By Guest",
+          "donetAte": 1591087200174
+        },
+        {
+          "id": "ACK",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sec 3d modal was moved from l;lk' to Materials By Guest",
+          "donetAte": 1591087411969
+        },
+        {
+          "id": "sEg",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Final Product was moved from l;lk' to Customer Notes By Guest",
+          "donetAte": 1591087416009
+        },
+        {
+          "id": "3MY",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "important notes was moved from Customer Notes to l;lk' By Guest",
+          "donetAte": 1591087420517
+        },
+        {
+          "id": "MyU",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "l;lk' was moved from 2 to 3 By Guest",
+          "donetAte": 1591087523994
+        },
+        {
+          "id": "vBA",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 99.jpg By Guest",
+          "donetAte": 1591087642724
+        },
+        {
+          "id": "jQV",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 95.jpg By Guest",
+          "donetAte": 1591087646604
+        },
+        {
+          "id": "Vyl",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "l;lk' was moved from 3 to 2 By Guest",
+          "donetAte": 1591087649707
+        },
+        {
+          "id": "HQP",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"Done\" was deleted By Guest",
+          "donetAte": 1591087655737
+        },
+        {
+          "id": "HOw",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"Done\" was deleted By Guest",
+          "donetAte": 1591087656603
+        },
+        {
+          "id": "tND",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Materials was moved from 5 to 1 By Guest",
+          "donetAte": 1591087687898
+        },
+        {
+          "id": "sHn",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 91.jpg By Guest",
+          "donetAte": 1591087699022
+        },
+        {
+          "id": "FMk",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Final Product was moved from Materials to l;lk' By Guest",
+          "donetAte": 1591087727544
+        },
+        {
+          "id": "BkP",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "90 Hashel Street was moved from Delivery to 3D modal By Guest",
+          "donetAte": 1591087771850
+        },
+        {
+          "id": "eOC",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "ideas was moved from Customer Notes to l;lk' By Guest",
+          "donetAte": 1591087773337
+        },
+        {
+          "id": "E0l",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"dfsdfds\" was added By Guest",
+          "donetAte": 1591087780055
+        },
+        {
+          "id": "3Vb",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"dsfsdfds\" was added By Guest",
+          "donetAte": 1591087784279
+        },
+        {
+          "id": "l8N",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Final Product was moved from l;lk' to Customer Notes By Guest",
+          "donetAte": 1591087789546
+        },
+        {
+          "id": "8u2",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"Delivery\" was deleted By Guest",
+          "donetAte": 1591087803074
+        },
+        {
+          "id": "srQ",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"Delivery\" was deleted By Guest",
+          "donetAte": 1591087803626
+        },
+        {
+          "id": "yWr",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Customer Notes was moved from 2 to 1 By Guest",
+          "donetAte": 1591087860572
+        },
+        {
+          "id": "FHm",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"Materials\" was deleted By Guest",
+          "donetAte": 1591087864390
+        },
+        {
+          "id": "8QS",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "list:\"Design\" was deleted By Guest",
+          "donetAte": 1591087866682
+        },
+        {
+          "id": "4Eh",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "90 Hashel Street was moved from 3D modal to sdsdsdss By Guest",
+          "donetAte": 1591088017294
+        },
+        {
+          "id": "HV3",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "sdsdsdss was moved from 3 to 1 By Guest",
+          "donetAte": 1591088018667
+        },
+        {
+          "id": "7G8",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "important notes was moved from l;lk' to sdsdsdss By Guest",
+          "donetAte": 1591088020028
+        },
+        {
+          "id": "6BQ",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"sdfsdfsd\" was added By Guest",
+          "donetAte": 1591088022939
+        },
+        {
+          "id": "g9O",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"dfdsfdsfd\" was added By Guest",
+          "donetAte": 1591088025482
+        },
+        {
+          "id": "Vhd",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new list:\"sdfdsfdsf\" was added By Guest",
+          "donetAte": 1591088027995
+        },
+        {
+          "id": "7OY",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "important notes was moved from sdsdsdss to l;lk' By Guest",
+          "donetAte": 1591088035147
         }
       ],
       "cardLists": [
-        {
-          "id": "LGK2",
-          "title": "Design",
-          "cards": [
-            {
-              "id": "1Scv",
-              "title": "Here is my frs 3d modal",
-              "labels": [
-                {
-                  "id": "c0002",
-                  "title": null,
-                  "color": "orange"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "Ring 3D modal",
-              "dueDate": null,
-              "checkLists": [
-                {
-                  "id": "9FKM",
-                  "title": "Add to the modal",
-                  "todos": [
-                    {
-                      "id": "iru1",
-                      "title": "change ring color",
-                      "isDone": true
-                    },
-                    {
-                      "id": "0BrO",
-                      "title": "add more daimonds",
-                      "isDone": false
-                    },
-                    {
-                      "id": "rzff",
-                      "title": "change to blue daimond",
-                      "isDone": false
-                    }
-                  ]
-                },
-                {
-                  "id": "h2Ro",
-                  "title": "yuval",
-                  "todos": [
-                    {
-                      "id": "YiV0",
-                      "title": "yuval",
-                      "isDone": false
-                    },
-                    {
-                      "id": "BPu9",
-                      "title": "yuval",
-                      "isDone": false
-                    }
-                  ]
-                },
-                {
-                  "id": "ZkpV",
-                  "title": "sdsd",
-                  "todos": []
-                }
-              ],
-              "attachments": [
-                "http://res.cloudinary.com/rondeliahu/image/upload/v1590930534/ssy9czmp6pmxtug6mbne.webp"
-              ],
-              "comments": [
-                {
-                  "id": "18kk",
-                  "text": "look nice ",
-                  "createdAt": 1590930618900,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "GmbJ",
-              "title": "Blue Daimond",
-              "labels": [
-                {
-                  "id": "c0001",
-                  "title": null,
-                  "color": "red"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u101",
-                  "fullName": "Gal Rondel",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#2196f3"
-            },
-            {
-              "id": "FuWD",
-              "title": "Final Product",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": "dddd",
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [
-                "https://res.cloudinary.com/rondeliahu/image/upload/v1590931276/gcrsmzucqier8wextnps.webp"
-              ],
-              "comments": [
-                {
-                  "id": "rnVt",
-                  "text": "ddd",
-                  "createdAt": 1591019741892,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                },
-                {
-                  "id": "f0PE",
-                  "text": "dddd",
-                  "createdAt": 1591019739597,
-                  "createdBy": {
-                    "_id": "u101",
-                    "fullName": "Gal Rondel",
-                    "imgUrl": "adf.png"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "oICY",
-              "title": "sec 3d modal",
-              "labels": [
-                {
-                  "id": "c0002",
-                  "title": null,
-                  "color": "orange"
-                },
-                {
-                  "id": "c0004",
-                  "title": null,
-                  "color": "blue"
-                },
-                {
-                  "id": "Bi2d",
-                  "title": null,
-                  "color": "#ff0080"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
-              "desc": "sec attempt for the ring",
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [
-                "https://res.cloudinary.com/rondeliahu/image/upload/v1590930697/mkbj9qxh8b0qbzim4okm.jpg"
-              ],
-              "comments": []
-            },
-            {
-              "id": "ZdTN",
-              "title": "Hi this is the sketch",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": 1594300007001,
-              "checkLists": [],
-              "attachments": [
-                "https://res.cloudinary.com/rondeliahu/image/upload/v1590930367/d9htdsi0excyqb2nc2pf.jpg"
-              ],
-              "comments": []
-            }
-          ]
-        },
-        {
-          "id": "F3LB",
-          "title": "Materials",
-          "cards": [
-            {
-              "id": "zU4M",
-              "title": "Gold",
-              "labels": [
-                {
-                  "id": "c0003",
-                  "title": null,
-                  "color": "green"
-                },
-                {
-                  "id": "c0002",
-                  "title": null,
-                  "color": "orange"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#ffd54f"
-            },
-            {
-              "id": "6xUL",
-              "title": "Silver",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#d9d9d9"
-            },
-            {
-              "id": "RsOl",
-              "title": "Black Silver",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#c5cae9"
-            },
-            {
-              "id": "65up",
-              "title": "Wood",
-              "labels": [],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": null,
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#ffe0b2"
-            }
-          ]
-        },
-        {
-          "id": "73z7",
-          "title": "Done",
-          "cards": []
-        },
-        {
-          "id": "obcQ",
-          "title": "Delivery",
-          "cards": []
-        },
         {
           "id": "3sNJ",
           "title": "l;lk'",
@@ -440,32 +463,9 @@
           ]
         },
         {
-          "id": "wjgm",
-          "title": "Customer Notes",
+          "id": "sdKF",
+          "title": "3D modal",
           "cards": [
-            {
-              "id": "uSaQ",
-              "title": "important notes",
-              "labels": [
-                {
-                  "id": "c0001",
-                  "title": null,
-                  "color": "red"
-                }
-              ],
-              "createdBy": {
-                "_id": "u101",
-                "fullName": "Gal Rondel",
-                "imgUrl": "././img/troll.jpg"
-              },
-              "cardMembers": [],
-              "desc": ".",
-              "dueDate": null,
-              "checkLists": [],
-              "attachments": [],
-              "comments": [],
-              "background": "#c2185b"
-            },
             {
               "id": "YuXB",
               "title": "ideas",
@@ -492,56 +492,83 @@
               "checkLists": [],
               "attachments": [],
               "comments": []
-            }
-          ]
-        },
-        {
-          "id": "sdKF",
-          "title": "3D modal",
-          "cards": []
-        },
-        {
-          "id": "73z7",
-          "title": "Done",
-          "cards": []
-        },
-        {
-          "id": "obcQ",
-          "title": "Delivery",
-          "cards": [
+            },
             {
-              "id": "zdJR",
-              "title": "90 Hashel Street",
+              "id": "uSaQ",
+              "title": "important notes",
+              "labels": [
+                {
+                  "id": "c0001",
+                  "title": null,
+                  "color": "red"
+                }
+              ],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": ".",
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": [],
+              "background": "#c2185b"
+            },
+            {
+              "id": "e4Az",
+              "title": "sdfsdfsd",
               "labels": [],
               "createdBy": {
                 "_id": "u101",
                 "fullName": "Gal Rondel",
                 "imgUrl": "././img/troll.jpg"
               },
-              "cardMembers": [
-                {
-                  "_id": "u401",
-                  "fullName": "Aviv Nakar",
-                  "imgUrl": "adf.png"
-                }
-              ],
+              "cardMembers": [],
               "desc": null,
-              "dueDate": 1595596960745,
+              "dueDate": null,
               "checkLists": [],
               "attachments": [],
-              "comments": [],
-              "background": "#fff9c4"
+              "comments": []
             }
           ]
+        },
+        {
+          "id": "EEDZ",
+          "title": "sdsdss",
+          "cards": [
+            {
+              "id": "G9ea",
+              "title": "dfdsfdsfd",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
+            }
+          ]
+        },
+        {
+          "id": "RBDu",
+          "title": "sdfdsfdsf",
+          "cards": []
         }
       ],
-      "updatedAt": 1591084537728
+      "updatedAt": 1591088138456
     },
     {
       "_id": "5c07",
       "name": "Ringly4Me",
       "desc": "this board is board",
-      "background": "99.jpg",
+      "background": "91.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -549,15 +576,130 @@
       },
       "labels": [],
       "members": [],
-      "activities": [],
+      "activities": [
+        {
+          "id": "JQV",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 91.jpg By Guest",
+          "donetAte": 1591088266758
+        },
+        {
+          "id": "oaY",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "Board background was changed to 88.jpg By Guest",
+          "donetAte": 1591088243178
+        },
+        {
+          "id": "hqQ",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "card:\"dfsdfds\" was changed to color #9c27b0 By Guest",
+          "donetAte": 1591088229889
+        },
+        {
+          "id": "rEI",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new photo:\"http://res.cloudinary.com/rondeliahu/image/upload/v1591088208/wtd8uikgtye39e1emice.jpg\" was added By Guest",
+          "donetAte": 1591088206487
+        },
+        {
+          "id": "Ii6",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "dfdsfdsd was moved from 1 to 0 By Guest",
+          "donetAte": 1591088193210
+        },
+        {
+          "id": "9mW",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "dfsdfds was moved from dfdsfdsd to Card forcard By Guest",
+          "donetAte": 1591088188529
+        },
+        {
+          "id": "N03",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"dfsfdsfds\" was added By Guest",
+          "donetAte": 1591088183818
+        },
+        {
+          "id": "sEI",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new card:\"dfsdfds\" was added By Guest",
+          "donetAte": 1591088179663
+        },
+        {
+          "id": "gei",
+          "donetBy": {
+            "fullName": "Guest"
+          },
+          "text": "new list:\"dfdsfdsd\" was added By Guest",
+          "donetAte": 1591088170113
+        }
+      ],
       "cardLists": [
+        {
+          "id": "g9Nd",
+          "title": "dfdsfdsd",
+          "cards": [
+            {
+              "id": "WbVe",
+              "title": "dfsfdsfds",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [],
+              "comments": []
+            }
+          ]
+        },
         {
           "id": "Xt6I",
           "title": "Card forcard",
-          "cards": []
+          "cards": [
+            {
+              "id": "5vXR",
+              "title": "dfsdfds",
+              "labels": [],
+              "createdBy": {
+                "_id": "u101",
+                "fullName": "Gal Rondel",
+                "imgUrl": "././img/troll.jpg"
+              },
+              "cardMembers": [],
+              "desc": null,
+              "dueDate": null,
+              "checkLists": [],
+              "attachments": [
+                "http://res.cloudinary.com/rondeliahu/image/upload/v1591088208/wtd8uikgtye39e1emice.jpg"
+              ],
+              "comments": [],
+              "background": "#9c27b0"
+            }
+          ]
         }
       ],
-      "updatedAt": 1590935081752
+      "updatedAt": 1591088266758
     },
     {
       "_id": "5c04",

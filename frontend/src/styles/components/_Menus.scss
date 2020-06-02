@@ -21,7 +21,7 @@
     border: 1px solid #172b4d2c;
     min-height: min-content;
 
-    & > * {
+    &>* {
         width: rem(280px);
         background-color: #fff;
         // background-color: indigo;
@@ -94,14 +94,17 @@
     position: relative;
     top: 0;
     z-index: 11;
+
     &.left {
         right: 100%;
         align-items: flex-end;
     }
+
     &.right {
         left: 100%;
         align-items: flex-start;
     }
+
     & li {
         text-align: left;
         cursor: pointer;
@@ -125,6 +128,7 @@
     right: 20px;
     top: 40px;
     border-radius: 3px;
+    width: rem(300px);
 
     & .board-menu-title {
         line-height: 20px;
@@ -177,10 +181,38 @@
 
     & img {
         cursor: pointer;
-        width: 100px;
+        width: 100%;
+        object-fit: cover;
         height: 70px;
         margin: rem(5px);
         border-radius: 5px;
+    }
+
+    & .activities {
+        font-size: 0.9rem;
+        padding: rem(10px);
+        display: flex;
+        flex-direction: column;
+
+        &-time {
+            font-size: 0.7rem;
+            text-align: left;
+            margin-bottom: rem(10px);
+
+        }
+
+        &-txt {
+            font-weight: 100;
+            text-align: left;
+            margin-bottom: rem(5px);
+
+        }
+    }
+
+    & .add-list-btn {
+        width: rem(150px);
+        font-size: 0.9rem;
+        margin: rem(10px) auto;
     }
 }
 
@@ -251,5 +283,28 @@
 
     & button {
         background: $clr3;
+    }
+}
+
+.activi-container {
+    overflow: auto;
+    max-height: rem(500px);
+
+    &::-webkit-scrollbar {
+        margin-bottom: 20px;
+        height: 10px;
+        width: 6px;
+        cursor: move;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 16px solid #0000008f;
+        border-radius: 20px;
+    }
+
+    &::-webkit-scrollbar-track {
+        border: 16px solid #ffffff81;
+        border-radius: 10px;
+        height: 100px;
     }
 }

@@ -13,12 +13,14 @@ export class BoardMenu extends Component {
         const { board, updateBoard } = this.props;
         return (
             <div className="board-menu-list flex column">
-                <Link to="#" className="board-sec-nav-icons" onClick={this.toggleBg}>Change background</Link>
-                {this.state.isBg && <ChangeBg board={board} updateBoard={updateBoard} toggleBoardMenu={this.props.toggleBoardMenu} />}
-                {!this.state.isBg &&<h4>Activities</h4>}
-                {board.activities.length > 0 && !this.state.isBg &&
+                {this.state.isBg && <ChangeBg setActivites={this.props.setActivites} board={board} updateBoard={updateBoard} toggleBoardMenu={this.props.toggleBoardMenu} />}
+                {!this.state.isBg && <h4 className="board-menu-title">Activities</h4>}
+                <div className="activi-container">
+                    {board.activities.length > 0 && !this.state.isBg &&
                         board.activities.map((activity) => <Activities key={activity.id} activity={activity} />)
                     }
+                </div>
+                <Link to="#" className="add-list-btn" onClick={this.toggleBg}>Change background</Link>
             </div>
         )
     }

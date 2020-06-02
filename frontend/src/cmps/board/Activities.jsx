@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 
 export class Activities extends Component {
     render() {
-        const {activity} = this.props
+        const { activity } = this.props
         const date = new Date(activity.donetAte)
         const TIME = date.toTimeString()
         return (
-            <div>
-                <div>{activity.text}</div>
-                <div>{TIME}</div>
+            <div className="activities">
+                <div className="activities-txt">{activity.text}</div>
+                <div className="activities-time">>{TIME}</div>
             </div>
         )
     }

@@ -47,13 +47,10 @@ export function ChangeBg(props) {
                 </div>
 
             </div>
-            <div className="bgclr">
+            {/* <div className="bgclr">
                 <div className="board-menu-title sub-title">Colors</div>
-                <CirclePicker
-                // color={this.state.background}
-                // onChangeComplete={this.handleChangeComplete}
-                />
-            </div>
+                <CirclePicker/>
+            </div> */}
         </div>
     )
 }
