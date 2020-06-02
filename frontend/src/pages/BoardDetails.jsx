@@ -11,6 +11,7 @@ import { socketService } from '../services/socketService.js';
 // import { ClickAway } from '../cmps/ClickAway.jsx';
 import { CardMenu } from '../cmps/card/CardMenu.jsx';
 import { eventBus } from '../services/eventBusService.js';
+import { utilService } from '../services/utilService.js';
 
 class _BoardDetails extends Component {
     state = {
@@ -73,6 +74,25 @@ class _BoardDetails extends Component {
                 })
         }
     }
+    setActivites = (user = { fullName: 'Guest' }, action) => {
+        const { board, updateBoard } = this.props;
+        if (action) {
+            if (action.name === 'Del') var text = `${action.item} was deleted By ${user.fullName}`
+            if (action.name === 'Change') var text = `${action.item} was changed to ${action.dest} By ${user.fullName}`
+            if (action.name === 'Add') var text = `${action.item} was added By ${user.fullName}`
+            if (action.name === 'Moved') var text = `${action.item} was moved from ${action.src} to ${action.dest} By ${user.fullName}`
+            var activity = {
+                id: utilService.makeId(),
+                donetBy: user,
+                text,
+                donetAte: Date.now()
+            }
+            console.log(activity.text);  
+            board.activities.push(activity)
+            updateBoard(board)
+        }
+
+    }
     getCurrCard = (card) => {
         this.setState({
             currCard: card
@@ -97,10 +117,10 @@ class _BoardDetails extends Component {
         if (!destination) return;
         if (destination.droppableId === source.droppableId && destination.index === source.index) return;
         if (type === 'column') {
-            console.log(result);
             var list = board.cardLists.find(list => list.id === draggableId)
             board.cardLists.splice(source.index, 1)
             board.cardLists.splice(destination.index, 0, list)
+            this.setActivites({ fullName: 'Guest' }, { name: 'Moved', item: list.title, src: source.index, dest: destination.index })
         } else {
             const { destListIdx, srcListIdx, cardMoved } = board.cardLists.reduce((acc, list, idx) => {
                 if (source.droppableId === list.id) {
@@ -112,6 +132,7 @@ class _BoardDetails extends Component {
             }, {})
             board.cardLists[srcListIdx].cards.splice(source.index, 1)
             board.cardLists[destListIdx].cards.splice(destination.index, 0, cardMoved)
+            this.setActivites({ fullName: 'Guest' }, { name: 'Moved', item: cardMoved.title, src: board.cardLists[srcListIdx].title, dest: board.cardLists[destListIdx].title })
         }
         this.props.updateBoard(board)
     };
@@ -141,16 +162,18 @@ class _BoardDetails extends Component {
                                 ref={provided.innerRef}
                             >
                                 {card && <CardDetails card={this.props.card} board={board}
-                                    updateBoard={this.props.updateBoard} history={this.props.history} />}
+                                    updateBoard={this.props.updateBoard} history={this.props.history}
+                                    setActivites={this.setActivites} />}
                                 <div className="board-head">
-                                    <BoardHeadNav board={board} updateBoard={updateBoard} />
+                                    <BoardHeadNav board={board} updateBoard={updateBoard} setActivites={this.setActivites}/>
                                 </div>
                                 <div className="board" style={styleLi}>
                                     {board.cardLists && board.cardLists.map((list, index) => <ListPreiview
                                         key={list.id} list={list} getCurrCard={this.getCurrCard} index={index}
                                         {...source && source.droppableId === list.id ? drag : {}}
                                         {...destination && destination.droppableId === list.id ? drag : {}}
-                                        {...listProps} styleCardDrag={this.state.style} />)}
+                                        {...listProps} styleCardDrag={this.state.style} 
+                                        setActivites={this.setActivites} />)}
                                     <AddList board={board} updateBoard={this.props.updateBoard} />
                                     <div style={div}>
                                         {div && <CardMenu {...cardMenuFuncs} className={window.innerWidth - div.x<window.innerWidth-div.width ? 'left' : 'right'} />}

@@ -11,8 +11,12 @@ export class CardDesc extends Component {
         })
     }
     handleKeyDown(e) {
-        this.props.card.desc = e.target.value
+        const { card } = this.props
         if (e.key === 'Enter') {
+            if (card.desc) {
+                this.props.setActivites({ fullName: 'Guest' }, { name: 'Change', item: `card "${card.title}" description`, dest: `${e.target.value}` })
+            } else this.props.setActivites({ fullName: 'Guest' }, { name: 'Add', item: `card description:"${e.target.value}"` })
+            card.desc = e.target.value
             this.setState({
                 isEdit: false
             })

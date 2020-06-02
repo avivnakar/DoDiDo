@@ -28,6 +28,8 @@ export class BoardTitle extends Component {
                 })
             }
             this.props.updateBoard(board)
+            this.props.setActivites({ fullName: 'Guest' }, {name: 'Change',item: 'Board title', dest: board.name})
+
         }
     }
     getTitle() {

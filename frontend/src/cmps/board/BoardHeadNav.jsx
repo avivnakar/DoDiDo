@@ -19,8 +19,8 @@ export class BoardHeadNav extends Component {
         return (
             <header className="board-header flex space-between justify-center align-center" >
                 <div className="name-container flex space-between">
-                    <BoardTitle board={this.props.board} updateBoard={this.props.updateBoard} />
-                    {this.state.isOpenMenu && <BoardMenu toggleBoardMenu={this.toggleBoardMenu} board={this.props.board} updateBoard={this.props.updateBoard} />}
+                    <BoardTitle board={this.props.board} updateBoard={this.props.updateBoard}   setActivites={this.props.setActivites}/>
+                    {this.state.isOpenMenu && <BoardMenu toggleBoardMenu={this.toggleBoardMenu} setActivites={this.props.setActivites} board={this.props.board} updateBoard={this.props.updateBoard} />}
                     {/* <MiniUser users={props.board.members} command={() => { }} /> */}
                     <span className="user-logo">Y</span>
                     <span className="user-logo">G</span>

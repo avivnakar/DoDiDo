@@ -1,10 +1,19 @@
-import React, { Component } from 'react'
-import { ChangeBg } from './ChangeBg.jsx'
-import { Activities } from './Activities.jsx'
-import { Link } from 'react-router-dom';
-export class BoardMenu extends Component {
-    state = {
-        isBg: false
+import React from 'react';
+// import { FaTimes } from "react-icons/fa";
+// import { ClickAway } from '../ClickAway';
+import { CirclePicker } from 'react-color';
+
+export function BoardMenu(props) {
+    const { board, updateBoard } = props;
+
+
+    function changeBg(ev) {
+        const x = ev.target.getAttribute('data-img');
+        board.background = x
+        updateBoard(board)
+        props.toggleBoardMenu()
+        props.setActivites({ fullName: 'Guest' }, {name: 'Change',item: 'Board background', dest: board.background})
+
     }
     toggleBg = () => {
         this.setState(prevState => ({ isBg: !prevState.isBg }))

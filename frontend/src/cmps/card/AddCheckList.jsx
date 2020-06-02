@@ -30,6 +30,7 @@ export class AddCheckList extends Component {
                 this.setState({
                     isEdit: false
                 })
+                this.props.setActivites({ fullName: 'Guest' }, {name: 'Add',item: `new checklist:"${newChxList.title}"`})
                 card.checkLists.push(newChxList)
             }
             this.props.updateBoard(board)

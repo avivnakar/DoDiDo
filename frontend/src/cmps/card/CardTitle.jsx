@@ -26,6 +26,7 @@ export class CardTitle extends Component {
                     isEdit: null
                 })
             }
+            this.props.setActivites({ fullName: 'Guest' }, {name: 'Change',item: 'Card title', dest: card.title})
             updateBoard(board)
         }
     }

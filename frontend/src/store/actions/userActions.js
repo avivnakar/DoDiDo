@@ -10,10 +10,11 @@ const DEFAULT_USER = {
     imgUrl: 'https://robohash.org/set_set3/rondelicious?size=64x64'
 }
 export function login(credentials) {
+    console.log(credentials)
     return dispatch => authService.login(credentials)
         .catch(err => {
             alert(err);
-            return DEFAULT_USER;
+            // return DEFAULT_USER;
         })
         .then((user) => dispatch({ type: 'SET_USER', user }));
 }
