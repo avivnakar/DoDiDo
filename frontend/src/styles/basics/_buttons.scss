@@ -98,14 +98,14 @@ button {
     font-family: OpenSans-semiBold, sans-serif;
     color: #ffffff;
     text-align: left;
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.685);
     display: flex;
     min-width: 80px;
     cursor: pointer;
     margin-right: 50px;
 
     &:hover {
-        background-color: rgba(0, 128, 0, 0.472);
+        background-color: rgba(255, 0, 0, 0.37);
     }
 }
 

@@ -31,7 +31,7 @@
       "_id": "5c09",
       "name": "Jewelry",
       "desc": "this board is board",
-      "background": "94.jpg",
+      "background": "90.jpg",
       "createdBy": {
         "_id": "u101",
         "fullName": "Gal Rondel",
@@ -486,7 +486,7 @@
           ]
         }
       ],
-      "updatedAt": 1591084237203
+      "updatedAt": 1591084537728
     },
     {
       "_id": "5c07",
