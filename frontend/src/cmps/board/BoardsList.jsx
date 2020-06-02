@@ -3,7 +3,7 @@ import { BoardPreiview } from './BoardPreiview.jsx';
 import { Link } from 'react-router-dom';
 
 export function BoardsList(props) {
-    const { boards, toggleBoardMenu } = props;
+    const { boards, /* toggleBoardMenu */ } = props;
 
     function openMenu() {
         props.toggleBoardMenu()

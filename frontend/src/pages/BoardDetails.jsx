@@ -83,7 +83,7 @@ class _BoardDetails extends Component {
         if (start.type === 'task') {
             this.setState({ drag: start })
             const idx = board.cardLists.findIndex(list => list.id === start.source.droppableId)
-            var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId)
+            // var card = board.cardLists[idx].cards.find(card => card.id === start.draggableId)
             this.setState({ style: { backgroundColor: '#c7c7c7' } })
         }
     }
